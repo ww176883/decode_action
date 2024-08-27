@@ -1,3372 +1,2919 @@
-//Mon Aug 26 2024 07:14:03 GMT+0000 (Coordinated Universal Time)
+//Tue Aug 27 2024 09:30:02 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-const _0x1366a8 = _0x1c156a("顺丰速运"),
-  _0x149a58 = require("got"),
-  _0x508ad7 = require("path"),
-  {
-    exec: _0x39cbfc
-  } = require("child_process"),
-  _0x204044 = require("crypto-js"),
-  {
-    CookieJar: _0xd37655
-  } = require("tough-cookie"),
-  _0x3d0561 = "sfsy",
-  _0x371509 = /[\n]/,
-  _0x12e0b9 = [_0x3d0561 + "Url"],
-  _0x94f81d = process.env[_0x3d0561 + "Bee"] || "false",
-  _0x3bec27 = process.env[_0x3d0561 + "DragonBoatDraw"] || "false",
-  _0x5b274f = 8000,
-  _0x238e48 = 3;
-const _0x30f72a = 3.03,
-  _0x16c88c = "sfsy",
-  _0x1e5430 = "https://leafxcy.coding.net/api/user/leafxcy/project/validcode/shared-depot/validCode/git/blob/master/code.json",
-  _0x5c6146 = "https://leafxcy.coding.net/api/user/leafxcy/project/validcode/shared-depot/validCode/git/blob/master/" + _0x16c88c + ".json",
-  _0x4da51e = 5,
-  _0x8785c6 = "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
-  _0x5aa02d = "wwesldfs29aniversaryvdld29",
-  _0x2bbd78 = "MCS-MIMP-CORE",
-  _0x1f992f = "czflqdlhbxcx",
-  _0x51a8e3 = "wxwd26mem1",
-  _0xd3a68c = {
-    BAOZHU_CARD: "[爆竹卡]",
-    CHUNLIAN_CARD: "[春联卡]",
-    DENGLONG_CARD: "[灯笼卡]",
-    HONGBAO_CARD: "[红包卡]",
-    YUANXIAO_CARD: "[元宵卡]",
-    CHUANGHUA_CARD: "[窗花卡]",
-    COMMON_CARD: "[万能卡]"
-  };
-const _0x2500ab = {
-  PUSH_TIMES: "推金币次数",
-  COIN: "金币",
-  WELFARE_CARD: "财富卡",
-  RICH_CARD_GAME: "发财卡"
-};
-const _0xb8d615 = "YEAR_END_2023",
-  _0x4c1524 = "ANNIVERSARY_2024",
-  _0x1c616b = "MEMBER_DAY",
-  _0x49a488 = "DRAGONBOAT_2024",
-  _0x48074c = 8,
-  _0x596697 = 1 << _0x48074c - 1,
-  _0x144bb1 = ["完成连签7天", "参与积分活动", "每月累计寄件", "完成每月任务", "与好友微信分享会员福利", "DAILY_VIP_TASK_TYPE", "去新增一个收件偏好", "用行业模板寄件下单", "用积分兑任意礼品", "领任意生活特权福利", "设置你的顺丰ID"];
-let _0x11aa2a = [],
-  _0x479306 = {},
-  _0x48776e = 0,
-  _0x3ecd02 = 0;
-function _0x52bf8a() {
-  _0x3ecd02 = 1;
-  process.on("SIGTERM", () => {
-    _0x3ecd02 = 2;
-    process.exit(0);
+/*
+新转赚红包抽奖提现
+
+链接：https://pro.m.jd.com/mall/active/B2Y13x641hwWfpsoRenCzfbz4jR/index.html
+
+轮询提现变量：jd_zzhb_txnum //轮询提现页数
+
+提现间隔时间：jd_zzhb_txwait //提现兑换间隔，默认 120 秒
+抽奖间隔时间：jd_zzhb_drawwait //提现兑换间隔，默认 1 秒
+提现上限刷新时长变量：jd_zzhb_swish //是否延长提现时间，默认不延长（true/false） 配合提现页码，上限后延长，可以延迟到期时间，最终效果可以推迟到下个月直接提现。
+
+jd_zzhb_draw_retry     // 抽奖 提示未中奖等最大重试次数 默认 20 次
+jd_zzhb_txmax_retry      // 已存在状态/待发放，提现中，等最大重试次数 默认 2 次
+jd_zzhb_tx_retry  // 提现接口重试 默认为0  不重试
+
+兑换红包变量：
+export jd_zzhb_exchange="true" // 上限后兑换红包，默认关闭
+
+注意：轮询页数也大，越容易403，请谨慎填写
+
+cron:1 1 1 1 * jd_zzhb_new_draw.js
+
+
+*/
+
+const $ = new Env("\u65B0\u8F6C\u8D5A\u7EA2\u5305\u62BD\u5956\u63D0\u73B0");
+function fakerlobr27() {}
+var fakerkogzpv = Object["defineProperty"],
+  fakerjrha7p,
+  fakerzxy3i9,
+  fakerk896ji,
+  fakerstotgd,
+  fakerlrl6f,
+  fakernpmxvk,
+  fakerwipop,
+  faker50eqtr,
+  faker5ntkak,
+  fakerpglrkw,
+  fakerj361vj,
+  faker8e7pyb,
+  faker2o36em,
+  fakerwj4rd8,
+  fakerragodf,
+  fakerax6qj,
+  faker5tdpph,
+  fakeryznng,
+  fakerktil5k,
+  faker9dsuej,
+  fakeryom2w8,
+  fakerajp4gk;
+function fakerlvkixp(fakerlobr27) {
+  return fakerjrha7p[fakerlobr27 < 38 ? fakerlobr27 - 19 : fakerlobr27 > 428 ? fakerlobr27 - 41 : fakerlobr27 - 39];
+}
+fakerjrha7p = faker6vbl63.call(this);
+function faker4f626s(fakerlobr27, fakerkogzpv) {
+  return fakerzxy3i9.call(null, fakerlobr27, "length", {
+    value: fakerkogzpv,
+    configurable: !0
   });
-  const _0x48737f = _0x508ad7.basename(process.argv[1]),
-    _0x5a46f8 = ["bash", "timeout", "grep"];
-  let _0x44b56d = ["ps afx"];
-  _0x44b56d.push("grep " + _0x48737f);
-  _0x44b56d = _0x44b56d.concat(_0x5a46f8.map(_0x46ba30 => "grep -v \"" + _0x46ba30 + " \""));
-  _0x44b56d.push("wc -l");
-  const _0x2e16ad = _0x44b56d.join("|"),
-    _0x3b8c50 = () => {
-      _0x39cbfc(_0x2e16ad, (_0x47c98d, _0x3af612, _0x1b9cc2) => {
-        if (_0x47c98d || _0x1b9cc2) {
-          return;
+}
+fakerzxy3i9 = Object.defineProperty;
+var fakergqsqvm = [],
+  fakertl8wx9 = ["IT#mQ@26", ";VY]>*L}f~~7E6", ";VY]>*dlRNs", "UG<L_9F1FsP8ht", "lz[1r", "|5LKjV77Nm^", "rodIYY&sWqObu4", "u#<Z]", "H7@E=,g5", "e?mtIFX[3}@", "nO~lj", "+5@j!", "se{6G</R", "se{6G</R", "Sk5gg>]", "/vMX(|P:nMg@ROn", "ee9q[6{RSM(p^/rA:B", "?[(SH", "CAQS", ".nP1nrDtJYDz_YBP:B", "Tomg7", ".nP1nrDt>OUm)T*AHB", ".nP1nr/R", "/}{SW6aR", ".nP1nrDt>OH?_ksV+{Tw", ".nP1nrDtJYQ?CYfQ7B", "YoIk", ".nP1nrDtJY)JkT]2u/IS", "/}{SNynR", "@}ZgG<9R", ".nP1nrDtJY)JkTo_He3iQ*]", ".nP1nrDtJYQ?W/OuToOS", "on<oF`Os?w&|^uz::Q2=M1_U$1o", "A/L6;|F<l", "nn9KZ6#R", "3ebGK", "Bk)j", "A/@jg>9R", fakerlvkixp(52), "Rk(g7", "CRMcY(o2NKsZTY><czW2Nf)T76g3VA(4egJq7", "cphjH", "uvwj", "RJ^Vtk^Prh<", "RJ^V(2[X_>kB", "/vMX(|hR", "X/IS:>]", "26%s~", "se{6G</R", "p3c=_0#", ":ep63G:8DWZ", "uX01ei7mmb", "#ep63G:8DWCq/D/xSB", "QdbwXzG2", "#eFgrC]", fakerlvkixp(43), "R!G=.9N2", "@W)}<S~,,T", "OA[gG<vB", ".vrqH>]", fakerlvkixp(64), "(khjH", "{K>s($Eg<xSM[", "U9ugd6UFoFpE}>*A", "KLtS/", "+5p6QE]", "uvXq_)9R", "A/Fg{yB1U", "!vFg7", "He3iQ*N)[b", "=pWy)<]", "DATg?<&u$W_=PTm.};3q(|z:_WpEB", "@cowg>/)[b", "fvI|,=U<l", "+5tSJLAR", "JlFg&y@R", "xHFg&y@R", fakerlvkixp(59), "He3iQ*]", "#eIS7GhR", "DA:UDpZR", "7v=j:>+)l", fakerlvkixp(39), "DATg?<&u$W_=PTm.=;$yv)I$a8daB", "(khjH", "DATg?<&u$W_=PTm.N2(g7", fakerlvkixp(67), "U90Ht<gR", ";/tSH", fakerlvkixp(42), "wkL6_[|hU8Z", "wkL6_[KR", "5uTw", "U90Ht<?\"$WJEdDn", "wkL6_[LR", "wkL6_[LRyb", "wkL6Lda:nM1as/n.", "wkL6S@rh@Wdalf", "wkL6$DU<DW<%2Dn", "wkL6$DKR", "@/tSH>#R", fakerlvkixp(63), "D$L)Jm[[q8", "eQH^aOlh9", "uvwj", "ta/=/g,S", "u!uZ1o*S", "U9tSsGvU!M1", "2_W,>I(6", "#Q*ZztV6", "8omw", fakerlvkixp(39), "*tfXPoI.5!9{ODP", "^yLR7^36", fakerlvkixp(40), "rpQ)amr6", "$qjRUoq6", "fyl)+", "`p`>OQ~6", ")_C%pQ1jZ!]5|", "U9tSsGvU!M1", "2_W,>I(6", fakerlvkixp(41), "wI&bC*k>&^SpjW.f@#+YK4Jv!.g8[Wu;YUzc^]|G#$E{:r)", "D$L)Jm~6", "}28lJiKrf", "#n),", "U90Ht<GhEbf$dDt", fakerlvkixp(40), "rpQ)amr6", "A/Fge<f<|`boB", "Xsa1R9ZR", ")_C%CO$6", "0o3qfL9R", "`p`>OQ~6", "wkL6co!FybJEB", "*tP74In*1YJ", "lk8jqGPR", fakerlvkixp(41), "2G]4LU`q]|IcF8h0mu7MWs1=bh}{:8XZMe5n|JBzuAY$3@w", fakerlvkixp(49), fakerlvkixp(48), ".ANv", "Z`<b=jD.uC~ta<f$.\"U];59;3m6", "+5tSJLWt[;", "Z`<b=jD.uC~ta<f$17!M42mdq", "?d#)w|`MnTDKIhNji}qcpNo", "JtXt@v\"2I!YX6#j<[9}^;4B", "aG,XpqC3sT*XMTNjA.@", fakerlvkixp(39), "kkXqniMml", "uvwj", fakerlvkixp(42), "Xsa1R9ZR", fakerlvkixp(39), fakerlvkixp(39), fakerlvkixp(53), "U94Kt<Ox$#", ">sRo@p?tjb", ":eaHA)7m/{", "?o7X_>~a>8Z", ";L[g[6jF!{", "4v=jM9nR", ":exl7", "4v=jM9BF6`5oB", "?o7X_>|ni8;pI@n", "?o7X_>xB", fakerlvkixp(44), "U94Kt</R", "7/ISS@9R", "U94Kt<Ox$#+%97hVKB", "@cowi+@R", fakerlvkixp(43), "jYP$", "!1/{Os+ufrlV5*O@p8=+", ",r/Gi)883[", "v~D5Os+ufrlVa^4IR:#)74YK9}!M1vv1idBfAejbwhJ)inF|JS=yr", "#dVH)WiO>|!f8Z$Xv$_*9TL:JUsd8ZXQ|\"vKb1<", "9/{6co#R", fakerlvkixp(45), "/vfS%o#R", fakerlvkixp(46), "?o7X_>Shl", "t\"2MBs##lfEAg$", "#dVH)WiO>|!f8Z$Xv$_*9TL:JU", "hVnJT1<", "{,F.7g~q1!>i%E(<{kk", "v~D5Os+ufrlVa^4IR:#)74)2dD9\"{Gg1+:sm:{}0uK1z[Rc^]cec{h<ua", "1YZ.&g<RD#2i|o\"<DUW2;eB", "v~D5Os+ufrlVa^4IR:#)74YK,!$ir`\"y,rDfPuT0^.,ELv", "o\"i%Dnx~", "W[Hnv^eJfe[wn*6!g;2", "_}QjzD+g!WEM9HsT2w;", "v~D5Os+ufrlVa^4IR:#)74+gilh^dEwT;OUftDqzyQ655R?YgS.:,s,4{", "{$XaH", "s<,(m>;5MA!pnSmZ[:R;", "[/Eq2D?Kils^x.{1[$$", "v~D5].{J1]_8)kO@~`=qC20YRJ%/.8jT+8G[Y&l9#:b{\"4{2PoyGG17HSf0G#@g2", "(khjH", "v$|aK}9=", fakerlvkixp(60), ")w+!$mPpb3RokLmt9b[@rvUu)X0ZTRy/lQ=jo+9::w<J;Ot", "u|~q`6`hZWKMRtKvSkfSKpqmwbgrI7#;Hn]D{A=`C#m%29/YF6D5.*X:1FaCJ/1I~5mwaV&bsaq", "He,gC).R&[zDJQngisv/{A<ouOl@7hrY+7W:2^~PlOaa7h#;4`h!rK*Wx`h=xk1H82Zmh8l8v`no5d/b^J(/C:F$rac6Dt\"g]sIye\"9lL1&cgL(;k6|w\"qMoliBx3tfF)7(/C:h:jUE%e$fFJ7bw?_k|\"SE%O\"QFL^Ew\"q^b~1E<N9#;H@1k&K]", ".c.qY<]", "?o7X_>~a>8Z", "@cowg>]", fakerlvkixp(42), "uvwj", fakerlvkixp(70), fakerlvkixp(39), "dQ!g`6ZR", "U94Kt<Ox$#+%97hV*llyq>uU(MmWlf", fakerlvkixp(55), ";L[g[6jF!{", "4v=jM9BF6`5oB", "?o7X_>|ni8;pI@n", "?o7X_>xB", fakerlvkixp(44), "?o7X_>UU!MFtQk", "U94Kt<Ox$#+%97hVKB", "@cowi+@R", fakerlvkixp(43), "u@Ik", fakerlvkixp(47), fakerlvkixp(58), "l0gnm>;5MA!pji2`|dU+62@qPGsX<ll<19_MtVuYz=y+1WL8y#R4A", "U9pH+\"1mJ8sM:OkhlkCSP)adyb>9:OhK8olqY<]", "9/{6co#R", fakerlvkixp(45), "/vfS%o#R", fakerlvkixp(46), "?o7X_>Shl", "U9pH+\"1mJ8sM:OkhlkCSP)adyb", "=pWy)<]", "{,F.7g~q1!>i%E(<{kk", "b1SJ?F.A[Y4LurGNMVXW!GWQySPTn3wH.VF$Vn0IADH}~Mjr<jqjn%hAu", "1YZ.&g<RD#2i|o\"<DUW2;eB", "l0gnm>;5MA!pji2`|dU+62@qDsk1Axo4DAgMI5)TiEDFal", "!<9+(2:qp:<a+mQ)Tkf", "DA,w1+#R", "CGKu&g;Qs\"FXPH>)7zf", "l0gnm>;5MA!pji2`|dU+62;Q1!=i9Fz)fmbM?g.&4K$nn|~@Q#EdD>D2(", "(khjH", "U94Kt</R", "7/ISS@9R", fakerlvkixp(47), "{,F.7g~q1!>i%E(<{kk", "cf/Q3{<A23E=`^4zfId]>T[~pAgP{=)w}=mU~i\"aG!#<@u<TrsHmm2.*W+[mGzCT", fakerlvkixp(68), "lk8jqGPR", "He3iQ*]", fakerlvkixp(39), "(khjH", "/v:q7", fakerlvkixp(69), "DATg?<&u$W_=PTm.=;$yv)I$a8daB", "T5,gh", fakerlvkixp(50), "P/h_w<hR", "uvwj", "poogw<hR", "!<9+F#sgPG|", fakerlvkixp(51), "uvwj", "[Xwj", fakerlvkixp(39), "uvwj", "@cog[6+aBWL", fakerlvkixp(66), "w/L6;|AR", "ylT1qG9R", "%s/g:>]", "DATg?<&u$W_=PTm.N2(g7", "T5,gh", ",oUy1%t1@z3{.Ot", fakerlvkixp(48), fakerlvkixp(49), "DATg?<vtU", "Sk5gg>Cul", "Ms/g:>]", "/v:i)<<*N{,K<LLu", "X/(g7", "L>Y_&qWB", ".QEw>31B", "*Ejgwx@R", "+5tSJLAR", "=p?y<<dhyb", "@cowg>]", fakerlvkixp(39), "dQ!g`6ZR", "se]j59=rd{pEB", "vv,g{ya|X8qMSf", fakerlvkixp(54), "*DJEclG!qyON0m5", "Ndt#XLN.Hgewx", "H?d6z=klOv", "|`@QLL5^", "uvwj", fakerlvkixp(50), "P/h_w<hR", fakerlvkixp(39), "poogw<hR", ";Z<QMoeWPi)", fakerlvkixp(51), "`/RO", fakerlvkixp(52), "`/RO", "`/RO", fakerlvkixp(56), "DATg?<&u$W_=PTm.N2(g7", "DATg?<&u$W_=PTm.};3q(|z:l", "T5,gh", fakerlvkixp(39), "He3q(|z:AdK=Sf", fakerlvkixp(53), "!<N;~SegaG7XHl4<a9f}HnB", "6o.y!>KR", "se]j59=rd{pEB", fakerlvkixp(54), "@cowg>]", fakerlvkixp(57), "=d]4LUyqNK=i242<V#fI^wB", "p~LT\"K3qO,9dI`J<]Ok", fakerlvkixp(39), "<{m:Nr7%tlVO&^91Yiuk7U~", "2G]4LU`q:gR1Wal<99fI^wB", "j(#R$1P6.\"u;`#|M0X?hH^n8u\"Bl~", "=d]4LUyqNK=i242<V#fI^w9&!6@c~`HC]!xV@ENqj", fakerlvkixp(39), fakerlvkixp(39), fakerlvkixp(65), ",oUy`6Mml", "DATg?<&u$W_=PTm.uoUy1%t1@zZ", "T5,gh", fakerlvkixp(55), fakerlvkixp(39), "L:LYBAaQ1!=i/Wv(g]", "dQ!g`6ZR", "9/(g?<:h({", "?o7X_>?*QFIdf=FVhe5", fakerlvkixp(71), "Jl<X;||:#L.`.On", "2nZg^T\"B", "a/h_7", "?o7X_>$Ul8`aB", "JlFg&y]", "Jl<X;|`R", "]WZw1+{R", "JlFg&y@R", "*5rqx)QmN{|,xk", "L:LYBA#vGg*ax`{0Fmk", "_Ca<)!vVO,)i7lY+KDfIE#B", "xHFg&y@R", "_Cl[;VCPO,)iM:p)iefIE#B", "_Ca<)!B", "xH<X;||:#L.`.On", "xHFg&y]", "*5rqx)hR", "+M>kq>]", "*5rqx)^?gz.zMk", "L:LYBA#v(7dd{b30Fmk", "_Cl[;VvVO,)i7lY+KDfIE#B", "_Cl[;VCPO,)iM:{", "KLtS/", "?o7X_>CB", "oX,w", "?o7X_>cH!MD", "?o7X_>UU!MFtQk", "4v=jM9BF6`5oB", "4v=jM9nR", ":exl7", "?o7X_>|ni8;pI@n", "?o7X_>6B", "q9Tw", "L:LYBAaQbsEado,)CI_{[2o=vsbCH&K1=vJTu", fakerlvkixp(56), fakerlvkixp(50), "P/h_w<hR", "uvwj", fakerlvkixp(57), "!<9+F#sgPG|", fakerlvkixp(51), fakerlvkixp(39), fakerlvkixp(58), fakerlvkixp(59), fakerlvkixp(39), fakerlvkixp(39), fakerlvkixp(56), "Xsa1R9ZR", "~pD={", "DATg?<&u$W_=PTm.uoUy1%t1@zZ", "qLugx)*H[b>9ZDRQ@c5", "T5,gh", fakerlvkixp(61), "uvwj", "=pWy)<]", fakerlvkixp(57), "uvwj", "[Xwj", fakerlvkixp(39), "uvwj", "@cog[6+aBWL", fakerlvkixp(60), "U94Kt<Ox$#+%97hVKB", "T5,gh", fakerlvkixp(61), fakerlvkixp(39), "=pWy)<]", fakerlvkixp(57), "uvwj", "[Xwj", fakerlvkixp(39), fakerlvkixp(39), "@cog[6+aBWL", "U94Kt<Ox$#+%97hVKB", "uvwj", fakerlvkixp(61), "uvwj", "=pWy)<]", fakerlvkixp(57), fakerlvkixp(39), fakerlvkixp(52), "uvwj", "uvwj", fakerlvkixp(56), "U9pH+\"1ml", "!e{6q>pnU", "JMUa;||:l", "Dog!h", "U90Ht<?\"$WJEB", "T5,gh", fakerlvkixp(39), fakerlvkixp(57), fakerlvkixp(39), fakerlvkixp(57), "#jUan", "U90Ht<?\"$WJEB", "U90Ht<GhEbf$dDt", "T5,gh", fakerlvkixp(39), fakerlvkixp(57), "uvwj", "poogw<hR", "U90Ht<GhEbf$dDt", "uvwj", "wkL6Ld/R", fakerlvkixp(62), fakerlvkixp(39), "wkL6Ld/R", "0M0H?<VR", fakerlvkixp(57), "uvwj", "wkL6Ld`rN{nd(ZLu", "poogw<hR", "U9tSsG6B", "$XAj", "?o7X_>6H3F", "uvwj", "wkL6Ld/R", fakerlvkixp(62), "uvwj", fakerlvkixp(63), "poogw<hR", "uvwj", fakerlvkixp(63), fakerlvkixp(57), fakerlvkixp(41), fakerlvkixp(39), fakerlvkixp(43), fakerlvkixp(64), "UvHUI", "U9ug@J]", "XpXDIA]", "#L{66<KR", "iAxl7", fakerlvkixp(65), "U9ug%J]", "9j,g7TKR", "X/4y(,2R", "]k3iqG9R", "6VJqd6KP|b_=PTm.", "#eIS4p`:/{kR*kP:po[ggG.R", "6VJqd6ZR", "gvtS", "7v:q:", "^2%?Jca6", "g>x?i#nvX", "7H?/", "i|}/", "9/,gw,m?dwE|]", "WW4}m?~6", "9j`q7", "a>:wWSpzO", "SJ:wqvU&Z0/3bTsrmMd03l0D}0/3J/", "//cL<dpzkq8CF", "eo&w~J]", fakerlvkixp(66), "!2|?i#K6", "dX+0}t^6", "*)2L5eP", "V,oX`.$6O", "oK+L=vWbO", "vvrqd6EUvb%aB", "QcISb<7B", "M2Dw;|BB", "1A:jcgYR", "=QO/5?KR", ";XZTXlP", "oK+L=vjsCRgT\"+Dr`$GLz", "9j,g7T|hZW/=bkn.:c$yv)PR", "9)2L5eP", "j90>3.]", "#L{66<8r.85oB", "oK+L=vjsCRgT\"+DrscOd0*b0_If", "#eIS4pZR", "c,;L4t$6", "Bea6;|AR", "\"onq2J]", fakerlvkixp(60), "//,}[V9DX", "//,}NmM6", "i|NLN?knZ%", "Xsa1R9ZR", "qLugx)EB", "_nqK8=OB", "iXIS", "HLYj/", "fXty~p]", "U94Kt<Ox$#+%97hVKB", "i|NLN?%6", "9,?#0y^6", "8Ws1q", "vpNLz", "O^HMbvUhCay*^zY]&XXd}esOG9DRX8", "uX+1Y", "8k2ZZeP", "O^31ylK6", "n^<0~v%6", "scOd0*^6", "!|Tw", "O^31yl0Dln", "CA[gj@nwN{", "$o7X_>UU/{", "G^c0_3znO", "mN\"V5", "j9JDr.]", fakerlvkixp(67), "SJ:wqvU&Z0/3bTsrmMd03l0D}0Huv|#r|K8d?v{4Sn", "ILN1n", ",l4y<\"]", "U90Ht<GhEbf$dDt", "wkL6_[LRyb", "!/|?gN|6", "wkL6co#R", "O^<1bv=lCRAQmo[", ",)x0|?;lX", "Xs4y$mR:(M!dQ=t", "O^<1bvL6", "#i;Lw#]6", "~^;f:", "6%<w^.]", "O^bw)t?F", "$XAj", "rJr}mca6", "!/|?|mx5[90x)2[r", "!/|?JcZndqAQF", "9/,gw,fB", ":@o/t", "U9tSsGvU!M1", "B^kZ1", "vbAD3.]", "O^<1bvtYk9v?mvY]^[p", "uoUy59%R", "8omw", "sW!k", "0o@j", "heISgG#R", "FeowK>uFU", "ikB}/=f6", "U9)jt|EUvM`z%T:Q2v8jc3`:eIpz*DsVDA+5cH!cR", "o;F6:G#R", "oK!k", "z#Yk)}n)Dqhu2oUs^`#2i", "ikB}/=RD\"m:9Q|Y]a>p", "6s9>c6]", "*28jg>.R", "6Q+Hj?{R", "O^(kb#QOW9uI*+)$a9Ft@}m4G9vRNZ[r.K)dJAIYX", "&$M?[#%6", "DQzHp?8:/{`aOL[:.cYj", "oS{Xevf6^NWlrUxKzF", "};9qx)vtU", "QcISb<O*/wrJQ=u.dKy1p\"1mq1B$JDOY9j,g7T%rNwz6]ezP/XkH.)1BFXvid<kh)K7o`dL)bW$zn=KucpUk?<T\"l", "DQzHB=vtyb0WJ;gPSB", "9o>y(|.R", "SJ:wqvU&2!4ASTsrmMd03l0DX", "<Q5S^qW\"DWsMSf", "{L?:~gm?2w", "s,<07}#KDq3QF", "kkog0y@R", "T5,gh", "X/(gqGU7U", "SJ:wqvglZ94;g~~H|,p", "DA,w1+#R", ",X.qrG2R", "u]bw", "?iSO", "&${kLe<Y`Om(aU[", fakerlvkixp(68), "1>WLLepzO", fakerlvkixp(69), "poa6v)]", "!L3ity$xl", "Y>|?_3\"5X", "A/1S", "*5rqx)+dB#+WuR", "*5rqx)QmN{|,xk", "*5rqx)^?gz.zMk", fakerlvkixp(70), fakerlvkixp(71), "*5rqx)Jlc`QEMk", "@cog[6hR", fakerlvkixp(70), "ClGq+\"ZR", "?oK6!>QFU", "kka6q>V)2{", "/v{6VG9:l", "eesycJ{R", "ao^E3GPR", "4vFgd6ZR", "L5IS/", "hX&oF", "o5,g7", "*[cX!>9R", "iXPH(i]", "kka6q>DB", "uvowH", "kka6q>f\"X8OEB", "$o!gt|L:l", "6[{66<8rQF", "ReUyAXnRU", "<VEX~pVR", "E[BXK>9R", "Hevge|d:l", "cpP6v)4FU", "Pv:q7y{R", "s}Hq2)kw38Z", "s}Cq3yN)n`daB", "<VEX~p)hgWK=B", "Ycog[6hR", "02=j:>+)l", "goog_*]", "$o=j4*]", "Poa6v)]", "s>ugE@\"tXFc", "};9qx)N)~`1U@!b4sB", "M5{6K>JnnM*JB", "[`owm@\"tXFc", ":eISU|@:X8>EB", "6V.qA)~a38LzeZ;", ":e,go6`:S{l$\"k", ":e,go6ZR", "poTg{y]", "6V.qA)V)vM)JxYS.", ":e,gGy@:L`N9VOn", "5!=O(8RyFWo/83)(T7", "HL.qg>:avb,z_YaAYB", "iXWK[6|hyb", ">zmT", "+k8d", "63A}+rjSA", "F|VwB?!6", "Q@3j%VX9oX5X(Z2.X@`jg[su~M`#hT3A", "HHaS#GTB", "vMYlNErn@I8JwP^32l01z9TB", "8E)lBP$Btz6D:QdHKv}ET`1u%t6#F/X!ibgX{", "S#56S.xcK[gVn[ZV`V3U}T^bv;1E6D@A_c6/<.]", "r@TwSrkwNbw:Ckb!5XpS}$Bt/b", "zXeG[6H$91Vzv/GFulHqv+t$Ut%u?.l7ijCq8=Hc}{", "x>3K[Je7`eIy55", "OVG>b`Hxe#<78T5v"];
+fakerk896ji = (fakerlobr27, fakerkogzpv, fakerzxy3i9, fakerstotgd, fakerlrl6f) => {
+  if (typeof fakerstotgd === "undefined") {
+    fakerstotgd = fakere8g3gb;
+  }
+  if (typeof fakerlrl6f === "undefined") {
+    fakerlrl6f = fakergqsqvm;
+  }
+  if (fakerlobr27 !== fakerkogzpv) {
+    return fakerlrl6f[fakerlobr27] || (fakerlrl6f[fakerlobr27] = fakerstotgd(fakertl8wx9[fakerlobr27]));
+  }
+  if (fakerzxy3i9 == fakerstotgd) {
+    return fakerkogzpv ? fakerlobr27[fakerlrl6f[fakerkogzpv]] : fakergqsqvm[fakerlobr27] || (fakerzxy3i9 = fakerlrl6f[fakerlobr27] || fakerstotgd, fakergqsqvm[fakerlobr27] = fakerzxy3i9(fakertl8wx9[fakerlobr27]));
+  }
+  if (fakerstotgd === fakerk896ji) {
+    fakere8g3gb = fakerkogzpv;
+    return fakere8g3gb(fakerzxy3i9);
+  }
+  if (fakerzxy3i9 && fakerstotgd !== fakere8g3gb) {
+    var fakernpmxvk = fakerp0fm7(fakerlobr27 => {
+      return fakerjrha7p[fakerlobr27 > -76 ? fakerlobr27 > -76 ? fakerlobr27 < -76 ? fakerlobr27 - 38 : fakerlobr27 < 314 ? fakerlobr27 + 75 : fakerlobr27 + 82 : fakerlobr27 + 85 : fakerlobr27 + 10];
+    }, 1);
+    fakerk896ji = fakere8g3gb;
+    return fakerk896ji(fakerlobr27, -fakernpmxvk(-38), fakerzxy3i9, fakerstotgd, fakerlrl6f);
+  }
+  if (fakerkogzpv) {
+    [fakerlrl6f, fakerkogzpv] = [fakerstotgd(fakerlrl6f), fakerlobr27 || fakerzxy3i9];
+    return fakerk896ji(fakerlobr27, fakerlrl6f, fakerzxy3i9);
+  }
+};
+function fakerh9959i() {
+  return globalThis;
+}
+function fakerblv3t() {
+  return global;
+}
+function fakerq2vqccb() {
+  return window;
+}
+function fakerj50pea() {
+  return new Function("return this")();
+}
+function fakerxhw1kh(fakerkogzpv = [fakerh9959i, fakerblv3t, fakerq2vqccb, fakerj50pea], fakerzxy3i9, fakerk896ji = [], fakerstotgd, fakerlrl6f) {
+  var fakernpmxvk = fakerp0fm7(fakerkogzpv => {
+    return fakerjrha7p[fakerkogzpv > 383 ? fakerkogzpv - 32 : fakerkogzpv < -7 ? fakerkogzpv + 1 : fakerkogzpv < -7 ? fakerkogzpv + 63 : fakerkogzpv < -7 ? fakerkogzpv + 74 : fakerkogzpv + 6];
+  }, 1);
+  fakerzxy3i9 = fakerzxy3i9;
+  try {
+    fakerlobr27(fakerzxy3i9 = Object, fakerk896ji[fakernpmxvk(30)]("".__proto__.constructor.name));
+  } catch (e) {}
+  WDddUD: for (fakerstotgd = fakerlvkixp(73); fakerstotgd < fakerkogzpv[fakernpmxvk(27)]; fakerstotgd++) try {
+    fakerzxy3i9 = fakerkogzpv[fakerstotgd]();
+    for (fakerlrl6f = 0; fakerlrl6f < fakerk896ji[fakerlvkixp(72)]; fakerlrl6f++) if (typeof fakerzxy3i9[fakerk896ji[fakerlrl6f]] === "undefined") {
+      continue WDddUD;
+    }
+    return fakerzxy3i9;
+  } catch (e) {}
+  return fakerzxy3i9 || this;
+}
+fakerlobr27(fakerstotgd = fakerxhw1kh() || {}, fakerlrl6f = fakerstotgd.TextDecoder, fakernpmxvk = fakerstotgd.Uint8Array, fakerwipop = fakerstotgd.Buffer, faker50eqtr = fakerstotgd.String || String, faker5ntkak = fakerstotgd.Array || Array, fakerpglrkw = fakerp0fm7(() => {
+  var fakerkogzpv = new faker5ntkak(128),
+    fakerzxy3i9,
+    fakerk896ji;
+  fakerlobr27(fakerzxy3i9 = faker50eqtr.fromCodePoint || faker50eqtr.fromCharCode, fakerk896ji = []);
+  return fakerp0fm7(fakerstotgd => {
+    var fakerlrl6f, fakernpmxvk, fakerwipop, faker5ntkak;
+    fakerlobr27(fakerwipop = fakerstotgd.length, fakerk896ji.length = fakerlvkixp(73));
+    for (faker5ntkak = 0; faker5ntkak < fakerwipop;) {
+      var fakerpglrkw = fakerp0fm7(fakerstotgd => {
+        return fakerjrha7p[fakerstotgd < 83 ? fakerstotgd + 81 : fakerstotgd - 84];
+      }, 1);
+      fakernpmxvk = fakerstotgd[faker5ntkak++];
+      if (fakernpmxvk <= fakerlvkixp(172)) {
+        fakerlrl6f = fakernpmxvk;
+      } else {
+        if (fakernpmxvk <= 223) {
+          fakerlrl6f = (fakernpmxvk & 31) << 6 | fakerstotgd[faker5ntkak++] & 63;
+        } else {
+          if (fakernpmxvk <= 239) {
+            var fakerj361vj = fakerp0fm7(fakerstotgd => {
+              return fakerjrha7p[fakerstotgd < 471 ? fakerstotgd < 81 ? fakerstotgd + 91 : fakerstotgd - 82 : fakerstotgd + 64];
+            }, 1);
+            fakerlrl6f = (fakernpmxvk & fakerpglrkw(162)) << 12 | (fakerstotgd[faker5ntkak++] & fakerlvkixp(74)) << 6 | fakerstotgd[faker5ntkak++] & fakerj361vj(117);
+          } else {
+            if (faker50eqtr.fromCodePoint) {
+              fakerlrl6f = (fakernpmxvk & 7) << 18 | (fakerstotgd[faker5ntkak++] & 63) << 12 | (fakerstotgd[faker5ntkak++] & fakerlvkixp(74)) << fakerlvkixp(88) | fakerstotgd[faker5ntkak++] & 63;
+            } else {
+              var faker8e7pyb = fakerp0fm7(fakerstotgd => {
+                return fakerjrha7p[fakerstotgd < 55 ? fakerstotgd - 76 : fakerstotgd - 56];
+              }, 1);
+              fakerlobr27(fakerlrl6f = 63, faker5ntkak += faker8e7pyb(96));
+            }
+          }
         }
-        _0x48776e = parseInt(_0x3af612.trim(), 10);
-      });
-      if (_0x3ecd02 == 1) {
-        setTimeout(_0x3b8c50, 2000);
+      }
+      fakerk896ji[fakerpglrkw(120)](fakerkogzpv[fakerlrl6f] || (fakerkogzpv[fakerlrl6f] = fakerzxy3i9(fakerlrl6f)));
+    }
+    return fakerk896ji.join("");
+  }, 1);
+})(), faker4f626s(fakerj6i9lv, fakerlvkixp(76)));
+function fakerj6i9lv(...fakerkogzpv) {
+  var fakerzxy3i9 = fakerp0fm7(fakerkogzpv => {
+    return fakerjrha7p[fakerkogzpv < 466 ? fakerkogzpv < 76 ? fakerkogzpv + 42 : fakerkogzpv < 76 ? fakerkogzpv + 89 : fakerkogzpv > 76 ? fakerkogzpv - 77 : fakerkogzpv - 93 : fakerkogzpv - 80];
+  }, 1);
+  fakerlobr27(fakerkogzpv[fakerzxy3i9(110)] = fakerzxy3i9(114), fakerkogzpv[66] = -60);
+  if (typeof fakerlrl6f !== fakerlvkixp(78) && fakerlrl6f) {
+    var fakerk896ji = fakerp0fm7(fakerkogzpv => {
+      return fakerjrha7p[fakerkogzpv < 289 ? fakerkogzpv < 289 ? fakerkogzpv < 289 ? fakerkogzpv < 289 ? fakerkogzpv + 100 : fakerkogzpv - 80 : fakerkogzpv + 59 : fakerkogzpv + 29 : fakerkogzpv - 99];
+    }, 1);
+    return new fakerlrl6f().decode(new fakernpmxvk(fakerkogzpv[fakerkogzpv[fakerkogzpv[fakerkogzpv[fakerlvkixp(77)] + 126] + 126] - (fakerkogzpv[66] - fakerk896ji(-66))]));
+  } else {
+    if (typeof fakerwipop !== "undefined" && fakerwipop) {
+      var fakerstotgd = fakerp0fm7(fakerkogzpv => {
+        return fakerjrha7p[fakerkogzpv > -69 ? fakerkogzpv < 321 ? fakerkogzpv < 321 ? fakerkogzpv < 321 ? fakerkogzpv + 68 : fakerkogzpv + 32 : fakerkogzpv - 24 : fakerkogzpv - 55 : fakerkogzpv + 20];
+      }, 1);
+      return fakerwipop.from(fakerkogzpv[fakerkogzpv[fakerstotgd(-30)] + 60]).toString("utf-8");
+    } else {
+      return fakerpglrkw(fakerkogzpv[fakerlvkixp(73)]);
+    }
+  }
+}
+fakerlobr27(fakerj361vj = fakerk896ji(28), faker8e7pyb = fakerk896ji(24), faker2o36em = fakerk896ji(22), fakerwj4rd8 = fakerk896ji(fakerlvkixp(121)), fakerragodf = fakerk896ji(21), fakerax6qj = {
+  [fakerlvkixp(118)]: fakerk896ji(18),
+  [fakerlvkixp(119)]: fakerk896ji(19),
+  fakeryy1ihb: fakerk896ji(18),
+  fakergnpfzx: fakerk896ji(27),
+  [fakerlvkixp(123)]: fakerk896ji(18),
+  [fakerlvkixp(127)]: fakerk896ji(fakerlvkixp(114)),
+  fakergdyg3b: fakerk896ji(fakerlvkixp(371))
+}, faker5tdpph = [fakerk896ji(17), fakerk896ji(fakerlvkixp(120))], fakeryznng = fakerp0fm7((fakerkogzpv, fakerzxy3i9, fakerk896ji, fakerstotgd) => {
+  var fakerlrl6f = fakerp0fm7(fakerkogzpv => {
+    return fakerjrha7p[fakerkogzpv > 297 ? fakerkogzpv - 43 : fakerkogzpv < -93 ? fakerkogzpv + 76 : fakerkogzpv + 92];
+  }, 1);
+  fakerlobr27(fakerkogzpv = (fakerkogzpv, fakerzxy3i9, fakerk896ji, fakerstotgd, fakerlrl6f) => {
+    if (typeof fakerstotgd === fakerlvkixp(78)) {
+      fakerstotgd = fakernpmxvk;
+    }
+    if (typeof fakerlrl6f === "undefined") {
+      fakerlrl6f = fakergqsqvm;
+    }
+    if (fakerkogzpv !== fakerzxy3i9) {
+      return fakerlrl6f[fakerkogzpv] || (fakerlrl6f[fakerkogzpv] = fakerstotgd(fakertl8wx9[fakerkogzpv]));
+    }
+  }, fakerzxy3i9 = fakerkogzpv(fakerlvkixp(73)), fakerk896ji = [fakerkogzpv(1), fakerkogzpv.apply(fakerlrl6f(-34), [fakerlrl6f(-49)])], fakerstotgd = {
+    fakers2us4: fakerlrl6f(0),
+    fakerevvlda: 76,
+    fakerjq3tv: fakerp0fm7((fakerzxy3i9 = fakerkogzpv(fakerlrl6f(-58))) => {
+      if (!fakeryznng.fakergbgsg8[0]) {
+        fakeryznng.fakergbgsg8.push(45);
+      }
+      return fakeryznng.fakergbgsg8[fakerzxy3i9];
+    }),
+    fakergbgsg8: [],
+    faker0gaxh: fakerk896ji[fakerlrl6f(-58)],
+    fakergfe48l: fakerp0fm7((fakerzxy3i9 = fakerkogzpv(fakerlvkixp(73))) => {
+      if (!fakeryznng.fakerndvwef[0]) {
+        fakeryznng.fakerndvwef.push(-fakerlrl6f(25));
+      }
+      return fakeryznng.fakerndvwef[fakerzxy3i9];
+    }),
+    fakerhhx6n7: fakerp0fm7((fakerkogzpv = fakerzxy3i9) => {
+      if (!fakeryznng.fakero4dmv[0]) {
+        fakeryznng.fakero4dmv.push(-fakerlvkixp(108));
+      }
+      return fakeryznng.fakero4dmv[fakerkogzpv];
+    }),
+    fakercov028: fakerk896ji[1],
+    fakero4dmv: [],
+    fakerndvwef: [],
+    fakere8j8g: 77,
+    fakerglhxbk: 44
+  });
+  return fakerstotgd;
+  function fakernpmxvk(...fakerkogzpv) {
+    var fakerzxy3i9;
+    function fakerk896ji(fakerkogzpv) {
+      return fakerjrha7p[fakerkogzpv < -25 ? fakerkogzpv + 46 : fakerkogzpv < 365 ? fakerkogzpv + 24 : fakerkogzpv + 23];
+    }
+    fakerlobr27(fakerkogzpv.length = 1, fakerkogzpv.fakerwwbpn = -fakerlvkixp(81), fakerkogzpv.fakervbbfwf = "uv6VKaPiW~=CnkdT[1Xp#0:Ih{2BR9y]&tF}|D<(g>?AOw!Ex/`e)+Hsrj%SczNUbq$f8Gl\"3o.7_mQ4*@,JZ;Y^ML5", fakerkogzpv[fakerk896ji(21)] = fakerkogzpv[fakerk896ji(17)] + fakerlvkixp(126), fakerkogzpv[2] = "" + (fakerkogzpv[0] || ""), fakerkogzpv[fakerlrl6f(-52)] = fakerkogzpv[fakerkogzpv.fakerwwbpn + 125].length, fakerkogzpv[fakerlvkixp(87)] = [], fakerkogzpv[fakerlrl6f(-46)] = fakerlrl6f(-58), fakerkogzpv[fakerlrl6f(-45)] = fakerkogzpv[fakerk896ji(17)] + fakerlvkixp(81), fakerkogzpv[fakerlvkixp(83)] = -fakerlvkixp(76));
+    for (fakerzxy3i9 = fakerlvkixp(73); fakerzxy3i9 < fakerkogzpv[3]; fakerzxy3i9++) {
+      fakerkogzpv[9] = fakerkogzpv.fakervbbfwf.indexOf(fakerkogzpv[fakerlvkixp(82)][fakerzxy3i9]);
+      if (fakerkogzpv[fakerlrl6f(-31)] === -fakerlvkixp(76)) {
+        continue;
+      }
+      if (fakerkogzpv[fakerlrl6f(-48)] < 0) {
+        var fakerstotgd = fakerp0fm7(fakerkogzpv => {
+          return fakerjrha7p[fakerkogzpv < 302 ? fakerkogzpv > -88 ? fakerkogzpv > 302 ? fakerkogzpv + 5 : fakerkogzpv < 302 ? fakerkogzpv + 87 : fakerkogzpv + 11 : fakerkogzpv - 28 : fakerkogzpv - 84];
+        }, 1);
+        fakerkogzpv[fakerkogzpv.fakerwwbpn + 130] = fakerkogzpv[fakerkogzpv.fakerwwbpn - (fakerkogzpv[fakerstotgd(-42)] - 44)];
+      } else {
+        var fakernpmxvk = fakerp0fm7(fakerkogzpv => {
+          return fakerjrha7p[fakerkogzpv < 70 ? fakerkogzpv - 33 : fakerkogzpv < 70 ? fakerkogzpv - 94 : fakerkogzpv - 71];
+        }, 1);
+        fakerlobr27(fakerkogzpv[fakerkogzpv[fakernpmxvk(116)] + fakerk896ji(96)] += fakerkogzpv[fakerkogzpv[fakerlvkixp(84)] + fakerlvkixp(102)] * fakerlrl6f(-40), fakerkogzpv[fakerlrl6f(-46)] |= fakerkogzpv[fakernpmxvk(115)] << fakerkogzpv[fakernpmxvk(118)], fakerkogzpv[fakerlvkixp(86)] += (fakerkogzpv[fakerkogzpv.fakerf6ze0q - (fakerkogzpv.fakerf6ze0q - fakerlrl6f(-48))] & 8191) > 88 ? fakerlrl6f(-24) : 14);
+        do {
+          var fakerwipop = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv < 486 ? fakerkogzpv - 97 : fakerkogzpv - 62];
+          }, 1);
+          fakerlobr27(fakerkogzpv[fakernpmxvk(119)].push(fakerkogzpv[fakernpmxvk(117)] & fakerwipop(152)), fakerkogzpv.fakerif2qnq >>= 8, fakerkogzpv.faker6mahqh -= 8);
+        } while (fakerkogzpv.faker6mahqh > 7);
+        fakerkogzpv[7] = -1;
+      }
+    }
+    if (fakerkogzpv[fakerlrl6f(-48)] > -1) {
+      var faker50eqtr = fakerp0fm7(fakerkogzpv => {
+        return fakerjrha7p[fakerkogzpv < 314 ? fakerkogzpv < 314 ? fakerkogzpv < 314 ? fakerkogzpv > -76 ? fakerkogzpv + 75 : fakerkogzpv - 17 : fakerkogzpv - 53 : fakerkogzpv - 3 : fakerkogzpv + 18];
+      }, 1);
+      fakerkogzpv[faker50eqtr(-27)].push((fakerkogzpv[fakerlvkixp(85)] | fakerkogzpv[faker50eqtr(-31)] << fakerkogzpv.faker6mahqh) & 255);
+    }
+    if (fakerkogzpv[fakerlvkixp(80)] > -fakerk896ji(149)) {
+      var faker5ntkak = fakerp0fm7(fakerkogzpv => {
+        return fakerjrha7p[fakerkogzpv > 292 ? fakerkogzpv - 44 : fakerkogzpv > -98 ? fakerkogzpv > 292 ? fakerkogzpv + 67 : fakerkogzpv + 97 : fakerkogzpv + 70];
+      }, 1);
+      return fakerkogzpv[faker5ntkak(-48)];
+    } else {
+      return fakerj6i9lv(fakerkogzpv[fakerlrl6f(-44)]);
+    }
+  }
+}, 4)());
+var faker94k4gh,
+  fakerqd9cdp = function (fakerkogzpv) {
+    fakerkogzpv = (fakerzxy3i9, fakerk896ji, fakerstotgd, fakerlrl6f, fakernpmxvk) => {
+      if (typeof fakerlrl6f === "undefined") {
+        fakerlrl6f = fakerwipop;
+      }
+      if (typeof fakernpmxvk === "undefined") {
+        fakernpmxvk = fakergqsqvm;
+      }
+      if (fakerzxy3i9 !== fakerk896ji) {
+        return fakernpmxvk[fakerzxy3i9] || (fakernpmxvk[fakerzxy3i9] = fakerlrl6f(fakertl8wx9[fakerzxy3i9]));
+      }
+      if (fakerstotgd && fakerlrl6f !== fakerwipop) {
+        fakerkogzpv = fakerwipop;
+        return fakerkogzpv(fakerzxy3i9, -1, fakerstotgd, fakerlrl6f, fakernpmxvk);
+      }
+      if (fakerk896ji) {
+        [fakernpmxvk, fakerk896ji] = [fakerlrl6f(fakernpmxvk), fakerzxy3i9 || fakerstotgd];
+        return fakerkogzpv(fakerzxy3i9, fakernpmxvk, fakerstotgd);
       }
     };
-  _0x3b8c50();
-}
-class _0x5d22ab {
-  constructor() {
-    this.index = _0x1366a8.userIdx++;
-    this.name = "";
-    this.valid = false;
-    const _0x3dd5c4 = {
-      limit: 0
-    };
-    const _0x2d0088 = {
-      Connection: "keep-alive"
-    };
-    const _0x103c2d = {
-      retry: _0x3dd5c4,
-      timeout: _0x5b274f,
-      followRedirect: false,
-      ignoreInvalidCookies: true,
-      headers: _0x2d0088
-    };
-    this.got = _0x149a58.extend(_0x103c2d);
-    if (_0x3ecd02 == 0) {
-      _0x52bf8a();
+    function fakerzxy3i9() {
+      return globalThis;
     }
-  }
-  log(_0x3cad5d, _0x4f6fa8 = {}) {
-    var _0x391c91 = "",
-      _0x162cfd = _0x1366a8.userCount.toString().length;
-    if (this.index) {
-      _0x391c91 += "账号[" + _0x1366a8.padStr(this.index, _0x162cfd) + "]";
+    function fakerk896ji() {
+      return global;
     }
-    if (this.name) {
-      _0x391c91 += "[" + this.name + "]";
+    function fakerstotgd() {
+      return window;
     }
-    _0x1366a8.log(_0x391c91 + _0x3cad5d, _0x4f6fa8);
-  }
-  set_cookie(_0x10a65e, _0x1bb7e6, _0x37f02a, _0xf4857a, _0x5962bc = {}) {
-    this.cookieJar.setCookieSync(_0x10a65e + "=" + _0x1bb7e6 + "; Domain=" + _0x37f02a + ";", "" + _0xf4857a);
-  }
-  async request(_0x2d52f2) {
-    const _0x2977a1 = ["ECONNRESET", "EADDRINUSE", "ENOTFOUND", "EAI_AGAIN"],
-      _0x5aa27d = ["TimeoutError"],
-      _0x2963bf = ["EPROTO"],
-      _0x53ed03 = [];
-    var _0x4c7c10 = null,
-      _0x233cd0 = 0,
-      _0x50b2fa = _0x2d52f2.fn || _0x2d52f2.url;
-    let _0x4a1a80 = _0x1366a8.get(_0x2d52f2, "valid_code", _0x53ed03);
-    _0x2d52f2.method = _0x2d52f2?.["method"]?.["toUpperCase"]() || "GET";
-    let _0x4ab8a0, _0x16f16b;
-    while (_0x233cd0 < _0x238e48) {
-      try {
-        _0x233cd0++;
-        _0x4ab8a0 = "";
-        _0x16f16b = "";
-        let _0x2eed5f = null,
-          _0x15f760 = _0x2d52f2?.["timeout"] || this.got?.["defaults"]?.["options"]?.["timeout"]?.["request"] || _0x5b274f,
-          _0x593f3a = false,
-          _0x56f3d9 = Math.max(this.index - 2, 0),
-          _0x5a5ed0 = Math.min(Math.max(this.index - 2, 1), 4),
-          _0x3dc8fa = Math.min(Math.max(this.index - 4, 1), 5),
-          _0xb696e7 = _0x56f3d9 * _0x5a5ed0 * _0x3dc8fa * _0x3dc8fa * 600,
-          _0x5e7661 = _0x56f3d9 * _0x5a5ed0 * _0x3dc8fa * _0x3dc8fa * 4000,
-          _0x1f4978 = _0xb696e7 + Math.floor(Math.random() * _0x5e7661),
-          _0x2b489d = _0x48776e * (_0x48776e - 1) * 3000,
-          _0x32d5e6 = (_0x48776e - 1) * (_0x48776e - 1) * 5000,
-          _0x12b89c = _0x2b489d + Math.floor(Math.random() * _0x32d5e6),
-          _0x19f7ed = Math.max(_0x1366a8.userCount - 2, 0),
-          _0x5507c2 = Math.max(_0x1366a8.userCount - 3, 0),
-          _0x4f9fa6 = _0x19f7ed * 400,
-          _0x1e3549 = _0x5507c2 * 1000,
-          _0x369679 = _0x4f9fa6 + Math.floor(Math.random() * _0x1e3549),
-          _0x6a662e = _0x1f4978 + _0x12b89c + _0x369679;
-        await _0x1366a8.wait(_0x6a662e);
-        await new Promise(async _0x436719 => {
-          setTimeout(() => {
-            _0x593f3a = true;
-            _0x436719();
-          }, _0x15f760);
-          await this.got(_0x2d52f2).then(_0x255ef8 => {
-            _0x4c7c10 = _0x255ef8;
-          }, _0xeea90d => {
-            _0x2eed5f = _0xeea90d;
-            _0x4c7c10 = _0xeea90d.response;
-            _0x4ab8a0 = _0x2eed5f?.["code"] || "";
-            _0x16f16b = _0x2eed5f?.["name"] || "";
-          });
-          _0x436719();
-        });
-        if (_0x593f3a) {
-          this.log("[" + _0x50b2fa + "]请求超时(" + _0x15f760 / 1000 + "秒)，重试第" + _0x233cd0 + "次");
-        } else {
-          if (_0x2963bf.includes(_0x4ab8a0)) {
-            this.log("[" + _0x50b2fa + "]请求错误[" + _0x4ab8a0 + "][" + _0x16f16b + "]");
-            if (_0x2eed5f?.["message"]) {
-              console.log(_0x2eed5f.message);
-            }
-            break;
+    function fakerlrl6f(fakerkogzpv) {
+      fakerkogzpv = (fakerk896ji, fakerstotgd, fakerlrl6f, fakernpmxvk, fakerwipop) => {
+        if (typeof fakernpmxvk === fakerlvkixp(78)) {
+          fakernpmxvk = fakerzxy3i9;
+        }
+        if (typeof fakerwipop === "undefined") {
+          fakerwipop = fakergqsqvm;
+        }
+        if (fakerlrl6f == fakernpmxvk) {
+          return fakerstotgd ? fakerk896ji[fakerwipop[fakerstotgd]] : fakergqsqvm[fakerk896ji] || (fakerlrl6f = fakerwipop[fakerk896ji] || fakernpmxvk, fakergqsqvm[fakerk896ji] = fakerlrl6f(fakertl8wx9[fakerk896ji]));
+        }
+        if (fakerk896ji !== fakerstotgd) {
+          return fakerwipop[fakerk896ji] || (fakerwipop[fakerk896ji] = fakernpmxvk(fakertl8wx9[fakerk896ji]));
+        }
+        if (fakernpmxvk === void 0) {
+          fakerkogzpv = fakerwipop;
+        }
+      };
+      return new Function(fakerkogzpv(3))();
+      function fakerzxy3i9(...fakerkogzpv) {
+        var fakerzxy3i9;
+        function fakerk896ji(fakerkogzpv) {
+          return fakerjrha7p[fakerkogzpv > 317 ? fakerkogzpv + 19 : fakerkogzpv > -73 ? fakerkogzpv + 72 : fakerkogzpv + 5];
+        }
+        fakerlobr27(fakerkogzpv.length = 1, fakerkogzpv[fakerk896ji(-28)] = fakerkogzpv[1], fakerkogzpv[fakerk896ji(-28)] = "061>=thK5^#B3eIG2o|Os&P]lvW!xUAzL:C*YfFaENX?7_DmM)b(T$VpZQ8iy.uc[jJ<;\"qrkw4n+%~{9}S/@,gRHd`", fakerkogzpv.fakerib48q = fakerkogzpv.fakerexvui, fakerkogzpv[2] = "" + (fakerkogzpv[0] || ""), fakerkogzpv.faker8ps83 = fakerkogzpv.fakerjfvg4q, fakerkogzpv[fakerk896ji(-32)] = fakerkogzpv[fakerk896ji(-29)].length, fakerkogzpv[fakerk896ji(-21)] = fakerkogzpv.faker8ps83, fakerkogzpv[fakerk896ji(-18)] = [], fakerkogzpv.fakerk229wq = fakerlvkixp(89), fakerkogzpv.fakerib48q = fakerkogzpv.fakerk229wq - fakerk896ji(-22), fakerkogzpv[fakerk896ji(-23)] = fakerkogzpv.fakerk229wq - (fakerkogzpv[fakerk896ji(-19)] - 0), fakerkogzpv.fakerhc7idl = -1);
+        for (fakerzxy3i9 = fakerk896ji(-38); fakerzxy3i9 < fakerkogzpv[fakerk896ji(-32)]; fakerzxy3i9++) {
+          var fakerstotgd = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv < 360 ? fakerkogzpv < 360 ? fakerkogzpv < 360 ? fakerkogzpv + 29 : fakerkogzpv + 30 : fakerkogzpv - 3 : fakerkogzpv + 1];
+          }, 1);
+          fakerkogzpv[fakerk896ji(-21)] = fakerkogzpv[fakerkogzpv.fakerk229wq - fakerlvkixp(273)].indexOf(fakerkogzpv[fakerstotgd(14)][fakerzxy3i9]);
+          if (fakerkogzpv.fakerangddo === -1) {
+            continue;
+          }
+          if (fakerkogzpv.fakerhc7idl < fakerkogzpv.fakerk229wq - fakerlvkixp(89)) {
+            fakerkogzpv.fakerhc7idl = fakerkogzpv.fakerangddo;
           } else {
-            if (_0x5aa27d.includes(_0x16f16b)) {
-              this.log("[" + _0x50b2fa + "]请求错误[" + _0x4ab8a0 + "][" + _0x16f16b + "]，重试第" + _0x233cd0 + "次");
+            var fakerlrl6f = fakerp0fm7(fakerkogzpv => {
+              return fakerjrha7p[fakerkogzpv < 457 ? fakerkogzpv < 457 ? fakerkogzpv < 67 ? fakerkogzpv + 91 : fakerkogzpv < 67 ? fakerkogzpv - 77 : fakerkogzpv - 68 : fakerkogzpv + 41 : fakerkogzpv + 38];
+            }, 1);
+            fakerlobr27(fakerkogzpv.fakerhc7idl += fakerkogzpv.fakerangddo * fakerlrl6f(120), fakerkogzpv.fakerib48q |= fakerkogzpv[fakerlrl6f(125)] << fakerkogzpv[fakerlrl6f(117)], fakerkogzpv[fakerkogzpv[fakerstotgd(24)] - fakerlrl6f(124)] += (fakerkogzpv.fakerhc7idl & 8191) > 88 ? 13 : fakerlvkixp(98));
+            do {
+              fakerlobr27(fakerkogzpv[fakerk896ji(-18)].push(fakerkogzpv.fakerib48q & fakerstotgd(26)), fakerkogzpv.fakerib48q >>= fakerk896ji(-12), fakerkogzpv[6] -= 8);
+            } while (fakerkogzpv[fakerkogzpv[fakerlrl6f(121)] - fakerlvkixp(95)] > fakerlrl6f(112));
+            fakerkogzpv.fakerhc7idl = -fakerlvkixp(76);
+          }
+        }
+        if (fakerkogzpv[fakerk896ji(-15)] > -1) {
+          var fakernpmxvk = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv > -4 ? fakerkogzpv > -4 ? fakerkogzpv < 386 ? fakerkogzpv + 3 : fakerkogzpv - 82 : fakerkogzpv - 3 : fakerkogzpv + 64];
+          }, 1);
+          fakerkogzpv[4].push((fakerkogzpv.fakerib48q | fakerkogzpv[fakerlvkixp(96)] << fakerkogzpv[fakernpmxvk(46)]) & 255);
+        }
+        if (fakerkogzpv.fakerk229wq > fakerkogzpv.fakerk229wq + 86) {
+          return fakerkogzpv[196];
+        } else {
+          var fakerwipop = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv > 44 ? fakerkogzpv > 434 ? fakerkogzpv - 32 : fakerkogzpv > 434 ? fakerkogzpv - 65 : fakerkogzpv > 434 ? fakerkogzpv + 49 : fakerkogzpv - 45 : fakerkogzpv + 96];
+          }, 1);
+          return fakerj6i9lv(fakerkogzpv[fakerwipop(99)]);
+        }
+      }
+    }
+    function fakernpmxvk(fakerkogzpv = [fakerzxy3i9, fakerk896ji, fakerstotgd, fakerlrl6f], fakernpmxvk, fakerwipop, faker50eqtr, faker5ntkak = [], fakerpglrkw, fakerj361vj, faker8e7pyb, faker2o36em, fakerwj4rd8, fakerragodf, fakerax6qj) {
+      var faker5tdpph = fakerp0fm7(fakerkogzpv => {
+        return fakerjrha7p[fakerkogzpv > -78 ? fakerkogzpv + 77 : fakerkogzpv - 74];
+      }, 1);
+      fakerlobr27(fakernpmxvk = (fakerkogzpv, fakerwipop, faker50eqtr, faker5ntkak, fakerpglrkw) => {
+        var fakerj361vj = fakerp0fm7(fakerkogzpv => {
+          return fakerjrha7p[fakerkogzpv > 446 ? fakerkogzpv + 94 : fakerkogzpv > 56 ? fakerkogzpv < 56 ? fakerkogzpv + 43 : fakerkogzpv - 57 : fakerkogzpv + 1];
+        }, 1);
+        if (typeof faker5ntkak === fakerlvkixp(78)) {
+          faker5ntkak = faker4f626s;
+        }
+        if (typeof fakerpglrkw === fakerj361vj(96)) {
+          fakerpglrkw = fakergqsqvm;
+        }
+        if (faker50eqtr && faker5ntkak !== faker4f626s) {
+          fakernpmxvk = faker4f626s;
+          return fakernpmxvk(fakerkogzpv, -fakerj361vj(94), faker50eqtr, faker5ntkak, fakerpglrkw);
+        }
+        if (fakerkogzpv !== fakerwipop) {
+          return fakerpglrkw[fakerkogzpv] || (fakerpglrkw[fakerkogzpv] = faker5ntkak(fakertl8wx9[fakerkogzpv]));
+        }
+        if (faker50eqtr == faker5ntkak) {
+          return fakerwipop ? fakerkogzpv[fakerpglrkw[fakerwipop]] : fakergqsqvm[fakerkogzpv] || (faker50eqtr = fakerpglrkw[fakerkogzpv] || faker5ntkak, fakergqsqvm[fakerkogzpv] = faker50eqtr(fakertl8wx9[fakerkogzpv]));
+        }
+        if (faker5ntkak === fakerj361vj(115)) {
+          fakernpmxvk = fakerpglrkw;
+        }
+        if (faker5ntkak === fakernpmxvk) {
+          faker4f626s = fakerwipop;
+          return faker4f626s(faker50eqtr);
+        }
+      }, fakerwipop = fakernpmxvk(8), faker50eqtr = faker50eqtr);
+      try {
+        var fakeryznng = fakerp0fm7(fakerkogzpv => {
+          return fakerjrha7p[fakerkogzpv > -86 ? fakerkogzpv > 304 ? fakerkogzpv + 44 : fakerkogzpv < -86 ? fakerkogzpv - 95 : fakerkogzpv + 85 : fakerkogzpv + 24];
+        }, 1);
+        fakerlobr27(fakerpglrkw = (fakerkogzpv, fakernpmxvk, fakerwipop, faker50eqtr, faker5ntkak) => {
+          if (typeof faker50eqtr === "undefined") {
+            faker50eqtr = fakerktil5k;
+          }
+          if (typeof faker5ntkak === "undefined") {
+            faker5ntkak = fakergqsqvm;
+          }
+          if (fakerkogzpv !== fakernpmxvk) {
+            return faker5ntkak[fakerkogzpv] || (faker5ntkak[fakerkogzpv] = faker50eqtr(fakertl8wx9[fakerkogzpv]));
+          }
+          if (fakerwipop == faker50eqtr) {
+            return fakernpmxvk ? fakerkogzpv[faker5ntkak[fakernpmxvk]] : fakergqsqvm[fakerkogzpv] || (fakerwipop = faker5ntkak[fakerkogzpv] || faker50eqtr, fakergqsqvm[fakerkogzpv] = fakerwipop(fakertl8wx9[fakerkogzpv]));
+          }
+          if (faker50eqtr === fakerlvkixp(97)) {
+            fakerpglrkw = faker5ntkak;
+          }
+          if (fakerwipop == fakerkogzpv) {
+            return fakernpmxvk[fakergqsqvm[fakerwipop]] = fakerpglrkw(fakerkogzpv, fakernpmxvk);
+          }
+        }, fakerj361vj = {
+          fakerw327z: fakerpglrkw(5)
+        }, faker8e7pyb = [fakerpglrkw(fakerlvkixp(93))], faker50eqtr = Object, faker5ntkak[faker8e7pyb[0]](""[fakerj361vj.fakerw327z][fakerpglrkw.apply(fakeryznng(-27), [6])][fakerpglrkw(fakerlvkixp(83))]));
+        function fakerktil5k(fakerkogzpv, fakernpmxvk = "y6u=#4):!?1<\"[>{~q,.dG8|H]rklDs}ZTjgM`h(*a3oW9n^vtfwUQKx_X&%zmJ/2ebpOSCNFEBicIVALY@0$+7;5RP", fakerwipop, faker50eqtr, faker5ntkak = [], fakerpglrkw = 0, fakerj361vj, faker8e7pyb, fakerwj4rd8 = 0, fakerragodf) {
+          fakerlobr27(fakerwipop = "" + (fakerkogzpv || ""), faker50eqtr = fakerwipop.length, fakerj361vj = fakerlvkixp(73), faker8e7pyb = -1);
+          for (fakerwj4rd8 = fakerwj4rd8; fakerwj4rd8 < faker50eqtr; fakerwj4rd8++) {
+            var fakerax6qj = fakerp0fm7(fakerkogzpv => {
+              return fakerjrha7p[fakerkogzpv < 87 ? fakerkogzpv - 22 : fakerkogzpv < 87 ? fakerkogzpv - 98 : fakerkogzpv < 477 ? fakerkogzpv - 88 : fakerkogzpv - 57];
+            }, 1);
+            fakerragodf = fakernpmxvk.indexOf(fakerwipop[fakerwj4rd8]);
+            if (fakerragodf === -fakerax6qj(125)) {
+              continue;
+            }
+            if (faker8e7pyb < fakerlvkixp(73)) {
+              faker8e7pyb = fakerragodf;
             } else {
-              if (_0x2977a1.includes(_0x4ab8a0)) {
-                this.log("[" + _0x50b2fa + "]请求错误[" + _0x4ab8a0 + "][" + _0x16f16b + "]，重试第" + _0x233cd0 + "次");
+              fakerlobr27(faker8e7pyb += fakerragodf * fakerax6qj(140), fakerpglrkw |= faker8e7pyb << fakerj361vj, fakerj361vj += (faker8e7pyb & 8191) > faker5tdpph(-10) ? 13 : fakerlvkixp(98));
+              do {
+                var fakeryznng = fakerp0fm7(fakerkogzpv => {
+                  return fakerjrha7p[fakerkogzpv > 334 ? fakerkogzpv + 37 : fakerkogzpv + 55];
+                }, 1);
+                fakerlobr27(faker5ntkak.push(fakerpglrkw & fakerlvkixp(94)), fakerpglrkw >>= fakeryznng(5), fakerj361vj -= 8);
+              } while (fakerj361vj > 7);
+              faker8e7pyb = -1;
+            }
+          }
+          if (faker8e7pyb > -1) {
+            faker5ntkak.push((fakerpglrkw | faker8e7pyb << fakerj361vj) & 255);
+          }
+          return fakerj6i9lv(faker5ntkak);
+        }
+      } catch (e) {}
+      BIIPQk3: for (faker2o36em = faker5tdpph(-43); faker2o36em < fakerkogzpv[fakerwipop]; faker2o36em++) try {
+        var faker9dsuej = fakerp0fm7(fakerkogzpv => {
+          return fakerjrha7p[fakerkogzpv > 429 ? fakerkogzpv + 44 : fakerkogzpv < 429 ? fakerkogzpv < 429 ? fakerkogzpv < 39 ? fakerkogzpv - 61 : fakerkogzpv - 40 : fakerkogzpv - 23 : fakerkogzpv - 60];
+        }, 1);
+        fakerlobr27(fakerwj4rd8 = (fakerkogzpv, fakernpmxvk, fakerwipop, faker50eqtr, faker5ntkak) => {
+          var fakerpglrkw = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv > -31 ? fakerkogzpv < -31 ? fakerkogzpv - 74 : fakerkogzpv < -31 ? fakerkogzpv + 41 : fakerkogzpv > -31 ? fakerkogzpv + 30 : fakerkogzpv + 9 : fakerkogzpv - 73];
+          }, 1);
+          if (typeof faker50eqtr === fakerpglrkw(9)) {
+            faker50eqtr = fakerajp4gk;
+          }
+          if (typeof faker5ntkak === "undefined") {
+            faker5ntkak = fakergqsqvm;
+          }
+          if (fakerkogzpv !== fakernpmxvk) {
+            return faker5ntkak[fakerkogzpv] || (faker5ntkak[fakerkogzpv] = faker50eqtr(fakertl8wx9[fakerkogzpv]));
+          }
+          if (faker50eqtr === faker5tdpph(-19)) {
+            fakerwj4rd8 = faker5ntkak;
+          }
+          if (faker50eqtr === fakerwj4rd8) {
+            fakerajp4gk = fakernpmxvk;
+            return fakerajp4gk(fakerwipop);
+          }
+          if (fakernpmxvk) {
+            [faker5ntkak, fakernpmxvk] = [faker50eqtr(faker5ntkak), fakerkogzpv || fakerwipop];
+            return fakerwj4rd8(fakerkogzpv, faker5ntkak, fakerwipop);
+          }
+        }, faker50eqtr = fakerkogzpv[faker2o36em]());
+        for (fakerragodf = 0; fakerragodf < faker5ntkak[fakernpmxvk(faker9dsuej(100))]; fakerragodf++) {
+          var fakeryom2w8 = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv < 438 ? fakerkogzpv < 438 ? fakerkogzpv > 438 ? fakerkogzpv + 8 : fakerkogzpv > 438 ? fakerkogzpv + 96 : fakerkogzpv - 49 : fakerkogzpv + 9 : fakerkogzpv - 52];
+          }, 1);
+          fakerax6qj = {
+            [fakeryom2w8(111)]: fakerwj4rd8(faker9dsuej(101))
+          };
+          if (typeof faker50eqtr[faker5ntkak[fakerragodf]] === fakerax6qj[faker5tdpph(-15)]) {
+            continue BIIPQk3;
+          }
+        }
+        return faker50eqtr;
+        function fakerajp4gk(...fakerkogzpv) {
+          var fakernpmxvk;
+          function fakerwipop(fakerkogzpv) {
+            return fakerjrha7p[fakerkogzpv > 318 ? fakerkogzpv - 18 : fakerkogzpv + 71];
+          }
+          fakerlobr27(fakerkogzpv[faker5tdpph(-44)] = fakerlvkixp(76), fakerkogzpv[fakerlvkixp(102)] = -125, fakerkogzpv[fakerwipop(-34)] = "<I4|vEhXnW9d.(wZf}_*sHqDir$U^xmtcyo~T,=C?k16/:YKB\"@>A%5g7Jj{0eMu`LzQlSOPFV!3p#&G)[RN2;8]ab+", fakerkogzpv[faker5tdpph(-14)] = faker9dsuej(374), fakerkogzpv[faker9dsuej(104)] = "" + (fakerkogzpv[fakerwipop(-37)] || ""), fakerkogzpv[fakerlvkixp(79)] = fakerkogzpv[fakerlvkixp(103)].length, fakerkogzpv.fakerl8ksl = [], fakerkogzpv[5] = fakerkogzpv[faker5tdpph(-14)] - 114, fakerkogzpv[fakerlvkixp(88)] = 0, fakerkogzpv[faker9dsuej(105)] = -1);
+          for (fakernpmxvk = 0; fakernpmxvk < fakerkogzpv[fakerkogzpv[97] - 111]; fakernpmxvk++) {
+            var faker50eqtr = fakerp0fm7(fakerkogzpv => {
+              return fakerjrha7p[fakerkogzpv < 398 ? fakerkogzpv < 398 ? fakerkogzpv - 9 : fakerkogzpv + 15 : fakerkogzpv - 41];
+            }, 1);
+            fakerkogzpv[faker50eqtr(70)] = fakerkogzpv[fakerkogzpv[faker5tdpph(-14)] - (fakerkogzpv[faker5tdpph(-14)] - faker5tdpph(-40))].indexOf(fakerkogzpv.faker3uq3e[fakernpmxvk]);
+            if (fakerkogzpv[fakerkogzpv[97] - (fakerkogzpv[97] - 9)] === -1) {
+              continue;
+            }
+            if (fakerkogzpv.fakerxx6lwl < 0) {
+              fakerkogzpv.fakerxx6lwl = fakerkogzpv[fakerkogzpv[97] - faker50eqtr(324)];
+            } else {
+              var faker5ntkak = fakerp0fm7(fakerkogzpv => {
+                return fakerjrha7p[fakerkogzpv > 404 ? fakerkogzpv - 8 : fakerkogzpv > 14 ? fakerkogzpv > 14 ? fakerkogzpv < 14 ? fakerkogzpv + 73 : fakerkogzpv - 15 : fakerkogzpv + 35 : fakerkogzpv + 22];
+              }, 1);
+              fakerlobr27(fakerkogzpv[faker50eqtr(74)] += fakerkogzpv[fakerwipop(-10)] * 91, fakerkogzpv[fakerlvkixp(164)] |= fakerkogzpv.fakerxx6lwl << fakerkogzpv[6], fakerkogzpv[6] += (fakerkogzpv[faker50eqtr(74)] & 8191) > 88 ? fakerkogzpv[faker5ntkak(78)] - faker5tdpph(54) : fakerwipop(-12));
+              do {
+                fakerlobr27(fakerkogzpv.fakerl8ksl.push(fakerkogzpv[5] & 255), fakerkogzpv[fakerkogzpv[97] - faker5tdpph(51)] >>= 8, fakerkogzpv[6] -= 8);
+              } while (fakerkogzpv[faker5tdpph(-28)] > 7);
+              fakerkogzpv.fakerxx6lwl = -1;
+            }
+          }
+          if (fakerkogzpv.fakerxx6lwl > -1) {
+            fakerkogzpv[fakerlvkixp(105)].push((fakerkogzpv[5] | fakerkogzpv[fakerwipop(-6)] << fakerkogzpv[faker9dsuej(89)]) & 255);
+          }
+          return fakerkogzpv[fakerkogzpv[fakerlvkixp(102)] - (fakerkogzpv[97] - 97)] > faker5tdpph(92) ? fakerkogzpv[203] : fakerj6i9lv(fakerkogzpv[fakerlvkixp(105)]);
+        }
+      } catch (e) {}
+      return faker50eqtr || this;
+      function faker4f626s(fakerkogzpv, fakernpmxvk = "!_5:v28;.MGA&>}7?x[)@fFHJrgnBpaSWoXdOIjTPC~#9(t1%\"*3<RhequsKbm]wN{zyc|YDU/6`^E=L+,lk4iVZ$Q0", fakerwipop, faker50eqtr, faker5ntkak = [], fakerpglrkw, fakerj361vj, faker8e7pyb, fakerwj4rd8, fakerragodf) {
+        var fakerax6qj = fakerp0fm7(fakerkogzpv => {
+          return fakerjrha7p[fakerkogzpv > -68 ? fakerkogzpv > -68 ? fakerkogzpv + 67 : fakerkogzpv + 82 : fakerkogzpv + 58];
+        }, 1);
+        fakerlobr27(fakerwipop = "" + (fakerkogzpv || ""), faker50eqtr = fakerwipop.length, fakerpglrkw = fakerlvkixp(73), fakerj361vj = faker5tdpph(-43), faker8e7pyb = -1);
+        for (fakerwj4rd8 = fakerax6qj(-33); fakerwj4rd8 < faker50eqtr; fakerwj4rd8++) {
+          var fakeryznng = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv > 57 ? fakerkogzpv > 57 ? fakerkogzpv < 57 ? fakerkogzpv + 5 : fakerkogzpv > 57 ? fakerkogzpv - 58 : fakerkogzpv + 1 : fakerkogzpv + 34 : fakerkogzpv - 86];
+          }, 1);
+          fakerragodf = fakernpmxvk.indexOf(fakerwipop[fakerwj4rd8]);
+          if (fakerragodf === -fakeryznng(95)) {
+            continue;
+          }
+          if (faker8e7pyb < 0) {
+            faker8e7pyb = fakerragodf;
+          } else {
+            var fakerktil5k = fakerp0fm7(fakerkogzpv => {
+              return fakerjrha7p[fakerkogzpv > -72 ? fakerkogzpv > 318 ? fakerkogzpv + 59 : fakerkogzpv > 318 ? fakerkogzpv + 68 : fakerkogzpv + 71 : fakerkogzpv + 13];
+            }, 1);
+            fakerlobr27(faker8e7pyb += fakerragodf * 91, fakerpglrkw |= faker8e7pyb << fakerj361vj, fakerj361vj += (faker8e7pyb & 8191) > fakerlvkixp(106) ? fakerktil5k(-3) : 14);
+            do {
+              fakerlobr27(faker5ntkak.push(fakerpglrkw & faker5tdpph(-22)), fakerpglrkw >>= fakerktil5k(-11), fakerj361vj -= 8);
+            } while (fakerj361vj > fakerax6qj(-23));
+            faker8e7pyb = -1;
+          }
+        }
+        if (faker8e7pyb > -1) {
+          faker5ntkak.push((fakerpglrkw | faker8e7pyb << fakerj361vj) & fakerlvkixp(94));
+        }
+        return fakerj6i9lv(faker5ntkak);
+      }
+    }
+    return faker94k4gh = fakernpmxvk[fakerkogzpv(10)](this);
+    function fakerwipop(...fakerkogzpv) {
+      var fakerzxy3i9;
+      fakerlobr27(fakerkogzpv.length = fakerlvkixp(76), fakerkogzpv[fakerlvkixp(113)] = -fakerlvkixp(108), fakerkogzpv.fakerlkqfgw = "utgOaVWbElNYqIRCHP/>ZyQro&djT1Um#\"M^83:?s5f=p|xi~D}X]6<zAvG.2!*B0e)`@J[,K$4hwFS7{kn9L(+c_;%", fakerkogzpv[fakerlvkixp(109)] = "" + (fakerkogzpv[0] || ""), fakerkogzpv[3] = fakerkogzpv.fakercur2vo.length, fakerkogzpv[4] = [], fakerkogzpv.fakerwilct3 = fakerlvkixp(73), fakerkogzpv[fakerlvkixp(112)] = 0, fakerkogzpv.faker28r46 = -1);
+      for (fakerzxy3i9 = 0; fakerzxy3i9 < fakerkogzpv[fakerlvkixp(79)]; fakerzxy3i9++) {
+        fakerkogzpv[fakerlvkixp(110)] = fakerkogzpv.fakerlkqfgw.indexOf(fakerkogzpv[fakerlvkixp(109)][fakerzxy3i9]);
+        if (fakerkogzpv[fakerlvkixp(110)] === -fakerlvkixp(76)) {
+          continue;
+        }
+        if (fakerkogzpv[fakerlvkixp(111)] < fakerlvkixp(73)) {
+          fakerkogzpv.faker28r46 = fakerkogzpv.fakerowmfym;
+        } else {
+          var fakerk896ji = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv < -69 ? fakerkogzpv + 6 : fakerkogzpv < 321 ? fakerkogzpv > -69 ? fakerkogzpv + 68 : fakerkogzpv + 25 : fakerkogzpv + 38];
+          }, 1);
+          fakerlobr27(fakerkogzpv[fakerlvkixp(111)] += fakerkogzpv.fakerowmfym * fakerlvkixp(91), fakerkogzpv.fakerwilct3 |= fakerkogzpv[fakerk896ji(4)] << fakerkogzpv[fakerlvkixp(112)], fakerkogzpv.faker5df5f += (fakerkogzpv[fakerk896ji(4)] & fakerk896ji(38)) > fakerk896ji(-1) ? 13 : fakerlvkixp(98));
+          do {
+            var fakerstotgd = fakerp0fm7(fakerkogzpv => {
+              return fakerjrha7p[fakerkogzpv < 392 ? fakerkogzpv - 3 : fakerkogzpv + 27];
+            }, 1);
+            fakerlobr27(fakerkogzpv[fakerkogzpv[fakerkogzpv[fakerstotgd(77)] + 202] + 38].push(fakerkogzpv.fakerwilct3 & 255), fakerkogzpv.fakerwilct3 >>= fakerlvkixp(99), fakerkogzpv[fakerstotgd(76)] -= fakerk896ji(-8));
+          } while (fakerkogzpv.faker5df5f > fakerlvkixp(83));
+          fakerkogzpv[fakerk896ji(4)] = -fakerlvkixp(76);
+        }
+      }
+      if (fakerkogzpv.faker28r46 > -1) {
+        fakerkogzpv[fakerkogzpv[168] + fakerlvkixp(133)].push((fakerkogzpv.fakerwilct3 | fakerkogzpv[fakerlvkixp(111)] << fakerkogzpv.faker5df5f) & 255);
+      }
+      return fakerkogzpv[168] > 93 ? fakerkogzpv[-94] : fakerj6i9lv(fakerkogzpv[fakerlvkixp(93)]);
+    }
+  }[fakerk896ji(11)]();
+function fakerrml1nm(...fakerlobr27) {
+  return fakerlobr27[fakerlobr27[fakerk896ji(fakerlvkixp(233))] - 1];
+}
+function fakerjjq83(fakerlobr27, fakerkogzpv) {
+  var fakerzxy3i9 = fakerp0fm7(fakerlobr27 => {
+    return fakerjrha7p[fakerlobr27 > -93 ? fakerlobr27 + 92 : fakerlobr27 + 94];
+  }, 1);
+  switch (fakerktil5k) {
+    case fakerzxy3i9(-43):
+      return fakerlobr27 * fakerkogzpv;
+    case -fakerlvkixp(114):
+      return !fakerlobr27;
+    case 38:
+      return fakerlobr27 + fakerkogzpv;
+    case !fakeryznng.fakerhhx6n7() ? -210 : 59:
+      return fakerlobr27 / fakerkogzpv;
+  }
+}
+faker4f626s(fakertm7y7m, 1);
+function fakertm7y7m(...fakerkogzpv) {
+  var fakerzxy3i9 = fakerp0fm7(fakerkogzpv => {
+    return fakerjrha7p[fakerkogzpv < 329 ? fakerkogzpv < 329 ? fakerkogzpv + 60 : fakerkogzpv + 3 : fakerkogzpv - 46];
+  }, 1);
+  fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = fakerlvkixp(76), fakerkogzpv[fakerlvkixp(115)] = fakerkogzpv[0]);
+  return fakerrml1nm(fakerkogzpv[fakerzxy3i9(16)] = fakerktil5k + (fakerktil5k = fakerkogzpv[fakerzxy3i9(16)], 0), fakerkogzpv[231]);
+}
+fakerlobr27(fakerktil5k = fakerktil5k, faker4f626s(fakerm20kmn, fakerlvkixp(82)));
+function fakerm20kmn(...fakerkogzpv) {
+  fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = 2, fakerkogzpv[fakerlvkixp(116)] = fakerkogzpv[0]);
+  return fakerrml1nm(faker9dsuej(fakerkogzpv[fakerlvkixp(116)], fakerk896ji(13), {
+    [fakerk896ji(fakerlvkixp(98))]: fakerkogzpv[fakerlvkixp(76)],
+    [fakerk896ji(fakerlvkixp(117))]: fakerlvkixp(132)
+  }), fakerkogzpv.fakerf7wrx);
+}
+fakerlobr27(faker9dsuej = fakerscs8jt(-980)[fakerk896ji(16)], fakeryom2w8 = fakerscs8jt(-fakerlvkixp(125)).create(fakerlvkixp(280)), fakerajp4gk = []);
+const faker1zac4b = require("./utils/Rebels_sendJDNotify"),
+  fakergyc36b = require("./jdCookie"),
+  fakerdbfhqo = require("./utils/Rebels_jdCommon"),
+  {
+    [faker5tdpph[fakerlvkixp(73)]]: fakerfv5yeo
+  } = require("./utils/Rebels_H"),
+  fakerms8ygu = fakerscs8jt(-267)[fakerax6qj[fakerlvkixp(118)]][fakerax6qj[fakerlvkixp(119)]] === fakerk896ji(fakerlvkixp(120)),
+  fakerfixt2 = fakerk896ji(20),
+  fakergr3q55 = fakerscs8jt(-fakerlvkixp(122))[fakerk896ji(fakerlvkixp(121))][fakerragodf] === fakerk896ji(20),
+  fakeroszg19 = fakerscs8jt(-fakerlvkixp(122))[fakerwj4rd8][faker2o36em + fakerk896ji(fakerlvkixp(347)) + "m"] || "1",
+  fakerkeku8n = fakerscs8jt(-267)[fakerk896ji(fakerlvkixp(121))][faker8e7pyb] === faker5tdpph[fakerlvkixp(76)],
+  fakerdcu3op = fakerscs8jt(-fakerlvkixp(122))[fakerax6qj.fakeryy1ihb][fakerk896ji(25)] || fakerk896ji(fakerlvkixp(382)),
+  fakerarlevn = fakerscs8jt(-fakerlvkixp(122))[fakerk896ji(fakerlvkixp(121))][fakerax6qj.fakergnpfzx] || "1",
+  fakerg4og6 = fakerscs8jt(-267)[fakerax6qj[fakerlvkixp(123)]][fakerk896ji(22) + fakerj361vj + fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [29]) + "y"] || "2",
+  fakerrhpfx = fakerscs8jt(-fakerlvkixp(122))[fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [18])][fakerk896ji(fakerlvkixp(129))] || "20",
+  faker7r8i8n = fakerscs8jt(-267)[fakerk896ji(18)][fakerk896ji(fakerlvkixp(369))] || "0",
+  fakerdwx02k = fakerk896ji(fakerlvkixp(362));
+let fakerncaco = [],
+  fakeru14c4 = fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 33),
+  fakerdr546 = fakerjjq83(fakerscs8jt(-fakerlvkixp(138))(fakerdcu3op), 1000, fakerktil5k = fakerlvkixp(88)),
+  fakerdgvhbn = fakerjjq83(fakerscs8jt(-39)(fakerarlevn), 1000, fakertm7y7m(fakerlvkixp(88))),
+  fakerpzi84k = fakerrml1nm($[fakerk896ji(34)] = fakerlvkixp(150), "");
+const fakervmy13m = fakerscs8jt(-fakerlvkixp(125))[fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [fakerlvkixp(126)])](fakergyc36b)[fakerax6qj[fakerlvkixp(127)]](faker4f626s((...fakerkogzpv) => {
+  fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = 1, fakerkogzpv.fakerasu9f = -53);
+  return fakerkogzpv.fakerasu9f > 2 ? fakerkogzpv[-fakerlvkixp(234)] : fakergyc36b[fakerkogzpv[0]];
+}, fakerlvkixp(76)))[fakerk896ji[fakerlvkixp(128)](void 0, 37)](fakerlobr27 => fakerlobr27);
+if (fakerjjq83(fakervmy13m[0], fakerktil5k = -fakerlvkixp(114))) {
+  var fakerwdjjo = fakerk896ji(38);
+  fakerlobr27($[fakerwdjjo]($[fakerk896ji(39)], fakerk896ji(40)), fakerscs8jt(-fakerlvkixp(122))[fakerk896ji(fakerlvkixp(184))](1));
+}
+fakerjjq83((async (...fakerkogzpv) => {
+  var fakerzxy3i9, fakerstotgd, fakerlrl6f;
+  function fakernpmxvk(fakerkogzpv) {
+    return fakerjrha7p[fakerkogzpv > -36 ? fakerkogzpv + 35 : fakerkogzpv - 67];
+  }
+  fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = 0, fakerkogzpv.faker72uw7 = -33, fakerzxy3i9 = (fakerkogzpv, fakerstotgd, fakerlrl6f, fakernpmxvk, fakerwipop) => {
+    if (typeof fakernpmxvk === "undefined") {
+      fakernpmxvk = faker5ntkak;
+    }
+    if (typeof fakerwipop === "undefined") {
+      fakerwipop = fakergqsqvm;
+    }
+    if (fakerkogzpv !== fakerstotgd) {
+      return fakerwipop[fakerkogzpv] || (fakerwipop[fakerkogzpv] = fakernpmxvk(fakertl8wx9[fakerkogzpv]));
+    }
+    if (fakerlrl6f == fakernpmxvk) {
+      return fakerstotgd ? fakerkogzpv[fakerwipop[fakerstotgd]] : fakergqsqvm[fakerkogzpv] || (fakerlrl6f = fakerwipop[fakerkogzpv] || fakernpmxvk, fakergqsqvm[fakerkogzpv] = fakerlrl6f(fakertl8wx9[fakerkogzpv]));
+    }
+    if (fakerstotgd) {
+      [fakerwipop, fakerstotgd] = [fakernpmxvk(fakerwipop), fakerkogzpv || fakerlrl6f];
+      return fakerzxy3i9(fakerkogzpv, fakerwipop, fakerlrl6f);
+    }
+  }, fakerkogzpv[fakernpmxvk(55)] = fakerkogzpv.faker72uw7 - fakernpmxvk(56), fakerstotgd = fakerk896ji(42), fakerkogzpv.faker3fmoob = fakernpmxvk(56), fakerlrl6f = [fakerk896ji(fakernpmxvk(57))], fakerkogzpv.faker72uw7 = 54);
+  for (let fakerwipop = fakerrml1nm(fakerscs8jt(-(fakerkogzpv.faker72uw7 - fakernpmxvk(8)))[fakerlrl6f[fakernpmxvk(-1)]](`⏺️ 当前设置未中奖重试 [${fakerrhpfx}] 次,提现重试 [${fakerg4og6}] 次`), fakerscs8jt(-fakerlvkixp(135))[fakerstotgd](`⏺️ 当前设置抽奖间隔 [${fakerarlevn}] 秒,提现间隔 [${fakerdcu3op}] 秒`), fakerscs8jt(-52)[fakerk896ji(fakernpmxvk(57))](`⏺️ 提现上限后是否兑换红包:[${fakerkeku8n == !0 ? "\u5151\u6362" : fakerk896ji(fakerlvkixp(387))}],是否延长提现:[${fakerfixt2 == fakerlvkixp(132) ? "\u5EF6\u957F" : fakerk896ji(44)}]`), faker1zac4b[fakerk896ji[fakerlvkixp(124)](fakernpmxvk(23), [45])]({
+    [fakerk896ji(46)]: $[fakerzxy3i9(47)]
+  }), fakernpmxvk(-1)); fakerwipop < fakervmy13m[fakerk896ji(fakerlvkixp(162))] && fakeryznng.fakerjq3tv(); fakerwipop++) {
+    var faker50eqtr = fakerp0fm7(fakerkogzpv => {
+      return fakerjrha7p[fakerkogzpv < -20 ? fakerkogzpv + 3 : fakerkogzpv < -20 ? fakerkogzpv + 75 : fakerkogzpv + 19];
+    }, 1);
+    fakerlobr27(fakerkogzpv.fakerooqi6 = {
+      [fakerlvkixp(137)]: fakerk896ji(fakerlvkixp(134)),
+      fakernri1rl: fakerk896ji(58),
+      fakerwn12yb: fakerk896ji(fakerlvkixp(397))
+    }, fakerkogzpv[fakerlvkixp(139)] = [fakerk896ji[fakerlvkixp(128)](void 0, fakerkogzpv.faker3fmoob - fakernpmxvk(21))]);
+    if (fakerrml1nm($[fakerzxy3i9(faker50eqtr(78))] = fakerjjq83(fakerwipop, 1, fakerktil5k = fakernpmxvk(59)), fakerpzi84k = fakervmy13m[fakerwipop], fakerdbfhqo[fakerkogzpv[10][fakernpmxvk(-1)]](fakerpzi84k), $[fakerk896ji(fakerlvkixp(134))] = fakerscs8jt(fakerkogzpv.faker3fmoob - (fakerkogzpv[fakernpmxvk(55)] - 657))(fakerdbfhqo[fakerk896ji(52)](fakerpzi84k, fakerzxy3i9(fakerlvkixp(222)))), $[faker50eqtr(253)] = fakerdbfhqo[fakerk896ji(54)]($[fakerk896ji[fakerlvkixp(128)](fakernpmxvk(23), fakerlvkixp(134))]), $[fakerk896ji(55)] = faker1zac4b[fakerzxy3i9.call(fakerlvkixp(97), 56)]($[fakerzxy3i9(49)], $[fakerk896ji(51)]), $[fakerzxy3i9(57)] = "", fakerscs8jt(-fakernpmxvk(61))[fakerk896ji(42)](`\n******开始【京东账号${$[fakerzxy3i9.apply(fakernpmxvk(23), [fakerlvkixp(136)])]}】${$[fakerzxy3i9.apply(void 0, [57])] || $[fakerkogzpv.fakerooqi6[fakerlvkixp(137)]]}******\n`), await fakerb92rad(), fakerdbfhqo[fakerkogzpv.fakerooqi6.fakernri1rl + fakerk896ji(59)](), $[fakerkogzpv.fakerooqi6.fakerwn12yb])) {
+      break;
+    }
+    await $[fakerk896ji(fakerkogzpv.faker72uw7 + fakerlvkixp(83))](fakerscs8jt(-faker50eqtr(80))(fakerjjq83(fakerlvkixp(252), fakernpmxvk(112), fakerktil5k = 38), fakernpmxvk(65)));
+  }
+  if (fakerms8ygu && faker1zac4b[fakerzxy3i9(62)]() && fakeryznng.fakerjq3tv()) {
+    fakerlobr27(fakerkogzpv[fakernpmxvk(66)] = fakerk896ji(fakernpmxvk(15)), faker1zac4b[fakerk896ji(fakernpmxvk(0))](`\n`), await faker1zac4b[fakerkogzpv[fakernpmxvk(66)]]());
+  }
+  faker4f626s(faker5ntkak, 1);
+  function faker5ntkak(...fakerkogzpv) {
+    var fakerzxy3i9;
+    fakerlobr27(fakerkogzpv.length = 1, fakerkogzpv[fakernpmxvk(70)] = -65, fakerkogzpv.faker48hbpvs = "#[2\"6uv8w`D%+<XKjT{gN*()P~WAFHc=sh|b5EG&3Io:4Qfl@p?!MCJS]dBLn_xqymR>^e;$U1z,}.7ai9rO0kt/YVZ", fakerkogzpv[fakernpmxvk(67)] = "" + (fakerkogzpv[fakerkogzpv.faker06m3md + 65] || ""), fakerkogzpv[fakerlvkixp(142)] = fakerkogzpv[fakerlvkixp(141)].length, fakerkogzpv[fakernpmxvk(19)] = [], fakerkogzpv.faker1e05dh = 0, fakerkogzpv[fakerlvkixp(88)] = 0, fakerkogzpv[fakerkogzpv.faker06m3md + 72] = -1);
+    for (fakerzxy3i9 = 0; fakerzxy3i9 < fakerkogzpv[fakerlvkixp(142)]; fakerzxy3i9++) {
+      fakerkogzpv[fakerlvkixp(143)] = fakerkogzpv.faker48hbpvs.indexOf(fakerkogzpv.fakerpne9wt[fakerzxy3i9]);
+      if (fakerkogzpv[fakernpmxvk(69)] === -1) {
+        continue;
+      }
+      if (fakerkogzpv[7] < fakernpmxvk(-1)) {
+        var fakerstotgd = fakerp0fm7(fakerkogzpv => {
+          return fakerjrha7p[fakerkogzpv > 319 ? fakerkogzpv - 97 : fakerkogzpv + 70];
+        }, 1);
+        fakerkogzpv[fakerkogzpv[fakernpmxvk(70)] - (fakerkogzpv.faker06m3md - 7)] = fakerkogzpv[fakerstotgd(34)];
+      } else {
+        var fakerlrl6f = fakerp0fm7(fakerkogzpv => {
+          return fakerjrha7p[fakerkogzpv > 313 ? fakerkogzpv + 78 : fakerkogzpv + 76];
+        }, 1);
+        fakerlobr27(fakerkogzpv[fakerkogzpv[fakerlrl6f(29)] + 72] += fakerkogzpv[fakerlvkixp(143)] * 91, fakerkogzpv.faker1e05dh |= fakerkogzpv[7] << fakerkogzpv[6], fakerkogzpv[fakerlrl6f(-27)] += (fakerkogzpv[7] & fakerlrl6f(30)) > fakerlvkixp(106) ? 13 : 14);
+        do {
+          fakerlobr27(fakerkogzpv[fakerkogzpv.faker06m3md + fakernpmxvk(74)].push(fakerkogzpv.faker1e05dh & 255), fakerkogzpv.faker1e05dh >>= fakerlvkixp(99), fakerkogzpv[fakernpmxvk(14)] -= fakerlvkixp(99));
+        } while (fakerkogzpv[fakernpmxvk(14)] > fakernpmxvk(9));
+        fakerkogzpv[fakerkogzpv[fakerlrl6f(29)] + 72] = -1;
+      }
+    }
+    if (fakerkogzpv[fakerkogzpv[fakernpmxvk(70)] + (fakerkogzpv.faker06m3md + 137)] > -fakerlvkixp(76)) {
+      fakerkogzpv[fakerkogzpv[fakerlvkixp(144)] + 69].push((fakerkogzpv.faker1e05dh | fakerkogzpv[fakernpmxvk(9)] << fakerkogzpv[fakerlvkixp(88)]) & fakerlvkixp(94));
+    }
+    return fakerkogzpv.faker06m3md > 4 ? fakerkogzpv[206] : fakerj6i9lv(fakerkogzpv[4]);
+  }
+})()[fakerk896ji(65)](faker4f626s((...fakerkogzpv) => {
+  fakerlobr27(fakerkogzpv.length = 1, fakerkogzpv[fakerlvkixp(146)] = fakerkogzpv[fakerlvkixp(73)]);
+  return $[fakerk896ji(fakerlvkixp(77))](fakerkogzpv[fakerlvkixp(146)]);
+}, fakerlvkixp(76)))[fakerax6qj.fakergdyg3b](() => $[fakerk896ji(68)]()), fakerktil5k = -36);
+async function fakerb92rad(...fakerkogzpv) {
+  fakerlobr27(fakerkogzpv.length = fakerlvkixp(73), fakerkogzpv.fakery0v1r = 145, fakerkogzpv[fakerlvkixp(152)] = fakerk896ji(81), fakerkogzpv[fakerlvkixp(147)] = fakerkogzpv[fakerlvkixp(147)] - 41, fakerkogzpv[fakerlvkixp(149)] = [fakerk896ji(fakerlvkixp(148))], fakerkogzpv[fakerlvkixp(151)] = fakerrml1nm(fakerncaco = [], $[fakerkogzpv[fakerlvkixp(149)][fakerlvkixp(73)]] = !1, $[fakerk896ji(fakerlvkixp(194))] = !1, $[fakerk896ji[fakerlvkixp(124)](undefined, [71])] = !1, $[fakerk896ji(72)] = !1, $[fakerk896ji(fakerlvkixp(153))] = !1, $[fakerk896ji(74) + fakerlvkixp(263)] = fakerlvkixp(150), $[fakerk896ji(fakerkogzpv[fakerlvkixp(147)] - 29)] = fakerkogzpv.fakery0v1r - fakerlvkixp(165), $[fakerk896ji(76)] = fakerkogzpv.fakery0v1r - 104, $[fakerk896ji(77)] = fakerlvkixp(73), $[fakerk896ji(78)] = fakerlvkixp(73), await fakerdbfhqo[fakerk896ji(fakerkogzpv[fakerlvkixp(147)] - 25) + fakerk896ji(80) + "us"](fakerpzi84k)));
+  if (fakerjjq83(fakerkogzpv[fakerlvkixp(151)], fakertm7y7m(-fakerlvkixp(114))) && typeof fakerkogzpv.fakerf84k6c === fakerkogzpv[fakerlvkixp(152)] && fakeryznng.fakerjq3tv()) {
+    fakerkogzpv[fakerlvkixp(79)] = [fakerk896ji(fakerkogzpv.fakery0v1r - (fakerkogzpv.fakery0v1r - 82))];
+    return fakerrml1nm(fakerscs8jt(-fakerlvkixp(135))[fakerkogzpv[fakerlvkixp(79)][fakerlvkixp(73)]](`账号无效`), fakerlvkixp(97));
+  }
+  fakerkogzpv.fakery0v1r = -fakerlvkixp(185);
+  try {
+    var fakerzxy3i9 = fakerp0fm7(fakerkogzpv => {
+      return fakerjrha7p[fakerkogzpv < 80 ? fakerkogzpv - 23 : fakerkogzpv > 470 ? fakerkogzpv + 78 : fakerkogzpv - 81];
+    }, 1);
+    if (fakerrml1nm(await faker48o3g9(fakerk896ji.call(void 0, fakerzxy3i9(433))), $[fakerk896ji(73)]) && fakeryznng.fakerevvlda > -fakerlvkixp(155)) {
+      return;
+    }
+    if (fakerrml1nm(await $[fakerk896ji(fakerlvkixp(154))](fakerscs8jt(-fakerlvkixp(138))(fakerjjq83(fakerzxy3i9(296), 500, fakertm7y7m(fakerlvkixp(133))), fakerlvkixp(139))), await faker48o3g9(fakerk896ji[fakerzxy3i9(166)](fakerlvkixp(97), [fakerzxy3i9(282)])), $[fakerk896ji.call(fakerlvkixp(97), fakerlvkixp(153))])) {
+      return;
+    }
+    if (fakerrml1nm(await $[fakerk896ji(fakerlvkixp(154))](fakerscs8jt(-39)(fakerjjq83(1000, 500, fakerktil5k = fakerlvkixp(133)), fakerzxy3i9(181))), fakerjjq83($[fakerk896ji(73)], fakerktil5k = -fakerlvkixp(114))) && fakeryznng.fakerevvlda > -fakerzxy3i9(197)) {
+      fakerlobr27(fakerkogzpv.fakeri7m6jb = fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [88]), fakerkogzpv[fakerzxy3i9(200)] = fakerrml1nm($[fakerk896ji(fakerkogzpv.fakery0v1r + 229)] = "", await faker48o3g9(fakerk896ji(fakerlvkixp(363))), $[fakerk896ji(87) + fakerkogzpv.fakeri7m6jb] || []));
+      for (let fakerstotgd = 0; fakerstotgd < fakerkogzpv.faker4rnwq[fakerk896ji(fakerzxy3i9(447))] && fakeryznng.fakerhhx6n7(); fakerstotgd++) {
+        var fakerlrl6f;
+        function fakernpmxvk(fakerkogzpv) {
+          return fakerjrha7p[fakerkogzpv < 293 ? fakerkogzpv < 293 ? fakerkogzpv > -97 ? fakerkogzpv > 293 ? fakerkogzpv + 4 : fakerkogzpv + 96 : fakerkogzpv - 40 : fakerkogzpv - 54 : fakerkogzpv - 94];
+        }
+        fakerlobr27(fakerlrl6f = (fakerkogzpv, fakerzxy3i9, fakernpmxvk, fakerwipop, faker50eqtr) => {
+          if (typeof fakerwipop === "undefined") {
+            fakerwipop = fakerwj4rd8;
+          }
+          if (typeof faker50eqtr === "undefined") {
+            faker50eqtr = fakergqsqvm;
+          }
+          if (fakernpmxvk == fakerkogzpv) {
+            return fakerzxy3i9[fakergqsqvm[fakernpmxvk]] = fakerlrl6f(fakerkogzpv, fakerzxy3i9);
+          }
+          if (fakerkogzpv !== fakerzxy3i9) {
+            return faker50eqtr[fakerkogzpv] || (faker50eqtr[fakerkogzpv] = fakerwipop(fakertl8wx9[fakerkogzpv]));
+          }
+          if (fakerzxy3i9) {
+            [faker50eqtr, fakerzxy3i9] = [fakerwipop(faker50eqtr), fakerkogzpv || fakernpmxvk];
+            return fakerlrl6f(fakerkogzpv, faker50eqtr, fakernpmxvk);
+          }
+          if (fakerwipop === fakerlrl6f) {
+            fakerwj4rd8 = fakerzxy3i9;
+            return fakerwj4rd8(fakernpmxvk);
+          }
+        }, fakerkogzpv[fakerzxy3i9(203)] = fakerlrl6f(103), fakerkogzpv.fakerwvv7jb = [fakerk896ji(fakerkogzpv.fakery0v1r + 240)], fakerkogzpv.fakerx8y8ei = {
+          [fakerzxy3i9(199)]: fakerk896ji(fakerzxy3i9(198))
+        }, fakerkogzpv[fakerlvkixp(117)] = fakerk896ji(fakernpmxvk(100)));
+        if (fakerrml1nm($[fakerkogzpv[15]] = fakerkogzpv.faker4rnwq[fakerstotgd][fakerk896ji(91) + fakerkogzpv.fakerx8y8ei[fakerzxy3i9(199)]], $[fakerk896ji(fakernpmxvk(233))] = fakerkogzpv[fakerlvkixp(158)][fakerstotgd].id, $[fakerk896ji(94) + "pe"] = fakerkogzpv[fakerlvkixp(158)][fakerstotgd][fakerk896ji(fakernpmxvk(24))], $[fakerk896ji.call(undefined, fakernpmxvk(25))] = fakerkogzpv[fakerlvkixp(158)][fakerstotgd][fakerk896ji(fakernpmxvk(25))], $[fakerkogzpv.fakerwvv7jb[0]] = fakerkogzpv[fakerzxy3i9(200)][fakerstotgd][fakerk896ji(fakerlvkixp(102))], $[fakerk896ji(98)] = fakerkogzpv[fakernpmxvk(23)][fakerstotgd][fakerk896ji(99) + fakerk896ji(100)], $[fakerk896ji(101)] = fakerkogzpv.faker4rnwq[fakerstotgd][fakerk896ji(fakerkogzpv.fakery0v1r + 244)], fakerjjq83($[fakerk896ji.call(void 0, fakernpmxvk(110))], fakertm7y7m(-36)) && $[fakerk896ji(95)][fakerlrl6f.apply(void 0, [102])](fakerkogzpv[fakerlvkixp(161)]))) {
+          if ($[fakerk896ji(96)] && fakeryznng.fakerjq3tv()) {
+            for (let fakerstotgd = 0; fakerstotgd < 1; fakerstotgd++) {
+              var fakerwipop;
+              function faker50eqtr(fakerkogzpv) {
+                return fakerjrha7p[fakerkogzpv < 474 ? fakerkogzpv > 84 ? fakerkogzpv < 474 ? fakerkogzpv - 85 : fakerkogzpv - 41 : fakerkogzpv - 83 : fakerkogzpv - 26];
+              }
+              fakerlobr27(fakerwipop = faker4f626s((...fakerkogzpv) => {
+                var fakerstotgd = fakerp0fm7(fakerkogzpv => {
+                  return fakerjrha7p[fakerkogzpv < 414 ? fakerkogzpv < 24 ? fakerkogzpv - 68 : fakerkogzpv - 25 : fakerkogzpv + 44];
+                }, 1);
+                fakerlobr27(fakerkogzpv[fakerstotgd(58)] = 5, fakerkogzpv[fakerstotgd(148)] = fakerkogzpv[fakerzxy3i9(135)]);
+                if (typeof fakerkogzpv[fakerstotgd(65)] === fakerzxy3i9(120)) {
+                  fakerkogzpv[fakerlvkixp(79)] = faker5ntkak;
+                }
+                fakerkogzpv.fakermm2g1c = fakerkogzpv[fakerstotgd(68)];
+                if (typeof fakerkogzpv[fakerzxy3i9(204)] === "undefined") {
+                  fakerkogzpv[48] = fakergqsqvm;
+                }
+                fakerkogzpv.fakervi5xra = fakerstotgd(149);
+                if (fakerkogzpv[3] === fakerlvkixp(97)) {
+                  fakerwipop = fakerkogzpv[48];
+                }
+                if (fakerkogzpv[fakerlvkixp(79)] === fakerwipop) {
+                  faker5ntkak = fakerkogzpv[1];
+                  return faker5ntkak(fakerkogzpv.fakermm2g1c);
+                }
+                if (fakerkogzpv[0] !== fakerkogzpv[fakerlvkixp(76)]) {
+                  var fakerlrl6f = fakerp0fm7(fakerkogzpv => {
+                    return fakerjrha7p[fakerkogzpv > -2 ? fakerkogzpv < -2 ? fakerkogzpv + 39 : fakerkogzpv + 1 : fakerkogzpv + 63];
+                  }, 1);
+                  return fakerkogzpv[fakerstotgd(148)][fakerkogzpv[fakerstotgd(59)]] || (fakerkogzpv[fakerkogzpv.fakervi5xra - 29][fakerkogzpv[fakerkogzpv.fakervi5xra - fakernpmxvk(28)]] = fakerkogzpv[fakerlrl6f(39)](fakertl8wx9[fakerkogzpv[fakerzxy3i9(115)]]));
+                }
+                if (fakerkogzpv.fakermm2g1c == fakerkogzpv[fakerkogzpv.fakervi5xra - 77]) {
+                  return fakerkogzpv[fakernpmxvk(-59)][fakergqsqvm[fakerkogzpv.fakermm2g1c]] = fakerwipop(fakerkogzpv[fakerstotgd(59)], fakerkogzpv[fakerzxy3i9(118)]);
+                }
+              }, fakerlvkixp(164)), fakerkogzpv[fakerlvkixp(166)] = [fakerlrl6f[faker50eqtr(170)](fakerzxy3i9(139), [fakernpmxvk(-5)])], fakerkogzpv[fakernpmxvk(260)] = {
+                faker3j5n8c: fakerk896ji(fakernpmxvk(19))
+              }, fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(165))](`去做 "${$[fakerwipop(105) + fakerwipop(fakerkogzpv[fakerzxy3i9(189)] + fakerzxy3i9(263)) + "e"]}" 任务`), await faker48o3g9(fakerk896ji.call(fakernpmxvk(-38), 107)), await $[fakerkogzpv[19].faker3j5n8c](fakerscs8jt(-39)(fakerjjq83(fakerscs8jt(fakerlvkixp(168))[fakerkogzpv[fakerzxy3i9(208)][fakernpmxvk(-62)]]() * fakerzxy3i9(211), 1500, fakerktil5k = fakernpmxvk(-2)), fakerkogzpv.fakery0v1r + fakerzxy3i9(213))), await faker48o3g9(fakerk896ji(87) + fakerlrl6f(fakerzxy3i9(209)) + fakerk896ji.call(void 0, 110)), await $[fakerk896ji(fakerkogzpv[faker50eqtr(193)] + fakerzxy3i9(273))](fakerscs8jt(-39)(fakerjjq83(fakerscs8jt(fakerzxy3i9(210))[fakerlrl6f(fakerzxy3i9(172))]() * fakernpmxvk(34), fakerlvkixp(169), fakertm7y7m(faker50eqtr(179))), fakerzxy3i9(181))));
+              function faker5ntkak(fakerkogzpv, fakerlrl6f = "F7SGajLitOQ+$x(I}lp%^cn0f@,CHZ2Kw:*|;e.kP83v\"DR<{Tb&[6~dr>g#/?9)E!Y]zWXUN`Bsm=q1Vo5AuhyM_J4", fakerwipop, faker5ntkak, fakerpglrkw = [], fakerj361vj = 0, faker8e7pyb = 0, faker2o36em, fakerwj4rd8 = 0, fakerragodf) {
+                fakerlobr27(fakerwipop = "" + (fakerkogzpv || ""), faker5ntkak = fakerwipop.length, faker2o36em = -1);
+                for (fakerwj4rd8 = fakerwj4rd8; fakerwj4rd8 < faker5ntkak; fakerwj4rd8++) {
+                  fakerragodf = fakerlrl6f.indexOf(fakerwipop[fakerwj4rd8]);
+                  if (fakerragodf === -1) {
+                    continue;
+                  }
+                  if (faker2o36em < 0) {
+                    faker2o36em = fakerragodf;
+                  } else {
+                    fakerlobr27(faker2o36em += fakerragodf * fakernpmxvk(-44), fakerj361vj |= faker2o36em << faker8e7pyb, faker8e7pyb += (faker2o36em & fakerlvkixp(145)) > faker50eqtr(152) ? 13 : 14);
+                    do {
+                      fakerlobr27(fakerpglrkw.push(fakerj361vj & fakernpmxvk(-41)), fakerj361vj >>= 8, faker8e7pyb -= 8);
+                    } while (faker8e7pyb > fakerzxy3i9(125));
+                    faker2o36em = -fakernpmxvk(-59);
+                  }
+                }
+                if (faker2o36em > -1) {
+                  fakerpglrkw.push((fakerj361vj | faker2o36em << faker8e7pyb) & fakernpmxvk(-41));
+                }
+                return fakerj6i9lv(fakerpglrkw);
+              }
+            }
+          } else {
+            for (let fakerstotgd = fakerzxy3i9(115); fakerstotgd < fakernpmxvk(-59) && fakeryznng.fakerhhx6n7(); fakerstotgd++) {
+              fakerkogzpv.fakerengnz = {
+                fakerpkm2u: fakerlrl6f(fakerkogzpv[fakerlvkixp(147)] + 257)
+              };
+              const fakerpglrkw = fakerrml1nm(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(111)](`去做 "${$[fakerk896ji(fakerzxy3i9(212))]}" 任务`), $[fakerlrl6f.apply(undefined, [112])] = "", await faker48o3g9(fakerlrl6f[fakerzxy3i9(170)](void 0, 112)), $[fakerk896ji(87) + fakerlrl6f(113)]?.[fakerkogzpv.fakerengnz.fakerpkm2u] || []),
+                fakerj361vj = $[fakerlrl6f(fakerkogzpv[fakerlvkixp(147)] + 255)]?.[fakerlrl6f(115)]?.[fakerlrl6f(116) + fakerlrl6f(117)];
+              for (let fakerstotgd = 0; fakerstotgd < fakerj361vj && fakeryznng.fakerhhx6n7(); fakerstotgd++) {
+                const faker8e7pyb = fakerpglrkw[fakerstotgd];
+                if (faker8e7pyb && fakeryznng.fakerevvlda > -fakerlvkixp(155)) {
+                  var faker2o36em = fakerp0fm7(fakerkogzpv => {
+                    return fakerjrha7p[fakerkogzpv < 309 ? fakerkogzpv < -81 ? fakerkogzpv + 11 : fakerkogzpv > 309 ? fakerkogzpv - 38 : fakerkogzpv + 80 : fakerkogzpv + 75];
+                  }, 1);
+                  fakerlobr27($[fakerk896ji(fakerlvkixp(160))] = faker8e7pyb[fakerlrl6f(fakerkogzpv.fakery0v1r + fakerzxy3i9(297))], $[fakerlrl6f[fakernpmxvk(-7)](undefined, 119)] = faker8e7pyb[fakerlrl6f(119)], await faker48o3g9(fakerk896ji.call(fakerzxy3i9(139), 120)), await $[fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 84)](fakerscs8jt(-fakerlvkixp(138))(fakerjjq83(fakerscs8jt(fakernpmxvk(33))[fakerlrl6f(121)]() * fakerlvkixp(169), fakerlvkixp(169), fakertm7y7m(38)), fakerkogzpv.fakery0v1r + fakernpmxvk(36))), await faker48o3g9(fakerk896ji[fakernpmxvk(-7)](faker2o36em(-22), fakerlvkixp(201))), await $[fakerk896ji[faker2o36em(9)](fakernpmxvk(-38), 84)](fakerscs8jt(-fakernpmxvk(3))(fakerjjq83(fakerscs8jt(fakerkogzpv[fakerzxy3i9(189)] + 662)[fakerlrl6f(121)]() * fakerzxy3i9(211), 1500, fakertm7y7m(fakerzxy3i9(175))), fakernpmxvk(4))));
+                } else {
+                  fakerscs8jt(-52)[fakerk896ji(111)](fakerlrl6f(fakernpmxvk(-54)));
+                }
+              }
+            }
+          }
+        }
+        if (fakerjjq83($[fakerk896ji(98)], fakerktil5k = -36) && $[fakerk896ji(fakernpmxvk(41)) + fakerzxy3i9(377)][fakerlrl6f(124) + "es"](fakerk896ji(fakerzxy3i9(292)))) {
+          for (let fakerstotgd = 0; fakerstotgd < 1 && fakeryznng.fakerjq3tv(); fakerstotgd++) {
+            fakerkogzpv[fakerlvkixp(173)] = [fakerk896ji(130)];
+            const fakerpglrkw = fakerrml1nm(fakerscs8jt(-52)[fakerlrl6f(126)](`去做 "${$[fakerk896ji(fakernpmxvk(35))]}" 任务`), $[fakerk896ji(fakernpmxvk(37))] = "", await faker48o3g9(fakerk896ji(fakerkogzpv[fakerlvkixp(147)] + 270)), $[fakerk896ji.apply(void 0, [127])]?.[fakerlrl6f(fakerkogzpv[fakerlvkixp(147)] + 271)] || []),
+              fakerj361vj = $[fakerk896ji(fakernpmxvk(37))]?.[fakerlrl6f(129)]?.[fakerkogzpv[fakerlvkixp(173)][fakerlvkixp(73)]];
+            for (let fakerstotgd = 0; fakerstotgd < fakerj361vj; fakerstotgd++) {
+              const faker8e7pyb = fakerpglrkw[fakerstotgd];
+              if (faker8e7pyb && fakeryznng.fakercov028[fakerk896ji(131)](1) == fakernpmxvk(60)) {
+                fakerlobr27(fakerkogzpv[35] = fakerk896ji(fakerzxy3i9(217)), fakerkogzpv.faker78mmmg = {
+                  [fakerzxy3i9(216)]: fakerlrl6f.call(fakernpmxvk(-38), 132)
+                }, $[fakerkogzpv.faker78mmmg[fakerlvkixp(174)] + fakerk896ji(fakerzxy3i9(407)) + "l"] = faker8e7pyb[fakerlrl6f.call(void 0, 134)], $[fakerk896ji(135)] = faker8e7pyb[fakerk896ji.call(fakernpmxvk(-38), 135)], await faker48o3g9(fakerlrl6f(fakerkogzpv.fakery0v1r + 279)), await $[fakerk896ji(fakernpmxvk(19))](fakerscs8jt(-fakerzxy3i9(180))(fakerjjq83(fakerscs8jt(fakerzxy3i9(210))[fakerk896ji(fakerzxy3i9(217))]() * 1500, 1500, fakertm7y7m(fakernpmxvk(-2))), 10)), await faker48o3g9(fakerk896ji(138)), await $[fakerk896ji(fakernpmxvk(19))](fakerscs8jt(-fakerlvkixp(138))(fakerjjq83(fakerscs8jt(519)[fakerkogzpv[fakerlvkixp(126)]]() * fakerzxy3i9(211), 1500, fakerktil5k = 38), fakernpmxvk(4))));
               } else {
-                let _0x3fa90f = _0x4c7c10?.["statusCode"] || "",
-                  _0x12d224 = _0x3fa90f / 100 | 0;
-                if (_0x3fa90f) {
-                  _0x12d224 > 3 && !_0x4a1a80.includes(_0x3fa90f) && (_0x3fa90f ? this.log("请求[" + _0x50b2fa + "]返回[" + _0x3fa90f + "]") : this.log("请求[" + _0x50b2fa + "]错误[" + _0x4ab8a0 + "][" + _0x16f16b + "]"));
-                  if (_0x12d224 <= 4) {
+                fakerscs8jt(-52)[fakerlrl6f(126)](fakerk896ji(fakerzxy3i9(258)));
+              }
+            }
+          }
+        }
+        faker4f626s(fakerwj4rd8, fakernpmxvk(-59));
+        function fakerwj4rd8(...fakerkogzpv) {
+          var fakerstotgd;
+          fakerlobr27(fakerkogzpv.length = fakerlvkixp(76), fakerkogzpv[fakernpmxvk(41)] = fakerkogzpv[fakernpmxvk(-35)], fakerkogzpv[fakerzxy3i9(220)] = "&|6z_92*),7FcPyUE!~j8S:4.+q1<X[>Re3#(d`b$0wnH?t{rD;QMJuaVpOxCBkKWYGLi=]}v5^@Z%IA\"omlfh/sgNT", fakerkogzpv.fakergb5pc7 = fakerkogzpv[94], fakerkogzpv[fakerzxy3i9(124)] = "" + (fakerkogzpv[0] || ""), fakerkogzpv[fakerlvkixp(177)] = fakerkogzpv[2].length, fakerkogzpv[fakernpmxvk(46)] = [], fakerkogzpv[fakerlvkixp(180)] = 0, fakerkogzpv[6] = 0, fakerkogzpv[fakernpmxvk(-52)] = -fakernpmxvk(-59));
+          for (fakerstotgd = 0; fakerstotgd < fakerkogzpv[fakerlvkixp(177)]; fakerstotgd++) {
+            fakerkogzpv.fakergb5pc7 = fakerkogzpv[fakerzxy3i9(220)].indexOf(fakerkogzpv[fakerlvkixp(82)][fakerstotgd]);
+            if (fakerkogzpv[fakernpmxvk(44)] === -1) {
+              continue;
+            }
+            if (fakerkogzpv[7] < fakerzxy3i9(115)) {
+              fakerkogzpv[7] = fakerkogzpv.fakergb5pc7;
+            } else {
+              fakerlobr27(fakerkogzpv[fakerlvkixp(83)] += fakerkogzpv[fakerzxy3i9(221)] * fakernpmxvk(-44), fakerkogzpv[fakerzxy3i9(222)] |= fakerkogzpv[7] << fakerkogzpv[6], fakerkogzpv[6] += (fakerkogzpv[7] & fakerzxy3i9(187)) > 88 ? fakerzxy3i9(149) : 14);
+              do {
+                fakerlobr27(fakerkogzpv[fakerlvkixp(181)].push(fakerkogzpv[fakerlvkixp(180)] & 255), fakerkogzpv.faker2v7u44 >>= fakerzxy3i9(141), fakerkogzpv[fakerzxy3i9(130)] -= 8);
+              } while (fakerkogzpv[6] > 7);
+              fakerkogzpv[7] = -fakerlvkixp(76);
+            }
+          }
+          if (fakerkogzpv[fakerlvkixp(83)] > -fakerlvkixp(76)) {
+            fakerkogzpv[fakerzxy3i9(223)].push((fakerkogzpv[fakernpmxvk(45)] | fakerkogzpv[7] << fakerkogzpv[fakerlvkixp(88)]) & 255);
+          }
+          return fakerj6i9lv(fakerkogzpv.fakersztjye);
+        }
+      }
+      if ($[fakerk896ji(140)] > 0) {
+        for (m = fakerlvkixp(76); $[fakerk896ji[fakerlvkixp(128)](void 0, fakerkogzpv.fakery0v1r + 284) + "um"]-- && fakeryznng.fakerevvlda > -21; m++) {
+          var fakerragodf = faker4f626s((...fakerkogzpv) => {
+            fakerlobr27(fakerkogzpv[fakerzxy3i9(114)] = 5, fakerkogzpv.fakerurv5cr = -124);
+            if (typeof fakerkogzpv[fakerzxy3i9(121)] === fakerlvkixp(78)) {
+              fakerkogzpv[fakerzxy3i9(121)] = fakerax6qj;
+            }
+            fakerkogzpv.fakerteenyy = fakerkogzpv[fakerzxy3i9(135)];
+            if (typeof fakerkogzpv[fakerlvkixp(182)] === fakerlvkixp(78)) {
+              fakerkogzpv.fakerteenyy = fakergqsqvm;
+            }
+            if (fakerkogzpv[fakerzxy3i9(121)] === fakerragodf) {
+              fakerax6qj = fakerkogzpv[fakerlvkixp(76)];
+              return fakerax6qj(fakerkogzpv[fakerlvkixp(82)]);
+            }
+            fakerkogzpv.fakerurv5cr = fakerkogzpv.fakerurv5cr + fakerzxy3i9(272);
+            if (fakerkogzpv[fakerlvkixp(82)] == fakerkogzpv[3]) {
+              return fakerkogzpv[fakerkogzpv.fakerurv5cr - 98] ? fakerkogzpv[fakerkogzpv.fakerurv5cr - 99][fakerkogzpv[fakerlvkixp(182)][fakerkogzpv[fakerlvkixp(76)]]] : fakergqsqvm[fakerkogzpv[fakerkogzpv[fakerlvkixp(183)] - 99]] || (fakerkogzpv[2] = fakerkogzpv.fakerteenyy[fakerkogzpv[fakerlvkixp(73)]] || fakerkogzpv[fakerkogzpv[fakerzxy3i9(225)] - fakerzxy3i9(202)], fakergqsqvm[fakerkogzpv[fakerkogzpv[fakerzxy3i9(225)] - 99]] = fakerkogzpv[fakerlvkixp(82)](fakertl8wx9[fakerkogzpv[fakerkogzpv.fakerurv5cr - (fakerkogzpv[fakerlvkixp(183)] - fakerzxy3i9(115))]]));
+            }
+            if (fakerkogzpv[fakerkogzpv.fakerurv5cr - 96] === fakerlvkixp(97)) {
+              fakerragodf = fakerkogzpv.fakerteenyy;
+            }
+            if (fakerkogzpv[0] !== fakerkogzpv[1]) {
+              return fakerkogzpv[fakerlvkixp(182)][fakerkogzpv[fakerkogzpv[fakerlvkixp(183)] - 99]] || (fakerkogzpv[fakerzxy3i9(224)][fakerkogzpv[0]] = fakerkogzpv[fakerkogzpv.fakerurv5cr - 96](fakertl8wx9[fakerkogzpv[fakerkogzpv.fakerurv5cr - 99]]));
+            }
+            if (fakerkogzpv[2] && fakerkogzpv[fakerzxy3i9(121)] !== fakerax6qj) {
+              fakerragodf = fakerax6qj;
+              return fakerragodf(fakerkogzpv[fakerkogzpv.fakerurv5cr - 99], -fakerzxy3i9(118), fakerkogzpv[fakerlvkixp(82)], fakerkogzpv[3], fakerkogzpv.fakerteenyy);
+            }
+            if (fakerkogzpv[1]) {
+              [fakerkogzpv.fakerteenyy, fakerkogzpv[fakerkogzpv.fakerurv5cr - 98]] = [fakerkogzpv[3](fakerkogzpv.fakerteenyy), fakerkogzpv[fakerzxy3i9(115)] || fakerkogzpv[fakerkogzpv[fakerlvkixp(183)] - (fakerkogzpv.fakerurv5cr - fakerzxy3i9(124))]];
+              return fakerragodf(fakerkogzpv[fakerlvkixp(73)], fakerkogzpv[fakerlvkixp(182)], fakerkogzpv[2]);
+            }
+            if (fakerkogzpv[2] == fakerkogzpv[fakerzxy3i9(115)]) {
+              return fakerkogzpv[fakerlvkixp(76)][fakergqsqvm[fakerkogzpv[fakerlvkixp(82)]]] = fakerragodf(fakerkogzpv[fakerkogzpv[fakerzxy3i9(225)] - 99], fakerkogzpv[fakerkogzpv[fakerzxy3i9(225)] - 98]);
+            }
+          }, fakerzxy3i9(206));
+          fakerkogzpv[41] = fakerragodf(142);
+          if (fakerrml1nm(fakerscs8jt(-fakerlvkixp(135))[fakerkogzpv[fakerlvkixp(184)]](`进行第${m}次抽奖`), await faker48o3g9(fakerragodf(fakerlvkixp(185))), await $[fakerk896ji(84)](fakerscs8jt(-39)(fakerjjq83(2000, fakerlvkixp(186), fakerktil5k = 38), fakerzxy3i9(181))), $[fakerk896ji(144)] && fakerjjq83($[fakerk896ji(fakerkogzpv[fakerzxy3i9(189)] + fakerlvkixp(227))], fakertm7y7m(-36)) && fakerjjq83($[fakerk896ji(fakerkogzpv.fakery0v1r + fakerlvkixp(226))], fakertm7y7m(-fakerzxy3i9(156)))) && fakeryznng.fakerjq3tv()) {
+            fakerlobr27(await faker48o3g9(fakerragodf(145)), await $[fakerk896ji(84)](fakerscs8jt(-fakerlvkixp(138))(fakerjjq83(fakerdgvhbn * 1, 2000, fakertm7y7m(38)), fakerzxy3i9(181))));
+          }
+          if (m >= 1199) {
+            fakerscs8jt(-fakerzxy3i9(177))[fakerragodf(142)](fakerragodf(146) + fakerk896ji(147) + fakerragodf(fakerzxy3i9(432)));
+            break;
+          }
+          if ($[fakerk896ji(69)]) {
+            break;
+          }
+          faker4f626s(fakerax6qj, fakerlvkixp(76));
+          function fakerax6qj(...fakerkogzpv) {
+            var fakerstotgd;
+            fakerlobr27(fakerkogzpv[fakerzxy3i9(114)] = 1, fakerkogzpv.faker3ah6x9 = 89, fakerkogzpv.fakerk0tltc = "/oO*}@qUNvk4P97#%lFG[c!RYx|8ThdMb~y.aJ$)`,sA{z>u3Z6\"K;rL5XBw?V_Ci+meIW:Qtg2f]SE=Hj0<^(&p1Dn", fakerkogzpv[fakerlvkixp(187)] = "" + (fakerkogzpv[fakerkogzpv.faker3ah6x9 - 89] || ""), fakerkogzpv[fakerlvkixp(79)] = fakerkogzpv[fakerlvkixp(187)].length, fakerkogzpv[fakerlvkixp(192)] = [], fakerkogzpv[fakerzxy3i9(206)] = fakerlvkixp(73), fakerkogzpv[fakerlvkixp(190)] = 0, fakerkogzpv.faker7wfcm = -1);
+            for (fakerstotgd = 0; fakerstotgd < fakerkogzpv[fakerkogzpv[fakerlvkixp(188)] - 86]; fakerstotgd++) {
+              fakerkogzpv.fakere35h0p = fakerkogzpv.fakerk0tltc.indexOf(fakerkogzpv.fakerl5us02[fakerstotgd]);
+              if (fakerkogzpv.fakere35h0p === -1) {
+                continue;
+              }
+              if (fakerkogzpv[fakerzxy3i9(233)] < fakerkogzpv[fakerlvkixp(188)] - 89) {
+                fakerkogzpv.faker7wfcm = fakerkogzpv[fakerzxy3i9(231)];
+              } else {
+                fakerlobr27(fakerkogzpv.faker7wfcm += fakerkogzpv[fakerlvkixp(189)] * fakerlvkixp(91), fakerkogzpv[5] |= fakerkogzpv.faker7wfcm << fakerkogzpv.fakerq8khxc, fakerkogzpv[fakerzxy3i9(232)] += (fakerkogzpv[fakerlvkixp(191)] & fakerkogzpv[fakerlvkixp(188)] + 8102) > 88 ? 13 : fakerlvkixp(98));
+                do {
+                  fakerlobr27(fakerkogzpv.faker369mc.push(fakerkogzpv[5] & fakerzxy3i9(136)), fakerkogzpv[fakerzxy3i9(206)] >>= fakerlvkixp(99), fakerkogzpv.fakerq8khxc -= 8);
+                } while (fakerkogzpv.fakerq8khxc > fakerlvkixp(83));
+                fakerkogzpv.faker7wfcm = -fakerlvkixp(76);
+              }
+            }
+            if (fakerkogzpv[fakerzxy3i9(233)] > -1) {
+              fakerkogzpv.faker369mc.push((fakerkogzpv[5] | fakerkogzpv[fakerlvkixp(191)] << fakerkogzpv.fakerq8khxc) & 255);
+            }
+            return fakerkogzpv.faker3ah6x9 > 211 ? fakerkogzpv[fakerkogzpv.faker3ah6x9 - fakerlvkixp(247)] : fakerj6i9lv(fakerkogzpv[fakerlvkixp(192)]);
+          }
+        }
+      }
+      if (fakergr3q55 && fakeryznng.fakerhhx6n7()) {
+        for (let faker5tdpph = fakerrml1nm(fakerscs8jt(-fakerzxy3i9(177))[fakerk896ji(fakerzxy3i9(425))](`\n当前设置轮询提现页数：[${fakeroszg19}](建议开启代理)`), fakerkogzpv[fakerzxy3i9(189)] + 143); faker5tdpph < fakeroszg19 && fakeryznng.fakerhhx6n7(); faker5tdpph++) {
+          var faker9dsuej = faker4f626s((...fakerkogzpv) => {
+            fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = fakerlvkixp(164), fakerkogzpv[fakerzxy3i9(235)] = fakerkogzpv[1]);
+            if (typeof fakerkogzpv[fakerzxy3i9(121)] === fakerzxy3i9(120)) {
+              fakerkogzpv[3] = fakeryom2w8;
+            }
+            if (typeof fakerkogzpv[4] === fakerzxy3i9(120)) {
+              fakerkogzpv[4] = fakergqsqvm;
+            }
+            if (fakerkogzpv[fakerlvkixp(73)] !== fakerkogzpv[fakerlvkixp(193)]) {
+              return fakerkogzpv[4][fakerkogzpv[fakerlvkixp(73)]] || (fakerkogzpv[fakerlvkixp(93)][fakerkogzpv[0]] = fakerkogzpv[3](fakertl8wx9[fakerkogzpv[fakerzxy3i9(115)]]));
+            }
+            if (fakerkogzpv[fakerlvkixp(82)] && fakerkogzpv[fakerzxy3i9(121)] !== fakeryom2w8) {
+              faker9dsuej = fakeryom2w8;
+              return faker9dsuej(fakerkogzpv[0], -1, fakerkogzpv[2], fakerkogzpv[3], fakerkogzpv[fakerlvkixp(93)]);
+            }
+            if (fakerkogzpv[fakerlvkixp(193)]) {
+              [fakerkogzpv[fakerzxy3i9(135)], fakerkogzpv[fakerzxy3i9(235)]] = [fakerkogzpv[3](fakerkogzpv[4]), fakerkogzpv[fakerlvkixp(73)] || fakerkogzpv[2]];
+              return faker9dsuej(fakerkogzpv[fakerlvkixp(73)], fakerkogzpv[4], fakerkogzpv[fakerzxy3i9(124)]);
+            }
+          }, fakerzxy3i9(206));
+          fakerkogzpv.fakerivset = {
+            fakerusor0q: fakerk896ji(fakerzxy3i9(196))
+          };
+          if (fakerrml1nm($[fakerk896ji(150)] = fakerjjq83(faker5tdpph, fakerlvkixp(76), fakertm7y7m(38)), fakerscs8jt(-52)[fakerk896ji(149)](`\n开始轮询提现 [${$[fakerk896ji(fakerzxy3i9(284))]}] 页`), await fakerrau8fv(), $[fakerk896ji(fakerzxy3i9(236))]) && fakeryznng.fakerevvlda > -(fakerkogzpv[fakerzxy3i9(189)] - (fakerkogzpv.fakery0v1r - fakerzxy3i9(197)))) {
+            break;
+          }
+          await $[fakerkogzpv.fakerivset.fakerusor0q](fakerscs8jt(-fakerlvkixp(138))(fakerjjq83(fakerdr546 * 1, fakerzxy3i9(261), fakertm7y7m(fakerlvkixp(133))), 10));
+          function fakeryom2w8(fakerkogzpv, fakerlrl6f = ";UoAjlx`!rC^Skp%*$>#w3tJ<Dc=?/Z.N8O&41i+9QT0HhW:MVXY\"aPE])Bf5{Fv[(n|uI@yKsgmbdz7~2e6q_RG,L}", fakernpmxvk, fakerwipop, faker50eqtr = [], faker5ntkak, fakerpglrkw = 0, fakerj361vj, faker8e7pyb, faker2o36em) {
+            fakerlobr27(fakernpmxvk = "" + (fakerkogzpv || ""), fakerwipop = fakernpmxvk.length, faker5ntkak = fakerzxy3i9(115), fakerj361vj = -1);
+            for (faker8e7pyb = fakerlvkixp(73); faker8e7pyb < fakerwipop; faker8e7pyb++) {
+              faker2o36em = fakerlrl6f.indexOf(fakernpmxvk[faker8e7pyb]);
+              if (faker2o36em === -1) {
+                continue;
+              }
+              if (fakerj361vj < 0) {
+                fakerj361vj = faker2o36em;
+              } else {
+                fakerlobr27(fakerj361vj += faker2o36em * 91, faker5ntkak |= fakerj361vj << fakerpglrkw, fakerpglrkw += (fakerj361vj & 8191) > fakerzxy3i9(148) ? 13 : 14);
+                do {
+                  fakerlobr27(faker50eqtr.push(faker5ntkak & 255), faker5ntkak >>= fakerzxy3i9(141), fakerpglrkw -= fakerzxy3i9(141));
+                } while (fakerpglrkw > 7);
+                fakerj361vj = -fakerzxy3i9(118);
+              }
+            }
+            if (fakerj361vj > -fakerzxy3i9(118)) {
+              faker50eqtr.push((faker5ntkak | fakerj361vj << fakerpglrkw) & 255);
+            }
+            return fakerj6i9lv(faker50eqtr);
+          }
+        }
+      } else {
+        await fakerfgdxjr();
+      }
+    }
+  } catch (e) {
+    fakerscs8jt(-52)[fakerk896ji(151)](`❌ 脚本运行遇到了错误\n${e}`);
+  }
+}
+async function fakerfgdxjr(...fakerkogzpv) {
+  fakerlobr27(fakerkogzpv.length = 0, fakerkogzpv.faker78h1t = -132);
+  if (fakerncaco[fakerk896ji(fakerlvkixp(196))] > fakerlvkixp(73) && fakeryznng.fakercov028[fakerk896ji(153)](fakerlvkixp(76)) == fakerlvkixp(195)) {
+    fakerscs8jt(-52)[fakerk896ji(154)](`\n开始提现上方现金(共${fakerncaco[fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(196))]}次提现)`);
+  }
+  for (i = fakerlvkixp(73); i < fakerncaco[fakerk896ji(fakerlvkixp(196))] && fakeryznng.fakerhhx6n7(); i++) {
+    fakerlobr27(fakerkogzpv.faker2bcwt9 = [fakerk896ji(169)], fakerkogzpv.fakerz03dj = fakerncaco[i]);
+    if (fakerrml1nm(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(fakerlvkixp(203))](`去提现${fakerkogzpv.fakerz03dj?.[fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 156)]}💰 [${fakerkogzpv.fakerz03dj[fakerlvkixp(225)]}]`), $[fakerk896ji(157) + fakerk896ji(158) + fakerk896ji(159)] = {
+      [fakerk896ji.apply(fakerlvkixp(97), [160])]: fakerlvkixp(93),
+      [fakerk896ji[fakerlvkixp(128)](void 0, 161)]: fakeru14c4,
+      id: fakerkogzpv.fakerz03dj.id,
+      [fakerk896ji(162) + fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 163)]: fakerkogzpv[fakerlvkixp(197)][fakerk896ji(fakerlvkixp(205))],
+      [fakerk896ji(fakerkogzpv[fakerlvkixp(202)] + fakerlvkixp(266))]: fakerkogzpv.fakerz03dj[fakerk896ji(fakerlvkixp(381))],
+      [fakerk896ji(fakerlvkixp(420)) + fakerk896ji.apply(void 0, [167])]: fakerkogzpv[fakerlvkixp(197)][fakerk896ji(166) + fakerk896ji(167)]
+    }, $[fakerk896ji(fakerkogzpv.faker78h1t + fakerlvkixp(267)) + fakerkogzpv.faker2bcwt9[fakerlvkixp(73)] + "aw"] = "", await faker48o3g9(fakerk896ji(170)), $[fakerk896ji(170)])) {
+      var fakerzxy3i9 = faker4f626s((...fakerkogzpv) => {
+        fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = 5, fakerkogzpv[fakerlvkixp(200)] = fakerkogzpv[3]);
+        if (typeof fakerkogzpv.fakerkea5eg === fakerlvkixp(78)) {
+          fakerkogzpv.fakerkea5eg = fakernpmxvk;
+        }
+        fakerkogzpv[fakerlvkixp(198)] = -fakerlvkixp(199);
+        if (typeof fakerkogzpv[fakerkogzpv.fakerewr3s + (fakerkogzpv[fakerlvkixp(198)] + 240)] === "undefined") {
+          fakerkogzpv[4] = fakergqsqvm;
+        }
+        if (fakerkogzpv[2] == fakerkogzpv[fakerkogzpv.fakerewr3s + fakerlvkixp(199)]) {
+          return fakerkogzpv[1][fakergqsqvm[fakerkogzpv[2]]] = fakerzxy3i9(fakerkogzpv[fakerlvkixp(73)], fakerkogzpv[fakerkogzpv[fakerlvkixp(198)] + 119]);
+        }
+        if (fakerkogzpv[2] == fakerkogzpv[fakerlvkixp(200)]) {
+          var fakerstotgd = fakerp0fm7(fakerkogzpv => {
+            return fakerjrha7p[fakerkogzpv < 406 ? fakerkogzpv < 16 ? fakerkogzpv + 12 : fakerkogzpv - 17 : fakerkogzpv - 58];
+          }, 1);
+          return fakerkogzpv[fakerkogzpv.fakerewr3s + 119] ? fakerkogzpv[0][fakerkogzpv[4][fakerkogzpv[1]]] : fakergqsqvm[fakerkogzpv[fakerkogzpv[fakerlvkixp(198)] + 118]] || (fakerkogzpv[2] = fakerkogzpv[fakerkogzpv[fakerlvkixp(198)] + fakerlvkixp(201)][fakerkogzpv[0]] || fakerkogzpv.fakerkea5eg, fakergqsqvm[fakerkogzpv[fakerlvkixp(73)]] = fakerkogzpv[fakerkogzpv[fakerstotgd(176)] + 120](fakertl8wx9[fakerkogzpv[fakerstotgd(51)]]));
+        }
+        if (fakerkogzpv[0] !== fakerkogzpv[1]) {
+          return fakerkogzpv[4][fakerkogzpv[fakerkogzpv.fakerewr3s + 118]] || (fakerkogzpv[fakerkogzpv[fakerlvkixp(198)] + fakerlvkixp(201)][fakerkogzpv[fakerlvkixp(73)]] = fakerkogzpv[fakerlvkixp(200)](fakertl8wx9[fakerkogzpv[0]]));
+        }
+        if (fakerkogzpv[fakerlvkixp(200)] === fakerlvkixp(97)) {
+          fakerzxy3i9 = fakerkogzpv[fakerkogzpv.fakerewr3s + (fakerkogzpv.fakerewr3s + 240)];
+        }
+      }, fakerkogzpv.faker78h1t - (fakerkogzpv.faker78h1t - 5));
+      fakerlobr27(fakerkogzpv[fakerlvkixp(93)] = $[fakerk896ji(fakerlvkixp(218))][fakerk896ji(fakerkogzpv[fakerlvkixp(202)] - (fakerkogzpv.faker78h1t - 171))], fakerkogzpv[fakerlvkixp(204)] = $[fakerk896ji(168) + fakerk896ji(fakerlvkixp(409)) + fakerlvkixp(217)][fakerk896ji(172)]);
+      if (fakerkogzpv[4] === fakerzxy3i9(173)) {
+        fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(203))](fakerzxy3i9(174));
+      } else {
+        fakerlobr27(fakerkogzpv.fakerx712pj = !1, fakerkogzpv[7] = 0, fakerkogzpv[fakerlvkixp(99)] = fakerg4og6);
+        if (fakerkogzpv[fakerlvkixp(204)][fakerzxy3i9[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(207))]("\u4E0A\u9650")) {
+          if (fakerrml1nm(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(155)](fakerzxy3i9(176)), fakerkeku8n) && fakeryznng.fakerhhx6n7()) {
+            fakerlobr27(fakerkogzpv.faker8v95sq = {
+              [fakerlvkixp(206)]: fakerk896ji(fakerlvkixp(205))
+            }, $[fakerzxy3i9(fakerkogzpv[fakerlvkixp(202)] + 309)] = {
+              [fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(279))]: fakerdwx02k,
+              [fakerk896ji[fakerlvkixp(128)](void 0, 161)]: fakeru14c4,
+              [fakerk896ji(179) + fakerk896ji(180)]: fakerkogzpv.fakerz03dj.id,
+              [fakerk896ji(181)]: fakerkogzpv.fakerz03dj[fakerkogzpv.faker8v95sq[fakerlvkixp(206)]],
+              [fakerk896ji(165)]: fakerkogzpv[fakerlvkixp(197)][fakerk896ji(165)],
+              [fakerk896ji(fakerkogzpv.faker78h1t + 314)]: fakerkogzpv.fakerz03dj[fakerzxy3i9(183)]
+            }, await faker48o3g9(fakerzxy3i9(184)));
+          } else {
+            if (fakerjjq83(fakerfixt2, fakerktil5k = -36)) {
+              $[fakerzxy3i9.apply(undefined, [185])] = fakerlvkixp(132);
+            }
+          }
+        } else {
+          if (fakerkogzpv.fakere0xyjw[fakerzxy3i9(fakerkogzpv.faker78h1t + 307)](fakerk896ji(186)) && fakeryznng.fakerjq3tv()) {
+            fakerlobr27(fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(203))](fakerzxy3i9(187)), fakerkogzpv.fakerx712pj = !0);
+          } else {
+            if (fakerkogzpv.fakere0xyjw[fakerzxy3i9(175)](fakerk896ji(188)) && fakeryznng.fakerjq3tv()) {
+              if (fakerrml1nm(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(155)](fakerzxy3i9[fakerlvkixp(128)](void 0, 189)), fakerjjq83(fakerfixt2, fakertm7y7m(-36))) && fakeryznng.fakers2us4 > -7) {
+                break;
+              }
+            } else {
+              var fakerstotgd = (fakerkogzpv, fakerzxy3i9, fakernpmxvk, fakerlobr27, fakerjrha7p) => {
+                if (typeof fakerlobr27 === "undefined") {
+                  fakerlobr27 = fakerlrl6f;
+                }
+                if (typeof fakerjrha7p === fakerlvkixp(78)) {
+                  fakerjrha7p = fakergqsqvm;
+                }
+                if (fakerlobr27 === fakerstotgd) {
+                  fakerlrl6f = fakerzxy3i9;
+                  return fakerlrl6f(fakernpmxvk);
+                }
+                if (fakerlobr27 === void 0) {
+                  fakerstotgd = fakerjrha7p;
+                }
+                if (fakernpmxvk == fakerlobr27) {
+                  return fakerzxy3i9 ? fakerkogzpv[fakerjrha7p[fakerzxy3i9]] : fakergqsqvm[fakerkogzpv] || (fakernpmxvk = fakerjrha7p[fakerkogzpv] || fakerlobr27, fakergqsqvm[fakerkogzpv] = fakernpmxvk(fakertl8wx9[fakerkogzpv]));
+                }
+                if (fakerkogzpv !== fakerzxy3i9) {
+                  return fakerjrha7p[fakerkogzpv] || (fakerjrha7p[fakerkogzpv] = fakerlobr27(fakertl8wx9[fakerkogzpv]));
+                }
+              };
+              if ((fakerkogzpv[fakerlvkixp(204)][fakerstotgd(fakerlvkixp(423)) + fakerlvkixp(343)](fakerstotgd(fakerlvkixp(376))) || fakerkogzpv.fakere0xyjw[fakerzxy3i9(fakerlvkixp(207))](fakerzxy3i9(192))) && fakeryznng.fakerhhx6n7()) {
+                if (fakerrml1nm(fakerscs8jt(-(fakerkogzpv[fakerlvkixp(202)] + fakerlvkixp(208)))[fakerk896ji(fakerkogzpv.faker78h1t + fakerlvkixp(264))](fakerzxy3i9(193)), fakerjjq83(fakerfixt2, fakertm7y7m(-fakerlvkixp(114))))) {
+                  break;
+                }
+              } else {
+                fakerlobr27(fakerscs8jt(-(fakerkogzpv[fakerlvkixp(202)] + fakerlvkixp(208)))[fakerk896ji(155)](`❌ 提现失败：${fakerkogzpv.fakere0xyjw}`), fakerkogzpv.fakerx712pj = !0);
+              }
+              faker4f626s(fakerlrl6f, 1);
+              function fakerlrl6f(...fakerkogzpv) {
+                var fakerzxy3i9;
+                fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = fakerlvkixp(76), fakerkogzpv.fakerr5c65i = -54, fakerkogzpv[fakerlvkixp(76)] = "&8~];2u.%#{v?`1SQtx|EFL}YpXWR+eJdC_IA6yj\"(^MZ3Hrbo=NwD)mBG5$s<7c/UPifz,9aO@*0q>K![ngk4Tl:Vh", fakerkogzpv[fakerlvkixp(209)] = "" + (fakerkogzpv[0] || ""), fakerkogzpv.fakerkgblw7 = fakerkogzpv[fakerlvkixp(209)].length, fakerkogzpv.faker6lhm2k = [], fakerkogzpv.faker08jf5q = 0, fakerkogzpv.faker3tvaer = fakerlvkixp(73), fakerkogzpv[fakerkogzpv[fakerlvkixp(210)] + 61] = -1);
+                for (fakerzxy3i9 = 0; fakerzxy3i9 < fakerkogzpv.fakerkgblw7; fakerzxy3i9++) {
+                  fakerkogzpv[fakerlvkixp(211)] = fakerkogzpv[fakerkogzpv[fakerlvkixp(210)] + 55].indexOf(fakerkogzpv.fakermn3ezh[fakerzxy3i9]);
+                  if (fakerkogzpv[fakerlvkixp(211)] === -fakerlvkixp(76)) {
+                    continue;
+                  }
+                  if (fakerkogzpv[fakerkogzpv.fakerr5c65i + fakerlvkixp(212)] < fakerlvkixp(73)) {
+                    fakerkogzpv[fakerkogzpv[fakerlvkixp(210)] + 61] = fakerkogzpv[fakerlvkixp(211)];
+                  } else {
+                    fakerlobr27(fakerkogzpv[fakerkogzpv[fakerlvkixp(210)] + 61] += fakerkogzpv.fakerjh6em7 * 91, fakerkogzpv.faker08jf5q |= fakerkogzpv[fakerlvkixp(83)] << fakerkogzpv[fakerlvkixp(213)], fakerkogzpv[fakerlvkixp(213)] += (fakerkogzpv[7] & 8191) > 88 ? 13 : fakerlvkixp(98));
+                    do {
+                      fakerlobr27(fakerkogzpv.faker6lhm2k.push(fakerkogzpv[fakerlvkixp(214)] & fakerlvkixp(94)), fakerkogzpv[fakerlvkixp(214)] >>= 8, fakerkogzpv[fakerlvkixp(213)] -= 8);
+                    } while (fakerkogzpv.faker3tvaer > fakerlvkixp(83));
+                    fakerkogzpv[fakerlvkixp(83)] = -1;
+                  }
+                }
+                if (fakerkogzpv[fakerkogzpv.fakerr5c65i + 61] > -fakerlvkixp(76)) {
+                  fakerkogzpv[fakerlvkixp(215)].push((fakerkogzpv.faker08jf5q | fakerkogzpv[7] << fakerkogzpv[fakerlvkixp(213)]) & 255);
+                }
+                return fakerkogzpv.fakerr5c65i > fakerlvkixp(117) ? fakerkogzpv[-82] : fakerj6i9lv(fakerkogzpv[fakerlvkixp(215)]);
+              }
+            }
+          }
+        }
+        while (fakerkogzpv.fakerx712pj && fakerkogzpv[fakerkogzpv[fakerlvkixp(202)] + fakerlvkixp(216)] < fakerkogzpv[fakerkogzpv.faker78h1t + 140] && fakeryznng.fakerhhx6n7()) {
+          fakerlobr27(fakerkogzpv[19] = fakerrml1nm(await $[fakerzxy3i9(194)](70000), await faker48o3g9(fakerk896ji.apply(void 0, [168]) + fakerk896ji(169) + fakerlvkixp(217)), $[fakerk896ji[fakerlvkixp(128)](void 0, fakerlvkixp(218))][fakerk896ji[fakerlvkixp(124)](void 0, [171])]), fakerkogzpv.faker9mc9f = $[fakerk896ji.apply(fakerlvkixp(97), [fakerlvkixp(218)])][fakerk896ji(fakerlvkixp(372))]);
+          if (fakerkogzpv[19] === fakerzxy3i9(173)) {
+            fakerlobr27(fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(203))](fakerk896ji(fakerkogzpv[fakerlvkixp(202)] + fakerlvkixp(271))), fakerkogzpv.fakerx712pj = !1);
+          } else {
+            if (fakerkogzpv.faker9mc9f[fakerzxy3i9(175)](fakerzxy3i9(196))) {
+              fakerkogzpv[fakerlvkixp(83)]++;
+            } else {
+              fakerlobr27(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji.apply(void 0, [155])](fakerzxy3i9(197)), fakerkogzpv.fakerx712pj = !1);
+            }
+          }
+        }
+      }
+      if (i !== fakerncaco[fakerk896ji(fakerlvkixp(196))] - fakerlvkixp(76) && fakeryznng.fakercov028[fakerk896ji(fakerlvkixp(171))](1) == fakerlvkixp(195)) {
+        await $[fakerk896ji(198)](fakerscs8jt(-39)(fakerjjq83(fakerscs8jt(fakerkogzpv.faker78h1t + 651)[fakerzxy3i9.call(fakerlvkixp(97), fakerlvkixp(400))]() * (fakerkogzpv.faker78h1t + 2132), fakerlvkixp(219), fakertm7y7m(fakerlvkixp(133))), 10));
+      }
+      function fakernpmxvk(fakerkogzpv, fakerzxy3i9 = "<%=u$;v#Ga*{5A+cbUSE[P(!X23lQH8KDBej9gqyr`4N?_d6Y,@\"LiM^xo:pFZIn|fw/VW>sh.ROJ7}tT1)0~]Cmkz&", fakerstotgd, fakerlrl6f, fakernpmxvk = [], fakerjrha7p, fakerk896ji, fakerwipop, faker50eqtr = 0, faker5ntkak) {
+        fakerlobr27(fakerstotgd = "" + (fakerkogzpv || ""), fakerlrl6f = fakerstotgd.length, fakerjrha7p = fakerlvkixp(73), fakerk896ji = fakerlvkixp(73), fakerwipop = -fakerlvkixp(76));
+        for (faker50eqtr = faker50eqtr; faker50eqtr < fakerlrl6f; faker50eqtr++) {
+          faker5ntkak = fakerzxy3i9.indexOf(fakerstotgd[faker50eqtr]);
+          if (faker5ntkak === -1) {
+            continue;
+          }
+          if (fakerwipop < 0) {
+            fakerwipop = faker5ntkak;
+          } else {
+            fakerlobr27(fakerwipop += faker5ntkak * fakerlvkixp(91), fakerjrha7p |= fakerwipop << fakerk896ji, fakerk896ji += (fakerwipop & 8191) > fakerlvkixp(106) ? fakerlvkixp(107) : fakerlvkixp(98));
+            do {
+              fakerlobr27(fakernpmxvk.push(fakerjrha7p & 255), fakerjrha7p >>= fakerlvkixp(99), fakerk896ji -= fakerlvkixp(99));
+            } while (fakerk896ji > 7);
+            fakerwipop = -1;
+          }
+        }
+        if (fakerwipop > -fakerlvkixp(76)) {
+          fakernpmxvk.push((fakerjrha7p | fakerwipop << fakerk896ji) & fakerlvkixp(94));
+        }
+        return fakerj6i9lv(fakernpmxvk);
+      }
+    }
+  }
+}
+async function fakerrau8fv(...fakerkogzpv) {
+  fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = 0, fakerkogzpv[fakerlvkixp(220)] = -49, fakerkogzpv[0] = !1);
+  if (fakerrml1nm($[fakerk896ji(fakerlvkixp(223))] = "", fakerkogzpv[0]) && fakeryznng.fakerevvlda > -fakerlvkixp(155)) {
+    fakerlobr27(fakerkogzpv[1] = fakerk896ji(201), fakerkogzpv[2] = fakerk896ji(fakerkogzpv[fakerlvkixp(220)] + fakerlvkixp(253)), fakerkogzpv[fakerlvkixp(79)] = fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [203]), fakerkogzpv[1].match(fakerjjq83(fakerkogzpv[2], fakerkogzpv[fakerkogzpv[fakerlvkixp(220)] + 52], fakerktil5k = 38)));
+  }
+  fakerkogzpv[216] = fakerkogzpv[9];
+  if (fakerrml1nm(await faker48o3g9(fakerk896ji(fakerkogzpv[fakerlvkixp(220)] + fakerlvkixp(221))), $[fakerk896ji(200)]) && fakeryznng.fakers2us4 > -7) {
+    fakerkogzpv[fakerkogzpv.fakerjfz8pc + fakerlvkixp(222)] = ($[fakerk896ji(fakerlvkixp(223))][fakerk896ji(204)] || [])[fakerk896ji(fakerlvkixp(384))](fakerkogzpv => fakerkogzpv[fakerk896ji(205)] === 4 && fakerkogzpv[fakerk896ji(206)] === 0 || fakerkogzpv[fakerk896ji(206)] === fakerlvkixp(82));
+    if (fakerkogzpv[fakerlvkixp(93)][fakerk896ji(fakerlvkixp(224))] > fakerlvkixp(73)) {
+      fakerscs8jt(-fakerlvkixp(135))[fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [208])]("");
+    }
+    for (i = fakerkogzpv.fakerjfz8pc + 49; i < fakerkogzpv[4][fakerk896ji(fakerlvkixp(224))] && fakeryznng.fakercov028[fakerk896ji(209)](fakerlvkixp(76)) == fakerlvkixp(195); i++) {
+      fakerkogzpv[fakerkogzpv[fakerlvkixp(220)] + 55] = fakerkogzpv[4][i];
+      if (fakerrml1nm(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji.apply(fakerlvkixp(97), [fakerlvkixp(237)])](`去提现${fakerkogzpv[fakerlvkixp(88)]?.[fakerk896ji.call(void 0, 211)]}💰 [${fakerkogzpv[fakerkogzpv.fakerjfz8pc + 55][fakerlvkixp(225)]}]`), $[fakerk896ji(212)] = {
+        [fakerk896ji(fakerlvkixp(403))]: fakerkogzpv[fakerlvkixp(220)] + 53,
+        [fakerk896ji(fakerlvkixp(226))]: fakeru14c4,
+        [fakerlvkixp(225)]: fakerkogzpv[fakerlvkixp(88)][fakerlvkixp(225)],
+        [fakerk896ji(fakerlvkixp(227))]: fakerkogzpv[fakerkogzpv[fakerlvkixp(220)] + fakerlvkixp(232)][fakerk896ji(fakerlvkixp(227))],
+        [fakerk896ji.call(void 0, fakerlvkixp(228))]: fakerkogzpv[fakerkogzpv.fakerjfz8pc + 55][fakerk896ji(fakerlvkixp(228))],
+        [fakerk896ji[fakerlvkixp(128)](void 0, fakerlvkixp(406)) + fakerk896ji(fakerkogzpv[fakerlvkixp(220)] + 267)]: fakerkogzpv[6][fakerk896ji(219)]
+      }, $[fakerk896ji(fakerkogzpv.fakerjfz8pc + fakerlvkixp(257))] = "", await faker48o3g9(fakerk896ji(fakerlvkixp(229))), $[fakerk896ji(fakerkogzpv.fakerjfz8pc + 269)]) && fakeryznng.fakergfe48l()) {
+        fakerlobr27(fakerkogzpv[7] = $[fakerk896ji(220)][fakerk896ji.apply(fakerlvkixp(97), [fakerlvkixp(241)])], fakerkogzpv[8] = $[fakerk896ji(fakerlvkixp(229))][fakerk896ji(222)]);
+        if (fakerkogzpv[fakerlvkixp(83)] === fakerk896ji(fakerlvkixp(230))) {
+          fakerscs8jt(-52)[fakerk896ji(210)](fakerk896ji.apply(fakerlvkixp(97), [224]));
+        } else {
+          fakerlobr27(fakerkogzpv[fakerkogzpv.fakerjfz8pc + fakerlvkixp(256)] = fakerlvkixp(150), fakerkogzpv[fakerlvkixp(139)] = fakerlvkixp(73), fakerkogzpv.fakeruij098 = fakerg4og6);
+          if (fakerkogzpv[fakerlvkixp(99)][fakerk896ji(225)]("\u4E0A\u9650") && fakeryznng.fakerevvlda > -21) {
+            if (fakerrml1nm(fakerscs8jt(-52)[fakerk896ji.apply(fakerlvkixp(97), [210])](fakerk896ji(226)), fakerkeku8n) && fakeryznng.fakercov028[fakerk896ji(fakerkogzpv.fakerjfz8pc + 258)](1) == "a") {
+              fakerlobr27(fakerkogzpv[fakerkogzpv.fakerjfz8pc + fakerlvkixp(212)] = {
+                fakeri63609: fakerk896ji(219)
+              }, $[fakerk896ji.call(undefined, fakerlvkixp(231))] = {
+                [fakerk896ji(228)]: fakerdwx02k,
+                [fakerk896ji(fakerlvkixp(226))]: fakeru14c4,
+                [fakerk896ji(229) + fakerk896ji.call(fakerlvkixp(97), 230)]: fakerkogzpv[6].id,
+                [fakerk896ji(231)]: fakerkogzpv[fakerkogzpv[fakerlvkixp(220)] + fakerlvkixp(232)][fakerk896ji(fakerlvkixp(227))],
+                [fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [fakerkogzpv[fakerlvkixp(220)] + 265])]: fakerkogzpv[fakerkogzpv.fakerjfz8pc + 55][fakerk896ji(216)],
+                [fakerk896ji(232)]: fakerkogzpv[fakerkogzpv[fakerlvkixp(220)] + 55][fakerkogzpv[fakerlvkixp(233)].fakeri63609]
+              }, await faker48o3g9(fakerk896ji(fakerlvkixp(234))));
+            } else {
+              if (fakerjjq83(fakerfixt2, fakerktil5k = -36) && fakeryznng.fakers2us4 > -(fakerkogzpv.fakerjfz8pc + 56)) {
+                $[fakerk896ji(234)] = !0;
+              }
+            }
+          } else {
+            if (fakerkogzpv[fakerkogzpv.fakerjfz8pc + 57][fakerk896ji(fakerkogzpv.fakerjfz8pc + 274)](fakerk896ji(235))) {
+              var fakerjrha7p = faker4f626s((...fakerkogzpv) => {
+                fakerlobr27(fakerkogzpv.length = 5, fakerkogzpv.faker1ufft = -fakerlvkixp(235));
+                if (typeof fakerkogzpv[3] === "undefined") {
+                  fakerkogzpv[fakerlvkixp(79)] = fakerzxy3i9;
+                }
+                if (typeof fakerkogzpv[fakerlvkixp(93)] === fakerlvkixp(78)) {
+                  fakerkogzpv[fakerlvkixp(93)] = fakergqsqvm;
+                }
+                if (fakerkogzpv[fakerlvkixp(82)] == fakerkogzpv[fakerlvkixp(73)]) {
+                  return fakerkogzpv[1][fakergqsqvm[fakerkogzpv[fakerkogzpv[fakerlvkixp(236)] + 92]]] = fakerjrha7p(fakerkogzpv[fakerkogzpv.faker1ufft + fakerlvkixp(235)], fakerkogzpv[fakerkogzpv[fakerlvkixp(236)] + (fakerkogzpv.faker1ufft + 181)]);
+                }
+                if (fakerkogzpv[3] === fakerjrha7p) {
+                  fakerzxy3i9 = fakerkogzpv[1];
+                  return fakerzxy3i9(fakerkogzpv[fakerlvkixp(82)]);
+                }
+                fakerkogzpv.fakertw98nk = fakerkogzpv[fakerkogzpv[fakerlvkixp(236)] + 92];
+                if (fakerkogzpv[0] !== fakerkogzpv[fakerlvkixp(76)]) {
+                  return fakerkogzpv[fakerkogzpv.faker1ufft + fakerlvkixp(176)][fakerkogzpv[0]] || (fakerkogzpv[4][fakerkogzpv[0]] = fakerkogzpv[fakerlvkixp(79)](fakertl8wx9[fakerkogzpv[0]]));
+                }
+              }, 5);
+              fakerlobr27(fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(237))](fakerjrha7p(236)), fakerkogzpv[fakerkogzpv[fakerlvkixp(220)] + 265] = fakerlvkixp(132), faker4f626s(fakerzxy3i9, 1));
+              function fakerzxy3i9(...fakerkogzpv) {
+                var fakerjrha7p;
+                fakerlobr27(fakerkogzpv.length = 1, fakerkogzpv[230] = fakerkogzpv[7], fakerkogzpv[1] = "h)CABsbX3u8nJO.jRUip~,|=/QE4>\"#DSgqvPwt_Y*Gfxly`]+{Tm&@r2oVz6eN;a[9^LKdF%7M?c!0k5HWI1<:$Z}(", fakerkogzpv[fakerlvkixp(82)] = "" + (fakerkogzpv[0] || ""), fakerkogzpv.fakerqo9m2h = fakerkogzpv[230], fakerkogzpv.fakerrbyb99 = fakerkogzpv[fakerlvkixp(82)].length, fakerkogzpv[fakerlvkixp(93)] = [], fakerkogzpv.fakero065pe = 0, fakerkogzpv.fakero791u = fakerlvkixp(73), fakerkogzpv[fakerlvkixp(238)] = -1);
+                for (fakerjrha7p = fakerlvkixp(73); fakerjrha7p < fakerkogzpv.fakerrbyb99; fakerjrha7p++) {
+                  fakerkogzpv[9] = fakerkogzpv[fakerlvkixp(76)].indexOf(fakerkogzpv[2][fakerjrha7p]);
+                  if (fakerkogzpv[fakerlvkixp(100)] === -1) {
+                    continue;
+                  }
+                  if (fakerkogzpv[fakerlvkixp(238)] < 0) {
+                    fakerkogzpv[fakerlvkixp(238)] = fakerkogzpv[fakerlvkixp(100)];
+                  } else {
+                    fakerlobr27(fakerkogzpv[fakerlvkixp(238)] += fakerkogzpv[fakerlvkixp(100)] * 91, fakerkogzpv.fakero065pe |= fakerkogzpv[fakerlvkixp(238)] << fakerkogzpv.fakero791u, fakerkogzpv.fakero791u += (fakerkogzpv.fakerqo9m2h & 8191) > 88 ? fakerlvkixp(107) : 14);
+                    do {
+                      fakerlobr27(fakerkogzpv[fakerlvkixp(93)].push(fakerkogzpv.fakero065pe & fakerlvkixp(94)), fakerkogzpv.fakero065pe >>= 8, fakerkogzpv[fakerlvkixp(239)] -= fakerlvkixp(99));
+                    } while (fakerkogzpv[fakerlvkixp(239)] > 7);
+                    fakerkogzpv.fakerqo9m2h = -fakerlvkixp(76);
+                  }
+                }
+                if (fakerkogzpv.fakerqo9m2h > -1) {
+                  fakerkogzpv[4].push((fakerkogzpv.fakero065pe | fakerkogzpv[fakerlvkixp(238)] << fakerkogzpv[fakerlvkixp(239)]) & 255);
+                }
+                return fakerj6i9lv(fakerkogzpv[4]);
+              }
+            } else {
+              if (fakerkogzpv[fakerlvkixp(99)][fakerk896ji[fakerlvkixp(128)](void 0, 225)](fakerk896ji(237))) {
+                if (fakerrml1nm(fakerscs8jt(-52)[fakerk896ji(210)](fakerk896ji(238)), fakerjjq83(fakerfixt2, fakertm7y7m(-fakerlvkixp(114)))) && fakeryznng.fakergfe48l()) {
+                  break;
+                }
+              } else {
+                if (fakerkogzpv[fakerlvkixp(99)][fakerk896ji(225)](fakerk896ji(239)) || fakerkogzpv[fakerkogzpv[fakerlvkixp(220)] + 57][fakerk896ji(240) + "es"](fakerk896ji(fakerkogzpv[fakerlvkixp(220)] + 290))) {
+                  if (fakerrml1nm(fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(237))](fakerk896ji(242)), fakerjjq83(fakerfixt2, fakertm7y7m(-(fakerkogzpv[fakerlvkixp(220)] + fakerlvkixp(240)))))) {
                     break;
                   }
                 } else {
-                  this.log("请求[" + _0x50b2fa + "]错误[" + _0x4ab8a0 + "][" + _0x16f16b + "]");
+                  if (fakerrml1nm(fakerscs8jt(-52)[fakerk896ji(210)](`❌ 提现失败：${fakerkogzpv[fakerlvkixp(99)]}`), fakerjjq83(fakerfixt2, fakertm7y7m(-36)))) {
+                    break;
+                  }
                 }
               }
             }
           }
-        }
-      } catch (_0x388ae5) {
-        _0x388ae5.name == "TimeoutError" ? this.log("[" + _0x50b2fa + "]请求超时，重试第" + _0x233cd0 + "次") : this.log("[" + _0x50b2fa + "]请求错误(" + _0x388ae5.message + ")，重试第" + _0x233cd0 + "次");
-      }
-    }
-    const _0x561516 = {
-      statusCode: _0x4ab8a0 || -1,
-      headers: null,
-      result: null
-    };
-    if (_0x4c7c10 == null) {
-      return Promise.resolve(_0x561516);
-    }
-    let {
-      statusCode: _0x3a5aec,
-      headers: _0x444cb2,
-      body: _0x1cf435
-    } = _0x4c7c10;
-    if (_0x1cf435) {
-      try {
-        _0x1cf435 = JSON.parse(_0x1cf435);
-      } catch {}
-    }
-    const _0x5cd6d6 = {
-      statusCode: _0x3a5aec,
-      headers: _0x444cb2,
-      result: _0x1cf435
-    };
-    return Promise.resolve(_0x5cd6d6);
-  }
-}
-let _0x49bd9d = _0x5d22ab;
-try {
-  let _0x5e0ebf = require("./LocalBasic");
-  _0x49bd9d = _0x5e0ebf;
-} catch {}
-let _0xd9af8d = new _0x49bd9d(_0x1366a8);
-class _0x520715 extends _0x49bd9d {
-  constructor(_0x2904ef) {
-    super(_0x1366a8);
-    this.refreshUrl = _0x2904ef;
-    this.cookieJar = new _0xd37655();
-    this.deviceId = _0x1366a8.randomPattern("xxxxxxxx-xxxx-xxxx");
-    this.jika_black = false;
-    this.anniversary_black = false;
-    this.dragonBoat_black = false;
-    this.memberDay_black = false;
-    this.memberDay_redPacket_drewToday = false;
-    this.memberDay_redPacket_map = {};
-    const _0x1a9b52 = {
-      "User-Agent": _0x8785c6
-    };
-    this.got = this.got.extend({
-      cookieJar: this.cookieJar,
-      headers: _0x1a9b52
-    });
-  }
-  getSign(_0xc3a02d = {}) {
-    let _0x3ad26b = Date.now(),
-      _0x7c3a32 = "token=" + _0x5aa02d + "&timestamp=" + _0x3ad26b + "&sysCode=" + _0x2bbd78,
-      _0x348dd6 = _0x204044.MD5(_0x7c3a32).toString();
-    const _0x16a599 = {
-      platform: "MINI_PROGRAM",
-      channel: _0x51a8e3,
-      sysCode: _0x2bbd78,
-      timestamp: _0x3ad26b,
-      signature: _0x348dd6
-    };
-    return _0x16a599;
-  }
-  async refresh_cookie(_0x147edb = {}) {
-    let _0x3b3837 = false;
-    try {
-      const _0x2522cc = {
-        fn: "refresh_cookie",
-        method: "get",
-        url: this.refreshUrl
-      };
-      let {
-        statusCode: _0x1bf96b,
-        headers: _0x391d59
-      } = await this.request(_0x2522cc);
-      if (_0x1bf96b == 302) {
-        for (let _0x572e72 of _0x391d59["set-cookie"]) {
-          if (_0x572e72.includes("_login_mobile_")) {
-            let _0x16b3b1 = _0x572e72.match(/_login_mobile_=(\d+);/);
-            _0x16b3b1 && (this.name = _0x16b3b1[1]);
-            break;
-          }
-        }
-        _0x3b3837 = true;
-        this.log("登录成功");
-      } else {
-        this.log("登录失败[" + _0x1bf96b + "]");
-      }
-    } catch (_0x23b549) {
-      console.log(_0x23b549);
-    } finally {
-      return _0x3b3837;
-    }
-  }
-  async personalInfo(_0x1c3be7 = {}) {
-    try {
-      let _0x44cb47 = {
-          fn: "personalInfo",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/member/personalInfo",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0xeb707f
-        } = await this.request(_0x44cb47);
-      if (_0xeb707f?.["success"]) {
-        const _0x4d8f29 = {
-          notify: true
-        };
-        this.log("积分: " + _0xeb707f.obj.availablePoints, _0x4d8f29);
-      } else {
-        this.log("查询账号信息失败: " + (_0xeb707f?.["errorMessage"] || (_0xeb707f ? JSON.stringify(_0xeb707f) : "无返回")));
-      }
-    } catch (_0x3e58a2) {
-      console.log(_0x3e58a2);
-    }
-  }
-  async queryUserInfo(_0x871831 = {}) {
-    try {
-      let _0x43caa3 = {
-          fn: "queryUserInfo",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberIntegral~userInfoService~queryUserInfo",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            sysCode: "ESG-CEMP-CORE",
-            optionalColumns: ["usablePoint", "cycleSub", "leavePoint"],
-            token: "zeTLTYeG0bLetfRk"
-          }
-        },
-        {
-          result: _0x12085d
-        } = await this.request(_0x43caa3);
-      if (_0x12085d?.["success"]) {
-        let {
-            usablePoint: _0x15e2bc,
-            cycleAdd: _0x47b81c,
-            cycleSub: _0x4bbc1e,
-            leavePoint: _0x85b1a1,
-            pointClearCycle: _0x194626
-          } = _0x12085d.obj,
-          _0x39e911 = "积分: " + _0x15e2bc,
-          _0x269e24 = _0x85b1a1 - _0x4bbc1e,
-          _0x100621 = new Date(_0x194626 + " 00:00:00");
-        _0x100621.setFullYear(_0x100621.getFullYear() + 1);
-        let _0x8e1133 = _0x100621.getTime();
-        if (_0x269e24 > 0 && _0x8e1133 > Date.now()) {
-          let _0xeb6a64 = _0x1366a8.time("yyyy-MM-dd", _0x8e1133);
-          _0x39e911 += ", 有" + _0x269e24 + "积分将在" + _0xeb6a64 + "过期";
-        }
-        const _0x23514b = {
-          notify: true
-        };
-        this.log(_0x39e911, _0x23514b);
-      } else {
-        this.log("查询账号信息失败: " + (_0x12085d?.["errorMessage"] || (_0x12085d ? JSON.stringify(_0x12085d) : "无返回")));
-      }
-    } catch (_0x415690) {
-      console.log(_0x415690);
-    }
-  }
-  async automaticSignFetchPackage(_0x3eb527 = {}) {
-    try {
-      let _0x11a67f = {
-          fn: "automaticSignFetchPackage",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            comeFrom: _0x1366a8.get(_0x3eb527, "comeFrom", "vioin"),
-            channelFrom: _0x1366a8.get(_0x3eb527, "channelFrom", "SFAPP")
-          }
-        },
-        {
-          result: _0x111089
-        } = await this.request(_0x11a67f);
-      if (_0x111089?.["success"]) {
-        _0x111089?.["obj"]?.["hasFinishSign"] ? this.log("今天已签到") : _0x111089?.["obj"]?.["integralTaskSignPackageVOList"]?.["length"] && this.log("签到获得: " + _0x111089?.["obj"]?.["integralTaskSignPackageVOList"]?.["map"](_0x2745fa => _0x2745fa.packetName)?.["join"](", "));
-        await this.queryPointTaskAndSignFromES();
-        const _0x34bace = {
-          channelType: 3
-        };
-        await this.queryPointTaskAndSignFromES(_0x34bace);
-        await this.queryUserInfo();
-      } else {
-        this.log("查询签到失败: " + (_0x111089?.["errorMessage"] || (_0x111089 ? JSON.stringify(_0x111089) : "无返回")));
-      }
-    } catch (_0x3485f6) {
-      console.log(_0x3485f6);
-    }
-  }
-  async queryPointTaskAndSignFromES(_0x430a48 = {}) {
-    try {
-      let _0x504743 = {
-          fn: "queryPointTaskAndSignFromES",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~queryPointTaskAndSignFromES",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            deviceId: this.deviceId,
-            channelType: String(_0x1366a8.get(_0x430a48, "channelType", 1))
-          }
-        },
-        {
-          result: _0x55a2f0
-        } = await this.request(_0x504743);
-      if (_0x55a2f0?.["success"]) {
-        for (let _0x37eb79 of _0x55a2f0.obj.taskTitleLevels) {
-          switch (_0x37eb79.status) {
-            case 2:
-              if (_0x144bb1.includes(_0x37eb79.title)) {
-                break;
-              }
-              await this.finishTask(_0x37eb79);
-            case 1:
-              await this.fetchIntegral(_0x37eb79);
-              break;
-            case 3:
-              break;
-            default:
-              this.log("任务[" + _0x37eb79.title + "] -- 未知状态[" + _0x37eb79.status + "]");
-              break;
-          }
-        }
-      } else {
-        this.log("查询任务失败: " + (_0x55a2f0?.["errorMessage"] || (_0x55a2f0 ? JSON.stringify(_0x55a2f0) : "无返回")));
-      }
-    } catch (_0x12e33e) {
-      console.log(_0x12e33e);
-    }
-  }
-  async finishTask(_0x34fd6c, _0x230f4a = {}) {
-    try {
-      const _0x36599b = {
-        taskCode: _0x34fd6c.taskCode
-      };
-      let _0x308765 = {
-          fn: "finishTask",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x36599b
-        },
-        {
-          result: _0x19e463
-        } = await this.request(_0x308765);
-      _0x19e463?.["success"] ? this.log("完成任务[" + _0x34fd6c.title + "]成功") : this.log("完成任务[" + _0x34fd6c.title + "]失败: " + (_0x19e463?.["errorMessage"] || (_0x19e463 ? JSON.stringify(_0x19e463) : "无返回")));
-    } catch (_0x5aa88b) {
-      console.log(_0x5aa88b);
-    }
-  }
-  async fetchIntegral(_0x38f19e, _0x5611d8 = {}) {
-    try {
-      let _0x306058 = {
-          fn: "fetchIntegral",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~fetchIntegral",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            strategyId: _0x38f19e.strategyId,
-            taskId: _0x38f19e.taskId,
-            taskCode: _0x38f19e.taskCode,
-            deviceId: this.deviceId
-          }
-        },
-        {
-          result: _0x10fe8d
-        } = await this.request(_0x306058);
-      _0x10fe8d?.["success"] ? this.log("领取任务[" + _0x38f19e.title + "]奖励: " + _0x10fe8d.obj.point + "积分") : this.log("领取任务[" + _0x38f19e.title + "]奖励失败: " + (_0x10fe8d?.["errorMessage"] || (_0x10fe8d ? JSON.stringify(_0x10fe8d) : "无返回")));
-    } catch (_0x329dc3) {
-      console.log(_0x329dc3);
-    }
-  }
-  async queryPointTaskAndSign(_0x4be970 = {}) {
-    try {
-      let _0x2d3c2f = {
-          fn: "queryPointTaskAndSign",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/appTask/queryPointTaskAndSign",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            channel: _0x1366a8.get(_0x4be970, "channel", "SFAPP"),
-            pageType: _0x1366a8.get(_0x4be970, "pageType", "APP_MINE_TASK")
-          }
-        },
-        {
-          result: _0x82513a
-        } = await this.request(_0x2d3c2f);
-      if (_0x82513a?.["success"]) {
-        for (let _0x2b1bde of _0x82513a?.["obj"]?.["taskTitleLevels"] || []) {
-          if (_0x144bb1.includes(_0x2b1bde.title)) {
-            continue;
-          }
-          await this.scanPageToRecord(_0x2b1bde);
-          await this.fetchPoint(_0x2b1bde);
-        }
-      } else {
-        this.log("查询旧版任务失败: " + (_0x82513a?.["errorMessage"] || (_0x82513a ? JSON.stringify(_0x82513a) : "无返回")));
-      }
-    } catch (_0x1f2459) {
-      console.log(_0x1f2459);
-    }
-  }
-  async scanPageToRecord(_0x3292df, _0x590b36 = {}) {
-    try {
-      let _0x30e7d9 = {
-          fn: "scanPageToRecord",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/appTask/scanPageToRecord",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            channel: _0x1366a8.get(_0x590b36, "channel", "SFAPP"),
-            pageType: _0x3292df.pageType
-          }
-        },
-        {
-          result: _0x92ceff
-        } = await this.request(_0x30e7d9);
-      _0x92ceff?.["success"] ? this.log("完成任务[" + _0x3292df.title + "]成功") : this.log("完成任务[" + _0x3292df.title + "]失败: " + (_0x92ceff?.["errorMessage"] || (_0x92ceff ? JSON.stringify(_0x92ceff) : "无返回")));
-    } catch (_0x1f5e95) {
-      console.log(_0x1f5e95);
-    }
-  }
-  async fetchPoint(_0x81f68d, _0x247dad = {}) {
-    try {
-      let _0x496953 = {
-          fn: "fetchPoint",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/appTask/fetchPoint",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            channel: _0x1366a8.get(_0x247dad, "channel", "SFAPP"),
-            pageType: _0x81f68d.pageType,
-            deviceId: this.deviceId
-          }
-        },
-        {
-          result: _0xe721c1
-        } = await this.request(_0x496953);
-      _0xe721c1?.["success"] ? this.log("领取任务[" + _0x81f68d.title + "]奖励成功") : this.log("领取任务[" + _0x81f68d.title + "]奖励失败: " + (_0xe721c1?.["errorMessage"] || (_0xe721c1 ? JSON.stringify(_0xe721c1) : "无返回")));
-    } catch (_0x353bb6) {
-      console.log(_0x353bb6);
-    }
-  }
-  async coupon_list(_0x5460c2 = 1, _0x1f26f2 = 100, _0xef0224 = {}) {
-    try {
-      const _0x4aecec = {
-        couponType: "",
-        pageNo: _0x5460c2,
-        pageSize: _0x1f26f2
-      };
-      let _0x2604cf = {
-          fn: "coupon_list",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/coupon/available/list",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x4aecec
-        },
-        {
-          result: _0xc58473
-        } = await this.request(_0x2604cf);
-      if (_0xc58473?.["success"]) {
-        let _0xd783d8 = [],
-          _0x2ba28c = _0xc58473?.["obj"] || [];
-        for (let _0xb9006e of _0x2ba28c) {
-          let {
-            couponType: _0x4ee46b,
-            invalidTm: _0x11cba8,
-            pledgeAmt: _0x3c85c3,
-            couponName: _0x41dd55
-          } = _0xb9006e;
-          _0x4ee46b === "1" && _0x3c85c3 >= 8 && _0xd783d8.push(_0x41dd55 + ", 过期时间: " + _0x11cba8);
-        }
-        if (_0xd783d8.length) {
-          const _0x60717f = {
-            notify: true
-          };
-          this.log("大额优惠券:", _0x60717f);
-          const _0x513338 = {
-            notify: true
-          };
-          _0x1366a8.log(_0xd783d8.join("\n"), _0x513338);
-        }
-      } else {
-        this.log("查询账号券失败: " + (_0xc58473?.["errorMessage"] || (_0xc58473 ? JSON.stringify(_0xc58473) : "无返回")));
-      }
-    } catch (_0x425a1d) {
-      console.log(_0x425a1d);
-    }
-  }
-  async personalInfoNew(_0x106d38 = {}) {
-    try {
-      let _0x33f18f = {
-          fn: "personalInfoNew",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberIntegral~userInfoService~personalInfoNew",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x2c3ec6
-        } = await this.request(_0x33f18f);
-      if (_0x2c3ec6?.["success"]) {
-        this.userId = _0x2c3ec6.obj.userId;
-        const _0x66941a = {
-          notify: true
-        };
-        this.log("积分: " + _0x2c3ec6.obj.availablePoints, _0x66941a);
-      } else {
-        this.log("查询账号积分失败: " + (_0x2c3ec6?.["errorMessage"] || (_0x2c3ec6 ? JSON.stringify(_0x2c3ec6) : "无返回")));
-      }
-    } catch (_0xee6fd) {
-      console.log(_0xee6fd);
-    }
-  }
-  async bee_indexData(_0x55a3f8 = {}) {
-    try {
-      let _0x4b7288 = _0x1366a8.randomList(_0x11aa2a.filter(_0x2088c3 => _0x2088c3 != this.userId));
-      const _0x24fd72 = {
-        inviteUserId: _0x4b7288
-      };
-      let _0x70e5bf = {
-        fn: "bee_indexData",
-        method: "post",
-        url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~receiveExchangeIndexService~indexData",
-        headers: {
-          ...this.getSign()
-        },
-        json: _0x24fd72
-      };
-      {
-        let {
-          result: _0x5a8803
-        } = await this.request(_0x1366a8.copy(_0x70e5bf));
-        if (_0x5a8803?.["success"]) {
-          let {
-            friendAwards = [],
-            gameNum = 0,
-            usableHoney: _0x4adf12,
-            capacity: _0x44b630
-          } = _0x5a8803?.["obj"];
-          friendAwards?.["length"] && this.log("获得奖励: " + _0x5a8803.obj.friendAwards.map(_0x1f5f24 => _0x1f5f24.name).join(","));
-          _0x4adf12 >= _0x44b630;
-          this.log("可以采蜜冒险" + gameNum + "次");
-          while (gameNum-- > 0) {
-            await this.bee_gameReport();
-          }
-          await this.bee_taskDetail();
-        } else {
-          const _0x55e075 = {
-            notify: true
-          };
-          this.log("进入采蜜游戏主页失败: " + (_0x5a8803?.["errorMessage"] || (_0x5a8803 ? JSON.stringify(_0x5a8803) : "无返回")), _0x55e075);
-          return;
-        }
-      }
-      {
-        let {
-          result: _0x3038df
-        } = await this.request(_0x1366a8.copy(_0x70e5bf));
-        if (_0x3038df?.["success"]) {
-          for (let _0x55a541 of _0x3038df?.["obj"]?.["taskDetail"] || []) {
-            await this.bee_receiveHoney(_0x55a541);
-          }
-        } else {
-          const _0x293e24 = {
-            notify: true
-          };
-          this.log("进入采蜜游戏主页失败: " + (_0x3038df?.["errorMessage"] || (_0x3038df ? JSON.stringify(_0x3038df) : "无返回")), _0x293e24);
-          return;
-        }
-      }
-      {
-        let {
-          result: _0x487fe5
-        } = await this.request(_0x1366a8.copy(_0x70e5bf));
-        if (_0x487fe5?.["success"]) {
-          const _0x36358e = {
-            notify: true
-          };
-          this.log("采蜜游戏丰蜜: " + (_0x487fe5?.["obj"]?.["usableHoney"] || 0), _0x36358e);
-        } else {
-          const _0xa7fe87 = {
-            notify: true
-          };
-          this.log("进入采蜜游戏主页失败: " + (_0x487fe5?.["errorMessage"] || (_0x487fe5 ? JSON.stringify(_0x487fe5) : "无返回")), _0xa7fe87);
-          return;
-        }
-      }
-    } catch (_0x531ea0) {
-      console.log(_0x531ea0);
-    }
-  }
-  async bee_expand(_0x1b03ed = {}) {
-    let _0x3514e8 = false;
-    try {
-      let _0x1cc442 = {
-          fn: "bee_expand",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~receiveExchangeApiService~expand",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x44cc19
-        } = await this.request(_0x1cc442);
-      console.log(JSON.stringify(_0x44cc19));
-      _0x44cc19?.["success"] ? (_0x3514e8 = true, this.log("采蜜游戏扩容成功")) : this.log("采蜜游戏扩容失败: " + (_0x44cc19?.["errorMessage"] || (_0x44cc19 ? JSON.stringify(_0x44cc19) : "无返回")));
-    } catch (_0xda2eeb) {
-      console.log(_0xda2eeb);
-    } finally {
-      return _0x3514e8;
-    }
-  }
-  async bee_receiveHoney(_0x40b722, _0x4e411b = {}) {
-    try {
-      const _0x121e4d = {
-        taskType: _0x40b722.type
-      };
-      let _0x12bc16 = {
-          fn: "bee_receiveHoney",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~receiveExchangeIndexService~receiveHoney",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x121e4d
-        },
-        {
-          result: _0x2c0e79
-        } = await this.request(_0x12bc16);
-      _0x2c0e79?.["success"] ? this.log("领取[" + _0x40b722.type + "]奖励获得: " + _0x40b722.value + "丰蜜") : this.log("领取[" + _0x40b722.type + "]奖励失败: " + (_0x2c0e79?.["errorMessage"] || (_0x2c0e79 ? JSON.stringify(_0x2c0e79) : "无返回")));
-    } catch (_0xe738a7) {
-      console.log(_0xe738a7);
-    }
-  }
-  async bee_gameReport(_0x392998 = {}) {
-    try {
-      let _0x9b6e71 = 20;
-      const _0x2d4028 = {
-        gatherHoney: _0x9b6e71
-      };
-      let _0x52aaa2 = {
-          fn: "bee_gameReport",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~receiveExchangeGameService~gameReport",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x2d4028
-        },
-        {
-          result: _0x147f78
-        } = await this.request(_0x52aaa2);
-      if (_0x147f78?.["success"]) {
-        this.log("采蜜冒险获得" + _0x9b6e71 + "丰蜜");
-      } else {
-        let _0x4de714 = _0x147f78?.["errorMessage"] || (_0x147f78 ? JSON.stringify(_0x147f78) : "无返回");
-        this.log("采蜜冒险失败: " + _0x4de714);
-      }
-    } catch (_0x4c4260) {
-      console.log(_0x4c4260);
-    }
-  }
-  async bee_taskDetail(_0x29baa7 = {}) {
-    try {
-      let _0x34f55d = {
-          fn: "bee_taskDetail",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~receiveExchangeIndexService~taskDetail",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x11eef0
-        } = await this.request(_0x34f55d);
-      if (_0x11eef0?.["success"]) {
-        for (let _0x1bb54d of _0x11eef0.obj.list) {
-          if (!_0x1bb54d.taskCode) {
-            continue;
-          }
-          switch (_0x1bb54d.status) {
-            case 2:
-              if (_0x144bb1.includes(_0x1bb54d.taskType)) {
-                break;
-              }
-              await this.bee_finishTask(_0x1bb54d);
-            case 1:
-            case 3:
-              break;
-            default:
-              this.log("任务[" + _0x1bb54d.title + "] -- 未知状态[" + _0x1bb54d.status + "]");
-              break;
-          }
-        }
-      } else {
-        this.log("查询任务失败: " + (_0x11eef0?.["errorMessage"] || (_0x11eef0 ? JSON.stringify(_0x11eef0) : "无返回")));
-      }
-    } catch (_0x41272e) {
-      console.log(_0x41272e);
-    }
-  }
-  async bee_finishTask(_0x1d6b15, _0x2ac632 = {}) {
-    try {
-      const _0x286b69 = {
-        taskCode: _0x1d6b15.taskCode
-      };
-      let _0x39ad88 = {
-          fn: "bee_finishTask",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberEs~taskRecord~finishTask",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x286b69
-        },
-        {
-          result: _0x56adbd
-        } = await this.request(_0x39ad88);
-      _0x56adbd?.["success"] ? this.log("完成采蜜任务[" + _0x1d6b15.taskType + "]成功") : this.log("完成采蜜任务[" + _0x1d6b15.taskType + "]失败: " + (_0x56adbd?.["errorMessage"] || (_0x56adbd ? JSON.stringify(_0x56adbd) : "无返回")));
-    } catch (_0x4f0779) {
-      console.log(_0x4f0779);
-    }
-  }
-  async superWelfare_receiveRedPacket(_0x135d8d = {}) {
-    try {
-      const _0x2adba0 = {
-        channel: _0x1f992f
-      };
-      let _0xb87586 = {
-          fn: "superWelfare_receiveRedPacket",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberActLengthy~redPacketActivityService~superWelfare~receiveRedPacket",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x2adba0
-        },
-        {
-          result: _0x56795b
-        } = await this.request(_0xb87586);
-      if (_0x56795b?.["success"]) {
-        let _0x5ee939 = _0x56795b?.["obj"]?.["giftList"];
-        if (_0x56795b?.["obj"]?.["extraGiftList"]?.["length"]) {
-          _0x5ee939 = _0x5ee939.concat(_0x56795b.obj.extraGiftList);
-        }
-        let _0x1ddf6c = _0x5ee939?.["map"](_0x4077b8 => _0x4077b8.giftName)?.["join"](", ") || "",
-          _0x1a0e5f = _0x56795b?.["obj"]?.["receiveStatus"] == 1 ? "领取成功" : "已领取过";
-        const _0x4ead26 = {
-          notify: true
-        };
-        this.log("超值福利签到[" + _0x1a0e5f + "]: " + _0x1ddf6c, _0x4ead26);
-      } else {
-        this.log("超值福利签到失败: " + (_0x56795b?.["errorMessage"] || (_0x56795b ? JSON.stringify(_0x56795b) : "无返回")));
-      }
-    } catch (_0x3b26c1) {
-      console.log(_0x3b26c1);
-    }
-  }
-  async memberDay_invite(_0x2ebad7 = {}) {
-    try {
-      let _0x3bca57 = _0x1366a8.randomList(_0x11aa2a.filter(_0x2ec76f => _0x2ec76f != this.userId));
-      const _0xc4311 = {
-        inviteUserId: _0x3bca57
-      };
-      let _0x4739a1 = {
-        fn: "memberDay_invite",
-        method: "post",
-        url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayIndexService~index",
-        headers: {
-          ...this.getSign()
-        },
-        json: _0xc4311
-      };
-      await this.request(_0x4739a1);
-      let {
-        result: _0x2e6b91
-      } = await this.request(_0x4739a1);
-      if (_0x2e6b91?.["success"]) {
-        let {
-          canReceiveInviteAward: _0x261453,
-          risk: _0x9e8902
-        } = _0x2e6b91?.["obj"];
-        _0x261453 && (await this.memberDay_receiveInviteAward(_0x3bca57));
-        if (this.memberDay_black) {
-          return;
-        }
-        await this.memberDay_index();
-      } else {
-        let _0x3b7a40 = _0x2e6b91?.["errorMessage"] || (_0x2e6b91 ? JSON.stringify(_0x2e6b91) : "无返回");
-        this.log("查询会员日失败: " + _0x3b7a40);
-        if (_0x3b7a40?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x12ee2d = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x12ee2d);
-        }
-      }
-    } catch (_0x32a3fc) {
-      console.log(_0x32a3fc);
-    }
-  }
-  async memberDay_index(_0x2084ed = {}) {
-    try {
-      let _0x5d3766 = {
-          fn: "memberDay_index",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayIndexService~index",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x3ec4ee
-        } = await this.request(_0x5d3766);
-      if (_0x3ec4ee?.["success"]) {
-        let {
-          lotteryNum: _0x23cba7,
-          risk: _0x1fa76a
-        } = _0x3ec4ee?.["obj"];
-        await this.memberDay_redPacketReceivedStatus();
-        _0x23cba7 = _0x23cba7 || 0;
-        this.log("会员日可以抽奖" + _0x23cba7 + "次");
-        while (_0x23cba7-- > 0) {
-          await this.memberDay_lottery();
-        }
-        if (this.memberDay_black) {
-          return;
-        }
-        await this.memberDay_taskList();
-        if (this.memberDay_black) {
-          return;
-        }
-        await this.memberDay_redPacketStatus();
-      } else {
-        let _0x56c73d = _0x3ec4ee?.["errorMessage"] || (_0x3ec4ee ? JSON.stringify(_0x3ec4ee) : "无返回");
-        this.log("查询会员日失败: " + _0x56c73d);
-        if (_0x56c73d?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0xe6c6c1 = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0xe6c6c1);
-        }
-      }
-    } catch (_0x13205f) {
-      console.log(_0x13205f);
-    }
-  }
-  async memberDay_receiveInviteAward(_0x52373a, _0x244710 = {}) {
-    try {
-      const _0x4f1c34 = {
-        inviteUserId: _0x52373a
-      };
-      let _0x445214 = {
-          fn: "memberDay_receiveInviteAward",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayIndexService~receiveInviteAward",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x4f1c34
-        },
-        {
-          result: _0x48e49d
-        } = await this.request(_0x445214);
-      if (_0x48e49d?.["success"]) {
-        let {
-          productName = "空气"
-        } = _0x48e49d?.["obj"] || {};
-        const _0x305509 = {
-          notify: true
-        };
-        this.log("会员日奖励: " + productName, _0x305509);
-      } else {
-        let _0x5c78f3 = _0x48e49d?.["errorMessage"] || (_0x48e49d ? JSON.stringify(_0x48e49d) : "无返回");
-        this.log("领取会员日奖励失败: " + _0x5c78f3);
-        if (_0x5c78f3?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x7a718e = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x7a718e);
-        }
-      }
-    } catch (_0x593d59) {
-      console.log(_0x593d59);
-    }
-  }
-  async memberDay_lottery(_0x319d66 = {}) {
-    try {
-      let _0xd13a1 = {
-          fn: "memberDay_lottery",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayLotteryService~lottery",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x3224ef
-        } = await this.request(_0xd13a1);
-      if (_0x3224ef?.["success"]) {
-        let {
-          productName = "空气"
-        } = _0x3224ef?.["obj"] || {};
-        const _0x4e99df = {
-          notify: true
-        };
-        this.log("会员日抽奖: " + productName, _0x4e99df);
-      } else {
-        let _0x182807 = _0x3224ef?.["errorMessage"] || (_0x3224ef ? JSON.stringify(_0x3224ef) : "无返回");
-        this.log("会员日抽奖失败: " + _0x182807);
-        if (_0x182807?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0xa33bd3 = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0xa33bd3);
-        }
-      }
-    } catch (_0x1795ba) {
-      console.log(_0x1795ba);
-    }
-  }
-  async memberDay_taskList(_0x340464 = {}) {
-    try {
-      const _0xb5e45b = {
-        activityCode: _0x1c616b,
-        channelType: "MINI_PROGRAM"
-      };
-      let _0x5d9198 = {
-          fn: "memberDay_taskList",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~activityTaskService~taskList",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0xb5e45b
-        },
-        {
-          result: _0x55b5ca
-        } = await this.request(_0x5d9198);
-      if (_0x55b5ca?.["success"]) {
-        let _0x2ccfdd = _0x55b5ca?.["obj"] || [];
-        for (let _0x17bc26 of _0x2ccfdd.filter(_0x27783a => _0x27783a.status == 1)) {
-          if (this.memberDay_black) {
-            return;
-          }
-          await this.memberDay_fetchMixTaskReward(_0x17bc26);
-        }
-        for (let _0xfcd106 of _0x2ccfdd.filter(_0x3701a4 => _0x3701a4.status == 2)) {
-          if (this.memberDay_black) {
-            return;
-          }
-          switch (_0xfcd106.taskType) {
-            case "SEND_SUCCESS":
-            case "INVITEFRIENDS_PARTAKE_ACTIVITY":
-            case "OPEN_SVIP":
-            case "OPEN_NEW_EXPRESS_CARD":
-            case "OPEN_FAMILY_CARD":
-            case "CHARGE_NEW_EXPRESS_CARD":
-            case "INTEGRAL_EXCHANGE":
-              {
-                break;
-              }
-            default:
-              {
-                for (let _0x286fb1 = 0; _0x286fb1 < _0xfcd106.restFinishTime && !this.memberDay_black; _0x286fb1++) {
-                  await this.memberDay_finishTask(_0xfcd106);
-                }
-                break;
-              }
-          }
-        }
-      } else {
-        let _0x400b5b = _0x55b5ca?.["errorMessage"] || (_0x55b5ca ? JSON.stringify(_0x55b5ca) : "无返回");
-        this.log("查询会员日任务失败: " + _0x400b5b);
-        if (_0x400b5b?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0xbb5b50 = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0xbb5b50);
-        }
-      }
-    } catch (_0x6891e2) {
-      console.log(_0x6891e2);
-    }
-  }
-  async memberDay_finishTask(_0x188e04, _0x59cdbe = {}) {
-    try {
-      const _0x2c036e = {
-        taskCode: _0x188e04.taskCode
-      };
-      let _0x1fcc23 = {
-          fn: "memberDay_finishTask",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberEs~taskRecord~finishTask",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x2c036e
-        },
-        {
-          result: _0x2ac6ba
-        } = await this.request(_0x1fcc23);
-      if (_0x2ac6ba?.["success"]) {
-        this.log("完成会员日任务[" + _0x188e04.taskName + "]成功");
-        await this.memberDay_fetchMixTaskReward(_0x188e04);
-      } else {
-        let _0x244072 = _0x2ac6ba?.["errorMessage"] || (_0x2ac6ba ? JSON.stringify(_0x2ac6ba) : "无返回");
-        this.log("完成会员日任务[" + _0x188e04.taskName + "]失败: " + _0x244072);
-        if (_0x244072?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x5816e6 = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x5816e6);
-        }
-      }
-    } catch (_0x2e260c) {
-      console.log(_0x2e260c);
-    }
-  }
-  async memberDay_fetchMixTaskReward(_0x41e80d, _0x2433ac = {}) {
-    try {
-      const _0x1305de = {
-        taskType: _0x41e80d.taskType,
-        activityCode: _0x1c616b,
-        channelType: "MINI_PROGRAM"
-      };
-      let _0xd8571 = {
-          fn: "memberDay_fetchMixTaskReward",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~activityTaskService~fetchMixTaskReward",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x1305de
-        },
-        {
-          result: _0x36086f
-        } = await this.request(_0xd8571);
-      if (_0x36086f?.["success"]) {
-        this.log("领取会员日任务[" + _0x41e80d.taskName + "]奖励成功");
-      } else {
-        let _0x231ad9 = _0x36086f?.["errorMessage"] || (_0x36086f ? JSON.stringify(_0x36086f) : "无返回");
-        this.log("领取会员日任务[" + _0x41e80d.taskName + "]奖励失败: " + _0x231ad9);
-        if (_0x231ad9?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x2339b6 = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x2339b6);
-        }
-      }
-    } catch (_0x17dd53) {
-      console.log(_0x17dd53);
-    }
-  }
-  async memberDay_redPacketReceivedStatus(_0xfdfa8c = {}) {
-    try {
-      let _0x3b07de = {
-          fn: "memberDay_redPacketReceivedStatus",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayTaskService~redPacketReceivedStatus",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x5a308d
-        } = await this.request(_0x3b07de);
-      if (_0x5a308d?.["success"]) {
-        for (let _0x38048d of _0x5a308d?.["obj"] || []) {
-          if (_0x38048d.received) {
-            continue;
-          }
-          let _0x26e677 = new Date().getHours();
-          _0x38048d.receiveHour == _0x26e677 && (await this.memberDay_receiveRedPacket(_0x38048d.receiveHour));
-        }
-      } else {
-        let _0x58049c = _0x5a308d?.["errorMessage"] || (_0x5a308d ? JSON.stringify(_0x5a308d) : "无返回");
-        this.log("会员日查询整点领红包失败: " + _0x58049c);
-        if (_0x58049c?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x4ebf26 = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x4ebf26);
-        }
-      }
-    } catch (_0x1d6444) {
-      console.log(_0x1d6444);
-    }
-  }
-  async memberDay_receiveRedPacket(_0x2bd6e0, _0x416b42 = {}) {
-    try {
-      const _0xb00630 = {
-        receiveHour: _0x2bd6e0
-      };
-      let _0x5c2dbb = {
-          fn: "memberDay_receiveRedPacket",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayTaskService~receiveRedPacket",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0xb00630
-        },
-        {
-          result: _0x42f2a9
-        } = await this.request(_0x5c2dbb);
-      if (_0x42f2a9?.["success"]) {
-        this.log("会员日领取" + _0x2bd6e0 + "点红包成功");
-      } else {
-        let _0x11e726 = _0x42f2a9?.["errorMessage"] || (_0x42f2a9 ? JSON.stringify(_0x42f2a9) : "无返回");
-        this.log("会员日领取" + _0x2bd6e0 + "点红包失败: " + _0x11e726);
-        if (_0x11e726?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x1acb7f = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x1acb7f);
-        }
-      }
-    } catch (_0x1a9c33) {
-      console.log(_0x1a9c33);
-    }
-  }
-  async memberDay_redPacketStatus(_0x5ab404 = {}) {
-    try {
-      let _0xf4b04e = {
-          fn: "memberDay_redPacketStatus",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayPacketService~redPacketStatus",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x399537
-        } = await this.request(_0xf4b04e);
-      if (_0x399537?.["success"]) {
-        let {
-          drewToday: _0x5dc7c4,
-          packetList: _0x21921d
-        } = _0x399537?.["obj"];
-        this.memberDay_redPacket_drewToday = _0x5dc7c4;
-        for (let _0x189931 of _0x21921d) {
-          this.memberDay_redPacket_map[_0x189931.level] = _0x189931.count;
-        }
-        let _0x2fc534 = _0x48074c;
-        for (let _0x5be578 = 1; _0x5be578 < _0x2fc534; _0x5be578++) {
-          let _0x4b3754 = this.memberDay_redPacket_map[_0x5be578];
-          while (_0x4b3754 >= 2) {
-            await this.memberDay_redPacketMerge(_0x5be578);
-            _0x4b3754 -= 2;
-          }
-        }
-        let _0x565e3a = [],
-          _0x5410db = 0;
-        for (let _0x3d5190 in this.memberDay_redPacket_map) {
-          if (!this.memberDay_redPacket_map[_0x3d5190]) {
-            continue;
-          }
-          _0x565e3a.push("[" + _0x3d5190 + "级]X" + this.memberDay_redPacket_map[_0x3d5190]);
-          let _0x49b6f2 = parseInt(_0x3d5190);
-          _0x49b6f2 < _0x2fc534 && (_0x5410db += 1 << _0x49b6f2 - 1);
-        }
-        const _0xfabb87 = {
-          notify: true
-        };
-        this.log("会员日合成列表: " + _0x565e3a.join(", "), _0xfabb87);
-        if (this.memberDay_redPacket_map[_0x2fc534]) {
-          const _0x1ff22a = {
-            notify: true
-          };
-          this.log("会员日已拥有[" + _0x2fc534 + "级]红包X" + this.memberDay_redPacket_map[_0x2fc534], _0x1ff22a);
-          await this.memberDay_redPacketDraw(_0x2fc534);
-        } else {
-          let _0x2ba9d8 = _0x596697 - _0x5410db;
-          const _0x1b42cd = {
-            notify: true
-          };
-          this.log("会员日距离[" + _0x2fc534 + "级]红包还差: [1级]红包X" + _0x2ba9d8, _0x1b42cd);
-        }
-      } else {
-        let _0x3470e0 = _0x399537?.["errorMessage"] || (_0x399537 ? JSON.stringify(_0x399537) : "无返回");
-        this.log("查询会员日合成失败: " + _0x3470e0);
-        if (_0x3470e0?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x1d99aa = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x1d99aa);
-        }
-      }
-    } catch (_0x4be2b2) {
-      console.log(_0x4be2b2);
-    }
-  }
-  async memberDay_redPacketMerge(_0x10c25d, _0x2bbbf6 = {}) {
-    try {
-      const _0x53cb42 = {
-        level: _0x10c25d,
-        num: 2
-      };
-      let _0x535421 = {
-          fn: "memberDay_redPacketMerge",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayPacketService~redPacketMerge",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x53cb42
-        },
-        {
-          result: _0x2d9be6
-        } = await this.request(_0x535421);
-      if (_0x2d9be6?.["success"]) {
-        this.log("会员日合成: [" + _0x10c25d + "级]红包X2 -> [" + (_0x10c25d + 1) + "级]红包");
-        this.memberDay_redPacket_map[_0x10c25d] -= 2;
-        if (!this.memberDay_redPacket_map[_0x10c25d + 1]) {
-          this.memberDay_redPacket_map[_0x10c25d + 1] = 0;
-        }
-        this.memberDay_redPacket_map[_0x10c25d + 1]++;
-      } else {
-        let _0x441ffc = _0x2d9be6?.["errorMessage"] || (_0x2d9be6 ? JSON.stringify(_0x2d9be6) : "无返回");
-        this.log("会员日合成两个[" + _0x10c25d + "级]红包失败: " + _0x441ffc);
-        if (_0x441ffc?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x24ab5f = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x24ab5f);
-        }
-      }
-    } catch (_0x5222ec) {
-      console.log(_0x5222ec);
-    }
-  }
-  async memberDay_redPacketDraw(_0x4d8ea7, _0xab21dd = {}) {
-    try {
-      let _0x252d81 = {
-          fn: "memberDay_redPacketDraw",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~memberDayPacketService~redPacketDraw",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            level: _0x4d8ea7.toString()
-          }
-        },
-        {
-          result: _0x4dbc23
-        } = await this.request(_0x252d81);
-      if (_0x4dbc23?.["success"]) {
-        let _0x2ee85c = _0x4dbc23?.["obj"]?.["map"](_0x2dd984 => _0x2dd984.couponName) || [];
-        const _0x3cd128 = {
-          notify: true
-        };
-        this.log("会员日提取[" + _0x4d8ea7 + "级]红包: " + (_0x2ee85c.join(", ") || "空气"), _0x3cd128);
-      } else {
-        let _0x40ddef = _0x4dbc23?.["errorMessage"] || (_0x4dbc23 ? JSON.stringify(_0x4dbc23) : "无返回");
-        this.log("会员日提取[" + _0x4d8ea7 + "级]红包失败: " + _0x40ddef);
-        if (_0x40ddef?.["includes"]("没有资格参与活动")) {
-          this.memberDay_black = true;
-          const _0x29edc2 = {
-            notify: true
-          };
-          this.log("会员日任务风控", _0x29edc2);
-        }
-      }
-    } catch (_0x42006c) {
-      console.log(_0x42006c);
-    }
-  }
-  async jika2024_taskList(_0x506887 = {}) {
-    try {
-      let _0x20bf0d = {
-          fn: "jika2024_taskList",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~activityTaskService~taskList",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            activityCode: _0xb8d615,
-            channelType: "MINI_PROGRAM"
-          }
-        },
-        {
-          result: _0x138bfb
-        } = await this.request(_0x20bf0d);
-      if (_0x138bfb?.["success"]) {
-        let _0x125dbd = _0x138bfb?.["obj"] || [];
-        for (let _0x4799b8 of _0x125dbd.filter(_0x85511d => _0x85511d.status == 1)) {
-          if (this.jika_black) {
-            return;
-          }
-          for (let _0x3fdaa7 = 0; _0x3fdaa7 < _0x4799b8.canReceiveTokenNum; _0x3fdaa7++) {
-            await this.jika2024_fetchMixTaskReward(_0x4799b8);
-          }
-        }
-        for (let _0x4d15d2 of _0x125dbd.filter(_0x1d7a3d => _0x1d7a3d.status == 2)) {
-          if (this.jika_black) {
-            return;
-          }
-          switch (_0x4d15d2.taskType) {
-            case "PLAY_ACTIVITY_GAME":
-              {
-                this.log("开始玩新年集卡猜成语");
-                for (let _0x4e8e2f = 1; _0x4e8e2f <= 10; _0x4e8e2f++) {
-                  let _0x5d50e9 = Math.floor(Math.random() * 3000) + 1000;
-                  await _0x1366a8.wait(_0x5d50e9);
-                  await this.jika2024_chengyu_win(_0x4e8e2f);
-                }
-                break;
-              }
-            case "FOLLOW_SFZHUNONG_VEDIO_ID":
-              {
-                break;
-              }
-            case "CLICK_MY_SETTING":
-            case "CLICK_TEMPLATE":
-            case "REAL_NAME":
-            case "SEND_SUCCESS_RECALL":
-            case "OPEN_SVIP":
-            case "OPEN_FAST_CARD":
-            case "FIRST_CHARGE_NEW_EXPRESS_CARD":
-            case "CHARGE_NEW_EXPRESS_CARD":
-            case "INTEGRAL_EXCHANGE":
-              {
-                break;
-              }
-            default:
-              {
-                for (let _0xb053bb = 0; _0xb053bb < _0x4d15d2.restFinishTime && !this.jika_black; _0xb053bb++) {
-                  await this.jika2024_finishTask(_0x4d15d2);
-                }
-                break;
-              }
-          }
-        }
-      } else {
-        this.log("查询新年集卡任务失败: " + (_0x138bfb?.["errorMessage"] || (_0x138bfb ? JSON.stringify(_0x138bfb) : "无返回")));
-      }
-    } catch (_0x5d41ef) {
-      console.log(_0x5d41ef);
-    }
-  }
-  async jika2024_finishTask(_0x5a3c78, _0x2231f7 = {}) {
-    try {
-      const _0x243c7c = {
-        taskCode: _0x5a3c78.taskCode
-      };
-      let _0x20ce60 = {
-          fn: "jika2024_finishTask",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x243c7c
-        },
-        {
-          result: _0x1c97bf
-        } = await this.request(_0x20ce60);
-      _0x1c97bf?.["success"] ? (this.log("完成新年集卡任务[" + _0x5a3c78.taskName + "]成功"), await this.jika2024_fetchMixTaskReward(_0x5a3c78)) : this.log("完成新年集卡任务[" + _0x5a3c78.taskName + "]失败: " + (_0x1c97bf?.["errorMessage"] || (_0x1c97bf ? JSON.stringify(_0x1c97bf) : "无返回")));
-    } catch (_0x50668a) {
-      console.log(_0x50668a);
-    }
-  }
-  async jika2024_fetchMixTaskReward(_0x1b3000, _0x1a6121 = {}) {
-    try {
-      const _0x203f6a = {
-        taskType: _0x1b3000.taskType,
-        activityCode: _0xb8d615,
-        channelType: "MINI_PROGRAM"
-      };
-      let _0x5c4582 = {
-          fn: "jika2024_fetchMixTaskReward",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonNoLoginPost/~memberNonactivity~yearEnd2023TaskService~fetchMixTaskReward",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x203f6a
-        },
-        {
-          result: _0x405b41
-        } = await this.request(_0x5c4582);
-      if (_0x405b41?.["success"]) {
-        let _0x10ccb0 = [],
-          {
-            receivedAccountList = [],
-            turnedAward = {}
-          } = _0x405b41.obj;
-        for (let _0x20b794 of receivedAccountList) {
-          _0x10ccb0.push("" + (_0xd3a68c[_0x20b794.currency] || "[" + _0x20b794.currency + "]"));
-        }
-        turnedAward?.["couponName"] && _0x10ccb0.push("[优惠券]" + turnedAward?.["couponName"]);
-        this.log("领取任务[" + _0x1b3000.taskName + "]奖励: " + _0x10ccb0.join(", "));
-      } else {
-        let _0x22e15c = _0x405b41?.["errorMessage"] || (_0x405b41 ? JSON.stringify(_0x405b41) : "无返回");
-        this.log("领取任务[" + _0x1b3000.taskName + "]奖励失败: " + _0x22e15c);
-        _0x22e15c?.["includes"]("用户手机号校验未通过") && (this.jika_black = true);
-      }
-    } catch (_0x6bfaa9) {
-      console.log(_0x6bfaa9);
-    }
-  }
-  async jika2024_getAward(_0x42f65d, _0x14b34f = {}) {
-    try {
-      const _0x31f302 = {
-        cardType: _0x42f65d
-      };
-      let _0x5dcdf7 = {
-          fn: "jika2024_getAward",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~yearEnd2023GardenPartyService~getAward",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x31f302
-        },
-        {
-          result: _0x299652
-        } = await this.request(_0x5dcdf7);
-      if (_0x299652?.["success"]) {
-        let _0x23f920 = [],
-          {
-            receivedAccountList = [],
-            turnedAward = {}
-          } = _0x299652.obj;
-        for (let _0x1806c8 of receivedAccountList) {
-          _0x23f920.push("" + (_0xd3a68c[_0x1806c8.currency] || "[" + _0x1806c8.currency + "]"));
-        }
-        turnedAward?.["couponName"] && _0x23f920.push("[优惠券]" + turnedAward?.["couponName"]);
-        this.log("逛集市领卡奖励: " + _0x23f920.join(", "));
-      } else {
-        let _0x3162a2 = _0x299652?.["errorMessage"] || (_0x299652 ? JSON.stringify(_0x299652) : "无返回");
-        this.log("逛集市领卡失败: " + _0x3162a2);
-        _0x3162a2?.["includes"]("用户手机号校验未通过") && (this.jika_black = true);
-      }
-    } catch (_0x30059f) {
-      console.log(_0x30059f);
-    }
-  }
-  async jika2024_chengyu_index(_0x32d187 = {}) {
-    try {
-      let _0x3a5581 = {
-          fn: "jika2024_chengyu_index",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~yearEnd2023GuessIdiomService~index",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x3dd9fc
-        } = await this.request(_0x3a5581);
-      if (_0x3dd9fc?.["success"]) {
-        if (_0x3dd9fc?.["obj"]?.["bigCardFlag"]) {
-          this.log("今天已完成新年集卡猜成语");
-        } else {
-          this.log("开始玩新年集卡猜成语");
-          for (let _0x2a38ba = 1; _0x2a38ba <= 10; _0x2a38ba++) {
-            let _0x4fda2c = Math.floor(Math.random() * 3000) + 1000;
-            await _0x1366a8.wait(_0x4fda2c);
-            await this.jika2024_chengyu_win(_0x2a38ba);
-          }
-        }
-      } else {
-        this.log("查询新年集卡猜成语任务失败: " + (_0x3dd9fc?.["errorMessage"] || (_0x3dd9fc ? JSON.stringify(_0x3dd9fc) : "无返回")));
-      }
-    } catch (_0x33e13c) {
-      console.log(_0x33e13c);
-    }
-  }
-  async jika2024_chengyu_win(_0x24863b, _0x302bfb = {}) {
-    try {
-      const _0x5ceb0b = {
-        index: _0x24863b
-      };
-      let _0x51a974 = {
-          fn: "jika2024_chengyu_win",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~yearEnd2023GuessIdiomService~win",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x5ceb0b
-        },
-        {
-          result: _0x587690
-        } = await this.request(_0x51a974);
-      if (_0x587690?.["success"]) {
-        let {
-          isAward: _0x40f4f9,
-          currencyDTOList: _0x35c136
-        } = _0x587690?.["obj"];
-        if (_0x40f4f9) {
-          let _0x517d10 = [];
-          for (let _0x15a93c of _0x35c136) {
-            _0x517d10.push("" + (_0xd3a68c[_0x15a93c.currency] || "[" + _0x15a93c.currency + "]"));
-          }
-          this.log("猜成语第" + _0x24863b + "关通关成功: " + _0x517d10.join(", "));
-        } else {
-          this.log("猜成语第" + _0x24863b + "关通关成功");
-        }
-      } else {
-        let _0x175854 = _0x587690?.["errorMessage"] || (_0x587690 ? JSON.stringify(_0x587690) : "无返回");
-        this.log("猜成语第" + _0x24863b + "关失败: " + _0x175854);
-        _0x175854?.["includes"]("系统繁忙") && (this.jika_black = true);
-      }
-    } catch (_0x1871c1) {
-      console.log(_0x1871c1);
-    }
-  }
-  async jika2024_cardStatus(_0x372ae2 = {}) {
-    try {
-      let _0xd313b = {
-          fn: "jika2024_cardStatus",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~yearEnd2023CardService~cardStatus",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x1f0c13
-        } = await this.request(_0xd313b);
-      if (_0x1f0c13?.["success"]) {
-        let _0x1ab47f = _0x1f0c13?.["obj"]?.["accountList"] || [];
-        if (_0x1ab47f?.["length"]) {
-          this.cards = _0x1ab47f.filter(_0x4e7e96 => _0x4e7e96.balance > 0);
-          this.cards.sort((_0x204695, _0x5bf390) => {
-            return _0x5bf390.balance - _0x204695.balance;
-          });
-          let _0x2ca6ae = [];
-          for (let _0x559f88 of this.cards) {
-            let _0xb626e2 = _0xd3a68c[_0x559f88.currency] || "[" + _0x559f88.currency + "]";
-            _0x2ca6ae.push(_0xb626e2 + "X" + _0x559f88.balance);
-          }
-          const _0x23cbaa = {
-            notify: true
-          };
-          this.log("年卡: " + _0x2ca6ae.join(", "), _0x23cbaa);
-          if (this.cards.filter(_0x364631 => _0x364631.balance > 0).filter(_0x54ed54 => _0x54ed54.currency == "COMMON_CARD").length > 0) {
-            const _0x2f160a = {
-              notify: true
-            };
-            this.log("拥有万能卡, 请自行合成, 不自动抽奖", _0x2f160a);
-            return;
-          }
-          while (this.cards.filter(_0x4ed3eb => _0x4ed3eb.balance > 0).length >= 3 && !this.jika_black) {
-            await this.jika2024_collectDrawAward();
-          }
-        } else {
-          const _0x32003c = {
-            notify: true
-          };
-          this.log("还没有收集到年卡", _0x32003c);
-        }
-      } else {
-        this.log("查询已收集年卡失败: " + (_0x1f0c13?.["errorMessage"] || (_0x1f0c13 ? JSON.stringify(_0x1f0c13) : "无返回")));
-      }
-    } catch (_0x32dcaf) {
-      console.log(_0x32dcaf);
-    }
-  }
-  async jika2024_collectDrawAward(_0xcaa39f = {}) {
-    try {
-      let _0x1fc459 = this.cards.filter(_0x52a34c => _0x52a34c.balance > 0).map(_0x5276f7 => _0x5276f7.currency);
-      if (_0x1fc459.length > 6) {
-        _0x1fc459 = _0x1fc459.slice(0, 6);
-      }
-      const _0x2c6533 = {
-        accountList: _0x1fc459
-      };
-      let _0x3fd1c4 = {
-          fn: "jika2024_collectDrawAward",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~yearEnd2023CardService~collectDrawAward",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x2c6533
-        },
-        {
-          result: _0x3e0dc5
-        } = await this.request(_0x3fd1c4);
-      if (_0x3e0dc5?.["success"]) {
-        let {
-          productName: _0x4e0483
-        } = _0x3e0dc5?.["obj"];
-        const _0x40966a = {
-          notify: true
-        };
-        this.log("使用" + _0x1fc459.length + "种年卡合成: " + _0x4e0483, _0x40966a);
-        for (let _0x1c10d4 of this.cards) {
-          _0x1fc459.includes(_0x1c10d4.currency) && (_0x1c10d4.balance -= 1);
-        }
-      } else {
-        let _0x419b11 = _0x3e0dc5?.["errorMessage"] || (_0x3e0dc5 ? JSON.stringify(_0x3e0dc5) : "无返回");
-        this.log("使用" + _0x1fc459.length + "种年卡合成失败: " + _0x419b11);
-        _0x419b11?.["includes"]("系统繁忙") && (this.jika_black = true);
-      }
-    } catch (_0x4336a2) {
-      console.log(_0x4336a2);
-    }
-  }
-  async jika2024_task(_0x12b519 = {}) {
-    await this.jika2024_cardStatus();
-  }
-  async anniversary2024_weeklyGiftStatus(_0x4f2098 = {}) {
-    try {
-      let _0x1de0ca = {
-          fn: "anniversary2024_weeklyGiftStatus",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024IndexService~weeklyGiftStatus",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x5dfec6
-        } = await this.request(_0x1de0ca);
-      if (_0x5dfec6?.["success"]) {
-        let _0x466897 = _0x5dfec6?.["obj"]?.["weeklyGiftList"] || [];
-        for (let _0x23fd21 of _0x466897) {
-          if (!_0x23fd21.received) {
-            let _0xa46cce = new Date(_0x23fd21.receiveStartTime),
-              _0x3e54fb = new Date(_0x23fd21.receiveEndTime),
-              _0x5ef6d9 = Date.now();
-            _0x5ef6d9 >= _0xa46cce.getTime() && _0x5ef6d9 <= _0x3e54fb.getTime() && (await this.anniversary2024_receiveWeeklyGift());
-          }
-        }
-      } else {
-        let _0x6547a3 = _0x5dfec6?.["errorMessage"] || (_0x5dfec6 ? JSON.stringify(_0x5dfec6) : "无返回");
-        this.log("查询周年庆每周领券失败: " + _0x6547a3);
-        (_0x6547a3?.["includes"]("系统繁忙") || _0x6547a3?.["includes"]("用户手机号校验未通过")) && (this.anniversary_black = true);
-      }
-    } catch (_0x2c2cac) {
-      console.log(_0x2c2cac);
-    }
-  }
-  async anniversary2024_receiveWeeklyGift(_0x5ba826 = {}) {
-    try {
-      let _0x45e3cc = {
-          fn: "anniversary2024_receiveWeeklyGift",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024IndexService~receiveWeeklyGift",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x3084e6
-        } = await this.request(_0x45e3cc);
-      if (_0x3084e6?.["success"]) {
-        let _0x56e6a6 = _0x3084e6?.["obj"]?.["map"](_0x56a1fd => _0x56a1fd.productName);
-        this.log("周年庆每周领券: " + _0x56e6a6.join(", "));
-      } else {
-        let _0x2c46a3 = _0x3084e6?.["errorMessage"] || (_0x3084e6 ? JSON.stringify(_0x3084e6) : "无返回");
-        this.log("周年庆每周领券失败: " + _0x2c46a3);
-        (_0x2c46a3?.["includes"]("系统繁忙") || _0x2c46a3?.["includes"]("用户手机号校验未通过")) && (this.anniversary_black = true);
-      }
-    } catch (_0x1e4d00) {
-      console.log(_0x1e4d00);
-    }
-  }
-  async anniversary2024_taskList(_0x2534c7 = {}) {
-    try {
-      let _0x1ced3a = {
-          fn: "anniversary2024_taskList",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~activityTaskService~taskList",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            activityCode: _0x4c1524,
-            channelType: "MINI_PROGRAM"
-          }
-        },
-        {
-          result: _0x85486b
-        } = await this.request(_0x1ced3a);
-      if (_0x85486b?.["success"]) {
-        let _0x383bc9 = _0x85486b?.["obj"] || [];
-        for (let _0x5a77b3 of _0x383bc9.filter(_0x1e2ca8 => _0x1e2ca8.status == 1)) {
-          if (this.anniversary_black) {
-            return;
-          }
-          for (let _0x3750e7 = 0; _0x3750e7 < _0x5a77b3.canReceiveTokenNum; _0x3750e7++) {
-            await this.anniversary2024_fetchMixTaskReward(_0x5a77b3);
-          }
-        }
-        for (let _0x180900 of _0x383bc9.filter(_0x299398 => _0x299398.status == 2)) {
-          if (this.anniversary_black) {
-            return;
-          }
-          switch (_0x180900.taskType) {
-            case "PLAY_ACTIVITY_GAME":
-            case "PLAY_HAPPY_ELIMINATION":
-            case "PARTAKE_SUBJECT_GAME":
-              {
-                break;
-              }
-            case "FOLLOW_SFZHUNONG_VEDIO_ID":
-              {
-                break;
-              }
-            case "BROWSE_VIP_CENTER":
-            case "GUESS_GAME_TIP":
-            case "CREATE_SFID":
-            case "CLICK_MY_SETTING":
-            case "CLICK_TEMPLATE":
-            case "REAL_NAME":
-            case "SEND_SUCCESS_RECALL":
-            case "OPEN_SVIP":
-            case "OPEN_FAST_CARD":
-            case "FIRST_CHARGE_NEW_EXPRESS_CARD":
-            case "CHARGE_NEW_EXPRESS_CARD":
-            case "INTEGRAL_EXCHANGE":
-              {
-                break;
-              }
-            default:
-              {
-                for (let _0x37943d = 0; _0x37943d < _0x180900.restFinishTime && !this.anniversary_black; _0x37943d++) {
-                  await this.anniversary2024_finishTask(_0x180900);
-                }
-                break;
-              }
-          }
-        }
-      } else {
-        this.log("查询任务失败: " + (_0x85486b?.["errorMessage"] || (_0x85486b ? JSON.stringify(_0x85486b) : "无返回")));
-      }
-    } catch (_0x4af478) {
-      console.log(_0x4af478);
-    }
-  }
-  async anniversary2024_finishTask(_0x4f0413, _0x39c7b0 = {}) {
-    try {
-      const _0x197ef6 = {
-        taskCode: _0x4f0413.taskCode
-      };
-      let _0x1dd7e7 = {
-          fn: "anniversary2024_finishTask",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x197ef6
-        },
-        {
-          result: _0x5a814b
-        } = await this.request(_0x1dd7e7);
-      _0x5a814b?.["success"] ? (this.log("完成任务[" + _0x4f0413.taskName + "]成功"), await this.anniversary2024_fetchMixTaskReward(_0x4f0413)) : this.log("完成任务[" + _0x4f0413.taskName + "]失败: " + (_0x5a814b?.["errorMessage"] || (_0x5a814b ? JSON.stringify(_0x5a814b) : "无返回")));
-    } catch (_0x4b0690) {
-      console.log(_0x4b0690);
-    }
-  }
-  async anniversary2024_fetchMixTaskReward(_0x56d9ab, _0x1556be = {}) {
-    try {
-      let _0x488f2b = {
-          fn: "anniversary2024_fetchMixTaskReward",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024TaskService~fetchMixTaskReward",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            taskType: _0x56d9ab.taskType,
-            activityCode: _0x4c1524,
-            channelType: "MINI_PROGRAM"
-          }
-        },
-        {
-          result: _0x469902
-        } = await this.request(_0x488f2b);
-      if (_0x469902?.["success"]) {
-        let _0x2d9faa = [],
-          {
-            receivedAccountList = [],
-            turnedAward = {}
-          } = _0x469902?.["obj"]?.["account"];
-        for (let _0x46e3a1 of receivedAccountList) {
-          _0x2d9faa.push("[" + _0x46e3a1.currency + "]X" + _0x46e3a1.amount);
-        }
-        turnedAward?.["productName"] && _0x2d9faa.push("[优惠券]" + turnedAward?.["productName"]);
-        this.log("领取任务[" + _0x56d9ab.taskName + "]奖励: " + _0x2d9faa.join(", "));
-      } else {
-        let _0x2ddf1d = _0x469902?.["errorMessage"] || (_0x469902 ? JSON.stringify(_0x469902) : "无返回");
-        this.log("领取任务[" + _0x56d9ab.taskName + "]奖励失败: " + _0x2ddf1d);
-        _0x2ddf1d?.["includes"]("用户手机号校验未通过") && (this.anniversary_black = true);
-      }
-    } catch (_0x23d50e) {
-      console.log(_0x23d50e);
-    }
-  }
-  async anniversary2024_unbox(_0x4ad52c = {}) {
-    try {
-      let _0x4f9eb8 = {
-          fn: "anniversary2024_unbox",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024CardService~unbox",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x2fc585
-        } = await this.request(_0x4f9eb8);
-      if (_0x2fc585?.["success"]) {
-        let _0x465bda = [],
-          _0x5995ea = _0x2fc585?.["obj"]?.["account"]?.["receivedAccountList"] || [];
-        for (let _0x4e4676 of _0x5995ea) {
-          _0x465bda.push("[" + _0x4e4676.currency + "]X" + _0x4e4676.amount);
-        }
-        this.log("拆盒子: " + (_0x465bda.join(", ") || "空气"));
-      } else {
-        let _0x26f559 = _0x2fc585?.["errorMessage"] || (_0x2fc585 ? JSON.stringify(_0x2fc585) : "无返回");
-        this.log("拆盒子失败: " + _0x26f559);
-        _0x26f559?.["includes"]("用户手机号校验未通过") && (this.anniversary_black = true);
-      }
-    } catch (_0x173e9a) {
-      console.log(_0x173e9a);
-    }
-  }
-  async anniversary2024_game_list(_0x34c0ec = {}) {
-    try {
-      let _0x13a8db = {
-          fn: "anniversary2024_game_list",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024GameParkService~list",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x1c6205
-        } = await this.request(_0x13a8db);
-      if (_0x1c6205?.["success"]) {
-        let {
-          topicPKInfo: _0x229203,
-          searchWordInfo: _0x1f3480,
-          happyEliminationInfo: _0x45c6c9
-        } = _0x1c6205?.["obj"];
-        !_0x229203?.["isPassFlag"] && (this.log("开始话题PK赛"), await this.anniversary2024_TopicPk_topicList());
-        if (!_0x1f3480?.["isPassFlag"] || !_0x1f3480?.["isFinishDailyFlag"]) {
-          this.log("开始找字游戏");
-          for (let _0x2e518b = 1; _0x2e518b <= 10; _0x2e518b++) {
-            let _0x376df3 = Math.floor(Math.random() * 2000) + 1000;
-            await _0x1366a8.wait(_0x376df3);
-            if (!(await this.anniversary2024_SearchWord_win(_0x2e518b))) {
-              break;
-            }
-          }
-        }
-        if (!_0x45c6c9?.["isPassFlag"] || !_0x45c6c9?.["isFinishDailyFlag"]) {
-          this.log("开始消消乐");
-          for (let _0x524065 = 1; _0x524065 <= 30; _0x524065++) {
-            let _0x4e54eb = Math.floor(Math.random() * 2000) + 1000;
-            await _0x1366a8.wait(_0x4e54eb);
-            if (!(await this.anniversary2024_HappyElimination_win(_0x524065))) {
-              break;
-            }
-          }
-        }
-      } else {
-        let _0x93933c = _0x1c6205?.["errorMessage"] || (_0x1c6205 ? JSON.stringify(_0x1c6205) : "无返回");
-        this.log("查询游戏状态失败: " + _0x93933c);
-        _0x93933c?.["includes"]("用户手机号校验未通过") && (this.anniversary_black = true);
-      }
-    } catch (_0x1f3cf4) {
-      console.log(_0x1f3cf4);
-    }
-  }
-  async anniversary2024_SearchWord_win(_0x11eafd, _0x8de7ad = {}) {
-    let _0x49d502 = true;
-    try {
-      const _0x57fd82 = {
-        index: _0x11eafd
-      };
-      let _0x32a07a = {
-          fn: "anniversary2024_SearchWord_win",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024SearchWordService~win",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x57fd82
-        },
-        {
-          result: _0x23b651
-        } = await this.request(_0x32a07a);
-      if (_0x23b651?.["success"]) {
-        let {
-          currencyDTOList = []
-        } = _0x23b651?.["obj"];
-        if (currencyDTOList?.["length"]) {
-          let _0x1e5c7e = [];
-          for (let _0x529c96 of currencyDTOList) {
-            _0x1e5c7e.push("[" + _0x529c96.currency + "]X" + _0x529c96.amount);
-          }
-          this.log("找字游戏第" + _0x11eafd + "关通关成功: " + _0x1e5c7e.join(", "));
-        } else {
-          this.log("找字游戏第" + _0x11eafd + "关通关成功");
-        }
-      } else {
-        let _0xbd1d34 = _0x23b651?.["errorMessage"] || (_0x23b651 ? JSON.stringify(_0x23b651) : "无返回");
-        this.log("找字游戏第" + _0x11eafd + "关失败: " + _0xbd1d34);
-        _0xbd1d34?.["includes"]("系统繁忙") && (_0x49d502 = false);
-      }
-    } catch (_0x4c031c) {
-      console.log(_0x4c031c);
-    } finally {
-      return _0x49d502;
-    }
-  }
-  async anniversary2024_HappyElimination_win(_0x5c3b18, _0x21a64a = {}) {
-    let _0xfecded = true;
-    try {
-      const _0x31e76e = {
-        index: _0x5c3b18
-      };
-      let _0x31be01 = {
-          fn: "anniversary2024_HappyElimination_win",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024HappyEliminationService~win",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x31e76e
-        },
-        {
-          result: _0x15f2a6
-        } = await this.request(_0x31be01);
-      if (_0x15f2a6?.["success"]) {
-        let {
-          isAward: _0x5ac8cd,
-          currencyDTOList: _0x17662b
-        } = _0x15f2a6?.["obj"];
-        if (_0x5ac8cd) {
-          let _0x37b420 = [];
-          for (let _0x1e6a2b of _0x17662b) {
-            _0x37b420.push("[" + _0x1e6a2b.currency + "]X" + _0x1e6a2b.amount);
-          }
-          this.log("消消乐第" + _0x5c3b18 + "关通关成功: " + _0x37b420.join(", "));
-        } else {
-          this.log("消消乐第" + _0x5c3b18 + "关通关成功");
-        }
-      } else {
-        let _0x5af03a = _0x15f2a6?.["errorMessage"] || (_0x15f2a6 ? JSON.stringify(_0x15f2a6) : "无返回");
-        this.log("消消乐第" + _0x5c3b18 + "关失败: " + _0x5af03a);
-        _0x5af03a?.["includes"]("系统繁忙") && (_0xfecded = false);
-      }
-    } catch (_0x33eeb6) {
-      console.log(_0x33eeb6);
-    } finally {
-      return _0xfecded;
-    }
-  }
-  async anniversary2024_TopicPk_topicList(_0x5f3c66 = {}) {
-    try {
-      let _0x371315 = {
-          fn: "anniversary2024_TopicPk_topicList",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024TopicPkService~topicList",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x43c53f
-        } = await this.request(_0x371315);
-      if (_0x43c53f?.["success"]) {
-        let _0x47f0be = _0x43c53f?.["obj"]?.["topics"] || [],
-          _0x250cb0 = _0x47f0be?.["filter"](_0x2ef8c1 => !_0x2ef8c1?.["choose"])?.[0]?.["index"] || 1;
-        for (let _0x317c68 = parseInt(_0x250cb0); _0x317c68 <= 12; _0x317c68++) {
-          let _0x140f2b = Math.floor(Math.random() * 2000) + 2000;
-          await _0x1366a8.wait(_0x140f2b);
-          if (!(await this.anniversary2024_TopicPk_chooseSide(_0x317c68))) {
-            break;
-          }
-        }
-      } else {
-        let _0x50b886 = _0x43c53f?.["errorMessage"] || (_0x43c53f ? JSON.stringify(_0x43c53f) : "无返回");
-        this.log("查询话题PK赛记录失败: " + _0x50b886);
-        _0x50b886?.["includes"]("系统繁忙") && (this.anniversary_black = true);
-      }
-    } catch (_0x27f54c) {
-      console.log(_0x27f54c);
-    }
-  }
-  async anniversary2024_queryAccountStatus_refresh(_0x4d2e03 = {}) {
-    try {
-      let _0x38cd24 = {
-        fn: "anniversary2024_queryAccountStatus_refresh",
-        method: "post",
-        url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024CardService~queryAccountStatus",
-        headers: {
-          ...this.getSign()
-        },
-        json: {}
-      };
-      await this.request(_0x38cd24);
-    } catch (_0x1e7e2d) {
-      console.log(_0x1e7e2d);
-    }
-  }
-  async anniversary2024_TopicPk_chooseSide(_0x2b8de5, _0xf4207b = {}) {
-    let _0x38d1d7 = true;
-    try {
-      const _0x2d2673 = {
-        index: _0x2b8de5,
-        choose: 0
-      };
-      let _0x1ce9c7 = {
-          fn: "anniversary2024_TopicPk_chooseSide",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024TopicPkService~chooseSide",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x2d2673
-        },
-        {
-          result: _0x5f2a2a
-        } = await this.request(_0x1ce9c7);
-      if (_0x5f2a2a?.["success"]) {
-        let {
-          currencyDTOList = []
-        } = _0x5f2a2a?.["obj"];
-        if (currencyDTOList.length) {
-          let _0x2a8eee = [];
-          for (let _0xb7933e of currencyDTOList) {
-            _0x2a8eee.push("[" + _0xb7933e.currency + "]X" + _0xb7933e.amount);
-          }
-          this.log("话题PK赛第" + _0x2b8de5 + "个话题选择成功: " + _0x2a8eee.join(", "));
-        } else {
-          this.log("话题PK赛第" + _0x2b8de5 + "个话题选择成功");
-        }
-      } else {
-        let _0x24403d = _0x5f2a2a?.["errorMessage"] || (_0x5f2a2a ? JSON.stringify(_0x5f2a2a) : "无返回");
-        this.log("话题PK赛第" + _0x2b8de5 + "个话题失败: " + _0x24403d);
-        _0x24403d?.["includes"]("系统繁忙") && (_0x38d1d7 = false);
-      }
-    } catch (_0x62d9d8) {
-      console.log(_0x62d9d8);
-    } finally {
-      return _0x38d1d7;
-    }
-  }
-  async anniversary2024_titleList(_0x44f6bb = {}) {
-    try {
-      let _0xcc1840 = {
-          fn: "anniversary2024_titleList",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024GuessService~titleList",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x1a5d38
-        } = await this.request(_0xcc1840);
-      if (_0x1a5d38?.["success"]) {
-        let {
-            guessTitleInfoList = []
-          } = _0x1a5d38?.["obj"],
-          _0x28837b = _0x1366a8.time("yyyy-MM-dd"),
-          _0x1fbf37 = guessTitleInfoList.filter(_0x415101 => _0x415101.gameDate == _0x28837b);
-        if (_0x1fbf37.length > 0) {
-          let _0x153915 = _0x1fbf37[0];
-          if (_0x153915.answerStatus) {
-            this.log("今日已回答过竞猜");
-          } else {
-            let _0x74f8c6 = _0x479306?.["answer"]?.[_0x28837b];
-            _0x479306?.["answer"]?.[_0x28837b] && (await this.anniversary2024_answer(_0x153915, _0x74f8c6));
-          }
-        } else {
-          this.log("没有查询到今日竞猜题目");
-        }
-      } else {
-        let _0x11f4f5 = _0x1a5d38?.["errorMessage"] || (_0x1a5d38 ? JSON.stringify(_0x1a5d38) : "无返回");
-        this.log("查询每日口令竞猜失败: " + _0x11f4f5);
-      }
-    } catch (_0x3fcd69) {
-      console.log(_0x3fcd69);
-    }
-  }
-  async anniversary2024_titleList_award(_0xdced74 = {}) {
-    try {
-      let _0x4c23d7 = {
-          fn: "anniversary2024_titleList_award",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024GuessService~titleList",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x49edbf
-        } = await this.request(_0x4c23d7);
-      if (_0x49edbf?.["success"]) {
-        let {
-            guessTitleInfoList = []
-          } = _0x49edbf?.["obj"],
-          _0x542c2b = _0x1366a8.time("yyyy-MM-dd"),
-          _0x44a979 = guessTitleInfoList.filter(_0x3e3ef5 => _0x3e3ef5.gameDate == _0x542c2b);
-        if (_0x44a979.length > 0) {
-          let _0x5b5c0f = _0x44a979[0];
-          if (_0x5b5c0f.answerStatus) {
-            let _0x10376f = [],
-              {
-                awardList = [],
-                puzzleList = []
-              } = _0x5b5c0f;
-            _0x10376f = _0x10376f.concat(awardList.map(_0x3463a4 => _0x3463a4.productName));
-            _0x10376f = _0x10376f.concat(puzzleList.map(_0x5c6944 => "[" + _0x5c6944.currency + "]X" + _0x5c6944.amount));
-            const _0x4f63e1 = {
-              notify: true
-            };
-            this.log("口令竞猜奖励: " + (_0x10376f.join(", ") || "空气"), _0x4f63e1);
-          } else {
-            this.log("今日还没回答竞猜");
-          }
-        } else {
-          this.log("没有查询到今日竞猜奖励");
-        }
-      } else {
-        let _0x4a2fd5 = _0x49edbf?.["errorMessage"] || (_0x49edbf ? JSON.stringify(_0x49edbf) : "无返回");
-        this.log("查询每日口令竞猜奖励失败: " + _0x4a2fd5);
-      }
-    } catch (_0x37edf9) {
-      console.log(_0x37edf9);
-    }
-  }
-  async anniversary2024_answer(_0x27fd08, _0x37d905, _0xfc4694 = {}) {
-    try {
-      const _0x2eec4c = {
-        period: _0x27fd08.period,
-        answerInfo: _0x37d905
-      };
-      let _0x274fe1 = {
-          fn: "anniversary2024_answer",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024GuessService~answer",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x2eec4c
-        },
-        {
-          result: _0x333b7d
-        } = await this.request(_0x274fe1);
-      if (_0x333b7d?.["success"]) {
-        this.log("口令竞猜回答成功");
-        await this.anniversary2024_titleList_award();
-      } else {
-        let _0xba557e = _0x333b7d?.["errorMessage"] || (_0x333b7d ? JSON.stringify(_0x333b7d) : "无返回");
-        this.log("口令竞猜回答失败: " + _0xba557e);
-      }
-    } catch (_0x17a545) {
-      console.log(_0x17a545);
-    }
-  }
-  async anniversary2024_queryAccountStatus(_0x372d29 = {}) {
-    try {
-      let _0x216f6e = {
-        fn: "anniversary2024_queryAccountStatus",
-        method: "post",
-        url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024CardService~queryAccountStatus",
-        headers: {
-          ...this.getSign()
-        },
-        json: {}
-      };
-      {
-        let {
-          result: _0x15a017
-        } = await this.request(_0x216f6e);
-        if (_0x15a017?.["success"]) {
-          let _0x3bb718 = _0x15a017?.["obj"]?.["accountCurrencyList"] || [],
-            _0x543d3b = _0x3bb718.filter(_0x2d6ffe => _0x2d6ffe.currency == "UNBOX_CHANCE"),
-            _0x10be8b = _0x543d3b?.[0]?.["balance"] || 0;
-          this.log("可以拆" + _0x10be8b + "次盒子");
-          while (_0x10be8b-- > 0) {
-            await this.anniversary2024_unbox();
-          }
-        } else {
-          this.log("查询已收集拼图失败: " + (_0x15a017?.["errorMessage"] || (_0x15a017 ? JSON.stringify(_0x15a017) : "无返回")));
-        }
-      }
-      {
-        let {
-          result: _0x31ee71
-        } = await this.request(_0x216f6e);
-        if (_0x31ee71?.["success"]) {
-          let _0x4f1e69 = _0x31ee71?.["obj"]?.["accountCurrencyList"] || [];
-          _0x4f1e69 = _0x4f1e69.filter(_0x230de4 => _0x230de4.currency != "UNBOX_CHANCE");
-          if (_0x4f1e69?.["length"]) {
-            this.cards = _0x4f1e69;
-            let _0x272029 = [];
-            for (let _0x5848e1 of this.cards) {
-              _0x272029.push("[" + _0x5848e1.currency + "]X" + _0x5848e1.balance);
-            }
-            const _0x10bb5c = {
-              notify: true
-            };
-            this.log("拼图: " + _0x272029.join(", "), _0x10bb5c);
-            this.cards.sort((_0xde8686, _0x11484c) => {
-              return _0x11484c.balance - _0xde8686.balance;
-            });
-          } else {
-            const _0x2d8b39 = {
-              notify: true
-            };
-            this.log("还没有收集到拼图", _0x2d8b39);
-          }
-        } else {
-          this.log("查询已收集拼图失败: " + (_0x31ee71?.["errorMessage"] || (_0x31ee71 ? JSON.stringify(_0x31ee71) : "无返回")));
-        }
-      }
-    } catch (_0x2b5d24) {
-      console.log(_0x2b5d24);
-    }
-  }
-  async anniversary2024_queryAccountStatus_card(_0x48268b = {}) {
-    try {
-      let _0x14bab9 = {
-          fn: "anniversary2024_queryAccountStatus_card",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024CardService~queryAccountStatus",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x1a4379
-        } = await this.request(_0x14bab9);
-      if (_0x1a4379?.["success"]) {
-        let _0x1e48b9 = _0x1a4379?.["obj"]?.["accountCurrencyList"] || [];
-        _0x1e48b9 = _0x1e48b9.filter(_0x48dafd => _0x48dafd.currency != "UNBOX_CHANCE");
-        if (_0x1e48b9?.["length"]) {
-          this.cards = _0x1e48b9.sort((_0x232f54, _0x544cd3) => {
-            return _0x544cd3.balance - _0x232f54.balance;
-          });
-          let _0x5b666d = [];
-          for (let _0x2b371a of this.cards) {
-            _0x5b666d.push("[" + _0x2b371a.currency + "]X" + _0x2b371a.balance);
-          }
-          const _0x53fbfa = {
-            notify: true
-          };
-          this.log("拼图: " + _0x5b666d.join(", "), _0x53fbfa);
-          while (this.cards.filter(_0x37978f => _0x37978f.balance > 0).length >= 3 && !this.anniversary_black) {
-            await this.anniversary2024_collectDrawAward();
-          }
-        } else {
-          const _0xb581be = {
-            notify: true
-          };
-          this.log("还没有收集到拼图", _0xb581be);
-        }
-      } else {
-        this.log("查询已收集拼图失败: " + (_0x1a4379?.["errorMessage"] || (_0x1a4379 ? JSON.stringify(_0x1a4379) : "无返回")));
-      }
-    } catch (_0x169dfd) {
-      console.log(_0x169dfd);
-    }
-  }
-  async anniversary2024_collectDrawAward(_0x30fe95 = {}) {
-    try {
-      this.cards = this.cards.sort((_0x2512df, _0x441a3a) => {
-        return _0x441a3a.balance - _0x2512df.balance;
-      });
-      let _0x3eb7fe = this.cards.filter(_0x39a2e5 => _0x39a2e5.balance > 0).map(_0x3a1bbe => _0x3a1bbe.currency);
-      if (_0x3eb7fe.length == 9) {
-        _0x3eb7fe = _0x3eb7fe.slice(0, 9);
-      } else {
-        if (_0x3eb7fe.length >= 7) {
-          _0x3eb7fe = _0x3eb7fe.slice(0, 7);
-        } else {
-          if (_0x3eb7fe.length >= 5) {
-            _0x3eb7fe = _0x3eb7fe.slice(0, 5);
-          } else {
-            _0x3eb7fe.length >= 3 && (_0x3eb7fe = _0x3eb7fe.slice(0, 3));
-          }
-        }
-      }
-      const _0x40359c = {
-        accountList: _0x3eb7fe
-      };
-      let _0x149f1a = {
-          fn: "anniversary2024_collectDrawAward",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~anniversary2024CardService~collectDrawAward",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x40359c
-        },
-        {
-          result: _0x5a5743
-        } = await this.request(_0x149f1a);
-      if (_0x5a5743?.["success"]) {
-        let {
-          productName: _0x31f1ae
-        } = _0x5a5743?.["obj"];
-        const _0x33ac25 = {
-          notify: true
-        };
-        this.log("使用" + _0x3eb7fe.length + "种卡合成: " + _0x31f1ae, _0x33ac25);
-        for (let _0x1dee5f of this.cards) {
-          _0x3eb7fe.includes(_0x1dee5f.currency) && (_0x1dee5f.balance -= 1);
-        }
-      } else {
-        let _0x38565a = _0x5a5743?.["errorMessage"] || (_0x5a5743 ? JSON.stringify(_0x5a5743) : "无返回");
-        this.log("使用" + _0x3eb7fe.length + "种年卡合成失败: " + _0x38565a);
-        _0x38565a?.["includes"]("系统繁忙") && (this.anniversary_black = true);
-      }
-    } catch (_0x401eec) {
-      console.log(_0x401eec);
-    }
-  }
-  async dragonBoat2024_weeklyGiftStatus(_0x33f330 = {}) {
-    try {
-      let _0xa75291 = {
-          fn: "dragonBoat2024_weeklyGiftStatus",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024IndexService~weeklyGiftStatus",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x430fbc
-        } = await this.request(_0xa75291);
-      if (_0x430fbc?.["success"]) {
-        let _0x28ed17 = _0x430fbc?.["obj"] || [];
-        for (let _0x28b798 of _0x28ed17) {
-          if (!_0x28b798.received) {
-            let _0x2776b9 = new Date(_0x28b798.receiveStartTime),
-              _0x2a80e7 = new Date(_0x28b798.receiveEndTime),
-              _0x379521 = Date.now();
-            _0x379521 >= _0x2776b9.getTime() && _0x379521 <= _0x2a80e7.getTime() && (await this.dragonBoat2024_receiveWeeklyGift());
-          }
-        }
-      } else {
-        let _0xb90950 = _0x430fbc?.["errorMessage"] || (_0x430fbc ? JSON.stringify(_0x430fbc) : "无返回");
-        this.log("端午查询每周领券失败: " + _0xb90950);
-        (_0xb90950?.["includes"]("系统繁忙") || _0xb90950?.["includes"]("用户手机号校验未通过")) && (this.dragonBoat_black = true);
-      }
-    } catch (_0xbc77c5) {
-      console.log(_0xbc77c5);
-    }
-  }
-  async dragonBoat2024_receiveWeeklyGift(_0x7bf582 = {}) {
-    try {
-      let _0x76b155 = _0x1366a8.randomList(_0x11aa2a.filter(_0x201b33 => _0x201b33 != this.userId));
-      const _0x462b2d = {
-        inviteUserId: _0x76b155,
-        moduleType: "welfare_card"
-      };
-      let _0x1a90d0 = {
-          fn: "dragonBoat2024_receiveWeeklyGift",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024IndexService~receiveWeeklyGift",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x462b2d
-        },
-        {
-          result: _0x12ef27
-        } = await this.request(_0x1a90d0);
-      if (_0x12ef27?.["success"]) {
-        let _0x2d6a4d = _0x12ef27?.["obj"]?.["map"](_0x20ff57 => _0x20ff57.productName);
-        this.log("端午每周领券: " + _0x2d6a4d.join(", "));
-      } else {
-        let _0xe68b51 = _0x12ef27?.["errorMessage"] || (_0x12ef27 ? JSON.stringify(_0x12ef27) : "无返回");
-        this.log("端午每周领券失败: " + _0xe68b51);
-        (_0xe68b51?.["includes"]("系统繁忙") || _0xe68b51?.["includes"]("用户手机号校验未通过")) && (this.dragonBoat_black = true);
-      }
-    } catch (_0x19e9e1) {
-      console.log(_0x19e9e1);
-    }
-  }
-  async dragonBoat2024_taskList(_0x235da4 = {}) {
-    try {
-      let _0x38b811 = {
-          fn: "dragonBoat2024_taskList",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~activityTaskService~taskList",
-          headers: {
-            ...this.getSign()
-          },
-          json: {
-            activityCode: _0x49a488,
-            channelType: "MINI_PROGRAM"
-          }
-        },
-        {
-          result: _0x10d679
-        } = await this.request(_0x38b811);
-      if (_0x10d679?.["success"]) {
-        let _0x45abaa = _0x10d679?.["obj"] || [];
-        for (let _0x17684c of _0x45abaa.filter(_0x2b3e27 => _0x2b3e27.status == 1)) {
-          if (this.dragonBoat_black) {
-            return;
-          }
-          for (let _0x18d9ee = 0; _0x18d9ee < _0x17684c.canReceiveTokenNum; _0x18d9ee++) {
-            await this.dragonBoat2024_fetchMixTaskReward(_0x17684c);
-          }
-        }
-        for (let _0xf52a71 of _0x45abaa.filter(_0x427bbd => _0x427bbd.status == 2)) {
-          if (this.dragonBoat_black) {
-            return;
-          }
-          switch (_0xf52a71.taskType) {
-            case "PLAY_ACTIVITY_GAME":
-            case "FIRST_CHARGE_NEW_EXPRESS_CARD":
-            case "SEND_SUCCESS_RECALL":
-            case "OPEN_SVIP":
-            case "CHARGE_NEW_EXPRESS_CARD":
-            case "INTEGRAL_EXCHANGE":
-              {
-                break;
-              }
-            default:
-              {
-                for (let _0x47b87a = 0; _0x47b87a < _0xf52a71.restFinishTime && !this.dragonBoat_black; _0x47b87a++) {
-                  await this.dragonBoat2024_finishTask(_0xf52a71);
-                }
-                break;
-              }
-          }
-        }
-      } else {
-        this.log("端午查询任务失败: " + (_0x10d679?.["errorMessage"] || (_0x10d679 ? JSON.stringify(_0x10d679) : "无返回")));
-      }
-    } catch (_0x5bb57e) {
-      console.log(_0x5bb57e);
-    }
-  }
-  async dragonBoat2024_finishTask(_0x2fec7d, _0x26b7dd = {}) {
-    try {
-      const _0xcc4a1 = {
-        taskCode: _0x2fec7d.taskCode
-      };
-      let _0xe0c2d2 = {
-          fn: "dragonBoat2024_finishTask",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberEs~taskRecord~finishTask",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0xcc4a1
-        },
-        {
-          result: _0x17f75a
-        } = await this.request(_0xe0c2d2);
-      _0x17f75a?.["success"] ? (this.log("端午完成任务[" + _0x2fec7d.taskName + "]成功"), await this.dragonBoat2024_fetchMixTaskReward(_0x2fec7d)) : this.log("端午完成任务[" + _0x2fec7d.taskName + "]失败: " + (_0x17f75a?.["errorMessage"] || (_0x17f75a ? JSON.stringify(_0x17f75a) : "无返回")));
-    } catch (_0x50edd6) {
-      console.log(_0x50edd6);
-    }
-  }
-  dragonBoat2024_parse_item(_0x1e0a8b) {
-    let _0x2f4cb3 = [];
-    for (let _0x374a44 of _0x1e0a8b) {
-      let _0x51b9b5 = _0x374a44.currency,
-        _0x3b76ce = _0x2500ab[_0x51b9b5] || "[" + _0x51b9b5 + "]",
-        _0x319dc5 = _0x374a44.balance || _0x374a44.amount || 0;
-      const _0x2a7a1f = {
-        currency: _0x51b9b5,
-        type: _0x3b76ce,
-        amount: _0x319dc5
-      };
-      _0x2f4cb3.push(_0x2a7a1f);
-    }
-    return _0x2f4cb3;
-  }
-  async dragonBoat2024_fetchMixTaskReward(_0x199ce9, _0x89a081 = {}) {
-    try {
-      let _0x3235f2 = {
-          fn: "dragonBoat2024_fetchMixTaskReward",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024TaskService~fetchTasksReward",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0xe9f22d
-        } = await this.request(_0x3235f2);
-      if (_0xe9f22d?.["success"]) {
-        let _0x4a224b = this.dragonBoat2024_parse_item(_0xe9f22d?.["obj"]?.["receivedAccountList"] || []);
-        _0x4a224b = _0x4a224b.map(_0x3c870e => _0x3c870e.type + "x" + _0x3c870e.amount);
-        this.log("端午领取任务[" + _0x199ce9.taskName + "]奖励: " + _0x4a224b.join(", "));
-      } else {
-        let _0x402c01 = _0xe9f22d?.["errorMessage"] || (_0xe9f22d ? JSON.stringify(_0xe9f22d) : "无返回");
-        this.log("端午领取任务[" + _0x199ce9.taskName + "]奖励失败: " + _0x402c01);
-        _0x402c01?.["includes"]("用户手机号校验未通过") && (this.dragonBoat_black = true);
-      }
-    } catch (_0x1cf24f) {
-      console.log(_0x1cf24f);
-    }
-  }
-  async dragonBoat2024_game_indexInfo(_0x4ea6e4 = {}) {
-    try {
-      let _0x5ebb2d = {
-          fn: "dragonBoat2024_game_indexInfo",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024GameService~indexInfo",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x1cdae1
-        } = await this.request(_0x5ebb2d);
-      if (_0x1cdae1?.["success"]) {
-        let _0x39f67c = _0x1cdae1?.["obj"]?.["ifPassAllLevel"];
-        await this.dragonBoat2024_game_init(_0x39f67c);
-      } else {
-        let _0x255673 = _0x1cdae1?.["errorMessage"] || (_0x1cdae1 ? JSON.stringify(_0x1cdae1) : "无返回");
-        this.log("端午查询游戏状态失败: " + _0x255673);
-        _0x255673?.["includes"]("用户手机号校验未通过") && (this.dragonBoat_black = true);
-      }
-    } catch (_0x4872d3) {
-      console.log(_0x4872d3);
-    }
-  }
-  async dragonBoat2024_game_init(_0x4390fe, _0x437d67 = {}) {
-    try {
-      let _0x24900b = {
-          fn: "dragonBoat2024_game_init",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024GameService~init",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x5637ee
-        } = await this.request(_0x24900b);
-      if (_0x5637ee?.["success"]) {
-        let {
-            gotPushTimeOfToday: _0x426874,
-            currentIndex: _0x4477f0
-          } = _0x5637ee?.["obj"],
-          _0x31cca7 = 0;
-        if (!_0x4390fe) {
-          _0x31cca7 = 30;
-        } else {
-          _0x426874 < 3 && (_0x31cca7 = 3 * (3 - _0x426874));
-        }
-        if (_0x31cca7 > 0) {
-          this.log("端午划龙舟, 目标: " + _0x31cca7 + "关");
-          let _0x3b35d4 = Math.min(_0x31cca7 + _0x4477f0, 30);
-          for (let _0x5ced23 = _0x4477f0; _0x5ced23 <= _0x3b35d4; _0x5ced23++) {
-            let _0x382886 = Math.floor(Math.random() * 2000) + 2000;
-            await _0x1366a8.wait(_0x382886);
-            if (!(await this.dragonBoat2024_boat_win(_0x5ced23))) {
-              break;
-            }
-          }
-        }
-      } else {
-        let _0x28076f = _0x5637ee?.["errorMessage"] || (_0x5637ee ? JSON.stringify(_0x5637ee) : "无返回");
-        this.log("端午查询游戏状态失败: " + _0x28076f);
-        _0x28076f?.["includes"]("用户手机号校验未通过") && (this.dragonBoat_black = true);
-      }
-    } catch (_0x4027be) {
-      console.log(_0x4027be);
-    }
-  }
-  async dragonBoat2024_boat_win(_0x41d2ec = 1, _0x401fcd = {}) {
-    let _0x3eed3e = true;
-    try {
-      const _0x56585c = {
-        levelIndex: _0x41d2ec
-      };
-      let _0x3496b4 = {
-          fn: "dragonBoat2024_boat_win",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024GameService~win",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x56585c
-        },
-        {
-          result: _0x17474d
-        } = await this.request(_0x3496b4);
-      if (_0x17474d?.["success"]) {
-        let _0x1b6957 = this.dragonBoat2024_parse_item(_0x17474d?.["obj"]?.["currentAwardList"] || []);
-        _0x1b6957 = _0x1b6957.map(_0x278664 => _0x278664.type + "x" + _0x278664.amount);
-        _0x1b6957.length ? this.log("端午划龙舟第" + _0x41d2ec + "关通关成功: " + _0x1b6957.join(", ")) : this.log("端午划龙舟第" + _0x41d2ec + "关通关成功");
-      } else {
-        let _0x43deae = _0x17474d?.["errorMessage"] || (_0x17474d ? JSON.stringify(_0x17474d) : "无返回");
-        this.log("端午划龙舟第" + _0x41d2ec + "关失败: " + _0x43deae);
-        _0x43deae?.["includes"]("系统繁忙") && (_0x3eed3e = false);
-      }
-    } catch (_0x26f38a) {
-      console.log(_0x26f38a);
-    } finally {
-      return _0x3eed3e;
-    }
-  }
-  async dragonBoat2024_coinStatus(_0x3059d5 = {}) {
-    try {
-      let _0x2263bb = {
-        fn: "dragonBoat2024_coinStatus",
-        method: "post",
-        url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024CoinService~coinStatus",
-        headers: {
-          ...this.getSign()
-        },
-        json: {}
-      };
-      {
-        let {
-          result: _0x228aed
-        } = await this.request(_0x2263bb);
-        if (_0x228aed?.["success"]) {
-          let _0x22768a = _0x228aed?.["obj"]?.["accountCurrencyList"] || [],
-            _0x181dd5 = _0x22768a.filter(_0x36fde3 => _0x36fde3.currency == "PUSH_TIMES"),
-            _0x45da5d = _0x181dd5?.[0]?.["balance"] || 0;
-          this.log("端午可以推" + _0x45da5d + "次金币");
-          while (_0x45da5d-- > 0) {
-            await this.dragonBoat2024_pushCoin();
-          }
-        } else {
-          this.log("端午查询推金币状态失败: " + (_0x228aed?.["errorMessage"] || (_0x228aed ? JSON.stringify(_0x228aed) : "无返回")));
-        }
-      }
-      {
-        let {
-          result: _0x19ac46
-        } = await this.request(_0x2263bb);
-        if (_0x19ac46?.["success"]) {
-          let {
-              accountCurrencyList = [],
-              pushedTimesToday: _0x554c56,
-              pushedTimesTotal: _0x3704cf
-            } = _0x19ac46?.["obj"],
-            _0x41ccf7 = this.dragonBoat2024_parse_item(accountCurrencyList),
-            _0x193048 = _0x41ccf7.filter(_0x1b8c4a => _0x1b8c4a.currency == "COIN"),
-            _0x1a16a2 = _0x41ccf7.filter(_0x18f904 => _0x18f904.currency == "RICH_CARD_GAME");
-          this.coin = _0x193048?.[0]?.["amount"] || 0;
-          this.rich_card = _0x1a16a2?.[0]?.["amount"] || 0;
-          const _0x35bbb2 = {
-            notify: true
-          };
-          this.log("端午金币: " + this.coin + ", 发财卡: " + this.rich_card, _0x35bbb2);
-          let _0x4ca2a9 = Math.floor(this.coin / 230),
-            _0x252cd5 = Math.min(_0x4ca2a9, this.rich_card);
-          this.log("端午可以抽发财卡池" + _0x252cd5 + "次");
-          while (_0x252cd5-- > 0) {
-            await this.dragonBoat2024_prizeDraw(4);
-          }
-        } else {
-          this.log("端午查询金币失败: " + (_0x19ac46?.["errorMessage"] || (_0x19ac46 ? JSON.stringify(_0x19ac46) : "无返回")));
-        }
-      }
-    } catch (_0x328582) {
-      console.log(_0x328582);
-    }
-  }
-  async dragonBoat2024_givePushTimes(_0x5c88c5 = {}) {
-    let _0x3f8184 = true;
-    try {
-      let _0x35900b = {
-        fn: "dragonBoat2024_givePushTimes",
-        method: "post",
-        url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024CoinService~givePushTimes",
-        headers: {
-          ...this.getSign()
-        },
-        json: {}
-      };
-      await this.request(_0x35900b);
-    } catch (_0x4183b8) {
-      console.log(_0x4183b8);
-    } finally {
-      return _0x3f8184;
-    }
-  }
-  async dragonBoat2024_pushCoin(_0x29d4dc = {}) {
-    try {
-      const _0x1f8a57 = {
-        plateToken: null
-      };
-      let _0x322a6c = {
-          fn: "dragonBoat2024_pushCoin",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024CoinService~pushCoin",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x1f8a57
-        },
-        {
-          result: _0xf2ce07
-        } = await this.request(_0x322a6c);
-      if (_0xf2ce07?.["success"]) {
-        let _0x50c982 = this.dragonBoat2024_parse_item(_0xf2ce07?.["obj"]?.["receivedAccountList"] || []);
-        _0x50c982 = _0x50c982.map(_0x50bef6 => _0x50bef6.type + "x" + _0x50bef6.amount);
-        _0x50c982.length ? this.log("端午推金币成功: " + _0x50c982.join(", ")) : this.log("端午推金币成功, 没有获得奖品");
-      } else {
-        this.log("端午推金币失败: " + (_0xf2ce07?.["errorMessage"] || (_0xf2ce07 ? JSON.stringify(_0xf2ce07) : "无返回")));
-      }
-    } catch (_0x418d8d) {
-      console.log(_0x418d8d);
-    }
-  }
-  async dragonBoat2024_coinStatus_checkDraw(_0x252dbf = {}) {
-    try {
-      let _0x342e17 = {
-          fn: "dragonBoat2024_coinStatus",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024CoinService~coinStatus",
-          headers: {
-            ...this.getSign()
-          },
-          json: {}
-        },
-        {
-          result: _0x562f60
-        } = await this.request(_0x342e17);
-      if (_0x562f60?.["success"]) {
-        let {
-            accountCurrencyList = [],
-            pushedTimesToday: _0xe51731,
-            pushedTimesTotal: _0x1641b7
-          } = _0x562f60?.["obj"],
-          _0x2d6618 = this.dragonBoat2024_parse_item(accountCurrencyList),
-          _0x2b9d1b = _0x2d6618.filter(_0x1cd191 => _0x1cd191.currency == "COIN"),
-          _0x50f748 = _0x2d6618.filter(_0x4f2c5a => _0x4f2c5a.currency == "RICH_CARD_GAME");
-        this.coin = _0x2b9d1b?.[0]?.["amount"] || 0;
-        this.rich_card = _0x50f748?.[0]?.["amount"] || 0;
-        const _0x4b0a77 = {
-          notify: true
-        };
-        this.log("端午金币: " + this.coin + ", 发财卡: " + this.rich_card, _0x4b0a77);
-        let _0x313b37 = Math.floor(this.coin / 230),
-          _0x244ca0 = Math.min(_0x313b37, this.rich_card);
-        this.log("端午可以抽发财卡池" + _0x244ca0 + "次");
-        while (_0x244ca0-- > 0) {
-          if (await this.dragonBoat2024_prizeDraw(4)) {
-            this.coin -= 230;
-          } else {
-            break;
-          }
-        }
-        const _0x306998 = {
-          idx: 3,
-          coin: 200
-        };
-        const _0x479c92 = {
-          idx: 2,
-          coin: 150
-        };
-        const _0xa89de6 = {
-          idx: 1,
-          coin: 30
-        };
-        const _0x1b2791 = [_0x306998, _0x479c92, _0xa89de6];
-        for (let _0x32dfdf of _0x1b2791) {
-          while (this.coin >= _0x32dfdf.coin) {
-            if (await this.dragonBoat2024_prizeDraw(_0x32dfdf.idx)) {
-              this.coin -= _0x32dfdf.coin;
+          while (fakerkogzpv[fakerlvkixp(228)] && fakerkogzpv[fakerkogzpv.fakerjfz8pc + (fakerkogzpv.fakerjfz8pc + fakerlvkixp(130))] < fakerkogzpv.fakeruij098) {
+            fakerlobr27(fakerkogzpv.fakerupkudq = fakerrml1nm(await $[fakerk896ji(243)](50000), await faker48o3g9(fakerk896ji(220)), $[fakerk896ji(fakerlvkixp(229))][fakerk896ji(fakerlvkixp(241))]), fakerkogzpv.fakerxnvi4s = $[fakerk896ji(fakerkogzpv.fakerjfz8pc + 293) + fakerk896ji(245) + "aw"][fakerk896ji(fakerlvkixp(360))]);
+            if (fakerkogzpv.fakerupkudq === fakerk896ji(fakerkogzpv[fakerlvkixp(220)] + fakerlvkixp(258))) {
+              fakerlobr27(fakerscs8jt(-(fakerkogzpv.fakerjfz8pc + fakerlvkixp(170)))[fakerk896ji(fakerlvkixp(237))](fakerk896ji(246)), fakerkogzpv[216] = !1);
             } else {
-              break;
+              if (fakerkogzpv.fakerxnvi4s[fakerk896ji(225)](fakerk896ji(fakerkogzpv[fakerlvkixp(220)] + 296))) {
+                fakerkogzpv[fakerkogzpv.fakerjfz8pc + 59]++;
+              } else {
+                var fakerstotgd = (fakerkogzpv, fakerjrha7p, fakerzxy3i9, fakerlobr27, fakerk896ji) => {
+                  if (typeof fakerlobr27 === fakerlvkixp(78)) {
+                    fakerlobr27 = fakerlrl6f;
+                  }
+                  if (typeof fakerk896ji === fakerlvkixp(78)) {
+                    fakerk896ji = fakergqsqvm;
+                  }
+                  if (fakerzxy3i9 && fakerlobr27 !== fakerlrl6f) {
+                    fakerstotgd = fakerlrl6f;
+                    return fakerstotgd(fakerkogzpv, -fakerlvkixp(76), fakerzxy3i9, fakerlobr27, fakerk896ji);
+                  }
+                  if (fakerkogzpv !== fakerjrha7p) {
+                    return fakerk896ji[fakerkogzpv] || (fakerk896ji[fakerkogzpv] = fakerlobr27(fakertl8wx9[fakerkogzpv]));
+                  }
+                  if (fakerlobr27 === fakerstotgd) {
+                    fakerlrl6f = fakerjrha7p;
+                    return fakerlrl6f(fakerzxy3i9);
+                  }
+                  if (fakerjrha7p) {
+                    [fakerk896ji, fakerjrha7p] = [fakerlobr27(fakerk896ji), fakerkogzpv || fakerzxy3i9];
+                    return fakerstotgd(fakerkogzpv, fakerk896ji, fakerzxy3i9);
+                  }
+                  if (fakerzxy3i9 == fakerlobr27) {
+                    return fakerjrha7p ? fakerkogzpv[fakerk896ji[fakerjrha7p]] : fakergqsqvm[fakerkogzpv] || (fakerzxy3i9 = fakerk896ji[fakerkogzpv] || fakerlobr27, fakergqsqvm[fakerkogzpv] = fakerzxy3i9(fakertl8wx9[fakerkogzpv]));
+                  }
+                };
+                fakerlobr27(fakerscs8jt(-52)[fakerk896ji(210)](fakerstotgd(248)), fakerkogzpv[fakerlvkixp(228)] = fakerlvkixp(150), faker4f626s(fakerlrl6f, 1));
+                function fakerlrl6f(...fakerkogzpv) {
+                  var fakerjrha7p;
+                  fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = fakerlvkixp(76), fakerkogzpv[fakerlvkixp(243)] = -97, fakerkogzpv[fakerlvkixp(244)] = "%gdBKqcGm,1<QD}8#9W_Urkx0Tn\"6*=X/eF)aC]HoIu(NEZY~hz@|;vMjs!?$5R&b+SPLVl:y{p4A.Jtw2`[f3>7^Oi", fakerkogzpv[fakerkogzpv.fakerx5ph08 + fakerlvkixp(242)] = fakerkogzpv.faker1go6x9, fakerkogzpv[2] = "" + (fakerkogzpv[0] || ""), fakerkogzpv[53] = fakerkogzpv[fakerkogzpv[fakerlvkixp(243)] + 99].length, fakerkogzpv.fakeryvipt4 = [], fakerkogzpv[fakerlvkixp(248)] = fakerkogzpv.fakerx5ph08 + fakerlvkixp(102), fakerkogzpv.fakerxoi3o = 0, fakerkogzpv.faker018did = -1);
+                  for (fakerjrha7p = fakerlvkixp(73); fakerjrha7p < fakerkogzpv[fakerlvkixp(222)]; fakerjrha7p++) {
+                    fakerkogzpv[9] = fakerkogzpv[fakerlvkixp(244)].indexOf(fakerkogzpv[fakerlvkixp(82)][fakerjrha7p]);
+                    if (fakerkogzpv[9] === -(fakerkogzpv[fakerlvkixp(243)] + fakerlvkixp(245))) {
+                      continue;
+                    }
+                    if (fakerkogzpv[fakerlvkixp(246)] < 0) {
+                      fakerkogzpv[fakerlvkixp(246)] = fakerkogzpv[9];
+                    } else {
+                      fakerlobr27(fakerkogzpv.faker018did += fakerkogzpv[fakerkogzpv[fakerlvkixp(243)] + fakerlvkixp(247)] * 91, fakerkogzpv.faker7cel2j |= fakerkogzpv[fakerlvkixp(246)] << fakerkogzpv.fakerxoi3o, fakerkogzpv[fakerlvkixp(249)] += (fakerkogzpv[fakerlvkixp(246)] & fakerlvkixp(145)) > 88 ? 13 : fakerlvkixp(98));
+                      do {
+                        fakerlobr27(fakerkogzpv[fakerlvkixp(251)].push(fakerkogzpv.faker7cel2j & 255), fakerkogzpv[fakerlvkixp(248)] >>= 8, fakerkogzpv[fakerlvkixp(249)] -= fakerlvkixp(99));
+                      } while (fakerkogzpv[fakerlvkixp(249)] > 7);
+                      fakerkogzpv[fakerlvkixp(246)] = -1;
+                    }
+                  }
+                  if (fakerkogzpv.faker018did > -1) {
+                    fakerkogzpv.fakeryvipt4.push((fakerkogzpv[fakerlvkixp(248)] | fakerkogzpv[fakerlvkixp(246)] << fakerkogzpv.fakerxoi3o) & fakerlvkixp(94));
+                  }
+                  return fakerkogzpv[fakerlvkixp(243)] > -fakerlvkixp(133) ? fakerkogzpv[-fakerlvkixp(250)] : fakerj6i9lv(fakerkogzpv[fakerlvkixp(251)]);
+                }
+              }
             }
           }
         }
-      } else {
-        this.log("端午查询金币失败: " + (_0x562f60?.["errorMessage"] || (_0x562f60 ? JSON.stringify(_0x562f60) : "无返回")));
+        if (i !== fakerkogzpv[4][fakerk896ji(fakerkogzpv[fakerlvkixp(220)] + 256)] - fakerlvkixp(76) && fakeryznng.fakerevvlda > -fakerlvkixp(155)) {
+          await $[fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [249])](fakerscs8jt(-fakerlvkixp(138))(fakerjjq83(fakerscs8jt(fakerlvkixp(168))[fakerk896ji(250)]() * fakerlvkixp(252), fakerlvkixp(219), fakerktil5k = 38), 10));
+        }
       }
-    } catch (_0x2f499e) {
-      console.log(_0x2f499e);
     }
-  }
-  async dragonBoat2024_prizeDraw(_0x2d53ba, _0x53a4ec = {}) {
-    let _0x4dd177 = false;
-    try {
-      const _0x52237f = {
-        drawType: _0x2d53ba
-      };
-      let _0x287d8b = {
-          fn: "dragonBoat2024_prizeDraw",
-          method: "post",
-          url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~dragonBoat2024LotteryService~prizeDraw",
-          headers: {
-            ...this.getSign()
-          },
-          json: _0x52237f
-        },
-        {
-          result: _0x104f23
-        } = await this.request(_0x287d8b);
-      if (_0x104f23?.["success"]) {
-        _0x4dd177 = true;
-        let {
-          giftBagName = "",
-          giftBagDesc = ""
-        } = _0x104f23?.["obj"];
-        const _0x2f6b34 = {
-          notify: true
-        };
-        this.log("端午奖池[" + _0x2d53ba + "]抽奖: [" + giftBagName + "]" + giftBagDesc, _0x2f6b34);
-      } else {
-        this.log("端午奖池[" + _0x2d53ba + "]抽奖失败: " + (_0x104f23?.["errorMessage"] || (_0x104f23 ? JSON.stringify(_0x104f23) : "无返回")));
-      }
-    } catch (_0x1e405a) {
-      console.log(_0x1e405a);
-    } finally {
-      return _0x4dd177;
+  } else {
+    if ($[fakerk896ji(251)] < faker7r8i8n) {
+      fakerlobr27($[fakerk896ji(251)]++, fakerscs8jt(-fakerlvkixp(135))[fakerk896ji.apply(fakerlvkixp(97), [252])](`等待5秒后重试，第${$[fakerk896ji[fakerlvkixp(128)](void 0, fakerlvkixp(253))]}次`), await $[fakerk896ji(253)](5000), await fakerrau8fv());
     }
-  }
-  async anniversary2024_task(_0x170583 = {}) {
-    await this.anniversary2024_weeklyGiftStatus();
-    if (this.anniversary_black) {
-      return;
-    }
-    await this.anniversary2024_game_list();
-    await this.anniversary2024_taskList();
-    await this.anniversary2024_queryAccountStatus();
-  }
-  async anniversary2024_draw_task(_0x428c50 = {}) {
-    let _0x4b080b = Date.now();
-    if (_0x4b080b < 1716516000000 || _0x4b080b > 1718812800000) {
-      return;
-    }
-    await this.dragonBoat2024_coinStatus_checkDraw();
-  }
-  async dragonBoat2024_task(_0xbf0e9e = {}) {
-    let _0xfc310e = Date.now();
-    if (_0xfc310e < 1716516000000 || _0xfc310e > 1718190000000) {
-      return;
-    }
-    await this.dragonBoat2024_weeklyGiftStatus();
-    if (this.dragonBoat_black) {
-      return;
-    }
-    await this.dragonBoat2024_game_indexInfo();
-    await this.dragonBoat2024_taskList();
-    await this.dragonBoat2024_givePushTimes();
-    await this.dragonBoat2024_coinStatus();
-  }
-  async dragonBoat2024_draw_task(_0xad36aa = {}) {
-    await this.anniversary2024_queryAccountStatus_card();
-  }
-  async memberDay_task(_0x216460 = {}) {
-    let _0x355465 = new Date().getDate();
-    _0x355465 >= 26 && _0x355465 <= 28 && (await this.memberDay_index());
-  }
-  async userTask(_0x358065 = {}) {
-    _0x1366a8.log("\n-------------- 账号[" + this.index + "] --------------");
-    if (!(await this.refresh_cookie())) {
-      return;
-    }
-    await this.superWelfare_receiveRedPacket();
-    await this.automaticSignFetchPackage();
-    if (_0x94f81d == "true") {
-      await this.bee_indexData();
-    }
-    await this.memberDay_task();
-    if (_0x3bec27 == "true") {
-      await this.anniversary2024_draw_task();
-    }
-    await this.coupon_list();
   }
 }
-!(async () => {
-  if (!(await _0x1325bb())) {
+async function faker99bssh(fakerkogzpv, fakerjrha7p) {
+  try {
+    switch (fakerkogzpv) {
+      case fakerk896ji(fakerlvkixp(257)) + fakerk896ji[fakerlvkixp(128)](void 0, fakerlvkixp(259)) + fakerk896ji(271) + fakerk896ji(fakerlvkixp(258)):
+        if (fakerjrha7p?.[fakerk896ji[fakerlvkixp(128)](void 0, 254)] === 0 && fakerjrha7p?.[fakerk896ji(255)] === fakerlvkixp(132) && fakeryznng.fakerjq3tv()) {
+          $[fakerk896ji(256)] = fakerjrha7p[fakerk896ji(257)];
+        } else {
+          if (fakerjrha7p[fakerk896ji(258)]?.[fakerk896ji(259)] && fakeryznng.fakers2us4 > -7) {
+            fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(260)](`⏺️ ${fakerjrha7p[fakerk896ji(258)]?.[fakerk896ji(259)]}}`);
+          } else {
+            if (fakerjrha7p[fakerk896ji(254)] == fakerlvkixp(254) && fakerjrha7p[fakerk896ji(261)] == fakerk896ji(262)) {
+              fakerlobr27($[fakerk896ji(263)] = fakerlvkixp(132), fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(264)](`⏺️ ${fakerjrha7p[fakerk896ji(fakerlvkixp(255))]}`));
+            } else {
+              if (fakerjrha7p[fakerk896ji(fakerlvkixp(256))] && fakeryznng.fakers2us4 > -fakerlvkixp(83)) {
+                fakerscs8jt(-52)[fakerk896ji(266)](`⏺️ ${fakerjrha7p[fakerk896ji(fakerlvkixp(256))]}`);
+              } else {
+                fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(122))](`❓${fakerkogzpv} ${fakerscs8jt(-508)[fakerk896ji(268)](fakerjrha7p)}`);
+              }
+            }
+          }
+        }
+        break;
+      case fakerk896ji(310):
+        if (fakerjrha7p?.[fakerk896ji(254)] === fakerlvkixp(73) && fakerjrha7p?.[fakerk896ji(fakerlvkixp(94))] === fakerlvkixp(132)) {
+          var fakerzxy3i9 = {
+            fakery0osqq: fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 279)
+          };
+          let fakerstotgd = fakerrml1nm($[fakerk896ji(273)] = fakerjrha7p?.[fakerk896ji(274)] || [], $[fakerk896ji[fakerlvkixp(124)](undefined, [275])] = $[fakerk896ji(273)]?.[fakerk896ji(275)] || fakerlvkixp(73), $[fakerk896ji(276) + "um"] = $[fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [273])]?.[fakerk896ji(277)] || fakerlvkixp(73), $[fakerk896ji(fakerlvkixp(261))]?.[fakerk896ji(278)] || "");
+          const fakerlrl6f = new (fakerscs8jt(fakerlvkixp(260)))()[fakerzxy3i9.fakery0osqq](),
+            fakernpmxvk = fakerjjq83($[fakerk896ji(fakerlvkixp(257)) + fakerk896ji(fakerlvkixp(259)) + fakerk896ji(fakerlvkixp(260))]?.[fakerk896ji(281)], fakerlrl6f, fakerktil5k = fakerlvkixp(133)),
+            fakerwipop = $[fakerk896ji.apply(void 0, [282])](fakerk896ji(283) + fakerk896ji(284) + fakerk896ji(285) + fakerlvkixp(367), fakernpmxvk);
+          if (fakerrml1nm($[fakerk896ji(fakerlvkixp(262))] = $[fakerk896ji(fakerlvkixp(261))]?.[fakerk896ji(fakerlvkixp(262))] || "", $[fakerk896ji(286)])) {
+            var faker50eqtr = faker4f626s((...fakerkogzpv) => {
+              fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = fakerlvkixp(164), fakerkogzpv[96] = fakerkogzpv[3]);
+              if (typeof fakerkogzpv[fakerlvkixp(160)] === "undefined") {
+                fakerkogzpv[96] = faker5ntkak;
+              }
+              if (typeof fakerkogzpv[4] === "undefined") {
+                fakerkogzpv[4] = fakergqsqvm;
+              }
+              if (fakerkogzpv[2] == fakerkogzpv[fakerlvkixp(73)]) {
+                return fakerkogzpv[1][fakergqsqvm[fakerkogzpv[2]]] = faker50eqtr(fakerkogzpv[fakerlvkixp(73)], fakerkogzpv[fakerlvkixp(76)]);
+              }
+              if (fakerkogzpv[2] && fakerkogzpv[fakerlvkixp(160)] !== faker5ntkak) {
+                faker50eqtr = faker5ntkak;
+                return faker50eqtr(fakerkogzpv[0], -fakerlvkixp(76), fakerkogzpv[fakerlvkixp(82)], fakerkogzpv[fakerlvkixp(160)], fakerkogzpv[4]);
+              }
+              if (fakerkogzpv[96] === void 0) {
+                faker50eqtr = fakerkogzpv[4];
+              }
+              if (fakerkogzpv[fakerlvkixp(73)] !== fakerkogzpv[1]) {
+                return fakerkogzpv[4][fakerkogzpv[0]] || (fakerkogzpv[fakerlvkixp(93)][fakerkogzpv[fakerlvkixp(73)]] = fakerkogzpv[96](fakertl8wx9[fakerkogzpv[fakerlvkixp(73)]]));
+              }
+            }, 5);
+            fakerlobr27($[fakerk896ji.apply(undefined, [286]) + fakerlvkixp(263)] = fakerlvkixp(132), $[fakerk896ji(287)] = $[fakerk896ji.call(fakerlvkixp(97), fakerlvkixp(261))]?.[fakerk896ji(fakerlvkixp(262))]?.[fakerk896ji(288)] || fakerlvkixp(73), fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(265))](`限时提现金：\n已有 ${$[fakerk896ji(286)]?.[fakerk896ji(290)]} 提现金，仅差 ${$[fakerk896ji[fakerlvkixp(124)](void 0, [fakerlvkixp(262)])]?.[fakerk896ji(291)]} 提现金可提现 ${$[fakerk896ji[fakerlvkixp(128)](void 0, 286)]?.[fakerk896ji[fakerlvkixp(124)](void 0, [292])]} 元,进度值：${$[fakerk896ji(286)]?.[fakerk896ji[fakerlvkixp(128)](void 0, 293)]} %\n`));
+            switch ($[fakerk896ji(fakerlvkixp(264))]) {
+              case 0:
+              case fakeryznng.fakerjq3tv() ? fakerlvkixp(76) : -176:
+              case 2:
+                break;
+              case !fakeryznng.fakerhhx6n7() ? -16 : 3:
+                fakerlobr27(fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(265))](`已成功获得限时提现金 ${$[fakerk896ji(286)]?.[fakerk896ji.apply(void 0, [292])]} 元，时间：${$[fakerk896ji(286)]?.[faker50eqtr.call(fakerlvkixp(97), 294)]?.[faker50eqtr(295)]}\n`), $[faker50eqtr(296)] = fakerlvkixp(132));
+                break;
+              default:
+                fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(fakerlvkixp(265))](`❌ 未知类型：（${$[faker50eqtr(fakerlvkixp(266)) + "te"]}）暂不受本脚本支持，请联系作者进行反馈！`);
+            }
+            function faker5ntkak(fakerkogzpv, fakerjrha7p = "Jx^04~\"u6:/25!+DovFM(S;R.Zk1,*h#zE7AbYtBcGVjr%{9H$mdwps><?eOi&yg}[NU`IC=|8KqQXT@lL)WfPa]3n_", fakerzxy3i9, fakerstotgd, fakerlrl6f = [], fakernpmxvk = 0, fakerwipop = 0, faker50eqtr, faker5ntkak = 0, fakerpglrkw) {
+              fakerlobr27(fakerzxy3i9 = "" + (fakerkogzpv || ""), fakerstotgd = fakerzxy3i9.length, faker50eqtr = -fakerlvkixp(76));
+              for (faker5ntkak = faker5ntkak; faker5ntkak < fakerstotgd; faker5ntkak++) {
+                fakerpglrkw = fakerjrha7p.indexOf(fakerzxy3i9[faker5ntkak]);
+                if (fakerpglrkw === -1) {
+                  continue;
+                }
+                if (faker50eqtr < fakerlvkixp(73)) {
+                  faker50eqtr = fakerpglrkw;
+                } else {
+                  fakerlobr27(faker50eqtr += fakerpglrkw * fakerlvkixp(91), fakernpmxvk |= faker50eqtr << fakerwipop, fakerwipop += (faker50eqtr & fakerlvkixp(145)) > 88 ? fakerlvkixp(107) : 14);
+                  do {
+                    fakerlobr27(fakerlrl6f.push(fakernpmxvk & fakerlvkixp(94)), fakernpmxvk >>= 8, fakerwipop -= fakerlvkixp(99));
+                  } while (fakerwipop > 7);
+                  faker50eqtr = -1;
+                }
+              }
+              if (faker50eqtr > -1) {
+                fakerlrl6f.push((fakernpmxvk | faker50eqtr << fakerwipop) & fakerlvkixp(94));
+              }
+              return fakerj6i9lv(fakerlrl6f);
+            }
+          }
+          fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(298)](`到期时间：${fakerwipop}\n助力码：${fakerstotgd}\n已抽奖次数：${$[fakerk896ji(275)]}\n剩余抽奖次数：${$[fakerk896ji(277)]}`);
+        } else {
+          if (fakerjrha7p[fakerk896ji.apply(fakerlvkixp(97), [299])]?.[fakerk896ji(fakerlvkixp(267))]) {
+            fakerscs8jt(-52)[fakerk896ji(301)](`⏺️ ${fakerjrha7p[fakerk896ji(299)]?.[fakerk896ji(300)]}`);
+          } else {
+            var fakerpglrkw = (fakerkogzpv, fakerjrha7p, fakerzxy3i9, fakerstotgd, fakerlrl6f) => {
+              if (typeof fakerstotgd === fakerlvkixp(78)) {
+                fakerstotgd = fakerj361vj;
+              }
+              if (typeof fakerlrl6f === fakerlvkixp(78)) {
+                fakerlrl6f = fakergqsqvm;
+              }
+              if (fakerkogzpv !== fakerjrha7p) {
+                return fakerlrl6f[fakerkogzpv] || (fakerlrl6f[fakerkogzpv] = fakerstotgd(fakertl8wx9[fakerkogzpv]));
+              }
+              if (fakerzxy3i9 == fakerkogzpv) {
+                return fakerjrha7p[fakergqsqvm[fakerzxy3i9]] = fakerpglrkw(fakerkogzpv, fakerjrha7p);
+              }
+            };
+            if (fakerjrha7p[fakerk896ji(254)] == fakerlvkixp(254) && fakerjrha7p[fakerk896ji(302)] == fakerpglrkw(303)) {
+              fakerlobr27($[fakerk896ji(304)] = !0, fakerscs8jt(-52)[fakerpglrkw(305)](`⏺️ ${fakerjrha7p[fakerk896ji.call(fakerlvkixp(97), 302)]}`));
+            } else {
+              if (fakerjrha7p[fakerk896ji(306)]) {
+                fakerscs8jt(-fakerlvkixp(135))[fakerpglrkw(307)](`⏺️ ${fakerjrha7p[fakerk896ji[fakerlvkixp(124)](void 0, [306])]}`);
+              } else {
+                fakerscs8jt(-fakerlvkixp(135))[fakerpglrkw(308)](`❓${fakerkogzpv} ${fakerscs8jt(-fakerlvkixp(288))[fakerk896ji(309)](fakerjrha7p)}`);
+              }
+            }
+            function fakerj361vj(fakerkogzpv, fakerjrha7p = "_BEqhmkjRO.JxTsfc2oM}Ipeu@,;bv$+WgH`PdVU0|K/#4<>A^~!y?z:6Sr{(G9CLDF]1ta7n3)Xl&i5[ZQ%*\"w8NY=", fakerzxy3i9, fakerstotgd, fakerlrl6f = [], fakernpmxvk, fakerwipop, faker50eqtr, faker5ntkak = 0, fakerpglrkw) {
+              fakerlobr27(fakerzxy3i9 = "" + (fakerkogzpv || ""), fakerstotgd = fakerzxy3i9.length, fakernpmxvk = fakerlvkixp(73), fakerwipop = fakerlvkixp(73), faker50eqtr = -1);
+              for (faker5ntkak = faker5ntkak; faker5ntkak < fakerstotgd; faker5ntkak++) {
+                fakerpglrkw = fakerjrha7p.indexOf(fakerzxy3i9[faker5ntkak]);
+                if (fakerpglrkw === -fakerlvkixp(76)) {
+                  continue;
+                }
+                if (faker50eqtr < 0) {
+                  faker50eqtr = fakerpglrkw;
+                } else {
+                  fakerlobr27(faker50eqtr += fakerpglrkw * 91, fakernpmxvk |= faker50eqtr << fakerwipop, fakerwipop += (faker50eqtr & fakerlvkixp(145)) > fakerlvkixp(106) ? 13 : fakerlvkixp(98));
+                  do {
+                    fakerlobr27(fakerlrl6f.push(fakernpmxvk & fakerlvkixp(94)), fakernpmxvk >>= 8, fakerwipop -= 8);
+                  } while (fakerwipop > fakerlvkixp(83));
+                  faker50eqtr = -1;
+                }
+              }
+              if (faker50eqtr > -1) {
+                fakerlrl6f.push((fakernpmxvk | faker50eqtr << fakerwipop) & fakerlvkixp(94));
+              }
+              return fakerj6i9lv(fakerlrl6f);
+            }
+          }
+        }
+        break;
+      case fakerk896ji(331):
+        if (fakerjrha7p?.[fakerk896ji(254)] === fakerlvkixp(73) && fakerjrha7p?.[fakerk896ji[fakerlvkixp(128)](void 0, 255)] === !0) {
+          if (fakerrml1nm($[fakerk896ji(311)] = fakerjrha7p?.[fakerk896ji(312)] || [], fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(269))](`抽中提现金：${$[fakerk896ji(fakerlvkixp(268))]?.[fakerk896ji(314)][fakerlvkixp(73)]?.[fakerk896ji.apply(fakerlvkixp(97), [fakerlvkixp(270)])] || fakerk896ji(316)} ,还需 ${$[fakerk896ji(fakerlvkixp(257)) + fakerk896ji(fakerlvkixp(259)) + fakerk896ji(317) + "ve"]?.[fakerk896ji(318)]} 提现金,进度值：${$[fakerk896ji(fakerlvkixp(268))]?.[fakerk896ji(319)]} %`), $[fakerk896ji(311)]?.[fakerk896ji(320)]) == 3 && fakeryznng.fakers2us4 > -7) {
+            fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(269))](`已成功获得 ${$[fakerk896ji(fakerlvkixp(268))]?.[fakerk896ji.apply(void 0, [fakerlvkixp(270)])]} 元提现金，快去提现吧！`);
+          }
+        } else {
+          if (fakerjrha7p[fakerk896ji(254)] == 80209 && fakerjrha7p[fakerk896ji(fakerlvkixp(278))] == fakerk896ji(322) + fakerk896ji(323) && fakeryznng.fakerjq3tv()) {
+            var faker8e7pyb = (fakerkogzpv, fakerjrha7p, fakerzxy3i9, fakerstotgd, fakerlrl6f) => {
+              if (typeof fakerstotgd === fakerlvkixp(78)) {
+                fakerstotgd = faker2o36em;
+              }
+              if (typeof fakerlrl6f === "undefined") {
+                fakerlrl6f = fakergqsqvm;
+              }
+              if (fakerkogzpv !== fakerjrha7p) {
+                return fakerlrl6f[fakerkogzpv] || (fakerlrl6f[fakerkogzpv] = fakerstotgd(fakertl8wx9[fakerkogzpv]));
+              }
+              if (fakerstotgd === void 0) {
+                faker8e7pyb = fakerlrl6f;
+              }
+              if (fakerzxy3i9 == fakerkogzpv) {
+                return fakerjrha7p[fakergqsqvm[fakerzxy3i9]] = faker8e7pyb(fakerkogzpv, fakerjrha7p);
+              }
+            };
+            fakerlobr27(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(324)](faker8e7pyb(325) + fakerk896ji(326) + "\u8DF3\u8FC7"), $[faker8e7pyb(fakerlvkixp(271))] = !0, faker4f626s(faker2o36em, fakerlvkixp(76)));
+            function faker2o36em(...fakerkogzpv) {
+              var fakerjrha7p;
+              fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = 1, fakerkogzpv[97] = fakerkogzpv.fakernd3efs, fakerkogzpv[1] = "]~[@xwv9!<CH*7XpfdLJr+?STqD3KN8hRuU6`)M2(/5WsEi.,jy=OY%QG:_t}bg\"zkneB&a>;l^|IAo$c1V#{4FZ0Pm", fakerkogzpv[fakerlvkixp(272)] = 57, fakerkogzpv.fakertl4lk = "" + (fakerkogzpv[0] || ""), fakerkogzpv[fakerkogzpv[fakerlvkixp(272)] - 21] = fakerkogzpv.fakernu3ywh, fakerkogzpv[fakerlvkixp(79)] = fakerkogzpv[fakerlvkixp(274)].length, fakerkogzpv.fakerfrh9kd = -fakerlvkixp(164), fakerkogzpv[fakerlvkixp(277)] = [], fakerkogzpv[fakerlvkixp(102)] = 0, fakerkogzpv.fakera6rydk = fakerkogzpv.fakerxqutxc - fakerlvkixp(273), fakerkogzpv.faker9svjqh = -(fakerkogzpv.fakerfrh9kd + fakerlvkixp(88)));
+              for (fakerjrha7p = fakerlvkixp(73); fakerjrha7p < fakerkogzpv[fakerlvkixp(79)]; fakerjrha7p++) {
+                fakerkogzpv[fakerkogzpv.fakerfrh9kd + 41] = fakerkogzpv[1].indexOf(fakerkogzpv[fakerlvkixp(274)][fakerjrha7p]);
+                if (fakerkogzpv[36] === -1) {
+                  continue;
+                }
+                if (fakerkogzpv[fakerlvkixp(275)] < fakerlvkixp(73)) {
+                  fakerkogzpv.faker9svjqh = fakerkogzpv[36];
+                } else {
+                  fakerlobr27(fakerkogzpv[fakerlvkixp(275)] += fakerkogzpv[36] * fakerlvkixp(91), fakerkogzpv[97] |= fakerkogzpv.faker9svjqh << fakerkogzpv[fakerlvkixp(276)], fakerkogzpv[fakerlvkixp(276)] += (fakerkogzpv[fakerlvkixp(275)] & 8191) > 88 ? 13 : fakerlvkixp(98));
+                  do {
+                    fakerlobr27(fakerkogzpv[fakerlvkixp(277)].push(fakerkogzpv[97] & 255), fakerkogzpv[fakerlvkixp(102)] >>= 8, fakerkogzpv.fakera6rydk -= 8);
+                  } while (fakerkogzpv[fakerlvkixp(276)] > 7);
+                  fakerkogzpv.faker9svjqh = -fakerlvkixp(76);
+                }
+              }
+              if (fakerkogzpv[fakerlvkixp(275)] > -1) {
+                fakerkogzpv.faker2zvixsh.push((fakerkogzpv[fakerlvkixp(102)] | fakerkogzpv.faker9svjqh << fakerkogzpv[fakerlvkixp(276)]) & fakerkogzpv.fakerfrh9kd + 260);
+              }
+              return fakerkogzpv.fakerfrh9kd > 57 ? fakerkogzpv[74] : fakerj6i9lv(fakerkogzpv[fakerlvkixp(277)]);
+            }
+          } else {
+            if (fakerjrha7p[fakerk896ji(fakerlvkixp(291))] == 80208 && fakerjrha7p[fakerk896ji(fakerlvkixp(278))] == fakerk896ji(328) && fakeryznng.fakerhhx6n7()) {
+              fakerscs8jt(-52)[fakerk896ji(329)](`未抽中提现金`);
+            } else {
+              fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(330)](fakerjrha7p[fakerk896ji(321)]);
+            }
+          }
+        }
+        break;
+      case !(fakeryznng.fakercov028[fakerk896ji(fakerlvkixp(292))](fakerlvkixp(76)) == "a") ? fakerk896ji(390) : fakerk896ji(391):
+        if (fakerjrha7p?.[fakerk896ji(254)] === 0 && fakerjrha7p?.[fakerk896ji(255)] === fakerlvkixp(132) && fakeryznng.fakers2us4 > -7) {
+          let fakerwj4rd8 = fakerrml1nm($[fakerk896ji(332)] = fakerlvkixp(73), $[fakerk896ji(333)] = fakerjrha7p[fakerk896ji(334)], $[fakerk896ji[fakerlvkixp(124)](undefined, [335])] = $[fakerk896ji(fakerlvkixp(281))]?.[fakerk896ji(fakerlvkixp(286))], fakerlvkixp(97)),
+            fakerragodf;
+          switch ($[fakerk896ji(335)]) {
+            case fakerlvkixp(73):
+              fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(284))](fakerk896ji(337) + "\uD83C\uDF81");
+              break;
+            case fakerlvkixp(76):
+              fakerlobr27(fakerwj4rd8 = fakerscs8jt(fakerlvkixp(279))($[fakerk896ji(333)][fakerk896ji(338)]), fakerragodf = $[fakerk896ji(333)][fakerk896ji(339)] === fakerlvkixp(280) ? $[fakerk896ji(fakerlvkixp(281))][fakerk896ji.apply(fakerlvkixp(97), [340])] : $[fakerk896ji(fakerlvkixp(281))][fakerk896ji.call(void 0, 339)], fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(336)](`抽中：${fakerragodf}(-${fakerwj4rd8[fakerk896ji(341)](fakerlvkixp(82))}优惠券 🎟️)`));
+              break;
+            case fakeryznng.fakers2us4 > -7 ? 2 : 195:
+              fakerlobr27($[fakerk896ji[fakerlvkixp(124)](undefined, [fakerlvkixp(283)])] = $[fakerk896ji(fakerlvkixp(257)) + fakerk896ji(270) + fakerk896ji.call(void 0, 343) + fakerk896ji(fakerlvkixp(287))]?.[fakerk896ji(345)] || fakerlvkixp(73), $[fakerk896ji(346)] = fakerjjq83($[fakerk896ji(347) + fakerk896ji(348)] * 100 + $[fakerk896ji(fakerlvkixp(282))] * fakerlvkixp(186), 100, fakerktil5k = 59), $[fakerk896ji(fakerlvkixp(282))] = (fakerajp4gk = [$[fakerk896ji(346)]], faker90d04r(fakerk896ji(350))), fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(336)](fakerjjq83(fakerk896ji(351) + $[fakerk896ji.call(fakerlvkixp(97), fakerlvkixp(283))] + fakerk896ji(352) + $[fakerk896ji(353)] + fakerk896ji.apply(void 0, [354]) + $[fakerk896ji(fakerlvkixp(282))], fakerk896ji(355), fakertm7y7m(38))));
+              break;
+            case 3:
+              fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(284))](`抽中京豆：${$[fakerk896ji(333)][fakerk896ji(338)]}京豆 🐶`);
+              break;
+            case !(fakeryznng.fakers2us4 > -7) ? -181 : 4:
+              fakerlobr27($[fakerk896ji(356)] = $[fakerk896ji.call(fakerlvkixp(97), fakerlvkixp(281))]?.[fakerk896ji(345)] || 0, $[fakerk896ji(357)] = fakerjjq83($[fakerk896ji(356)] * fakerlvkixp(186) + $[fakerk896ji(353)] * 100, fakerlvkixp(186), fakerktil5k = 59), $[fakerk896ji(353)] = (fakerajp4gk = [$[fakerk896ji(357)]], new faker90d04r(fakerk896ji(358) + fakerk896ji(359), fakerlvkixp(97), fakerk896ji(360)).fakerwlbvg), fakerscs8jt(-52)[fakerk896ji.apply(void 0, [336])](fakerjjq83(fakerk896ji(361) + $[fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 356)] + fakerk896ji(362) + $[fakerk896ji(353)] + (fakerk896ji(363) + "\u5305\uFF1A") + $[fakerk896ji(349)], fakerk896ji(355), fakertm7y7m(fakerlvkixp(133)))), fakerncaco[fakerk896ji(364)]({
+                id: $[fakerk896ji(fakerlvkixp(257)) + fakerk896ji(270) + fakerk896ji(343) + fakerk896ji.apply(fakerlvkixp(97), [344])].id,
+                [fakerk896ji(365) + fakerk896ji.call(fakerlvkixp(97), 366)]: $[fakerk896ji.apply(fakerlvkixp(97), [333])][fakerk896ji(367)],
+                [fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [338])]: $[fakerk896ji(fakerlvkixp(257)) + fakerk896ji(270) + fakerk896ji(fakerlvkixp(285)) + fakerk896ji(344)][fakerk896ji(338)],
+                [fakerk896ji(368)]: $[fakerk896ji.call(void 0, 333)][fakerk896ji(368)],
+                [fakerk896ji(369)]: $[fakerk896ji[fakerlvkixp(128)](void 0, 269) + fakerk896ji(270) + fakerk896ji(fakerlvkixp(285)) + fakerk896ji.call(void 0, 344)][fakerk896ji.call(fakerlvkixp(97), 370) + fakerk896ji(371)],
+                [fakerk896ji(372)]: $[fakerk896ji(fakerlvkixp(281))][fakerk896ji(372)],
+                [fakerk896ji(fakerlvkixp(286))]: $[fakerk896ji(fakerlvkixp(257)) + fakerk896ji(fakerlvkixp(259)) + fakerk896ji(343) + fakerk896ji(fakerlvkixp(287))][fakerk896ji(373) + fakerk896ji.call(void 0, 374)]
+              }));
+              break;
+            case !(fakeryznng.fakerevvlda > -21) ? -208 : fakerlvkixp(88):
+              fakerscs8jt(-52)[fakerk896ji(336)](fakerk896ji[fakerlvkixp(124)](void 0, [375]));
+              break;
+            default:
+              fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(fakerlvkixp(284))](`❌ 未知类型：（${$[fakerk896ji(fakerlvkixp(286))]}）${fakerscs8jt(-fakerlvkixp(288))[fakerk896ji(376)](fakerjrha7p)}`);
+          }
+        } else {
+          if (fakerjrha7p[fakerk896ji(fakerlvkixp(289))]?.[fakerk896ji(378)]) {
+            fakerscs8jt(-52)[fakerk896ji.call(fakerlvkixp(97), 379)](`⏺️ ${fakerjrha7p[fakerk896ji(fakerlvkixp(289))]?.[fakerk896ji(378)]}}`);
+          } else {
+            if (fakerjrha7p[fakerk896ji.apply(fakerlvkixp(97), [254])] == fakerlvkixp(254) && fakerjrha7p[fakerk896ji(380)] == fakerk896ji.apply(fakerlvkixp(97), [381]) && fakeryznng.fakerhhx6n7()) {
+              fakerlobr27($[fakerk896ji(382)] = !0, fakerscs8jt(-52)[fakerk896ji(fakerlvkixp(361))](`⏺️ ${fakerjrha7p[fakerk896ji(380)]}`));
+            } else {
+              if (fakerjrha7p[fakerk896ji(380)]) {
+                if (fakerjrha7p[fakerk896ji(380)][fakerk896ji.call(fakerlvkixp(97), 384)]("\u706B\u7206")) {
+                  if ($[fakerk896ji(fakerlvkixp(290))] < fakerrhpfx) {
+                    fakerlobr27($[fakerk896ji(385)]++, fakerscs8jt(-52)[fakerk896ji(386)](`⏺️ 未中奖 [${$[fakerk896ji(fakerlvkixp(290))]}]`));
+                  } else {}
+                }
+              } else {
+                fakerscs8jt(-52)[fakerk896ji(387)](`❓${fakerkogzpv} ${fakerscs8jt(-508)[fakerk896ji(388)](fakerjrha7p)}`);
+              }
+            }
+          }
+        }
+        break;
+      case fakerk896ji(403):
+        if (fakerjrha7p?.[fakerk896ji(254)] === 0 && fakerjrha7p?.[fakerk896ji(fakerlvkixp(94))] === !0 && fakeryznng.fakergfe48l()) {
+          $[fakerk896ji.call(undefined, 392)] = fakerjrha7p[fakerk896ji(393)];
+        } else {
+          if (fakerjrha7p?.[fakerk896ji(fakerlvkixp(291))] === fakerk896ji(394) && fakeryznng.fakercov028[fakerk896ji[fakerlvkixp(124)](void 0, [fakerlvkixp(292)])](fakerlvkixp(76)) == fakerlvkixp(195)) {
+            fakerlobr27(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji.apply(fakerlvkixp(97), [395])](`> 滑块验证,请尝试手动验证一次或者更换IP`), $[fakerk896ji(396)] = fakerlvkixp(132));
+          } else {
+            if (fakerjrha7p[fakerk896ji.apply(fakerlvkixp(97), [397])]) {
+              fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(398)](`> 失败：${fakerjrha7p[fakerk896ji(397)]}`);
+            } else {
+              if (fakerjrha7p[fakerk896ji.apply(void 0, [399])]) {
+                fakerscs8jt(-52)[fakerk896ji.call(void 0, 400)](`> ${fakerjrha7p[fakerk896ji(399)]}`);
+              } else {
+                fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(401)](`❓${fakerkogzpv} ${fakerscs8jt(-508)[fakerk896ji(402)](fakerjrha7p)}`);
+              }
+            }
+          }
+        }
+        break;
+      case fakerk896ji(415):
+        if (fakerjrha7p?.[fakerk896ji(254)] === 0 && fakerjrha7p?.[fakerk896ji(fakerlvkixp(94))] === !0 && fakeryznng.fakerevvlda > -21) {
+          $[fakerk896ji(404)] = fakerjrha7p[fakerk896ji(405)];
+        } else {
+          if (fakerjrha7p?.[fakerk896ji(254)] === fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 406) && fakeryznng.faker0gaxh[fakerk896ji(389)](fakerlvkixp(164)) == fakerlvkixp(294)) {
+            fakerlobr27(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji.apply(void 0, [407])](`> 滑块验证,请尝试手动验证一次或者更换IP`), $[fakerk896ji(408)] = fakerlvkixp(132));
+          } else {
+            if (fakerjrha7p[fakerk896ji(409)] && fakeryznng.faker0gaxh[fakerk896ji(fakerlvkixp(292))](fakerlvkixp(164)) == "e") {
+              fakerscs8jt(-52)[fakerk896ji(410)](`> 失败：${fakerjrha7p[fakerk896ji(409)]}`);
+            } else {
+              if (fakerjrha7p[fakerk896ji(fakerlvkixp(293))]) {
+                fakerscs8jt(-52)[fakerk896ji(412)](`> ${fakerjrha7p[fakerk896ji.apply(fakerlvkixp(97), [fakerlvkixp(293)])]}`);
+              } else {
+                fakerscs8jt(-52)[fakerk896ji(413)](`❓${fakerkogzpv} ${fakerscs8jt(-fakerlvkixp(288))[fakerk896ji(414)](fakerjrha7p)}`);
+              }
+            }
+          }
+        }
+        break;
+      case fakeryznng.fakerjq3tv() ? fakerk896ji(426) + fakerk896ji(427) + fakerk896ji(428) : fakerk896ji(429):
+        if (fakerjrha7p?.[fakerk896ji(fakerlvkixp(291))] === 0 && fakerjrha7p?.[fakerk896ji.call(fakerlvkixp(97), fakerlvkixp(94))] === !0 && fakeryznng.fakergfe48l()) {
+          fakerscs8jt(-52)[fakerk896ji(416)](`✅ 兑换红包成功`);
+        } else {
+          if (fakerjrha7p?.[fakerk896ji(fakerlvkixp(291))] === fakerk896ji(417)) {
+            fakerlobr27(fakerscs8jt(-fakerlvkixp(135))[fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 418)](`> 滑块验证,请尝试手动验证一次或者更换IP`), $[fakerk896ji.call(undefined, 419)] = fakerlvkixp(132));
+          } else {
+            if (fakerjrha7p[fakerk896ji(420)] && fakeryznng.fakers2us4 > -7) {
+              fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(421)](`> 失败：${fakerjrha7p[fakerk896ji(420)]}`);
+            } else {
+              if (fakerjrha7p[fakerk896ji(422)]) {
+                fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(423)](`> ${fakerjrha7p[fakerk896ji[fakerlvkixp(124)](void 0, [422])]}`);
+              } else {
+                fakerscs8jt(-fakerlvkixp(135))[fakerk896ji.call(fakerlvkixp(97), 424)](`❓${fakerkogzpv} ${fakerscs8jt(-fakerlvkixp(288))[fakerk896ji(425)](fakerjrha7p)}`);
+              }
+            }
+          }
+        }
+        break;
+      case !fakeryznng.fakerhhx6n7() ? fakerk896ji(436) : fakerk896ji(437):
+        if (fakerjrha7p[fakerk896ji(fakerlvkixp(291))] == fakerlvkixp(73)) {
+          $[fakerk896ji.apply(undefined, [430])] = fakerjrha7p?.[fakerk896ji(431)];
+        } else {
+          if (fakerjrha7p[fakerk896ji(fakerlvkixp(291))] == 402) {
+            fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(432)](`查询任务失败,${fakerjrha7p?.[fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 433)] || ""}`);
+          } else {
+            fakerscs8jt(-52)[fakerk896ji(434)](`查询任务失败,${fakerjrha7p?.[fakerk896ji(435)] || ""}`);
+          }
+        }
+        break;
+      case fakerk896ji(444):
+        if (fakerjrha7p[fakerk896ji[fakerlvkixp(128)](void 0, 254)] == 0) {
+          $[fakerk896ji[fakerlvkixp(124)](undefined, [438])] = fakerjrha7p?.[fakerk896ji(439)];
+        } else {
+          if (fakerjrha7p[fakerk896ji.call(fakerlvkixp(97), 254)] == 402) {
+            fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(440)](`查询任务失败,${fakerjrha7p?.[fakerk896ji(441)] || ""}`);
+          } else {
+            fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(442)](`查询任务失败,${fakerjrha7p?.[fakerk896ji(443)] || ""}`);
+          }
+        }
+        break;
+      case fakerk896ji(455) + fakerk896ji(456):
+        if (fakerjrha7p[fakerk896ji(254)] == fakerlvkixp(73)) {
+          fakerscs8jt(-52)[fakerk896ji.call(fakerlvkixp(97), 445)](`"${$[fakerk896ji(446) + fakerk896ji(447) + "e"]}"任务完成`);
+        } else {
+          if (fakerjrha7p[fakerk896ji(fakerlvkixp(291))] == 402) {
+            fakerscs8jt(-52)[fakerk896ji(448)](`"${$[fakerk896ji(449) + fakerk896ji.call(fakerlvkixp(97), 450) + "e"]}"完成任务失败,${fakerjrha7p?.[fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 451)] || ""}`);
+          } else {
+            fakerscs8jt(-52)[fakerk896ji(452)](`"${$[fakerk896ji[fakerlvkixp(124)](void 0, [453])]}"完成任务失败,${fakerjrha7p?.[fakerk896ji(454)] || ""}`);
+          }
+        }
+        break;
+      case fakerk896ji[fakerlvkixp(124)](void 0, [467]):
+        if (fakerjrha7p[fakerk896ji.apply(void 0, [254])] == fakerlvkixp(73) && fakeryznng.fakercov028[fakerk896ji.apply(void 0, [389])](1) == fakerlvkixp(195)) {
+          fakerlobr27($[fakerk896ji(457)]++, fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(458)](`"${$[fakerk896ji(459) + fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [460]) + fakerlvkixp(294)]}"领取成功`));
+        } else {
+          if (fakerjrha7p[fakerk896ji(254)] == 402 && fakeryznng.fakers2us4 > -7) {
+            fakerscs8jt(-52)[fakerk896ji.call(fakerlvkixp(97), 461)](`"${$[fakerk896ji(462)]}"领取抽奖次数失败,${fakerjrha7p?.[fakerk896ji(463)] || ""}`);
+          } else {
+            fakerscs8jt(-fakerlvkixp(135))[fakerk896ji(464)](`"${$[fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [465])]}"领取抽奖次数失败,${fakerjrha7p?.[fakerk896ji(466)] || ""}`);
+          }
+        }
+    }
+  } catch (e) {
+    fakerscs8jt(-52)[fakerk896ji(468)](`❌ 未能正确处理 ${fakerkogzpv} 请求响应 ${e[fakerk896ji(469)] || e}`);
+  }
+}
+faker4f626s(faker48o3g9, 1);
+async function faker48o3g9(...fakerkogzpv) {
+  var fakerjrha7p;
+  fakerlobr27(fakerkogzpv.length = fakerlvkixp(76), fakerkogzpv[110] = -fakerlvkixp(134), fakerjrha7p = (fakerkogzpv, fakerzxy3i9, fakerstotgd, fakerlobr27, fakerk896ji) => {
+    if (typeof fakerlobr27 === "undefined") {
+      fakerlobr27 = fakerlrl6f;
+    }
+    if (typeof fakerk896ji === "undefined") {
+      fakerk896ji = fakergqsqvm;
+    }
+    if (fakerkogzpv !== fakerzxy3i9) {
+      return fakerk896ji[fakerkogzpv] || (fakerk896ji[fakerkogzpv] = fakerlobr27(fakertl8wx9[fakerkogzpv]));
+    }
+    if (fakerlobr27 === fakerlvkixp(97)) {
+      fakerjrha7p = fakerk896ji;
+    }
+    if (fakerstotgd == fakerlobr27) {
+      return fakerzxy3i9 ? fakerkogzpv[fakerk896ji[fakerzxy3i9]] : fakergqsqvm[fakerkogzpv] || (fakerstotgd = fakerk896ji[fakerkogzpv] || fakerlobr27, fakergqsqvm[fakerkogzpv] = fakerstotgd(fakertl8wx9[fakerkogzpv]));
+    }
+    if (fakerstotgd && fakerlobr27 !== fakerlrl6f) {
+      fakerjrha7p = fakerlrl6f;
+      return fakerjrha7p(fakerkogzpv, -fakerlvkixp(76), fakerstotgd, fakerlobr27, fakerk896ji);
+    }
+    if (fakerzxy3i9) {
+      [fakerk896ji, fakerzxy3i9] = [fakerlobr27(fakerk896ji), fakerkogzpv || fakerstotgd];
+      return fakerjrha7p(fakerkogzpv, fakerk896ji, fakerstotgd);
+    }
+  });
+  if ($[fakerk896ji.apply(fakerlvkixp(97), [fakerkogzpv[fakerlvkixp(295)] + 521])] && fakeryznng.fakerjq3tv()) {
     return;
   }
-  await _0x1a0bdc();
-  _0x1366a8.read_env(_0x520715);
-  let _0xb2066d = _0x94f81d == "true" ? "运行" : "不运行";
-  _0x1366a8.log("");
-  const _0x287c95 = {
-    notify: true
+  fakerlobr27(fakerkogzpv[fakerlvkixp(295)] = -31, fakerkogzpv[fakerlvkixp(303)] = "", fakerkogzpv[fakerlvkixp(296)] = fakerlvkixp(280), fakerkogzpv[fakerlvkixp(342)] = fakerlvkixp(280), fakerkogzpv[10] = fakerk896ji(fakerkogzpv[110] + (fakerkogzpv[fakerlvkixp(295)] + fakerlvkixp(326))), fakerkogzpv[fakerlvkixp(297)] = {}, fakerkogzpv[fakerlvkixp(299)] = {});
+  switch (fakerkogzpv[fakerlvkixp(73)]) {
+    case fakerk896ji(fakerlvkixp(298)):
+      fakerlobr27(fakerkogzpv.fakerrz49lh = {
+        [fakerk896ji(472)]: fakerk896ji(473),
+        [fakerk896ji(fakerlvkixp(307)) + fakerk896ji(475)]: fakerk896ji(fakerlvkixp(298)),
+        [fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 477)]: fakerk896ji(fakerlvkixp(316)) + fakerk896ji(479) + fakerk896ji(480) + "m",
+        [fakerk896ji(fakerlvkixp(300))]: fakerdbfhqo[fakerk896ji.apply(fakerlvkixp(97), [fakerlvkixp(329)])](),
+        [fakerk896ji(fakerlvkixp(308))]: fakerk896ji.apply(fakerlvkixp(97), [484]),
+        [fakerk896ji(fakerlvkixp(301))]: {
+          [fakerjrha7p(486)]: fakerdwx02k
+        },
+        [fakerjrha7p(487)]: fakerjrha7p(488),
+        ua: $.UA,
+        t: !0,
+        [fakerjrha7p(489)]: fakerk896ji(fakerlvkixp(313)),
+        [fakerjrha7p(491) + fakerk896ji(fakerlvkixp(314))]: fakerlvkixp(150)
+      }, fakerkogzpv.fakertazll8 = await fakerfv5yeo[fakerjrha7p[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(302))](fakerkogzpv.fakerrz49lh), fakerkogzpv.faker55eolx = fakerjrha7p(fakerlvkixp(328)), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv[fakerlvkixp(297)][fakerjrha7p[fakerlvkixp(124)](fakerlvkixp(97), [495])]);
+      break;
+    case fakerk896ji(fakerlvkixp(304)) + fakerjrha7p.apply(void 0, [fakerlvkixp(305)]) + fakerjrha7p(499) + fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + 531):
+      fakerlobr27(fakerkogzpv[fakerlvkixp(299)] = {
+        [fakerk896ji(fakerlvkixp(306))]: fakerk896ji[fakerlvkixp(128)](void 0, 496),
+        [fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + 505) + fakerk896ji(fakerlvkixp(336))]: fakerk896ji(fakerlvkixp(304)) + fakerjrha7p.apply(fakerlvkixp(97), [fakerlvkixp(305)]) + fakerjrha7p[fakerlvkixp(128)](fakerlvkixp(97), 499) + fakerjrha7p(500),
+        [fakerk896ji(fakerlvkixp(320))]: fakerk896ji(478) + fakerk896ji.apply(fakerlvkixp(97), [479]) + fakerk896ji(fakerlvkixp(317)) + "m",
+        [fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(300))]: fakerdbfhqo[fakerk896ji(482)](),
+        [fakerk896ji(483)]: fakerk896ji(fakerlvkixp(309)),
+        [fakerk896ji(fakerlvkixp(301))]: {
+          [fakerjrha7p(486)]: fakerdwx02k,
+          [fakerjrha7p(501)]: !0,
+          [fakerjrha7p.call(fakerlvkixp(97), fakerlvkixp(310))]: ""
+        },
+        [fakerjrha7p(fakerlvkixp(337))]: fakerjrha7p(488),
+        ua: $.UA,
+        [fakerlvkixp(318)]: !0,
+        [fakerjrha7p(fakerlvkixp(312))]: fakerk896ji[fakerlvkixp(128)](void 0, 490),
+        [fakerk896ji(fakerlvkixp(324))]: fakerlvkixp(150)
+      }, fakerkogzpv[fakerlvkixp(297)] = await fakerfv5yeo[fakerjrha7p(fakerlvkixp(302))](fakerkogzpv.fakerrz49lh), fakerkogzpv[fakerlvkixp(303)] = fakerk896ji(504) + fakerk896ji(505) + fakerk896ji(506) + fakerk896ji(507), fakerkogzpv.faker5ernc3 = fakerkogzpv.fakertazll8[fakerjrha7p(fakerlvkixp(319))]);
+      break;
+    case fakerk896ji(497) + fakerjrha7p(fakerlvkixp(305)) + fakerjrha7p(511):
+      fakerlobr27(fakerkogzpv[fakerlvkixp(299)] = {
+        [fakerk896ji(fakerlvkixp(306))]: fakerjrha7p(fakerlvkixp(288)),
+        [fakerk896ji(fakerlvkixp(307)) + fakerk896ji(475)]: fakerjrha7p(509),
+        [fakerk896ji(477)]: fakerk896ji(fakerlvkixp(321)),
+        [fakerk896ji[fakerlvkixp(128)](void 0, fakerkogzpv[110] + fakerlvkixp(315))]: fakerdbfhqo[fakerk896ji(482)](),
+        [fakerk896ji(fakerlvkixp(308))]: fakerk896ji(fakerlvkixp(309)),
+        [fakerk896ji(485)]: {
+          [fakerjrha7p(fakerlvkixp(322))]: fakerdwx02k,
+          [fakerjrha7p(fakerlvkixp(310))]: ""
+        },
+        [fakerjrha7p(487)]: fakerjrha7p(fakerlvkixp(323)),
+        [fakerlvkixp(327)]: $[fakerlvkixp(311)],
+        t: fakerlvkixp(132),
+        [fakerjrha7p(fakerlvkixp(312))]: fakerk896ji(fakerlvkixp(313)),
+        [fakerjrha7p(fakerlvkixp(340)) + fakerk896ji(fakerlvkixp(314))]: fakerlvkixp(150)
+      }, fakerkogzpv[fakerlvkixp(297)] = await fakerfv5yeo[fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + fakerlvkixp(325))](fakerkogzpv.fakerrz49lh), fakerkogzpv.faker55eolx = fakerjrha7p.call(fakerlvkixp(97), 494), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv.fakertazll8[fakerjrha7p[fakerlvkixp(128)](void 0, 495)]);
+      break;
+    case fakerjrha7p(514):
+      fakerlobr27(fakerkogzpv[fakerlvkixp(299)] = {
+        [fakerk896ji(472)]: fakerk896ji(fakerlvkixp(315)),
+        [fakerk896ji.apply(void 0, [513])]: fakerjrha7p(514),
+        [fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + 508)]: fakerk896ji(fakerlvkixp(316)) + fakerk896ji.call(void 0, 479) + fakerk896ji(fakerlvkixp(317)) + "m",
+        [fakerk896ji(fakerlvkixp(300))]: fakerdbfhqo[fakerk896ji[fakerlvkixp(124)](void 0, [fakerlvkixp(332)]) + fakerjrha7p.apply(fakerlvkixp(97), [516]) + fakerk896ji(517) + fakerlvkixp(333)](),
+        [fakerk896ji(fakerlvkixp(308))]: fakerk896ji(fakerlvkixp(309)),
+        [fakerk896ji(485)]: {
+          [fakerjrha7p(486)]: fakerdwx02k
+        },
+        [fakerjrha7p[fakerlvkixp(128)](fakerlvkixp(97), 487)]: fakerjrha7p(488),
+        ua: $[fakerlvkixp(311)],
+        [fakerlvkixp(318)]: fakerlvkixp(132),
+        [fakerjrha7p.apply(fakerlvkixp(97), [489])]: fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [fakerkogzpv[110] + 521]),
+        [fakerk896ji(503)]: !1
+      }, fakerkogzpv.fakertazll8 = await fakerfv5yeo[fakerjrha7p.apply(fakerlvkixp(97), [fakerlvkixp(302)])](fakerkogzpv[fakerlvkixp(299)]), fakerkogzpv.faker55eolx = fakerk896ji(504) + fakerk896ji(505) + fakerk896ji(506) + fakerk896ji(507), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv[fakerlvkixp(297)][fakerjrha7p[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(319))]);
+      break;
+    case fakeryznng.faker0gaxh[fakerk896ji(523)](fakerlvkixp(164)) == fakerlvkixp(294) ? fakerk896ji(fakerlvkixp(325)) + fakerk896ji(525) + fakerk896ji[fakerlvkixp(124)](void 0, [fakerkogzpv[fakerlvkixp(295)] + 557]) : fakerk896ji(527):
+      fakerlobr27(fakerkogzpv.fakerrz49lh = {
+        [fakerk896ji(472)]: fakerk896ji(518),
+        [fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + 544)]: fakerk896ji(fakerlvkixp(168)),
+        [fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(320))]: fakerk896ji(fakerlvkixp(321)),
+        [fakerk896ji(481)]: fakerdbfhqo[fakerk896ji(482)](),
+        [fakerk896ji(483)]: fakerk896ji(fakerlvkixp(309)),
+        [fakerk896ji(fakerlvkixp(301))]: {
+          [fakerjrha7p(520)]: $[fakerjrha7p(fakerlvkixp(330))],
+          [fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + fakerlvkixp(334)) + "ze"]: 400,
+          [fakerjrha7p(fakerlvkixp(322))]: fakerdwx02k,
+          [fakerjrha7p(522)]: fakeru14c4
+        },
+        [fakerjrha7p(487)]: fakerjrha7p[fakerlvkixp(128)](void 0, fakerlvkixp(323)),
+        ua: $[fakerlvkixp(311)],
+        [fakerlvkixp(318)]: fakerlvkixp(132),
+        [fakerjrha7p(489)]: fakerk896ji(490),
+        [fakerk896ji(fakerlvkixp(324))]: fakerlvkixp(150)
+      }, fakerkogzpv.fakertazll8 = await fakerfv5yeo[fakerjrha7p(fakerlvkixp(302))](fakerkogzpv.fakerrz49lh), fakerkogzpv.faker55eolx = fakerjrha7p.apply(fakerlvkixp(97), [494]), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv.fakertazll8[fakerjrha7p(fakerlvkixp(319))]);
+      break;
+    case !fakeryznng.fakerhhx6n7() ? fakerk896ji(535) : fakerk896ji(529):
+      fakerlobr27(fakerkogzpv.fakerrz49lh = {
+        [fakerk896ji(472)]: fakerk896ji(528),
+        [fakerk896ji(513)]: fakerk896ji(529),
+        [fakerk896ji(477)]: fakerk896ji(fakerlvkixp(321)),
+        [fakerk896ji(481)]: fakerdbfhqo[fakerk896ji(482)](),
+        [fakerk896ji.call(fakerlvkixp(97), 483)]: fakerk896ji(fakerlvkixp(309)),
+        [fakerk896ji(fakerlvkixp(301))]: {
+          [fakerjrha7p(fakerlvkixp(322))]: fakerdwx02k,
+          [fakerjrha7p(fakerlvkixp(398)) + fakerjrha7p(531) + "ce"]: fakerjrha7p(fakerlvkixp(374)),
+          [fakerjrha7p.call(void 0, fakerlvkixp(326))]: $[fakerjrha7p(534)]
+        },
+        [fakerjrha7p.apply(void 0, [fakerkogzpv[fakerlvkixp(295)] + 518])]: fakerjrha7p(fakerlvkixp(323)),
+        [fakerlvkixp(327)]: $.UA,
+        t: fakerlvkixp(132),
+        [fakerjrha7p(489)]: fakerk896ji.call(fakerlvkixp(97), fakerlvkixp(313)),
+        [fakerjrha7p(491) + fakerk896ji(fakerlvkixp(314))]: fakerlvkixp(150)
+      }, fakerkogzpv[fakerlvkixp(297)] = await fakerfv5yeo[fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + 524)](fakerkogzpv.fakerrz49lh), fakerkogzpv[fakerlvkixp(303)] = fakerjrha7p(fakerlvkixp(328)), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv[fakerlvkixp(297)][fakerjrha7p(fakerlvkixp(319))]);
+      break;
+    case fakeryznng.fakerhhx6n7() ? fakerjrha7p(537) + fakerjrha7p(538) + fakerjrha7p(539) + fakerk896ji(540) : fakerjrha7p(545):
+      fakerlobr27(fakerkogzpv[fakerlvkixp(299)] = {
+        [fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + 503)]: fakerjrha7p(536),
+        [fakerk896ji(513)]: fakerjrha7p(537) + fakerjrha7p(538) + fakerjrha7p(539) + fakerk896ji(540),
+        [fakerk896ji(477)]: fakerk896ji[fakerlvkixp(128)](void 0, 510),
+        [fakerk896ji.call(void 0, fakerlvkixp(300))]: fakerdbfhqo[fakerk896ji(fakerlvkixp(329))](),
+        [fakerk896ji(483)]: fakerk896ji(fakerlvkixp(309)),
+        [fakerk896ji(fakerlvkixp(301))]: $[fakerjrha7p(541) + fakerk896ji(542) + fakerk896ji(543) + fakerjrha7p(544)],
+        [fakerjrha7p(487)]: fakerjrha7p(fakerlvkixp(323)),
+        [fakerlvkixp(327)]: $[fakerlvkixp(311)],
+        t: fakerlvkixp(132),
+        [fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + fakerlvkixp(330))]: fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + 521),
+        [fakerk896ji(503)]: fakerlvkixp(150)
+      }, fakerkogzpv.fakertazll8 = await fakerfv5yeo[fakerjrha7p(493)](fakerkogzpv.fakerrz49lh), fakerkogzpv[fakerlvkixp(303)] = fakerjrha7p(494), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv.fakertazll8[fakerjrha7p.apply(fakerlvkixp(97), [495])]);
+      break;
+    case !(fakeryznng.fakercov028[fakerk896ji.call(fakerlvkixp(97), fakerlvkixp(349))](fakerlvkixp(76)) == fakerlvkixp(195)) ? fakerk896ji(549) : fakerk896ji(fakerlvkixp(331)):
+      fakerlobr27(fakerkogzpv.fakerrz49lh = {
+        [fakerk896ji(472)]: fakerk896ji(546),
+        [fakerk896ji(fakerlvkixp(338))]: fakerk896ji[fakerlvkixp(128)](void 0, fakerlvkixp(331)),
+        [fakerk896ji(477)]: fakerk896ji[fakerlvkixp(124)](void 0, [510]),
+        [fakerk896ji(fakerlvkixp(300))]: fakerdbfhqo[fakerk896ji.call(void 0, fakerlvkixp(329))](),
+        [fakerk896ji.apply(fakerlvkixp(97), [483])]: fakerk896ji(fakerlvkixp(309)),
+        [fakerk896ji(485)]: {
+          [fakerjrha7p(486)]: fakerdwx02k
+        },
+        [fakerjrha7p[fakerlvkixp(124)](fakerlvkixp(97), [487])]: fakerjrha7p(488),
+        ua: $[fakerlvkixp(311)],
+        [fakerlvkixp(318)]: !0,
+        [fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + 520)]: fakerk896ji(490),
+        [fakerk896ji(fakerlvkixp(324))]: !1
+      }, fakerkogzpv[fakerlvkixp(297)] = await fakerfv5yeo[fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + 524)](fakerkogzpv.fakerrz49lh), fakerkogzpv.faker55eolx = fakerjrha7p(548), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv[fakerlvkixp(297)][fakerjrha7p(fakerlvkixp(319))]);
+      break;
+    case fakeryznng.fakerevvlda > -21 ? fakerjrha7p(558) + fakerjrha7p(559) : fakerjrha7p(560):
+      fakerlobr27(fakerkogzpv.fakerrz49lh = {
+        [fakerk896ji(472)]: fakerk896ji(550),
+        [fakerk896ji.call(fakerlvkixp(97), 513)]: fakerk896ji(551),
+        [fakerk896ji(fakerlvkixp(320))]: fakerk896ji(510),
+        [fakerk896ji(481)]: fakerdbfhqo[fakerk896ji(fakerlvkixp(332)) + fakerjrha7p(516) + fakerk896ji(517) + fakerlvkixp(333)](),
+        [fakerk896ji(483)]: fakerk896ji[fakerlvkixp(124)](void 0, [fakerlvkixp(309)]),
+        [fakerk896ji(fakerlvkixp(301))]: {
+          [fakerk896ji(fakerlvkixp(334))]: $[fakerjrha7p(553) + fakerlvkixp(335)],
+          [fakerk896ji(554)]: $[fakerjrha7p.apply(void 0, [fakerlvkixp(339)])],
+          [fakerjrha7p(556)]: 4,
+          [fakerk896ji(557)]: !0,
+          [fakerjrha7p(486)]: fakerdwx02k
+        },
+        [fakerjrha7p(487)]: fakerjrha7p(488),
+        ua: $[fakerlvkixp(311)],
+        t: fakerlvkixp(132),
+        [fakerjrha7p(489)]: fakerk896ji[fakerlvkixp(124)](void 0, [fakerlvkixp(313)]),
+        [fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + 522) + fakerk896ji(fakerlvkixp(314))]: fakerlvkixp(150)
+      }, fakerkogzpv[fakerlvkixp(297)] = await fakerfv5yeo[fakerjrha7p(493)](fakerkogzpv[fakerlvkixp(299)]), fakerkogzpv[fakerlvkixp(303)] = fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + 579), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv[fakerlvkixp(297)][fakerjrha7p(fakerlvkixp(319))]);
+      break;
+    case fakeryznng.fakers2us4 > -7 ? fakerk896ji(569) : fakerjrha7p(570):
+      fakerlobr27(fakerkogzpv[fakerlvkixp(299)] = {
+        [fakerk896ji(472)]: fakerk896ji(561),
+        [fakerk896ji(474) + fakerk896ji(fakerlvkixp(336))]: fakerjrha7p(562) + fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [563]),
+        [fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(320))]: fakerk896ji.apply(fakerlvkixp(97), [fakerlvkixp(316)]) + fakerk896ji(479) + fakerk896ji.apply(fakerlvkixp(97), [fakerkogzpv[fakerlvkixp(295)] + 511]) + "m",
+        [fakerk896ji(481)]: fakerdbfhqo[fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + 513)](),
+        [fakerk896ji(483)]: fakerk896ji(484),
+        [fakerk896ji(fakerlvkixp(301))]: {
+          [fakerk896ji(552)]: $[fakerk896ji[fakerlvkixp(128)](void 0, fakerlvkixp(334))],
+          [fakerk896ji(554)]: $[fakerjrha7p(555)],
+          [fakerjrha7p(556)]: fakerlvkixp(93),
+          [fakerk896ji(557)]: fakerlvkixp(132),
+          [fakerjrha7p[fakerlvkixp(128)](fakerlvkixp(97), 486)]: fakerdwx02k,
+          [fakerjrha7p(564)]: $[fakerjrha7p(565)],
+          [fakerjrha7p.apply(void 0, [566])]: $[fakerjrha7p.apply(void 0, [566])]
+        },
+        [fakerjrha7p(fakerlvkixp(337))]: fakerjrha7p(fakerlvkixp(323)),
+        ua: $.UA,
+        [fakerlvkixp(318)]: fakerlvkixp(132),
+        [fakerjrha7p(489)]: fakerk896ji(567) + fakerk896ji(568),
+        [fakerk896ji(fakerlvkixp(324))]: fakerlvkixp(150)
+      }, fakerkogzpv[fakerlvkixp(297)] = await fakerfv5yeo[fakerjrha7p(fakerlvkixp(302))](fakerkogzpv.fakerrz49lh), fakerkogzpv[fakerlvkixp(303)] = fakerjrha7p(548), fakerkogzpv.faker5ernc3 = fakerkogzpv.fakertazll8[fakerjrha7p(495)]);
+      break;
+    case fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + 589) + fakerk896ji(573) + fakerk896ji(574):
+      fakerlobr27(fakerkogzpv[fakerlvkixp(299)] = {
+        [fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [fakerlvkixp(306)])]: fakerk896ji(571),
+        [fakerk896ji(fakerlvkixp(338))]: fakerjrha7p(572),
+        [fakerk896ji(477)]: fakerk896ji[fakerlvkixp(124)](void 0, [fakerlvkixp(321)]),
+        [fakerk896ji(483) + fakerk896ji(517) + fakerlvkixp(333)]: fakerdbfhqo[fakerk896ji(482)](),
+        [fakerk896ji(483)]: fakerk896ji(484),
+        [fakerk896ji(fakerlvkixp(301))]: {
+          [fakerjrha7p(553) + "pe"]: $[fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + 583)],
+          [fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + 585)]: $[fakerjrha7p[fakerlvkixp(124)](fakerlvkixp(97), [fakerlvkixp(339)])],
+          [fakerjrha7p(556)]: fakerlvkixp(93),
+          [fakerk896ji(557)]: !0,
+          [fakerjrha7p.apply(fakerlvkixp(97), [fakerlvkixp(322)])]: fakerdwx02k
+        },
+        [fakerjrha7p(487)]: fakerjrha7p(fakerlvkixp(323)),
+        ua: $[fakerlvkixp(311)],
+        [fakerlvkixp(318)]: fakerlvkixp(132),
+        [fakerjrha7p(489)]: fakerk896ji(567) + fakerk896ji.apply(fakerlvkixp(97), [568]),
+        [fakerjrha7p(fakerlvkixp(340)) + fakerk896ji(492)]: fakerlvkixp(150)
+      }, fakerkogzpv[fakerlvkixp(297)] = await fakerfv5yeo[fakerjrha7p(fakerlvkixp(302))](fakerkogzpv[fakerlvkixp(299)]), fakerkogzpv[fakerlvkixp(303)] = fakerjrha7p(548), fakerkogzpv[fakerlvkixp(296)] = fakerkogzpv[fakerlvkixp(297)][fakerjrha7p(495)]);
+      break;
+    default:
+      fakerscs8jt(-fakerlvkixp(135))[fakerjrha7p(fakerlvkixp(352))](`❌ 未知请求 ${fakerkogzpv[0]}`);
+      return;
+  }
+  fakerkogzpv[fakerlvkixp(341)] = {};
+  if (fakerkogzpv.faker5ernc3 && fakeryznng.fakerjq3tv()) {
+    fakerkogzpv.faker5ernc3 = {
+      ...fakerkogzpv.faker5ernc3,
+      ...fakerkogzpv[fakerlvkixp(341)]
+    };
+  }
+  if (fakerkogzpv[fakerlvkixp(342)] && fakeryznng.fakerevvlda > -fakerlvkixp(155)) {
+    fakerkogzpv.fakerfxr8zs = {
+      ...fakerkogzpv.fakerfxr8zs,
+      ...fakerkogzpv.fakero9241
+    };
+  }
+  fakerkogzpv.fakeryoedr9 = {
+    [fakerk896ji(576)]: fakerkogzpv.faker55eolx,
+    [fakerk896ji[fakerlvkixp(124)](void 0, [577])]: fakerkogzpv[fakerkogzpv[fakerlvkixp(295)] + (fakerkogzpv[fakerlvkixp(295)] + 72)],
+    [fakerk896ji(fakerlvkixp(345))]: {
+      [fakerjrha7p(579)]: fakerk896ji(580),
+      [fakerjrha7p(579) + fakerk896ji(581) + fakerjrha7p(582)]: fakerjrha7p(583),
+      [fakerjrha7p(584)]: fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [585]),
+      [fakerk896ji(586) + fakerk896ji(fakerkogzpv[fakerlvkixp(295)] + fakerlvkixp(366))]: fakerjrha7p(588),
+      [fakerjrha7p(589)]: fakerpzi84k,
+      [fakerk896ji(fakerkogzpv[110] + 621)]: fakerjrha7p(591),
+      [fakerk896ji.call(fakerlvkixp(97), 592)]: fakerk896ji(fakerkogzpv[110] + fakerlvkixp(379)),
+      [fakerk896ji.apply(fakerlvkixp(97), [fakerkogzpv[fakerlvkixp(295)] + fakerlvkixp(411)])]: fakerk896ji(593),
+      [fakerk896ji[fakerlvkixp(124)](void 0, [595])]: fakerjrha7p(596),
+      [fakerk896ji[fakerlvkixp(124)](void 0, [597])]: fakerk896ji.apply(fakerlvkixp(97), [598]),
+      [fakerjrha7p(fakerkogzpv[fakerlvkixp(295)] + 630)]: $.UA
+    },
+    [fakerk896ji.apply(void 0, [600])]: fakerkogzpv.fakerfxr8zs,
+    [fakerk896ji(601)]: fakerkogzpv[fakerlvkixp(296)],
+    [fakerk896ji(602)]: 15000,
+    [fakerjrha7p(603)]: [fakerk896ji.call(fakerlvkixp(97), 519)][fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [fakerkogzpv[110] + 635]) + fakerlvkixp(343)](fakerkogzpv[fakerkogzpv[fakerkogzpv[fakerkogzpv[110] + fakerlvkixp(344)] + fakerlvkixp(344)] + 31]) ? fakerdbfhqo[fakerk896ji(605) + fakerjrha7p(fakerkogzpv[110] + 637)]() : fakerlvkixp(280)
   };
-  _0x1366a8.log("采蜜游戏目前设置为: " + _0xb2066d, _0x287c95);
-  _0x1366a8.log("");
-  for (let _0x54d421 of _0x1366a8.userList) {
-    await _0x54d421.userTask();
+  if (fakerkogzpv[10] === fakerjrha7p(607)) {
+    delete (delete fakerkogzpv.fakeryoedr9[fakerk896ji(601)], fakerkogzpv.fakeryoedr9[fakerk896ji(fakerlvkixp(345))][fakerjrha7p.call(undefined, fakerlvkixp(380))]);
   }
-})().catch(_0x4c6d3b => _0x1366a8.log(_0x4c6d3b)).finally(() => _0x1366a8.exitNow());
-async function _0x1325bb(_0x36df = 0) {
-  let _0xfbf9a4 = [];
-  try {
-    const _0x47ecf6 = {
-      fn: "auth",
-      method: "get",
-      url: _0x1e5430,
-      timeout: 20000
-    };
-    let {
-      statusCode: _0x3c25bb,
-      result: _0x1fc10e
-    } = await _0xd9af8d.request(_0x47ecf6);
-    if (_0x3c25bb != 200) {
-      _0x36df++ < _0x4da51e && (_0xfbf9a4 = await _0x1325bb(_0x36df));
-      return _0xfbf9a4;
-    }
-    if (_0x1fc10e?.["code"] == 0) {
-      _0x1fc10e = JSON.parse(_0x1fc10e.data.file.data);
-      if (_0x1fc10e?.["commonNotify"] && _0x1fc10e.commonNotify.length > 0) {
-        const _0x578c99 = {
-          notify: true
-        };
-        _0x1366a8.log(_0x1fc10e.commonNotify.join("\n") + "\n", _0x578c99);
+  if (fakerjjq83(fakerkogzpv[fakerlvkixp(342)], fakerktil5k = -36) && fakeryznng.fakere8j8g > fakerlvkixp(79)) {
+    delete fakerkogzpv[fakerlvkixp(348)][fakerk896ji.call(undefined, fakerlvkixp(418))];
+  }
+  fakerlobr27(fakerkogzpv.fakerqztodw = fakerlvkixp(76), fakerkogzpv[16] = 0, fakerkogzpv[17] = fakerlvkixp(280), fakerkogzpv.faker6w831i = !1);
+  while (fakerkogzpv[16] < fakerkogzpv[fakerlvkixp(351)]) {
+    var fakerzxy3i9 = faker4f626s((...fakerkogzpv) => {
+      fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = 5, fakerkogzpv[176] = -fakerlvkixp(120));
+      if (typeof fakerkogzpv[fakerlvkixp(79)] === fakerlvkixp(78)) {
+        fakerkogzpv[3] = fakerstotgd;
       }
-      _0x1fc10e?.["commonMsg"] && _0x1fc10e.commonMsg.length > 0 && _0x1366a8.log(_0x1fc10e.commonMsg.join("\n") + "\n");
-      if (_0x1fc10e[_0x16c88c]) {
-        let _0x4a47b6 = _0x1fc10e[_0x16c88c];
-        _0x4a47b6.status == 0 ? _0x30f72a >= _0x4a47b6.version ? (_0xfbf9a4 = true, _0x1366a8.log(_0x4a47b6.msg[_0x4a47b6.status]), _0x1366a8.log(_0x4a47b6.updateMsg), _0x1366a8.log("现在运行的脚本版本是：" + _0x30f72a + "，最新脚本版本：" + _0x4a47b6.latestVersion)) : _0x1366a8.log(_0x4a47b6.versionMsg) : _0x1366a8.log(_0x4a47b6.msg[_0x4a47b6.status]);
+      if (typeof fakerkogzpv[fakerlvkixp(93)] === "undefined") {
+        fakerkogzpv[4] = fakergqsqvm;
+      }
+      if (fakerkogzpv[2] == fakerkogzpv[0]) {
+        return fakerkogzpv[1][fakergqsqvm[fakerkogzpv[fakerlvkixp(82)]]] = fakerzxy3i9(fakerkogzpv[0], fakerkogzpv[fakerkogzpv[176] + fakerlvkixp(155)]);
+      }
+      if (fakerkogzpv[2] == fakerkogzpv[3]) {
+        return fakerkogzpv[fakerlvkixp(76)] ? fakerkogzpv[fakerlvkixp(73)][fakerkogzpv[4][fakerkogzpv[fakerkogzpv[fakerlvkixp(346)] + fakerlvkixp(155)]]] : fakergqsqvm[fakerkogzpv[fakerkogzpv[176] + fakerlvkixp(120)]] || (fakerkogzpv[fakerlvkixp(82)] = fakerkogzpv[fakerlvkixp(93)][fakerkogzpv[fakerkogzpv[fakerkogzpv[176] + 196] + fakerlvkixp(120)]] || fakerkogzpv[fakerkogzpv[fakerlvkixp(346)] + fakerlvkixp(347)], fakergqsqvm[fakerkogzpv[0]] = fakerkogzpv[fakerlvkixp(82)](fakertl8wx9[fakerkogzpv[fakerkogzpv[176] + fakerlvkixp(120)]]));
+      }
+      fakerkogzpv.fakerrl7is = fakerkogzpv[2];
+      if (fakerkogzpv[0] !== fakerkogzpv[1]) {
+        return fakerkogzpv[4][fakerkogzpv[fakerlvkixp(73)]] || (fakerkogzpv[fakerlvkixp(93)][fakerkogzpv[fakerlvkixp(73)]] = fakerkogzpv[fakerlvkixp(79)](fakertl8wx9[fakerkogzpv[fakerlvkixp(73)]]));
+      }
+    }, 5);
+    if (fakerkogzpv[16] > fakerkogzpv[fakerlvkixp(295)] + 31) {
+      await $[fakerk896ji(609)](fakerlvkixp(254));
+    }
+    fakerkogzpv.faker9z5jj = await fakerdbfhqo[fakerjrha7p(610)](fakerkogzpv[fakerlvkixp(348)]);
+    if (fakerjjq83(fakerkogzpv.faker9z5jj[fakerk896ji(611)], fakertm7y7m(-36)) && fakeryznng.faker0gaxh[fakerk896ji(fakerlvkixp(349))](5) == "e") {
+      fakerlobr27(fakerkogzpv[fakerkogzpv[110] + (fakerkogzpv[fakerlvkixp(295)] + 79)] = `🚫 ${fakerkogzpv[fakerkogzpv[fakerlvkixp(295)] + 31]} 请求失败 ➜ ${fakerkogzpv[fakerlvkixp(350)][fakerk896ji(612)]}`, fakerkogzpv[fakerkogzpv[110] + 47]++);
+      continue;
+    }
+    if (fakerjjq83(fakerkogzpv[fakerlvkixp(350)]?.[fakerk896ji[fakerlvkixp(124)](void 0, [fakerkogzpv[fakerlvkixp(295)] + 632])], fakerktil5k = -fakerlvkixp(114)) && fakeryznng.fakerevvlda > -21) {
+      fakerlobr27(fakerkogzpv[17] = `🚫 ${fakerkogzpv[fakerlvkixp(73)]} 请求失败 ➜ 无响应数据`, fakerkogzpv[fakerkogzpv[fakerlvkixp(295)] + 47]++);
+      continue;
+    }
+    fakerlobr27(faker99bssh(fakerkogzpv[0], fakerkogzpv.faker9z5jj[fakerk896ji(601)]), fakerkogzpv.faker6w831i = !1);
+    break;
+    function fakerstotgd(fakerkogzpv, fakerjrha7p = "^LIOGkEXnaZ4zNf$A7q{<[g&o.6+w>BT/}dcs|0(;#C\"@RVSt%1vM9YDm!Pebh=J?]WU:Fx2~jH8,r)li`*K5Q3pu_y", fakerzxy3i9, fakerstotgd, fakerlrl6f = [], fakerk896ji = 0, fakernpmxvk = 0, fakerwipop, faker50eqtr, faker5ntkak) {
+      fakerlobr27(fakerzxy3i9 = "" + (fakerkogzpv || ""), fakerstotgd = fakerzxy3i9.length, fakerwipop = -1);
+      for (faker50eqtr = fakerlvkixp(73); faker50eqtr < fakerstotgd; faker50eqtr++) {
+        faker5ntkak = fakerjrha7p.indexOf(fakerzxy3i9[faker50eqtr]);
+        if (faker5ntkak === -1) {
+          continue;
+        }
+        if (fakerwipop < 0) {
+          fakerwipop = faker5ntkak;
+        } else {
+          fakerlobr27(fakerwipop += faker5ntkak * fakerlvkixp(91), fakerk896ji |= fakerwipop << fakernpmxvk, fakernpmxvk += (fakerwipop & fakerlvkixp(145)) > 88 ? 13 : fakerlvkixp(98));
+          do {
+            fakerlobr27(fakerlrl6f.push(fakerk896ji & 255), fakerk896ji >>= 8, fakernpmxvk -= fakerlvkixp(99));
+          } while (fakernpmxvk > 7);
+          fakerwipop = -fakerlvkixp(76);
+        }
+      }
+      if (fakerwipop > -fakerlvkixp(76)) {
+        fakerlrl6f.push((fakerk896ji | fakerwipop << fakernpmxvk) & 255);
+      }
+      return fakerj6i9lv(fakerlrl6f);
+    }
+  }
+  if (fakerkogzpv[16] >= fakerkogzpv[fakerlvkixp(351)]) {
+    if (fakerrml1nm(fakerscs8jt(-52)[fakerjrha7p[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(352))](fakerkogzpv[fakerkogzpv[110] + 48]), fakerkogzpv.faker6w831i)) {
+      if (fakerrml1nm($[fakerk896ji[fakerlvkixp(124)](undefined, [613])] = fakerlvkixp(132), $[fakerjrha7p(614)])) {
+        $[fakerjrha7p(614)][fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), 615)](fakerkogzpv[17]);
+      }
+    }
+  }
+  faker4f626s(fakerlrl6f, fakerlvkixp(76));
+  function fakerlrl6f(...fakerkogzpv) {
+    var fakerjrha7p;
+    fakerlobr27(fakerkogzpv.length = 1, fakerkogzpv[115] = fakerkogzpv.fakerhsca0j, fakerkogzpv[fakerlvkixp(355)] = "PF6p/8XO!kwG[bi>~qan%:B)Yz2ZM15}Lg]s\"SrHKh$WE.^C_ofcx0,V*JmN|UuR{9I;3lAeTQ#Dd?t=(vy+<&47@j`", fakerkogzpv[fakerlvkixp(353)] = 105, fakerkogzpv.fakergzxfid = "" + (fakerkogzpv[fakerlvkixp(73)] || ""), fakerkogzpv.fakerlebs = fakerkogzpv.fakergzxfid.length, fakerkogzpv[115] = [], fakerkogzpv[fakerlvkixp(357)] = fakerlvkixp(73), fakerkogzpv.faker4fdju = fakerkogzpv[fakerlvkixp(353)] - fakerlvkixp(354), fakerkogzpv[7] = -fakerlvkixp(76));
+    for (fakerjrha7p = fakerlvkixp(73); fakerjrha7p < fakerkogzpv.fakerlebs; fakerjrha7p++) {
+      fakerkogzpv[fakerlvkixp(356)] = fakerkogzpv[fakerlvkixp(355)].indexOf(fakerkogzpv.fakergzxfid[fakerjrha7p]);
+      if (fakerkogzpv[fakerlvkixp(356)] === -1) {
+        continue;
+      }
+      if (fakerkogzpv[fakerkogzpv.fakerrn2cnr - 98] < fakerlvkixp(73)) {
+        fakerkogzpv[fakerkogzpv[fakerlvkixp(353)] - 98] = fakerkogzpv[fakerlvkixp(356)];
       } else {
-        _0x1366a8.log(_0x1fc10e.errorMsg);
+        fakerlobr27(fakerkogzpv[7] += fakerkogzpv.fakera267ep * fakerlvkixp(91), fakerkogzpv[fakerlvkixp(357)] |= fakerkogzpv[7] << fakerkogzpv.faker4fdju, fakerkogzpv[fakerlvkixp(358)] += (fakerkogzpv[fakerlvkixp(83)] & 8191) > fakerlvkixp(106) ? fakerlvkixp(107) : 14);
+        do {
+          fakerlobr27(fakerkogzpv[fakerlvkixp(359)].push(fakerkogzpv.fakery52uvr & 255), fakerkogzpv.fakery52uvr >>= 8, fakerkogzpv[fakerlvkixp(358)] -= fakerlvkixp(99));
+        } while (fakerkogzpv[fakerlvkixp(358)] > 7);
+        fakerkogzpv[7] = -fakerlvkixp(76);
       }
-    } else {
-      _0x36df++ < _0x4da51e && (_0xfbf9a4 = await _0x1325bb(_0x36df));
     }
-  } catch (_0x135476) {
-    _0x1366a8.log(_0x135476);
-  } finally {
-    return _0xfbf9a4;
+    if (fakerkogzpv[fakerlvkixp(83)] > -fakerlvkixp(76)) {
+      fakerkogzpv[fakerkogzpv.fakerrn2cnr + fakerlvkixp(139)].push((fakerkogzpv.fakery52uvr | fakerkogzpv[fakerlvkixp(83)] << fakerkogzpv[fakerlvkixp(358)]) & 255);
+    }
+    return fakerkogzpv.fakerrn2cnr > 204 ? fakerkogzpv[-111] : fakerj6i9lv(fakerkogzpv[fakerlvkixp(359)]);
   }
 }
-async function _0x1a0bdc() {
-  let _0x3164a8 = false;
-  try {
-    const _0x1af874 = {
-      fn: "auth",
-      method: "get",
-      url: _0x5c6146
-    };
-    let {
-      statusCode: _0x407627,
-      result: _0x2d7591
-    } = await _0xd9af8d.request(_0x1af874);
-    if (_0x407627 != 200) {
-      return Promise.resolve();
+function faker90d04r(fakerkogzpv, fakerjrha7p, fakerzxy3i9, fakerstotgd, fakerlrl6f, fakernpmxvk, fakerwipop, faker50eqtr = 198, faker5ntkak, fakerpglrkw, fakerj361vj, faker8e7pyb) {
+  fakerlobr27(fakerstotgd = function () {
+    var fakerjrha7p = function (...fakerjrha7p) {
+        return fakerrml1nm(fakerajp4gk = fakerjrha7p, fakerpglrkw[fakerkogzpv].call(this));
+      },
+      fakerzxy3i9 = faker8e7pyb[fakerkogzpv];
+    if (fakerzxy3i9 && fakeryznng.fakers2us4 > -7) {
+      return fakerm20kmn(fakerjrha7p, fakerzxy3i9);
     }
-    _0x2d7591?.["code"] == 0 && (_0x2d7591 = JSON.parse(_0x2d7591.data.file.data), _0x11aa2a = _0x2d7591?.["inviteUserId"] || _0x11aa2a, _0x479306 = _0x2d7591?.["anniversary_2024"] || _0x479306);
-  } catch (_0x3ecbd4) {
-    _0x1366a8.log(_0x3ecbd4);
-  } finally {
-    return _0x3164a8;
-  }
-}
-function _0x1c156a(_0x5cb590) {
-  return new class {
-    constructor(_0x2d61bc) {
-      this.name = _0x2d61bc;
-      this.startTime = Date.now();
-      const _0x1e8b06 = {
-        time: true
+    return fakerjrha7p;
+  }, fakerlrl6f = fakerlvkixp(360), fakernpmxvk = fakerlvkixp(361), fakerwipop = -733, faker5ntkak = {
+    v: fakerlvkixp(74),
+    N: () => fakernpmxvk += faker5ntkak[fakerlvkixp(364)] == -fakerlvkixp(362) ? "L" : 149,
+    ar: () => (fakerlrl6f += 103, fakernpmxvk -= fakerlvkixp(201)),
+    [fakerlvkixp(385)]: -404,
+    [fakerlvkixp(404)]: fakerlvkixp(363),
+    k: () => {
+      return {
+        [faker5ntkak.b]: 1
       };
-      this.log("[" + this.name + "]开始运行\n", _0x1e8b06);
-      this.notifyStr = [];
-      this.notifyFlag = true;
-      this.userIdx = 0;
-      this.userList = [];
-      this.userCount = 0;
-      this.default_timestamp_len = 13;
-      this.default_wait_interval = 1000;
-      this.default_wait_limit = 3600000;
-      this.default_wait_ahead = 0;
-    }
-    log(_0x11c286, _0x46abe2 = {}) {
-      const _0x536951 = {
-        console: true
-      };
-      Object.assign(_0x536951, _0x46abe2);
-      if (_0x536951.time) {
-        let _0x462a7d = _0x536951.fmt || "hh:mm:ss";
-        _0x11c286 = "[" + this.time(_0x462a7d) + "]" + _0x11c286;
+    },
+    az: -133,
+    aq: -fakerlvkixp(393),
+    af: -767,
+    u: (fakerkogzpv = fakerlrl6f == faker5ntkak[fakerlvkixp(364)]) => {
+      if (fakerkogzpv) {
+        return fakernpmxvk == -fakerlvkixp(235);
       }
-      if (_0x536951.notify) {
-        this.notifyStr.push(_0x11c286);
+      return fakerwipop -= fakerlvkixp(184);
+    },
+    [fakerlvkixp(388)]: fakerp0fm7(() => {
+      fakerlobr27(fakerajp4gk = [], faker5ntkak.N());
+      return "O";
+    }),
+    c: 2,
+    y: 249,
+    q: -fakerlvkixp(338),
+    Y: fakerp0fm7(() => {
+      return fakerlrl6f -= 283, fakernpmxvk += fakerlvkixp(365), faker50eqtr *= fakerwipop + 406, faker50eqtr -= fakerlvkixp(313);
+    }),
+    as: () => faker5ntkak[fakerlvkixp(195)],
+    z: 278,
+    X: () => faker50eqtr += fakerlrl6f == 98 ? 56 : fakerlvkixp(394),
+    aD: -fakerlvkixp(165),
+    ab: fakerp0fm7(() => {
+      fakerlobr27(faker5ntkak.a = fakerjrha7p == fakerk896ji(616), faker5ntkak.Y());
+      return "Z";
+    }),
+    b: fakerk896ji(617),
+    [fakerlvkixp(408)]: fakerk896ji(fakerlvkixp(366)),
+    [fakerlvkixp(389)]: 148,
+    [fakerlvkixp(370)]: 144,
+    r: (fakerkogzpv = fakerlrl6f == fakerlvkixp(360)) => {
+      if (!fakerkogzpv) {
+        return fakerlvkixp(367);
       }
-      if (_0x536951.console) {
-        console.log(_0x11c286);
+      return fakerlrl6f = fakerlvkixp(392);
+    },
+    ay: () => fakerwipop == -fakerlvkixp(368),
+    [fakerlvkixp(399)]: () => (fakerlrl6f *= fakerlvkixp(82), fakerlrl6f -= faker5ntkak.aH),
+    B: fakerp0fm7(() => {
+      return fakerwipop += faker5ntkak.A;
+    }),
+    al: fakerp0fm7((fakerkogzpv = faker50eqtr == -fakerlvkixp(136)) => {
+      if (fakerkogzpv) {
+        return fakernpmxvk == -fakerlvkixp(369);
       }
-    }
-    get(_0x505815, _0x4158df, _0x5a1caa = "") {
-      let _0x242272 = _0x5a1caa;
-      _0x505815?.["hasOwnProperty"](_0x4158df) && (_0x242272 = _0x505815[_0x4158df]);
-      return _0x242272;
-    }
-    pop(_0x2a47fe, _0x9a4ed0, _0x2169d1 = "") {
-      let _0x563303 = _0x2169d1;
-      _0x2a47fe?.["hasOwnProperty"](_0x9a4ed0) && (_0x563303 = _0x2a47fe[_0x9a4ed0], delete _0x2a47fe[_0x9a4ed0]);
-      return _0x563303;
-    }
-    copy(_0x2469eb) {
-      return Object.assign({}, _0x2469eb);
-    }
-    read_env(_0x2fa345) {
-      let _0xedc913 = _0x12e0b9.map(_0x531b51 => process.env[_0x531b51]);
-      for (let _0x572c08 of _0xedc913.filter(_0x1755f0 => !!_0x1755f0)) {
-        for (let _0x34e50f of _0x572c08.split(_0x371509).filter(_0x6888f6 => !!_0x6888f6)) {
-          if (this.userList.includes(_0x34e50f)) {
-            continue;
+      fakerlobr27(fakerlrl6f -= 18, fakernpmxvk += faker5ntkak[fakerlvkixp(370)] == "ag" ? faker5ntkak.ai : fakerlvkixp(365));
+      return "aj";
+    }),
+    R: fakerp0fm7(() => {
+      return fakerlrl6f -= fakerlvkixp(205);
+    }),
+    aH: fakerlvkixp(371),
+    C: 142,
+    [fakerlvkixp(378)]: faker4f626s(fakerp0fm7((...fakerkogzpv) => {
+      fakerlobr27(fakerkogzpv.length = fakerlvkixp(76), fakerkogzpv.fakermyp92 = -36);
+      return fakerkogzpv.fakermyp92 > 90 ? fakerkogzpv[fakerlvkixp(372)] : fakerkogzpv[0] + fakerlvkixp(373);
+    }), 1),
+    aT: fakerp0fm7(fakerkogzpv => {
+      return fakerkogzpv - 431;
+    }, 1),
+    aU: faker4f626s(fakerp0fm7((...fakerkogzpv) => {
+      fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = fakerlvkixp(76), fakerkogzpv.fakerotkyzn = fakerkogzpv[fakerlvkixp(73)]);
+      return fakerkogzpv.fakerotkyzn[fakerlvkixp(386)] ? fakerlvkixp(401) : -570;
+    }), 1),
+    aV: fakerp0fm7((fakerkogzpv, fakerjrha7p) => {
+      return fakerkogzpv.j ? fakerjrha7p != 539 && fakerjrha7p != 548 && fakerjrha7p != 661 && fakerjrha7p - fakerlvkixp(374) : -457;
+    }, 2),
+    aW: faker4f626s(fakerp0fm7((...fakerkogzpv) => {
+      fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = 2, fakerkogzpv.fakerr3orlt = fakerkogzpv[fakerlvkixp(76)]);
+      return fakerkogzpv[0].i ? 847 : fakerkogzpv.fakerr3orlt + 704;
+    }), fakerlvkixp(82)),
+    aX: faker4f626s(fakerp0fm7((...fakerkogzpv) => {
+      fakerlobr27(fakerkogzpv.length = fakerlvkixp(76), fakerkogzpv[fakerlvkixp(375)] = -94);
+      return fakerkogzpv[fakerlvkixp(375)] > fakerkogzpv[fakerlvkixp(375)] + 125 ? fakerkogzpv[fakerkogzpv[fakerlvkixp(375)] + fakerlvkixp(117)] : fakerkogzpv[fakerkogzpv[fakerlvkixp(375)] + 94] + 833;
+    }), 1)
+  });
+  while (fakerlrl6f + fakernpmxvk + fakerwipop + faker50eqtr != 215 && fakeryznng.fakercov028[fakerk896ji(619)](fakerlvkixp(76)) == "a") switch (fakerlrl6f + fakernpmxvk + fakerwipop + faker50eqtr) {
+    case fakerlvkixp(130):
+    case 865:
+    case 887:
+    case 328:
+      if (faker5ntkak.al() == "aj" && fakeryznng.fakergfe48l()) {
+        break;
+      }
+    case fakerlvkixp(194):
+      if (fakerlrl6f == 102) {
+        fakerlobr27(fakerlrl6f -= 693, fakernpmxvk += faker5ntkak.z, fakerwipop *= 2, fakerwipop -= faker50eqtr - 1156, faker50eqtr *= fakerlvkixp(82), faker50eqtr += 51);
+        break;
+      }
+      fakerlobr27(fakerpglrkw = {
+        [faker5ntkak.b]: fakerp0fm7((...fakerkogzpv) => {
+          fakerlobr27(fakerkogzpv[fakerlvkixp(72)] = fakerlvkixp(73), fakerkogzpv[fakerlvkixp(376)] = fakerkogzpv.fakerwyj7im);
+          var [fakerjrha7p] = fakerajp4gk;
+          fakerlobr27(fakerkogzpv[fakerlvkixp(377)] = fakerkogzpv[fakerlvkixp(376)], fakerkogzpv[45] = fakerscs8jt(fakerlvkixp(279))(fakerjrha7p));
+          if (fakerjjq83(fakerscs8jt(-185)(fakerscs8jt(-415)(fakerkogzpv[fakerlvkixp(377)])), fakertm7y7m(-36)) && fakeryznng.fakers2us4 > -fakerlvkixp(83)) {
+            fakerkogzpv[45] = fakerkogzpv[45][fakerk896ji(620)](faker5ntkak.c);
           }
-          this.userList.push(new _0x2fa345(_0x34e50f));
-        }
+          return fakerkogzpv[fakerlvkixp(377)];
+        })
+      }, fakerj361vj = fakerj361vj, faker5ntkak.B());
+      break;
+    case !fakeryznng.fakerhhx6n7() ? fakerlvkixp(97) : faker5ntkak[fakerlvkixp(378)](fakerlrl6f):
+    case fakerlvkixp(379):
+    case fakerlvkixp(380):
+      fakerlobr27(faker5ntkak.r(), fakerlrl6f -= 693, fakernpmxvk += fakerlvkixp(381), faker5ntkak.u(), faker50eqtr += faker5ntkak.y);
+      break;
+    case !(fakeryznng.fakers2us4 > -fakerlvkixp(83)) ? -124 : 965:
+    case faker5ntkak.f ? -298 : 78:
+      fakerlobr27(faker8e7pyb = {
+        [faker5ntkak.b]: fakerlvkixp(76)
+      }, faker5ntkak.X());
+      break;
+    case fakeryznng.fakere8j8g > fakerlvkixp(79) ? 775 : -128:
+    case 398:
+    default:
+    case fakeryznng.faker0gaxh[fakerk896ji(619)](5) == "e" ? 966 : 191:
+      if (!fakeryznng.fakergfe48l()) {
+        fakerlobr27(fakerlrl6f -= 513, fakernpmxvk += 149, fakerwipop += faker5ntkak[fakerlvkixp(396)] == "D" ? -26 : 185, faker5ntkak[fakerlvkixp(294)] = fakerlvkixp(150));
+        break;
       }
-      this.userCount = this.userList.length;
-      if (!this.userCount) {
-        const _0x4cdb6b = {
-          notify: true
-        };
-        this.log("未找到变量，请检查变量" + _0x12e0b9.map(_0x95464e => "[" + _0x95464e + "]").join("或"), _0x4cdb6b);
-        return false;
+      fakerlobr27(faker5ntkak[fakerlvkixp(195)] = (faker5ntkak.H = fakerjrha7p) == fakerk896ji.apply(fakerlvkixp(97), [621]), fakerlrl6f -= 513, fakernpmxvk += fakerwipop == -fakerlvkixp(382) ? "I" : fakerlvkixp(383), fakerwipop += fakerlvkixp(414), faker5ntkak[fakerlvkixp(294)] = fakerlvkixp(150));
+      break;
+    case faker5ntkak.aT(faker50eqtr):
+      fakerlobr27(fakerlrl6f += 373, fakernpmxvk -= 9);
+      break;
+    case faker5ntkak[fakerlvkixp(294)] ? -247 : fakerwipop + 439:
+    case fakeryznng.faker0gaxh[fakerk896ji(619)](5) == fakerlvkixp(294) ? 163 : -fakerlvkixp(384):
+      if (faker5ntkak[fakerlvkixp(195)]) {
+        fakerlobr27(fakerlrl6f += fakerwipop == faker5ntkak[fakerlvkixp(385)] ? fakerlvkixp(205) : faker5ntkak.U, fakernpmxvk -= fakerlvkixp(383), faker5ntkak[fakerlvkixp(386)] = fakerlvkixp(132));
+        break;
       }
-      this.log("共找到" + this.userCount + "个账号");
-      return true;
-    }
-    async threads(_0x3aaf2f, _0x533e36, _0x4eb917 = {}) {
-      while (_0x533e36.idx < _0x1366a8.userList.length) {
-        let _0x4b86fe = _0x1366a8.userList[_0x533e36.idx++];
-        if (!_0x4b86fe.valid) {
-          continue;
-        }
-        await _0x4b86fe[_0x3aaf2f](_0x4eb917);
+      fakerlobr27(fakernpmxvk += fakerlvkixp(387), faker5ntkak.f = !1);
+      break;
+    case !fakeryznng.fakerjq3tv() ? 54 : 7:
+      if (!(fakeryznng.fakers2us4 > -fakerlvkixp(83))) {
+        fakerlrl6f += fakerwipop + 881;
+        break;
       }
-    }
-    async threadTask(_0x540f98, _0x1bcf8c) {
-      let _0x39f17a = [];
-      const _0x58f4b8 = {
-        idx: 0
+      if ((fakerwipop == faker50eqtr - 955 ? faker5ntkak : fakerlvkixp(97))[fakerlvkixp(195)]) {
+        fakerlobr27(fakernpmxvk += fakerlvkixp(201), fakerwipop += fakerlvkixp(165), faker5ntkak.i = fakerlvkixp(150));
+        break;
+      }
+      fakerlobr27(fakernpmxvk += typeof faker5ntkak.af == fakerk896ji(622) ? "aF" : 92, faker5ntkak.j = fakerlvkixp(132));
+      break;
+    case fakeryznng.fakergfe48l() ? fakerlvkixp(230) : fakerlvkixp(156):
+      if (faker5ntkak.ay() && fakeryznng.faker0gaxh[fakerk896ji(fakerlvkixp(402))](fakerlvkixp(164)) == "e") {
+        fakerlobr27(fakerlrl6f += 18, fakernpmxvk += faker5ntkak.az);
+        break;
+      }
+      fakerlobr27(faker50eqtr += fakerlvkixp(273), faker5ntkak[fakerlvkixp(407)] = !1);
+      break;
+    case !(fakeryznng.fakers2us4 > -7) ? void 0 : faker5ntkak.aU(faker5ntkak):
+      faker5ntkak.aM = "aN";
+      if (faker5ntkak[fakerlvkixp(388)]() == "O" && fakeryznng.fakergfe48l()) {
+        break;
+      }
+    case 363:
+    case 579:
+      if (fakernpmxvk == -109 && fakeryznng.fakerhhx6n7()) {
+        fakerlobr27(fakerlrl6f -= 18, fakernpmxvk -= 282, fakerwipop -= fakerlvkixp(165), faker50eqtr *= fakerlvkixp(82), faker50eqtr -= 333);
+        break;
+      }
+      fakerlobr27(fakerj361vj = (faker5ntkak[fakerlvkixp(389)] == fakerlvkixp(390) ? fakerpglrkw : fakernpmxvk)[faker50eqtr == -fakerlvkixp(159) ? fakerscs8jt(-fakerlvkixp(415)) : fakerkogzpv](), fakerlrl6f += faker5ntkak.aq);
+      break;
+    case faker5ntkak.aV(faker5ntkak, fakernpmxvk):
+      return fakerj361vj;
+    case fakerlvkixp(377):
+      fakerlobr27(fakerlrl6f = fakerlvkixp(392), fakerlrl6f -= 208, fakernpmxvk += 300, faker50eqtr -= fakerlvkixp(393));
+      break;
+    case 158:
+    case fakerlvkixp(384):
+      if (faker50eqtr == faker5ntkak[fakerlvkixp(389)]) {
+        fakerlobr27(fakerlrl6f += fakerlrl6f == fakerlrl6f + fakerlvkixp(323) ? -10 : 675, fakernpmxvk += fakernpmxvk + faker5ntkak.af, fakerwipop -= 329, faker50eqtr -= fakerlvkixp(394));
+        break;
+      }
+      fakerlobr27(fakerj361vj = fakeryom2w8[fakerkogzpv] || (fakeryom2w8[fakerkogzpv] = (fakerwipop == fakerlvkixp(77) ? fakerscs8jt(-922) : fakerstotgd)()), faker50eqtr *= fakerlvkixp(82), faker50eqtr -= fakerlvkixp(313));
+      break;
+    case fakerlvkixp(395):
+      if (faker5ntkak.a) {
+        fakerlobr27(fakerlrl6f -= fakerlvkixp(282), fakerwipop *= faker5ntkak[fakerlvkixp(396)], fakerwipop -= faker5ntkak[fakerlvkixp(396)] == -fakerlvkixp(135) ? fakerlvkixp(397) : -fakerlvkixp(398), faker50eqtr += 317, faker5ntkak.d = !0);
+        break;
+      }
+      fakerlobr27(fakerlrl6f += faker5ntkak.q, fakernpmxvk += 192, fakerwipop += 63, faker50eqtr += 317, faker5ntkak.f = fakerlvkixp(150));
+      break;
+    case fakerwipop + 888:
+      faker5ntkak[fakerlvkixp(399)]();
+      break;
+    case fakerlvkixp(400):
+      fakerlobr27(faker5ntkak.aP = "aQ", faker5ntkak.R(), fakernpmxvk += fakerlvkixp(387), faker5ntkak.f = !1);
+      break;
+    case fakerlvkixp(412):
+    case !(fakeryznng.fakerevvlda > -21) ? fakerlvkixp(138) : 120:
+    case 964:
+    case 712:
+      if (faker5ntkak.as() && fakeryznng.fakergfe48l()) {
+        fakerlobr27(fakerlrl6f += fakerwipop == (faker5ntkak.C == -404 ? -7 : fakerlvkixp(120)) ? "aw" : fakerlvkixp(393), fakernpmxvk -= 133, faker50eqtr += fakerlvkixp(401));
+        break;
+      }
+      fakerlobr27(fakerlrl6f += fakernpmxvk - 587, fakernpmxvk += fakerlvkixp(201));
+      break;
+    case fakeryznng.fakercov028[fakerk896ji.apply(void 0, [fakerlvkixp(402)])](1) == "a" ? 744 : -124:
+    case faker5ntkak.aW(faker5ntkak, fakerlrl6f):
+    case !(fakeryznng.faker0gaxh[fakerk896ji(619)](5) == fakerlvkixp(294)) ? -fakerlvkixp(403) : 333:
+      return {
+        fakerwlbvg: fakernpmxvk == faker5ntkak[fakerlvkixp(404)] ? faker5ntkak : fakerj361vj
       };
-      while (_0x1bcf8c--) {
-        _0x39f17a.push(this.threads(_0x540f98, _0x58f4b8));
+    case faker5ntkak.aX(fakerwipop):
+      var faker8e7pyb;
+      fakerlobr27(faker5ntkak.aJ = "aK", faker8e7pyb = faker5ntkak.k(), fakerlrl6f -= 590, fakernpmxvk += 683, fakerwipop += fakerwipop == -46 ? faker5ntkak.m : 41, faker50eqtr += fakerlrl6f + fakerlvkixp(405));
+      break;
+    case fakerlrl6f != -453 && fakerlrl6f + 611:
+    case 834:
+    case fakerlvkixp(406):
+    case fakeryznng.fakers2us4 > -fakerlvkixp(83) ? 617 : 225:
+      if (faker5ntkak.ab() == "Z") {
+        break;
       }
-      await Promise.all(_0x39f17a);
+    case fakeryznng.faker0gaxh[fakerk896ji(619)](fakerlvkixp(164)) == fakerlvkixp(294) ? 185 : -199:
+    case 970:
+    case fakeryznng.fakerevvlda > -21 ? 856 : fakerlvkixp(344):
+    case 129:
+      fakerlobr27(fakerlrl6f += 373, fakernpmxvk += 104 == faker50eqtr ? -76 : -122);
+      break;
+    case fakeryznng.fakergfe48l() ? 319 : fakerlvkixp(129):
+    case !(fakeryznng.fakercov028[fakerk896ji(fakerlvkixp(402))](1) == fakerlvkixp(195)) ? fakerlvkixp(205) : fakerlvkixp(394):
+    case !(fakeryznng.faker0gaxh[fakerk896ji(fakerlvkixp(402))](fakerlvkixp(164)) == fakerlvkixp(294)) ? -fakerlvkixp(138) : fakerlvkixp(304):
+    case 481:
+      faker5ntkak.ar();
+      break;
+    case fakerlvkixp(199):
+      fakerlobr27(fakerlrl6f *= 2, fakerlrl6f -= 1069, fakernpmxvk += 325, fakerwipop *= 2, fakerwipop += 486, faker50eqtr += 509);
+      break;
+    case 991:
+    case faker5ntkak[fakerlvkixp(407)] ? 250 : fakerlvkixp(260):
+      fakerlobr27(faker5ntkak.a = fakerzxy3i9 == (typeof faker5ntkak[fakerlvkixp(364)] == fakerk896ji(622) ? fakerscs8jt(-fakerlvkixp(416)) : faker5ntkak)[fakerlvkixp(408)], fakernpmxvk -= fakerlvkixp(409), fakerwipop -= fakerlvkixp(165));
+  }
+}
+faker4f626s(fakerscs8jt, 1);
+function fakerscs8jt(...fakerkogzpv) {
+  var fakerjrha7p;
+  fakerlobr27(fakerkogzpv.length = 1, fakerkogzpv[fakerlvkixp(384)] = fakerkogzpv[7], fakerjrha7p = (fakerkogzpv, fakerlobr27, fakerk896ji, fakerstotgd, fakerlrl6f) => {
+    if (typeof fakerstotgd === "undefined") {
+      fakerstotgd = fakerzxy3i9;
     }
-    time(_0x24208d, _0x1863d3 = null) {
-      let _0x37c3aa = _0x1863d3 ? new Date(_0x1863d3) : new Date(),
-        _0x5e65fd = {
-          "M+": _0x37c3aa.getMonth() + 1,
-          "d+": _0x37c3aa.getDate(),
-          "h+": _0x37c3aa.getHours(),
-          "m+": _0x37c3aa.getMinutes(),
-          "s+": _0x37c3aa.getSeconds(),
-          "q+": Math.floor((_0x37c3aa.getMonth() + 3) / 3),
-          S: this.padStr(_0x37c3aa.getMilliseconds(), 3)
-        };
-      /(y+)/.test(_0x24208d) && (_0x24208d = _0x24208d.replace(RegExp.$1, (_0x37c3aa.getFullYear() + "").substr(4 - RegExp.$1.length)));
-      for (let _0x1aaa2e in _0x5e65fd) new RegExp("(" + _0x1aaa2e + ")").test(_0x24208d) && (_0x24208d = _0x24208d.replace(RegExp.$1, 1 == RegExp.$1.length ? _0x5e65fd[_0x1aaa2e] : ("00" + _0x5e65fd[_0x1aaa2e]).substr(("" + _0x5e65fd[_0x1aaa2e]).length)));
-      return _0x24208d;
+    if (typeof fakerlrl6f === "undefined") {
+      fakerlrl6f = fakergqsqvm;
     }
-    async showmsg() {
-      if (!this.notifyFlag) {
-        return;
+    if (fakerlobr27) {
+      [fakerlrl6f, fakerlobr27] = [fakerstotgd(fakerlrl6f), fakerkogzpv || fakerk896ji];
+      return fakerjrha7p(fakerkogzpv, fakerlrl6f, fakerk896ji);
+    }
+    if (fakerk896ji == fakerkogzpv) {
+      return fakerlobr27[fakergqsqvm[fakerk896ji]] = fakerjrha7p(fakerkogzpv, fakerlobr27);
+    }
+    if (fakerkogzpv !== fakerlobr27) {
+      return fakerlrl6f[fakerkogzpv] || (fakerlrl6f[fakerkogzpv] = fakerstotgd(fakertl8wx9[fakerkogzpv]));
+    }
+  }, fakerkogzpv[fakerlvkixp(410)] = -129, fakerkogzpv[37] = void 0, fakerkogzpv.faker18wew = -fakerlvkixp(91));
+  switch (fakerkogzpv[0]) {
+    case !(fakeryznng.faker0gaxh[fakerk896ji(623)](fakerkogzpv.faker18wew + 96) == fakerlvkixp(294)) ? fakerlvkixp(97) : -980:
+      return faker94k4gh[fakerk896ji(fakerkogzpv[fakerlvkixp(410)] + 753)];
+    case -267:
+      fakerkogzpv[37] = fakerk896ji(fakerlvkixp(411)) || faker94k4gh[fakerk896ji(fakerlvkixp(411))];
+      break;
+    case fakeryznng.fakergfe48l() ? -fakerlvkixp(138) : fakerlvkixp(97):
+      return faker94k4gh[fakerk896ji(626)];
+    case -52:
+      return faker94k4gh[fakerk896ji(627)];
+    case 906:
+      return faker94k4gh[fakerk896ji(628) + fakerk896ji(fakerlvkixp(412)) + fakerk896ji.apply(void 0, [630])];
+    case 519:
+      return faker94k4gh[fakerk896ji(631)];
+    case !(fakeryznng.fakere8j8g > fakerlvkixp(79)) ? void 0 : -fakerlvkixp(288):
+      fakerkogzpv[fakerkogzpv[fakerlvkixp(410)] + 166] = fakerk896ji(632) || faker94k4gh[fakerk896ji(632)];
+      break;
+    case fakeryznng.fakercov028[fakerk896ji.apply(fakerlvkixp(97), [fakerlvkixp(413)])](fakerlvkixp(76)) == fakerlvkixp(195) ? fakerlvkixp(260) : -113:
+      return faker94k4gh[fakerk896ji(633)];
+    case fakeryznng.fakerhhx6n7() ? fakerlvkixp(279) : -99:
+      fakerkogzpv[fakerlvkixp(384)] = fakerk896ji(634) || faker94k4gh[fakerk896ji(634)];
+      break;
+    case fakeryznng.faker0gaxh[fakerk896ji(fakerlvkixp(413))](5) == fakerlvkixp(294) ? -fakerlvkixp(414) : null:
+      return faker94k4gh[fakerk896ji(635)];
+    case -415:
+      fakerkogzpv[fakerlvkixp(384)] = fakerk896ji(636) + fakerk896ji(637) || faker94k4gh[fakerk896ji(638)];
+      break;
+    case !fakeryznng.fakerhhx6n7() ? void 0 : -fakerlvkixp(415):
+      return faker94k4gh[fakerk896ji(639)];
+    case -922:
+      fakerkogzpv[fakerlvkixp(384)] = fakerk896ji(640) || faker94k4gh[fakerk896ji[fakerlvkixp(124)](fakerlvkixp(97), [640])];
+      break;
+    case fakeryznng.fakerhhx6n7() ? -fakerlvkixp(416) : null:
+      fakerkogzpv[fakerkogzpv[fakerlvkixp(417)] + 128] = fakerk896ji(641) || faker94k4gh[fakerk896ji(641)];
+      break;
+    case fakeryznng.fakerjq3tv() ? 2513 : -62:
+      return faker94k4gh[fakerk896ji(fakerkogzpv[fakerlvkixp(417)] + 733)];
+    case !(fakeryznng.fakerevvlda > -fakerlvkixp(155)) ? 26 : fakerlvkixp(418):
+      fakerkogzpv[37] = fakerk896ji(fakerlvkixp(419)) || faker94k4gh[fakerk896ji(fakerlvkixp(419))];
+      break;
+    case !(fakeryznng.fakercov028[fakerk896ji(623)](fakerlvkixp(76)) == fakerlvkixp(195)) ? 155 : 4421:
+      return faker94k4gh[fakerk896ji.call(void 0, 644)];
+    case fakeryznng.fakercov028[fakerk896ji(623)](1) == "a" ? 2682 : 5:
+      fakerkogzpv[37] = fakerk896ji.apply(void 0, [645]) || faker94k4gh[fakerk896ji(645)];
+      break;
+    case 3660:
+      fakerkogzpv[fakerlvkixp(384)] = fakerk896ji(646) || faker94k4gh[fakerk896ji(646)];
+      break;
+    case 728:
+      fakerkogzpv[fakerlvkixp(384)] = fakerk896ji(647) || faker94k4gh[fakerk896ji(647)];
+      break;
+    case 4576:
+      fakerkogzpv[fakerkogzpv.fakere4v4y + fakerlvkixp(420)] = fakerk896ji(648) || faker94k4gh[fakerk896ji(648)];
+      break;
+    case !(fakeryznng.fakerevvlda > -fakerlvkixp(155)) ? -197 : 2228:
+      return faker94k4gh[fakerk896ji(649)];
+    case !(fakeryznng.fakerevvlda > -fakerlvkixp(155)) ? fakerlvkixp(235) : 1491:
+      fakerkogzpv[fakerlvkixp(384)] = fakerk896ji(650) || faker94k4gh[fakerk896ji(fakerkogzpv.faker18wew + 741)];
+      break;
+    case 4619:
+      return faker94k4gh[fakerk896ji(651)];
+    case 87:
+      return faker94k4gh[fakerk896ji[fakerlvkixp(124)](void 0, [652])];
+    case 2494:
+      fakerkogzpv[fakerkogzpv.faker18wew + 128] = fakerk896ji(653) || faker94k4gh[fakerk896ji[fakerlvkixp(124)](void 0, [653])];
+      break;
+    case 3919:
+      return faker94k4gh[fakerk896ji(654)];
+    case 2064:
+      return faker94k4gh[fakerk896ji.call(void 0, 655)];
+    case 4649:
+      return faker94k4gh[fakerk896ji(656)];
+    case !(fakeryznng.fakerevvlda > -fakerlvkixp(155)) ? -135 : 2694:
+      return faker94k4gh[fakerk896ji.call(void 0, fakerkogzpv.fakere4v4y + 786)];
+    case 4893:
+      fakerkogzpv[fakerkogzpv[fakerlvkixp(417)] + 128] = fakerk896ji[fakerlvkixp(128)](fakerlvkixp(97), fakerlvkixp(421)) || faker94k4gh[fakerk896ji(fakerlvkixp(421))];
+      break;
+    case fakeryznng.fakergfe48l() ? 2527 : 71:
+      return faker94k4gh[fakerk896ji(659)];
+    case 2775:
+      return faker94k4gh[fakerk896ji(660)];
+    case 4828:
+      fakerkogzpv[37] = fakerk896ji(661) || faker94k4gh[fakerk896ji.call(fakerlvkixp(97), 662) + fakerk896ji(663)];
+      break;
+    case !(fakeryznng.fakerevvlda > -fakerlvkixp(155)) ? -55 : 1841:
+      return faker94k4gh[fakerk896ji(664)];
+    case !fakeryznng.fakerhhx6n7() ? -fakerlvkixp(199) : fakerkogzpv.fakere4v4y + 4450:
+      return faker94k4gh[fakerk896ji(665)];
+    case 1051:
+      fakerkogzpv[37] = fakerjrha7p.call(void 0, fakerlvkixp(422)) || faker94k4gh[fakerjrha7p(fakerlvkixp(422))];
+      break;
+    case 3207:
+      return faker94k4gh[fakerk896ji(667)];
+    case !(fakeryznng.fakerglhxbk > -28) ? 176 : 1156:
+      return faker94k4gh[fakerk896ji[fakerlvkixp(128)](void 0, 668)];
+    case fakeryznng.fakers2us4 > -7 ? 4511 : fakerlvkixp(423):
+      return faker94k4gh[fakerjrha7p(669)];
+    case 1474:
+      return faker94k4gh[fakerjrha7p(670)];
+    case fakeryznng.fakerhhx6n7() ? 3622 : -148:
+      fakerkogzpv[fakerkogzpv.faker18wew + 128] = fakerjrha7p[fakerlvkixp(124)](fakerlvkixp(97), [671]) || faker94k4gh[fakerjrha7p(671)];
+      break;
+    case 421:
+      fakerkogzpv[37] = fakerjrha7p(672) || faker94k4gh[fakerjrha7p(672)];
+  }
+  return fakerkogzpv.fakere4v4y > -46 ? fakerkogzpv[-fakerlvkixp(390)] : faker94k4gh[fakerkogzpv[37]];
+  function fakerzxy3i9(fakerkogzpv, fakerjrha7p = "q76kPfUA0dT1M^z34ot,lmFgSnDX~vBOZI!2si=_(Y`pE@JaH]x/Gcwu9Vrb+Ke[WhjNRC#|%Qy:}5?<8\"&.)$;*{>L", fakerzxy3i9, fakerk896ji, fakerstotgd = [], fakerlrl6f = 0, fakernpmxvk = 0, fakerwipop, faker50eqtr, faker5ntkak) {
+    fakerlobr27(fakerzxy3i9 = "" + (fakerkogzpv || ""), fakerk896ji = fakerzxy3i9.length, fakerwipop = -fakerlvkixp(76));
+    for (faker50eqtr = fakerlvkixp(73); faker50eqtr < fakerk896ji; faker50eqtr++) {
+      faker5ntkak = fakerjrha7p.indexOf(fakerzxy3i9[faker50eqtr]);
+      if (faker5ntkak === -fakerlvkixp(76)) {
+        continue;
       }
-      if (!this.notifyStr.length) {
-        return;
-      }
-      var _0x13fb74 = require("./sendNotify");
-      this.log("\n============== 推送 ==============");
-      await _0x13fb74.sendNotify(this.name, this.notifyStr.join("\n"));
-    }
-    padStr(_0x42eb11, _0x4c5026, _0x60cea4 = {}) {
-      let _0x2cab81 = _0x60cea4.padding || "0",
-        _0x57e066 = _0x60cea4.mode || "l",
-        _0x461c98 = String(_0x42eb11),
-        _0x124545 = _0x4c5026 > _0x461c98.length ? _0x4c5026 - _0x461c98.length : 0,
-        _0x3353ee = "";
-      for (let _0x3ace49 = 0; _0x3ace49 < _0x124545; _0x3ace49++) {
-        _0x3353ee += _0x2cab81;
-      }
-      _0x57e066 == "r" ? _0x461c98 = _0x461c98 + _0x3353ee : _0x461c98 = _0x3353ee + _0x461c98;
-      return _0x461c98;
-    }
-    json2str(_0x51d5d3, _0x21aa74, _0x5a5b72 = false) {
-      let _0x240689 = [];
-      for (let _0x39c756 of Object.keys(_0x51d5d3).sort()) {
-        let _0x473b45 = _0x51d5d3[_0x39c756];
-        if (_0x473b45 && _0x5a5b72) {
-          _0x473b45 = encodeURIComponent(_0x473b45);
-        }
-        _0x240689.push(_0x39c756 + "=" + _0x473b45);
-      }
-      return _0x240689.join(_0x21aa74);
-    }
-    str2json(_0xf0224e, _0x544c2e = false) {
-      let _0x12b12b = {};
-      for (let _0x1b8e24 of _0xf0224e.split("&")) {
-        if (!_0x1b8e24) {
-          continue;
-        }
-        let _0x573a07 = _0x1b8e24.indexOf("=");
-        if (_0x573a07 == -1) {
-          continue;
-        }
-        let _0x416b07 = _0x1b8e24.substr(0, _0x573a07),
-          _0x221b1a = _0x1b8e24.substr(_0x573a07 + 1);
-        if (_0x544c2e) {
-          _0x221b1a = decodeURIComponent(_0x221b1a);
-        }
-        _0x12b12b[_0x416b07] = _0x221b1a;
-      }
-      return _0x12b12b;
-    }
-    randomPattern(_0x458a0e, _0x29dd3c = "abcdef0123456789") {
-      let _0x257a26 = "";
-      for (let _0x153aac of _0x458a0e) {
-        if (_0x153aac == "x") {
-          _0x257a26 += _0x29dd3c.charAt(Math.floor(Math.random() * _0x29dd3c.length));
-        } else {
-          _0x153aac == "X" ? _0x257a26 += _0x29dd3c.charAt(Math.floor(Math.random() * _0x29dd3c.length)).toUpperCase() : _0x257a26 += _0x153aac;
-        }
-      }
-      return _0x257a26;
-    }
-    randomUuid() {
-      return this.randomPattern("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx");
-    }
-    randomString(_0x415a73, _0x6f9565 = "abcdef0123456789") {
-      let _0x271e76 = "";
-      for (let _0x80e349 = 0; _0x80e349 < _0x415a73; _0x80e349++) {
-        _0x271e76 += _0x6f9565.charAt(Math.floor(Math.random() * _0x6f9565.length));
-      }
-      return _0x271e76;
-    }
-    randomList(_0x23c41b) {
-      if (!_0x23c41b.length) {
-        return null;
-      }
-      let _0x912d16 = Math.floor(Math.random() * _0x23c41b.length);
-      return _0x23c41b[_0x912d16];
-    }
-    wait(_0x5c727d) {
-      return new Promise(_0x4005cc => setTimeout(_0x4005cc, _0x5c727d));
-    }
-    async exitNow() {
-      await this.showmsg();
-      let _0x5b7096 = Date.now(),
-        _0x19bd23 = (_0x5b7096 - this.startTime) / 1000;
-      this.log("");
-      const _0x468a94 = {
-        time: true
-      };
-      this.log("[" + this.name + "]运行结束，共运行了" + _0x19bd23 + "秒", _0x468a94);
-      process.exit(0);
-    }
-    normalize_time(_0x3bb0e1, _0x5d1c74 = {}) {
-      let _0x1bf048 = _0x5d1c74.len || this.default_timestamp_len;
-      _0x3bb0e1 = _0x3bb0e1.toString();
-      let _0x1fa6c2 = _0x3bb0e1.length;
-      while (_0x1fa6c2 < _0x1bf048) {
-        _0x3bb0e1 += "0";
-      }
-      _0x1fa6c2 > _0x1bf048 && (_0x3bb0e1 = _0x3bb0e1.slice(0, 13));
-      return parseInt(_0x3bb0e1);
-    }
-    async wait_until(_0x53f722, _0x103248 = {}) {
-      let _0x29b260 = _0x103248.logger || this,
-        _0x14b266 = _0x103248.interval || this.default_wait_interval,
-        _0x478640 = _0x103248.limit || this.default_wait_limit,
-        _0x2e11de = _0x103248.ahead || this.default_wait_ahead;
-      if (typeof _0x53f722 == "string" && _0x53f722.includes(":")) {
-        if (_0x53f722.includes("-")) {
-          _0x53f722 = new Date(_0x53f722).getTime();
-        } else {
-          let _0x469545 = this.time("yyyy-MM-dd ");
-          _0x53f722 = new Date(_0x469545 + _0x53f722).getTime();
-        }
-      }
-      let _0x13cb7c = this.normalize_time(_0x53f722) - _0x2e11de,
-        _0x5b704a = this.time("hh:mm:ss.S", _0x13cb7c),
-        _0x26e18b = Date.now();
-      _0x26e18b > _0x13cb7c && (_0x13cb7c += 86400000);
-      let _0x1f66c2 = _0x13cb7c - _0x26e18b;
-      if (_0x1f66c2 > _0x478640) {
-        const _0x2587de = {
-          time: true
-        };
-        _0x29b260.log("离目标时间[" + _0x5b704a + "]大于" + _0x478640 / 1000 + "秒,不等待", _0x2587de);
+      if (fakerwipop < 0) {
+        fakerwipop = faker5ntkak;
       } else {
-        const _0xcd63dc = {
-          time: true
-        };
-        _0x29b260.log("离目标时间[" + _0x5b704a + "]还有" + _0x1f66c2 / 1000 + "秒,开始等待", _0xcd63dc);
-        while (_0x1f66c2 > 0) {
-          let _0x10ee53 = Math.min(_0x1f66c2, _0x14b266);
-          await this.wait(_0x10ee53);
-          _0x26e18b = Date.now();
-          _0x1f66c2 = _0x13cb7c - _0x26e18b;
-        }
-        const _0x589fee = {
-          time: true
-        };
-        _0x29b260.log("已完成等待", _0x589fee);
+        fakerlobr27(fakerwipop += faker5ntkak * fakerlvkixp(91), fakerlrl6f |= fakerwipop << fakernpmxvk, fakernpmxvk += (fakerwipop & fakerlvkixp(145)) > 88 ? fakerlvkixp(107) : fakerlvkixp(98));
+        do {
+          fakerlobr27(fakerstotgd.push(fakerlrl6f & fakerlvkixp(94)), fakerlrl6f >>= fakerlvkixp(99), fakernpmxvk -= fakerlvkixp(99));
+        } while (fakernpmxvk > fakerlvkixp(83));
+        fakerwipop = -1;
       }
     }
-    async wait_gap_interval(_0x467842, _0x49bdb4) {
-      let _0x276a5b = Date.now() - _0x467842;
-      _0x276a5b < _0x49bdb4 && (await this.wait(_0x49bdb4 - _0x276a5b));
+    if (fakerwipop > -fakerlvkixp(76)) {
+      fakerstotgd.push((fakerlrl6f | fakerwipop << fakernpmxvk) & fakerlvkixp(94));
     }
-  }(_0x5cb590);
+    return fakerj6i9lv(fakerstotgd);
+  }
+}
+faker4f626s(fakere8g3gb, 1);
+function fakere8g3gb(...fakerkogzpv) {
+  var fakerjrha7p;
+  fakerlobr27(fakerkogzpv.length = fakerlvkixp(76), fakerkogzpv.fakera18r5a = fakerkogzpv.fakerghfnd5, fakerkogzpv[fakerlvkixp(424)] = "]BR5kflUwjS(nt;eYb#F{I3sh7/!KH:qg_VuPQ.4Ax2v~C9$@DZoa1Xi%cd[LO`W8Mz,p\"J>=E|my6G?)<+T0*r^}&N", fakerkogzpv[2] = "" + (fakerkogzpv[fakerlvkixp(73)] || ""), fakerkogzpv.faker150xu = fakerkogzpv.fakera18r5a, fakerkogzpv[3] = fakerkogzpv[2].length, fakerkogzpv.faker150xu = [], fakerkogzpv.fakerkxsqv7 = fakerlvkixp(73), fakerkogzpv[6] = 0, fakerkogzpv[fakerlvkixp(425)] = -fakerlvkixp(76));
+  for (fakerjrha7p = fakerlvkixp(73); fakerjrha7p < fakerkogzpv[fakerlvkixp(79)]; fakerjrha7p++) {
+    fakerkogzpv[fakerlvkixp(100)] = fakerkogzpv[fakerlvkixp(424)].indexOf(fakerkogzpv[fakerlvkixp(82)][fakerjrha7p]);
+    if (fakerkogzpv[fakerlvkixp(100)] === -1) {
+      continue;
+    }
+    if (fakerkogzpv.faker4ksphc < fakerlvkixp(73)) {
+      fakerkogzpv.faker4ksphc = fakerkogzpv[9];
+    } else {
+      fakerlobr27(fakerkogzpv[fakerlvkixp(425)] += fakerkogzpv[fakerlvkixp(100)] * 91, fakerkogzpv.fakerkxsqv7 |= fakerkogzpv.faker4ksphc << fakerkogzpv[fakerlvkixp(88)], fakerkogzpv[fakerlvkixp(88)] += (fakerkogzpv[fakerlvkixp(425)] & fakerlvkixp(145)) > 88 ? fakerlvkixp(107) : fakerlvkixp(98));
+      do {
+        fakerlobr27(fakerkogzpv[fakerlvkixp(426)].push(fakerkogzpv.fakerkxsqv7 & fakerlvkixp(94)), fakerkogzpv[fakerlvkixp(427)] >>= fakerlvkixp(99), fakerkogzpv[fakerlvkixp(88)] -= fakerlvkixp(99));
+      } while (fakerkogzpv[6] > fakerlvkixp(83));
+      fakerkogzpv[fakerlvkixp(425)] = -fakerlvkixp(76);
+    }
+  }
+  if (fakerkogzpv[fakerlvkixp(425)] > -fakerlvkixp(76)) {
+    fakerkogzpv[fakerlvkixp(426)].push((fakerkogzpv[fakerlvkixp(427)] | fakerkogzpv.faker4ksphc << fakerkogzpv[fakerlvkixp(88)]) & fakerlvkixp(94));
+  }
+  return fakerj6i9lv(fakerkogzpv[fakerlvkixp(426)]);
+}
+function faker6vbl63() {
+  return ["uvwj", ")_C%pQk[Sj)O*;y", "U90Ht<GhjM<6d<hV9n5", "se{6G</R", "heL6@pP:l", "$X.q@J]", ",oUyNc{R", "4v=jdo#R", "s<,(m>;5MA!pnSmZ[:R;", "?o7X_>MB", "?o7X_>6H3F", "T5,gh", "fvI|,=U<l", "[Xwj", "dQ!g`6ZR", "lk,g7", "?o7X_>~a>8Z", "@cog[6+aBWL", "poogw<hR", "DA,w1+::/{", ",oUy`6Mml", "qLugx)*H[b>9ZDRQ@c5", "iCOk", "0M0H?<VR", "wkL6Ld`rN{nd(ZLu", ":LFgZ6#R", "DATg?<&u$W_=PTm.};3q(|z:l", "DATg?<{R", "U90Ht<?\"$WJEB", "(khjH", "qLsy!>QFU", "Xsa1R9ZR", "vvWK`0zhl", "length", 0, 63, "push", 1, 66, "undefined", 3, "fakerwwbpn", 123, 2, 7, "fakerf6ze0q", "fakerif2qnq", "faker6mahqh", "faker6pg30k", 6, 64, "fakerangddo", 91, "fakerk229wq", 4, 255, 58, "fakerhc7idl", void 0, 14, 8, 9, "faker2kppup", 97, "faker3uq3e", "fakerxx6lwl", "fakerl8ksl", 88, 13, 34, "fakercur2vo", "fakerowmfym", "faker28r46", "faker5df5f", 168, 36, 231, "fakerf7wrx", 15, "faker3ywppj", "fakereyspml", 20, 18, 267, "fakerqzkfv", "apply", 980, 35, "fakerxoejij", "call", 30, 108, 42, !0, 38, 51, 52, 49, "faker6pt5i", 39, 10, "fakerq5d9s1l", "fakerpne9wt", "fakerdq2mtb", "fakerh72vf2", "faker06m3md", 8191, "fakerdxw8rd", "fakery0v1r", 69, "fakernjt6qh", !1, "fakerf84k6c", "fakervzchrs", 73, 84, 21, 92, "fakertl8if", "faker4rnwq", 95, 96, "fakerjp76gq", 48, 77, 5, 104, "fakerdrvssp", 109, 519, 1500, 101, 153, 127, "fakerknjm8", "faker0har6p", 137, 94, "fakerrr8lxs", "faker2ecp4i", "fakergb5pc7", "faker2v7u44", "fakersztjye", "fakerteenyy", "fakerurv5cr", 41, 143, 100, "fakerl5us02", "faker3ah6x9", "fakere35h0p", "fakerq8khxc", "faker7wfcm", "faker369mc", "fakerrgiku", 70, "a", 152, "fakerz03dj", "fakerewr3s", 118, "fakerkea5eg", 122, "faker78h1t", 155, "fakere0xyjw", 164, "fakers8vstm", 175, 184, "fakermn3ezh", "fakerr5c65i", "fakerjh6em7", 61, "faker3tvaer", "faker08jf5q", "faker6lhm2k", 139, "aw", 170, 5000, "fakerjfz8pc", 249, 53, 200, 207, "id", 214, 215, 216, 220, 223, 227, 55, 12, 233, 90, "faker1ufft", 210, "fakerqo9m2h", "fakero791u", 85, 221, 150, "fakerx5ph08", "faker35no5p", 98, "faker018did", 106, "faker7cel2j", "fakerxoi3o", 125, "fakeryvipt4", 2000, 251, 1000, 261, 265, 269, 272, 270, 280, 273, 286, "RS", 287, 289, 297, 300, 311, 313, 315, 327, "fakerxqutxc", 57, "fakertl4lk", "faker9svjqh", "fakera6rydk", "faker2zvixsh", 321, 178, null, 333, 349, 342, 336, 343, 335, 344, 508, 377, 385, 254, 389, 411, "e", 110, "faker5ernc3", "fakertazll8", 476, "fakerrz49lh", 481, 485, 493, "faker55eolx", 497, 498, 472, 474, 483, 484, 502, "UA", 489, 490, 492, 512, 478, 480, "t", 495, 477, 510, 486, 488, 503, 524, 533, "ua", 494, 482, 520, 547, 515, "n", 552, "pe", 475, 487, 513, 555, 491, "fakero9241", "fakerfxr8zs", "es", 141, 578, 176, 23, "fakeryoedr9", 523, "faker9z5jj", "fakerqztodw", 575, "fakerrn2cnr", 105, "fakercfkymm", "fakera267ep", "fakery52uvr", "faker4fdju", 115, 222, 383, 32, 86, "v", 133, 618, "s", 93, 31, "A", 67, 172, 114, 532, "faker75aq59", 191, 45, "aS", 624, 608, 165, 26, 149, 37, "S", "d", 43, "Q", "ac", 148, 83, 78, 121, 242, 19, "c", 60, 530, "aI", 199, 50, 619, 213, "aC", 89, 217, "g", "h", 169, "fakere4v4y", 625, 629, 623, 185, 773, 883, "faker18wew", 600, 643, 166, 658, 666, 190, "fakerm6yamn", "faker4ksphc", "faker150xu", "fakerkxsqv7"];
+}
+function fakerp0fm7(fakerlobr27, fakerjrha7p = 0) {
+  var fakerzxy3i9 = function () {
+    return fakerlobr27(...arguments);
+  };
+  return fakerkogzpv(fakerzxy3i9, "length", {
+    "value": fakerjrha7p,
+    "configurable": true
+  });
+}
+
+// prettier-ignore
+function Env(t, e) {
+  "undefined" != typeof process && JSON.stringify(process.env).indexOf("GITHUB") > -1 && process.exit(0);
+  class s {
+    constructor(t) {
+      this.env = t;
+    }
+    send(t, e = "GET") {
+      t = "string" == typeof t ? {
+        url: t
+      } : t;
+      let s = this.get;
+      return "POST" === e && (s = this.post), new Promise((e, i) => {
+        s.call(this, t, (t, s, r) => {
+          t ? i(t) : e(s);
+        });
+      });
+    }
+    get(t) {
+      return this.send.call(this.env, t);
+    }
+    post(t) {
+      return this.send.call(this.env, t, "POST");
+    }
+  }
+  return new class {
+    constructor(t, e) {
+      this.name = t, this.http = new s(this), this.data = null, this.dataFile = "box.dat", this.logs = [], this.isMute = !1, this.isNeedRewrite = !1, this.logSeparator = "\n", this.startTime = new Date().getTime(), Object.assign(this, e), this.log("", `🔔${this.name}, 开始!`);
+    }
+    isNode() {
+      return "undefined" != typeof module && !!module.exports;
+    }
+    isQuanX() {
+      return "undefined" != typeof $task;
+    }
+    isSurge() {
+      return "undefined" != typeof $httpClient && "undefined" == typeof $loon;
+    }
+    isLoon() {
+      return "undefined" != typeof $loon;
+    }
+    toObj(t, e = null) {
+      try {
+        return JSON.parse(t);
+      } catch {
+        return e;
+      }
+    }
+    toStr(t, e = null) {
+      try {
+        return JSON.stringify(t);
+      } catch {
+        return e;
+      }
+    }
+    getjson(t, e) {
+      let s = e;
+      const i = this.getdata(t);
+      if (i) try {
+        s = JSON.parse(this.getdata(t));
+      } catch {}
+      return s;
+    }
+    setjson(t, e) {
+      try {
+        return this.setdata(JSON.stringify(t), e);
+      } catch {
+        return !1;
+      }
+    }
+    getScript(t) {
+      return new Promise(e => {
+        this.get({
+          url: t
+        }, (t, s, i) => e(i));
+      });
+    }
+    runScript(t, e) {
+      return new Promise(s => {
+        let i = this.getdata("@chavy_boxjs_userCfgs.httpapi");
+        i = i ? i.replace(/\n/g, "").trim() : i;
+        let r = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
+        r = r ? 1 * r : 20, r = e && e.timeout ? e.timeout : r;
+        const [o, h] = i.split("@"),
+          n = {
+            url: `http://${h}/v1/scripting/evaluate`,
+            body: {
+              script_text: t,
+              mock_type: "cron",
+              timeout: r
+            },
+            headers: {
+              "X-Key": o,
+              Accept: "*/*"
+            }
+          };
+        this.post(n, (t, e, i) => s(i));
+      }).catch(t => this.logErr(t));
+    }
+    loaddata() {
+      if (!this.isNode()) return {};
+      {
+        this.fs = this.fs ? this.fs : require("fs"), this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile),
+          e = this.path.resolve(process.cwd(), this.dataFile),
+          s = this.fs.existsSync(t),
+          i = !s && this.fs.existsSync(e);
+        if (!s && !i) return {};
+        {
+          const i = s ? t : e;
+          try {
+            return JSON.parse(this.fs.readFileSync(i));
+          } catch (t) {
+            return {};
+          }
+        }
+      }
+    }
+    writedata() {
+      if (this.isNode()) {
+        this.fs = this.fs ? this.fs : require("fs"), this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile),
+          e = this.path.resolve(process.cwd(), this.dataFile),
+          s = this.fs.existsSync(t),
+          i = !s && this.fs.existsSync(e),
+          r = JSON.stringify(this.data);
+        s ? this.fs.writeFileSync(t, r) : i ? this.fs.writeFileSync(e, r) : this.fs.writeFileSync(t, r);
+      }
+    }
+    lodash_get(t, e, s) {
+      const i = e.replace(/\[(\d+)\]/g, ".$1").split(".");
+      let r = t;
+      for (const t of i) if (r = Object(r)[t], void 0 === r) return s;
+      return r;
+    }
+    lodash_set(t, e, s) {
+      return Object(t) !== t ? t : (Array.isArray(e) || (e = e.toString().match(/[^.[\]]+/g) || []), e.slice(0, -1).reduce((t, s, i) => Object(t[s]) === t[s] ? t[s] : t[s] = Math.abs(e[i + 1]) >> 0 == +e[i + 1] ? [] : {}, t)[e[e.length - 1]] = s, t);
+    }
+    getdata(t) {
+      let e = this.getval(t);
+      if (/^@/.test(t)) {
+        const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t),
+          r = s ? this.getval(s) : "";
+        if (r) try {
+          const t = JSON.parse(r);
+          e = t ? this.lodash_get(t, i, "") : e;
+        } catch (t) {
+          e = "";
+        }
+      }
+      return e;
+    }
+    setdata(t, e) {
+      let s = !1;
+      if (/^@/.test(e)) {
+        const [, i, r] = /^@(.*?)\.(.*?)$/.exec(e),
+          o = this.getval(i),
+          h = i ? "null" === o ? null : o || "{}" : "{}";
+        try {
+          const e = JSON.parse(h);
+          this.lodash_set(e, r, t), s = this.setval(JSON.stringify(e), i);
+        } catch (e) {
+          const o = {};
+          this.lodash_set(o, r, t), s = this.setval(JSON.stringify(o), i);
+        }
+      } else s = this.setval(t, e);
+      return s;
+    }
+    getval(t) {
+      return this.isSurge() || this.isLoon() ? $persistentStore.read(t) : this.isQuanX() ? $prefs.valueForKey(t) : this.isNode() ? (this.data = this.loaddata(), this.data[t]) : this.data && this.data[t] || null;
+    }
+    setval(t, e) {
+      return this.isSurge() || this.isLoon() ? $persistentStore.write(t, e) : this.isQuanX() ? $prefs.setValueForKey(t, e) : this.isNode() ? (this.data = this.loaddata(), this.data[e] = t, this.writedata(), !0) : this.data && this.data[e] || null;
+    }
+    initGotEnv(t) {
+      this.got = this.got ? this.got : require("got"), this.cktough = this.cktough ? this.cktough : require("tough-cookie"), this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar(), t && (t.headers = t.headers ? t.headers : {}, void 0 === t.headers.Cookie && void 0 === t.cookieJar && (t.cookieJar = this.ckjar));
+    }
+    get(t, e = () => {}) {
+      t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"]), this.isSurge() || this.isLoon() ? (this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+        "X-Surge-Skip-Scripting": !1
+      })), $httpClient.get(t, (t, s, i) => {
+        !t && s && (s.body = i, s.statusCode = s.status), e(t, s, i);
+      })) : this.isQuanX() ? (this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+        hints: !1
+      })), $task.fetch(t).then(t => {
+        const {
+          statusCode: s,
+          statusCode: i,
+          headers: r,
+          body: o
+        } = t;
+        e(null, {
+          status: s,
+          statusCode: i,
+          headers: r,
+          body: o
+        }, o);
+      }, t => e(t))) : this.isNode() && (this.initGotEnv(t), this.got(t).on("redirect", (t, e) => {
+        try {
+          if (t.headers["set-cookie"]) {
+            const s = t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+            s && this.ckjar.setCookieSync(s, null), e.cookieJar = this.ckjar;
+          }
+        } catch (t) {
+          this.logErr(t);
+        }
+      }).then(t => {
+        const {
+          statusCode: s,
+          statusCode: i,
+          headers: r,
+          body: o
+        } = t;
+        e(null, {
+          status: s,
+          statusCode: i,
+          headers: r,
+          body: o
+        }, o);
+      }, t => {
+        const {
+          message: s,
+          response: i
+        } = t;
+        e(s, i, i && i.body);
+      }));
+    }
+    post(t, e = () => {}) {
+      if (t.body && t.headers && !t.headers["Content-Type"] && (t.headers["Content-Type"] = "application/x-www-form-urlencoded"), t.headers && delete t.headers["Content-Length"], this.isSurge() || this.isLoon()) this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+        "X-Surge-Skip-Scripting": !1
+      })), $httpClient.post(t, (t, s, i) => {
+        !t && s && (s.body = i, s.statusCode = s.status), e(t, s, i);
+      });else if (this.isQuanX()) t.method = "POST", this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+        hints: !1
+      })), $task.fetch(t).then(t => {
+        const {
+          statusCode: s,
+          statusCode: i,
+          headers: r,
+          body: o
+        } = t;
+        e(null, {
+          status: s,
+          statusCode: i,
+          headers: r,
+          body: o
+        }, o);
+      }, t => e(t));else if (this.isNode()) {
+        this.initGotEnv(t);
+        const {
+          url: s,
+          ...i
+        } = t;
+        this.got.post(s, i).then(t => {
+          const {
+            statusCode: s,
+            statusCode: i,
+            headers: r,
+            body: o
+          } = t;
+          e(null, {
+            status: s,
+            statusCode: i,
+            headers: r,
+            body: o
+          }, o);
+        }, t => {
+          const {
+            message: s,
+            response: i
+          } = t;
+          e(s, i, i && i.body);
+        });
+      }
+    }
+    time(t, e = null) {
+      const s = e ? new Date(e) : new Date();
+      let i = {
+        "M+": s.getMonth() + 1,
+        "d+": s.getDate(),
+        "H+": s.getHours(),
+        "m+": s.getMinutes(),
+        "s+": s.getSeconds(),
+        "q+": Math.floor((s.getMonth() + 3) / 3),
+        S: s.getMilliseconds()
+      };
+      /(y+)/.test(t) && (t = t.replace(RegExp.$1, (s.getFullYear() + "").substr(4 - RegExp.$1.length)));
+      for (let e in i) new RegExp("(" + e + ")").test(t) && (t = t.replace(RegExp.$1, 1 == RegExp.$1.length ? i[e] : ("00" + i[e]).substr(("" + i[e]).length)));
+      return t;
+    }
+    msg(e = t, s = "", i = "", r) {
+      const o = t => {
+        if (!t) return t;
+        if ("string" == typeof t) return this.isLoon() ? t : this.isQuanX() ? {
+          "open-url": t
+        } : this.isSurge() ? {
+          url: t
+        } : void 0;
+        if ("object" == typeof t) {
+          if (this.isLoon()) {
+            let e = t.openUrl || t.url || t["open-url"],
+              s = t.mediaUrl || t["media-url"];
+            return {
+              openUrl: e,
+              mediaUrl: s
+            };
+          }
+          if (this.isQuanX()) {
+            let e = t["open-url"] || t.url || t.openUrl,
+              s = t["media-url"] || t.mediaUrl;
+            return {
+              "open-url": e,
+              "media-url": s
+            };
+          }
+          if (this.isSurge()) {
+            let e = t.url || t.openUrl || t["open-url"];
+            return {
+              url: e
+            };
+          }
+        }
+      };
+      if (this.isMute || (this.isSurge() || this.isLoon() ? $notification.post(e, s, i, o(r)) : this.isQuanX() && $notify(e, s, i, o(r))), !this.isMuteLog) {
+        let t = ["", "==============\uD83D\uDCE3\u7CFB\u7EDF\u901A\u77E5\uD83D\uDCE3=============="];
+        t.push(e), s && t.push(s), i && t.push(i), console.log(t.join("\n")), this.logs = this.logs.concat(t);
+      }
+    }
+    log(...t) {
+      t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(t.join(this.logSeparator));
+    }
+    logErr(t, e) {
+      const s = !this.isSurge() && !this.isQuanX() && !this.isLoon();
+      s ? this.log("", `❗️${this.name}, 错误!`, t.stack) : this.log("", `❗️${this.name}, 错误!`, t);
+    }
+    wait(t) {
+      return new Promise(e => setTimeout(e, t));
+    }
+    done(t = {}) {
+      const e = new Date().getTime(),
+        s = (e - this.startTime) / 1000;
+      this.log("", `🔔${this.name}, 结束! 🕛 ${s} 秒`), this.log(), (this.isSurge() || this.isQuanX() || this.isLoon()) && $done(t);
+    }
+  }(t, e);
 }
